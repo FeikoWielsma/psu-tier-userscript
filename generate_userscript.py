@@ -97,13 +97,19 @@ def generate_userscript():
 
     const psuData = {json_str};
 
-    const TierColors = {{
-        'A': '#32CD32', 'A+': '#32CD32', 'A-': '#32CD32',
-        'B': '#1E90FF', 'B+': '#1E90FF', 'B-': '#1E90FF',
-        'C': '#FFD700', 'C+': '#FFD700', 'C-': '#FFD700',
-        'D': '#FF8C00',
-        'E': '#FF4500',
-        'F': '#FF0000'
+    const TierStyles = {{
+        'A':  {{ bg: '#34ebb4', color: '#000' }},
+        'A+': {{ bg: '#80f2ff', color: '#000' }},
+        'A-': {{ bg: '#00c78e', color: '#000' }},
+        'B':  {{ bg: '#76db35', color: '#000' }},
+        'B+': {{ bg: '#a3ff75', color: '#000' }},
+        'B-': {{ bg: '#48b509', color: '#000' }},
+        'C':  {{ bg: '#ffe14c', color: '#000' }},
+        'C+': {{ bg: '#fff566', color: '#000' }},
+        'C-': {{ bg: '#eebb00', color: '#000' }},
+        'D':  {{ bg: '#ff9f43', color: '#000' }},
+        'E':  {{ bg: '#ff6b6b', color: '#000' }},
+        'F':  {{ bg: '#c92a2a', color: '#fff' }}
     }};
 
     function normalize(s) {{
@@ -248,8 +254,9 @@ def generate_userscript():
             if (tier) {{
                 const badge = document.createElement('span');
                 badge.innerText = `Tier ${{tier}}`;
-                badge.style.backgroundColor = TierColors[tier.split(' ')[0]] || '#333';
-                badge.style.color = 'white';
+                const style = TierStyles[tier] || TierStyles[tier.substring(0, 1)] || {{ bg: '#333', color: '#fff' }};
+                badge.style.backgroundColor = style.bg;
+                badge.style.color = style.color;
                 badge.style.padding = '2px 6px';
                 badge.style.borderRadius = '4px';
                 badge.style.marginLeft = '8px';
