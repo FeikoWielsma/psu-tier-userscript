@@ -6,7 +6,7 @@ A tool that parses **SPL's PSU Tier List** (Google Sheet) and generates a usersc
 
 ## 🌟 Features
 
-*   **Multi-Site Support**: Works on both [PCPartPicker](https://pcpartpicker.com) and [Tweakers.net](https://tweakers.net/voedingen/vergelijken/).
+*   **Multi-Site Support**: Works on [Tweakers.net](https://tweakers.net/voedingen/vergelijken/) and **all** PCPartPicker regions (e.g., US, UK, DE, FR, etc.).
 *   **Live Injection**: Adds colored labels (Tier A, B, C, etc.) next to PSU names.
 *   **Smart Matching**:
     *   Handles complex series names (e.g., "MWE Gold V2" matching "MWE V2 Gold").

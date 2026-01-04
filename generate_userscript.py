@@ -86,9 +86,9 @@ def generate_userscript():
 // @version      1.3
 // @description  Display PSU Tiers from SPL's list on PCPartPicker
 // @author       Antigravity
-// @match        https://pcpartpicker.com/products/power-supply/*
+// @match        https://*.pcpartpicker.com/products/power-supply/*
 // @match        https://tweakers.net/voedingen/vergelijken/*
-// @match        https://pcpartpicker.com/list/*
+// @match        https://*.pcpartpicker.com/list/*
 // @grant        none
 // ==/UserScript==
 
