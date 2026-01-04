@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Generated Data (Optional: Keep user.js, ignore intermediates?)
+# We keep psu_tier.html as strict source snapshot? 
+# We keep psutier.user.js as it is the distribution.
+# We might ignore the intermediate JSONs if we want to force generation.
+# But for now, let's include them so the repo works out of the box.
+# except maybe the huge temp lookup map? No, keep it for tests.

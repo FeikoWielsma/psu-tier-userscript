@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PCPP Test Page</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .tr-product {}
+
+        .td-name {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PCPP Mock List</h1>
+    <table id="category_content">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Wattage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Simple Case -->
+            <tr class="tr-product">
+                <td class="td-name"><a href="#">Corsair RM750e (2023)</a></td>
+                <td class="td-wattage">750 W</td>
+            </tr>
+            <!-- Multi-word Brand -->
+            <tr class="tr-product">
+                <td class="td-name"><a href="#">be quiet! Pure Power 12 M</a></td>
+                <td class="td-wattage">850 W</td>
+            </tr>
+            <!-- Another Multi-word -->
+            <tr class="tr-product">
+                <td class="td-name"><a href="#">Super Flower Leadex III Gold</a></td>
+                <td class="td-wattage">750 W</td>
+            </tr>
+            <!-- No Wattage match (Wattage mismatch) -->
+            <tr class="tr-product">
+                <td class="td-name"><a href="#">Corsair RM750e (2023)</a></td>
+                <td class="td-wattage">1000 W</td>
+            </tr>
+            <!-- Complex Series match -->
+            <tr class="tr-product">
+                <td class="td-name"><a href="#">FSP Group Hydro G Pro</a></td>
+                <td class="td-wattage">1000 W</td>
+            </tr>
+            <!-- Case sensitivity -->
+            <tr class="tr-product">
+                <td class="td-name"><a href="#">SEASONIC FOCUS GX-750</a></td>
+                <td class="td-wattage">750 W</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Load the ACTUAL Userscript -->
+    <!-- Note: Userscript is wrapped in IIFE so it runs safely -->
+    <script src="psutier.user.js"></script>
+</body>
+
+</html>

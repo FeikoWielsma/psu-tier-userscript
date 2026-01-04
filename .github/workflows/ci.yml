@@ -1,0 +1,33 @@
+name: PSU Tier List CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Parse Data
+      run: python parse_tier_list.py
+
+    - name: Generate Userscript
+      run: python generate_userscript.py
+
+    - name: Run Validation Tests
+      run: node tests/test_matching.js

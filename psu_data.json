@@ -1,0 +1,6182 @@
+[
+  {
+    "brand": "1st Player",
+    "series": "ACK Standard",
+    "wattage": "550/650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "1st Player",
+    "series": "ACK Bronze",
+    "wattage": "650/750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "1st Player",
+    "series": "ACK Bronze",
+    "wattage": "850W",
+    "tier": "E"
+  },
+  {
+    "brand": "1st Player",
+    "series": "ACK Silver",
+    "wattage": "750/850W",
+    "tier": "C-"
+  },
+  {
+    "brand": "1st Player",
+    "series": "Armour",
+    "wattage": "550-750W",
+    "tier": "B"
+  },
+  {
+    "brand": "1st Player",
+    "series": "Black Sir",
+    "wattage": "500-600W",
+    "tier": "E"
+  },
+  {
+    "brand": "1st Player",
+    "series": "DK Premium",
+    "wattage": "500-600W",
+    "tier": "C-"
+  },
+  {
+    "brand": "1st Player",
+    "series": "DK Premium",
+    "wattage": "700-800W",
+    "tier": "C-"
+  },
+  {
+    "brand": "1st Player",
+    "series": "FK",
+    "wattage": "300/400W",
+    "tier": "F"
+  },
+  {
+    "brand": "1st Player",
+    "series": "FK",
+    "wattage": "500-750W",
+    "tier": "E"
+  },
+  {
+    "brand": "1st Player",
+    "series": "NGDP Gold",
+    "wattage": "750 / 850 /1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "1st Player",
+    "series": "NGDP Platinum ATX 3.0",
+    "wattage": "1000W/1300W",
+    "tier": "A-"
+  },
+  {
+    "brand": "1st Player",
+    "series": "NGDP Platinum ATX 3.1",
+    "wattage": "1000W/1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "1st Player",
+    "series": "PRO",
+    "wattage": "500-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "1st Player",
+    "series": "SFX Gold",
+    "wattage": "650W",
+    "tier": "B"
+  },
+  {
+    "brand": "1st Player",
+    "series": "SFX Gold",
+    "wattage": "850W",
+    "tier": "E"
+  },
+  {
+    "brand": "1st Player",
+    "series": "SFX Platinum",
+    "wattage": "750W",
+    "tier": "B"
+  },
+  {
+    "brand": "1st Player",
+    "series": "Steampunk Gold",
+    "wattage": "650/750W",
+    "tier": "B"
+  },
+  {
+    "brand": "1st Player",
+    "series": "Steampunk Gold",
+    "wattage": "850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Abko (Abkoncore)",
+    "series": "CR Platinum",
+    "wattage": "1200W",
+    "tier": "B"
+  },
+  {
+    "brand": "Abko (Abkoncore)",
+    "series": "Coremax Bronze",
+    "wattage": "500/600/700W",
+    "tier": "C"
+  },
+  {
+    "brand": "Abko (Abkoncore)",
+    "series": "MT",
+    "wattage": "500/600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Abko (Abkoncore)",
+    "series": "Tenergy Bronze",
+    "wattage": "500/600/700W",
+    "tier": "C"
+  },
+  {
+    "brand": "Abko (Abkoncore)",
+    "series": "Tenergy Gold",
+    "wattage": "650/750/850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Abko (Abkoncore)",
+    "series": "Settler II",
+    "wattage": "600/700/800W",
+    "tier": "C"
+  },
+  {
+    "brand": "Abko (Abkoncore)",
+    "series": "Settler Hybrid Bronze",
+    "wattage": "700/800W",
+    "tier": "C"
+  },
+  {
+    "brand": "Abko (Abkoncore)",
+    "series": "Settler Hybrid Bronze Modular",
+    "wattage": "1000W",
+    "tier": "C"
+  },
+  {
+    "brand": "Acer",
+    "series": "AC Gold",
+    "wattage": "1000W",
+    "tier": "E"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Core Reactor",
+    "wattage": "650 /750/ 850W",
+    "tier": "A+"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Core Reactor II",
+    "wattage": "650 /750/ 850W",
+    "tier": "A+"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Core Reactor II",
+    "wattage": "1000 / 1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Core Reactor II VE",
+    "wattage": "650 /750/850W",
+    "tier": "A"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Core Shift",
+    "wattage": "650W",
+    "tier": "B"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Core Shift",
+    "wattage": "750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Core Shift",
+    "wattage": "850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Core Shift II",
+    "wattage": "750W",
+    "tier": "B"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Core Shift II",
+    "wattage": "850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Cybercore",
+    "wattage": "1000 / 1300W",
+    "tier": "A+"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Cybercore II",
+    "wattage": "1000 / 1300W",
+    "tier": "A+"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Fusion",
+    "wattage": "1600W",
+    "tier": "A+"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Kyber",
+    "wattage": "650W",
+    "tier": "B-"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Kyber",
+    "wattage": "750 / 850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Probe",
+    "wattage": "600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Pylon",
+    "wattage": "450/ 550 / 650W",
+    "tier": "C+"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Pylon",
+    "wattage": "750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Pylon II",
+    "wattage": "550/650/750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Pymcore",
+    "wattage": "750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "ADATA XPG",
+    "series": "Pymcore",
+    "wattage": "850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "AE",
+    "wattage": "550/650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "Aero Bronze Non-Modular",
+    "wattage": "500 -750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "Aero Bronze Modular",
+    "wattage": "550-850W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "Aero White",
+    "wattage": "500-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "Cylon",
+    "wattage": "500/600/700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "Higgs",
+    "wattage": "650/750/850W",
+    "tier": "F"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "Integrator Gold",
+    "wattage": "750-1000W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "KCAS Bronze Non-Mod.",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "KCAS Bronze Modular",
+    "wattage": "650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "KCAS Bronze Modular",
+    "wattage": "650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "KCAS Bronze Modular",
+    "wattage": "850/1000W",
+    "tier": "E"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "KCAS Bronze Modular",
+    "wattage": "1200W",
+    "tier": "C"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "KCAS Plus Bronze Non-Mod.",
+    "wattage": "400-800W",
+    "tier": "C"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "KCAS Plus Bronze Modular",
+    "wattage": "650/750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "KCAS Gold Non-Mod.",
+    "wattage": "550-850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "KCAS Gold Modular",
+    "wattage": "650/750/850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "LUX Standard",
+    "wattage": "550-1000W",
+    "tier": "E"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "LUX RGB",
+    "wattage": "550-1000W",
+    "tier": "E"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "LUX M",
+    "wattage": "550-1000W",
+    "tier": "E"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "LUX RGB Mod.",
+    "wattage": "550-1000W",
+    "tier": "E"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "LUX Pro / Pro RGB Modular",
+    "wattage": "550-750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "Mirage Gold Non-Mod.",
+    "wattage": "650/750/850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "Mirage Gold Modular",
+    "wattage": "650/750/850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "Premier G1",
+    "wattage": "750/850/1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "Project 7",
+    "wattage": "650-850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "United Power",
+    "wattage": "500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "VP",
+    "wattage": "450-850W",
+    "tier": "E"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "VX Plus",
+    "wattage": "350-800W",
+    "tier": "F"
+  },
+  {
+    "brand": "Aerocool",
+    "series": "VX Plus RGB",
+    "wattage": "350-800W",
+    "tier": "F"
+  },
+  {
+    "brand": "Aigo",
+    "series": "VK",
+    "wattage": "550/650/750W",
+    "tier": "F"
+  },
+  {
+    "brand": "Andyson",
+    "series": "BX",
+    "wattage": "550-850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Andyson",
+    "series": "E5+",
+    "wattage": "300-500W",
+    "tier": "F"
+  },
+  {
+    "brand": "Andyson",
+    "series": "GX",
+    "wattage": "500/600/800W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Andyson",
+    "series": "H6",
+    "wattage": "500-800W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Andyson",
+    "series": "M5+",
+    "wattage": "450W",
+    "tier": "E"
+  },
+  {
+    "brand": "Andyson",
+    "series": "M5+",
+    "wattage": "550/650W",
+    "tier": "C"
+  },
+  {
+    "brand": "Andyson",
+    "series": "N",
+    "wattage": "500/700W",
+    "tier": "B"
+  },
+  {
+    "brand": "Andyson",
+    "series": "PX",
+    "wattage": "1200W",
+    "tier": "B"
+  },
+  {
+    "brand": "Andyson",
+    "series": "R",
+    "wattage": "850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Andyson",
+    "series": "R",
+    "wattage": "1200W",
+    "tier": "B"
+  },
+  {
+    "brand": "Andyson",
+    "series": "TX",
+    "wattage": "700W",
+    "tier": "B"
+  },
+  {
+    "brand": "Andyson",
+    "series": "Venus",
+    "wattage": "600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Atom Bronze",
+    "wattage": "550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Atom V Series",
+    "wattage": "350-750W",
+    "tier": "F"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Cuprum Strike Bronze",
+    "wattage": "450/550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Cuprum Strike \"DC\"",
+    "wattage": "550/650/750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Cuprum Strike H Bronze",
+    "wattage": "750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Cuprum Strike Pro ATX 3.1",
+    "wattage": "850/1000W",
+    "tier": "C"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Earthwatts Gold Asia",
+    "wattage": "550/650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Earthwatts Gold EVO",
+    "wattage": "550/650W",
+    "tier": "C"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Earthwatts Gold Pro",
+    "wattage": "550 / 650 / 750W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "GSK ATX 3.1",
+    "wattage": "750/850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Neo Eco Classic v1",
+    "wattage": "550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Neo Eco Classic v2",
+    "wattage": "550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Neo Eco Classic Mod. v1",
+    "wattage": "550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Neo Eco Classic Mod. v2",
+    "wattage": "550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Neo Eco Gold Modular",
+    "wattage": "650/ 750 / 850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Neo Eco Gold Modular ATX 3.0",
+    "wattage": "850 / 1000 / 1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Neo Eco Gold Zen",
+    "wattage": "500/600/700W",
+    "tier": "C"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "High Current Gamer Gold",
+    "wattage": "650 /750/ 850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "High Current Gamer Pro Platinum",
+    "wattage": "850/1000/1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "High Current Gamer Extreme",
+    "wattage": "850/1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Signature Platinum",
+    "wattage": "1000/ 1300W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "Signature Titanium",
+    "wattage": "1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "VP Plus",
+    "wattage": "500-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "VP Plus 230V",
+    "wattage": "500-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Antec/Atom",
+    "series": "VPF",
+    "wattage": "550/650W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Apevia",
+    "series": "Prestige Standard",
+    "wattage": "600 / 800 / 1000W",
+    "tier": "C"
+  },
+  {
+    "brand": "Apevia",
+    "series": "Signature",
+    "wattage": "900/1050W",
+    "tier": "E"
+  },
+  {
+    "brand": "Apevia",
+    "series": "Jupiter",
+    "wattage": "600/800/1000W",
+    "tier": "E"
+  },
+  {
+    "brand": "Apevia",
+    "series": "Essence",
+    "wattage": "600/700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Apevia",
+    "series": "Spirit",
+    "wattage": "600/700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Apevia",
+    "series": "Beast",
+    "wattage": "550/650/700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Apevia",
+    "series": "Venus",
+    "wattage": "500W",
+    "tier": "F"
+  },
+  {
+    "brand": "Apevia",
+    "series": "Captain",
+    "wattage": "500W",
+    "tier": "F"
+  },
+  {
+    "brand": "Apevia",
+    "series": "Raptor",
+    "wattage": "500W",
+    "tier": "F"
+  },
+  {
+    "brand": "Apevia",
+    "series": "ITX",
+    "wattage": "300-500W",
+    "tier": "F"
+  },
+  {
+    "brand": "Apevia",
+    "series": "TFX",
+    "wattage": "300-500W",
+    "tier": "F"
+  },
+  {
+    "brand": "Apevia",
+    "series": "SFX",
+    "wattage": "300-600W",
+    "tier": "F"
+  },
+  {
+    "brand": "Apexgaming",
+    "series": "All PSUs",
+    "wattage": "All PSUs",
+    "tier": "E"
+  },
+  {
+    "brand": "Apexgaming",
+    "series": "All PSUs",
+    "wattage": "All PSUs",
+    "tier": "E"
+  },
+  {
+    "brand": "Apexgaming",
+    "series": "All PSUs",
+    "wattage": "All PSUs",
+    "tier": "E"
+  },
+  {
+    "brand": "Apexgaming",
+    "series": "All PSUs",
+    "wattage": "All PSUs",
+    "tier": "E"
+  },
+  {
+    "brand": "Apexgaming",
+    "series": "All PSUs",
+    "wattage": "All PSUs",
+    "tier": "E"
+  },
+  {
+    "brand": "Aresgame (Pystar)",
+    "series": "All PSUs",
+    "wattage": "All PSUs",
+    "tier": "E"
+  },
+  {
+    "brand": "Aresgame (Pystar)",
+    "series": "All PSUs",
+    "wattage": "All PSUs",
+    "tier": "E"
+  },
+  {
+    "brand": "Aresgame (Pystar)",
+    "series": "All PSUs",
+    "wattage": "All PSUs",
+    "tier": "E"
+  },
+  {
+    "brand": "Aresgame (Pystar)",
+    "series": "All PSUs",
+    "wattage": "All PSUs",
+    "tier": "E"
+  },
+  {
+    "brand": "ASRock",
+    "series": "Phantom Gaming",
+    "wattage": "1300 / 1600W",
+    "tier": "A"
+  },
+  {
+    "brand": "ASRock",
+    "series": "Phantom Gaming",
+    "wattage": "750 / 850 / 1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "ASRock",
+    "series": "Steel Legend",
+    "wattage": "650 - 1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "ASRock",
+    "series": "Steel Legend",
+    "wattage": "1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "ASRock",
+    "series": "Taichi",
+    "wattage": "1300W / 1650W",
+    "tier": "A+"
+  },
+  {
+    "brand": "ASUS",
+    "series": "Prime",
+    "wattage": "750 / 850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "ASUS",
+    "series": "ROG Loki Platinum",
+    "wattage": "750 - 1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "ASUS",
+    "series": "ROG THOR Platinum",
+    "wattage": "850W",
+    "tier": "A"
+  },
+  {
+    "brand": "ASUS",
+    "series": "ROG THOR Platinum",
+    "wattage": "1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "ASUS",
+    "series": "ROG THOR Platinum II",
+    "wattage": "850W",
+    "tier": "A"
+  },
+  {
+    "brand": "ASUS",
+    "series": "ROG THOR Platinum II",
+    "wattage": "1000 / 1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "ASUS",
+    "series": "ROG THOR Platinum III",
+    "wattage": "1000/1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "ASUS",
+    "series": "ROG Strix Aura Gold",
+    "wattage": "750 - 1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "ASUS",
+    "series": "ROG Strix Gold",
+    "wattage": "550- 850W",
+    "tier": "A"
+  },
+  {
+    "brand": "ASUS",
+    "series": "ROG Strix Platinum",
+    "wattage": "850W",
+    "tier": "A"
+  },
+  {
+    "brand": "ASUS",
+    "series": "ROG Strix Platinum",
+    "wattage": "1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "ASUS",
+    "series": "ROG Strix Platinum",
+    "wattage": "1200W",
+    "tier": "B+"
+  },
+  {
+    "brand": "ASUS",
+    "series": "TUF Gold",
+    "wattage": "750 - 1200W",
+    "tier": "B"
+  },
+  {
+    "brand": "ASUS",
+    "series": "TUF Bronze",
+    "wattage": "450- 750W",
+    "tier": "B"
+  },
+  {
+    "brand": "AZZA",
+    "series": "PSAZ ARGB Bronze New",
+    "wattage": "550/ 650 / 750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "AZZA",
+    "series": "PSAZ ARGB Bronze New",
+    "wattage": "550/650/750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "AZZA",
+    "series": "PSAZ ARGB Bronze Old",
+    "wattage": "550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "AZZA",
+    "series": "PSAZ Bronze New",
+    "wattage": "550/650/ 750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "AZZA",
+    "series": "PSAZ Bronze New",
+    "wattage": "550/650/750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "AZZA",
+    "series": "PSAZ Bronze Old",
+    "wattage": "650W",
+    "tier": "E"
+  },
+  {
+    "brand": "AZZA",
+    "series": "PSAZ Gold",
+    "wattage": "750/850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "AZZA",
+    "series": "PSAZ Gold ATX 3.0",
+    "wattage": "750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "AZZA",
+    "series": "PSAZ Gold ATX 3.0",
+    "wattage": "850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "AZZA",
+    "series": "PSAZ Gold ATX 3.1",
+    "wattage": "1000W",
+    "tier": "B-"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Dark Power - 12",
+    "wattage": "750 / 850 / 1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Dark Power - 13",
+    "wattage": "750 / 850 / 1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Dark Power - 14",
+    "wattage": "850 / 1000 / 1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Dark Power Pro 11",
+    "wattage": "550/650/750W",
+    "tier": "A+"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Dark Power Pro 11",
+    "wattage": "850-1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Dark Power Pro 12",
+    "wattage": "1200/1500W",
+    "tier": "A+"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Dark Power Pro 13",
+    "wattage": "1300 / 1600W",
+    "tier": "A+"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Power Zone 2",
+    "wattage": "750 / 850 / 1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Pure Power 10",
+    "wattage": "400-700W",
+    "tier": "B-"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Pure Power 10 CM",
+    "wattage": "400-700W",
+    "tier": "B-"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Pure Power 11",
+    "wattage": "300/350W",
+    "tier": "D-"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Pure Power 11",
+    "wattage": "400-700W",
+    "tier": "B"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Pure Power 11 CM",
+    "wattage": "400-700W",
+    "tier": "B"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Pure Power 11 FM",
+    "wattage": "550/650/750W",
+    "tier": "B+"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Pure Power 11 FM",
+    "wattage": "850/1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Pure Power 12 M",
+    "wattage": "550 - 1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Pure Power 13 M",
+    "wattage": "550/650W",
+    "tier": "B+"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Pure Power 13 M",
+    "wattage": "750 / 850W",
+    "tier": "A"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Pure Power 13 M",
+    "wattage": "1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "SFX-L Power",
+    "wattage": "500 / 600W",
+    "tier": "B"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Straight Power 11 Gold",
+    "wattage": "450/550/650W",
+    "tier": "A"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Straight Power 11 Gold",
+    "wattage": "750- 1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Straight Power 11 Platinum",
+    "wattage": "550/650/750W",
+    "tier": "A"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "Straight Power 11 Platinum",
+    "wattage": "850 - 1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "System Power 9",
+    "wattage": "400-700W",
+    "tier": "C-"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "System Power 9 CM",
+    "wattage": "400-700W",
+    "tier": "C-"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "System Power 10 Bronze",
+    "wattage": "450-750W",
+    "tier": "E"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "System Power 10 Gold",
+    "wattage": "850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "System Power 10 U",
+    "wattage": "550-750W",
+    "tier": "E"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "System Power 11",
+    "wattage": "550 / 650W",
+    "tier": "C"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "System Power B9",
+    "wattage": "300/350W",
+    "tier": "E"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "System Power U9",
+    "wattage": "400/500/600W",
+    "tier": "C"
+  },
+  {
+    "brand": "be quiet!",
+    "series": "System Power U9",
+    "wattage": "700W",
+    "tier": "C"
+  },
+  {
+    "brand": "Bitfenix",
+    "series": "BFG Gold",
+    "wattage": "550/650W",
+    "tier": "B"
+  },
+  {
+    "brand": "Bitfenix",
+    "series": "BPA",
+    "wattage": "400/500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Bitfenix",
+    "series": "BPA U",
+    "wattage": "400/500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Bitfenix",
+    "series": "Formula Bronze",
+    "wattage": "400-700W",
+    "tier": "C"
+  },
+  {
+    "brand": "Bitfenix",
+    "series": "Formula Gold",
+    "wattage": "450-750W",
+    "tier": "A"
+  },
+  {
+    "brand": "Bitfenix",
+    "series": "Whisper M",
+    "wattage": "450-850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "A-80 CTG-80P",
+    "wattage": "450/500W",
+    "tier": "E"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "A-80 CTG-80P",
+    "wattage": "550W",
+    "tier": "E"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "A-80 CTG-80P",
+    "wattage": "650W",
+    "tier": "E"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "A-80 CTG-C",
+    "wattage": "550/650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "A-90 GDP-C",
+    "wattage": "550/650/750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Atmos CPX-FC",
+    "wattage": "750/850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Compact CSN-C",
+    "wattage": "450/550/ 650W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Core BBS-S",
+    "wattage": "500/600/ 700W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Eco GPE-S",
+    "wattage": "400-700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Element ELP-S",
+    "wattage": "350-700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Eon ZPU-S",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "I-Arena GPA-S",
+    "wattage": "550-700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "I-Arena GPA-S8",
+    "wattage": "350-500W",
+    "tier": "F"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "I-Arena GPB-S",
+    "wattage": "350-500W",
+    "tier": "F"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "I-Arena GPC-S",
+    "wattage": "400-700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Navitas GPM-C",
+    "wattage": "650/750/850W",
+    "tier": "E"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Navitas GPM-C",
+    "wattage": "1250W",
+    "tier": "E"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Photon Bronze CTG-C-RGB",
+    "wattage": "650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Photon Gold GDP-C-RGB",
+    "wattage": "650/750W",
+    "tier": "F"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Polaris - PPS-FC",
+    "wattage": "550/650/ 750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Polaris - PPS-FC",
+    "wattage": "850 /1050/1250W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Polaris ATX 3.0 PPS-FC-A3",
+    "wattage": "850/1050/1250W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Proton BDF-S",
+    "wattage": "400 /500/ 600W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Proton BDF-C",
+    "wattage": "650/ 750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Proton BDF-C",
+    "wattage": "850 /1000W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "PowerPlay Gold",
+    "wattage": "550/650/750W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "PowerPlay Platinum",
+    "wattage": "850/1050/1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "PowerUp GPX-FC",
+    "wattage": "750/850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "PowerUp GPX-FC",
+    "wattage": "550/650W",
+    "tier": "B"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Silicon",
+    "wattage": "650/750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Silicon",
+    "wattage": "850/1000W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Smart GPS-A8",
+    "wattage": "350-500W",
+    "tier": "E"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Smart GPS-A8",
+    "wattage": "550-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Smart GPS-C",
+    "wattage": "450-750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Smart BFX-BS",
+    "wattage": "350/450W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Smart SFX-BS",
+    "wattage": "350/450W",
+    "tier": "E"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Smart SFX-GDC",
+    "wattage": "500W",
+    "tier": "C"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "SteelPower BDK-FC",
+    "wattage": "550/650/750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Task TPS-S",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Value APB-B8",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Vega Non-Modular PPG-S",
+    "wattage": "750/850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Vega Modular PPG-C",
+    "wattage": "750/850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Vita - BPX-S",
+    "wattage": "750/850W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Chieftec/Chieftronic",
+    "series": "Vita SM3 BPX-C",
+    "wattage": "750/850W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "B V2",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "Elite V3",
+    "wattage": "300-600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "Elite V4",
+    "wattage": "300-600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "Elite NEX 230V",
+    "wattage": "400-800W",
+    "tier": "E"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "G Gold",
+    "wattage": "500-800W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "G Gold V2",
+    "wattage": "550/650/750W",
+    "tier": "B"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "GX Bronze",
+    "wattage": "450-650W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "GX Gold Non-Mod.",
+    "wattage": "550-850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "GX Gold Full Mod.",
+    "wattage": "550-850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "GX Gold Full Mod.",
+    "wattage": "1050/1200W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "GX Gold V2 Full Mod.",
+    "wattage": "1050/1250W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "GX Gold ATX 3.0",
+    "wattage": "1050/1250W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "GX Gold ATX 3.1",
+    "wattage": "750-1250W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "GX CM Storm Edition",
+    "wattage": "650/750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "GX II Gold ATX 3.0",
+    "wattage": "650-1250W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "GX III Gold ATX 3.1",
+    "wattage": "650/750/850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "GX III Gold ATX 3.1",
+    "wattage": "1050/1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "Hyper White",
+    "wattage": "400/500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "M2000 Platinum",
+    "wattage": "2000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "Masterwatt Bronze",
+    "wattage": "450-750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "Masterwatt TUF Gaming",
+    "wattage": "450-750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "Masterwatt Lite / Lite Full Modular",
+    "wattage": "400-700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "Masterwatt Maker",
+    "wattage": "1200/1500W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "Masterwatt Maker MiJ",
+    "wattage": "1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE White",
+    "wattage": "400-550W",
+    "tier": "D-"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE White 230V",
+    "wattage": "400-550W",
+    "tier": "D-"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE Bronze",
+    "wattage": "450/500/550W",
+    "tier": "D-"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE Bronze",
+    "wattage": "600/650W",
+    "tier": "C"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE Bronze 230V",
+    "wattage": "450/500/550W",
+    "tier": "D-"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE Bronze 230V",
+    "wattage": "600/650W",
+    "tier": "C"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE Gold Non-Mod.",
+    "wattage": "550-850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE Gold Modular",
+    "wattage": "550-850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V2 White",
+    "wattage": "450-750W",
+    "tier": "B"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V2 White 230V",
+    "wattage": "450-750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V2 Bronze",
+    "wattage": "450- 750W",
+    "tier": "B"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V2 Bronze 230V",
+    "wattage": "450- 750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V2 Gold Non Mod.",
+    "wattage": "550- 850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V2 Gold Full Mod.",
+    "wattage": "550-850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V2 Gold Full Mod.",
+    "wattage": "1050 /1250W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V2 Gold ATX 3.0",
+    "wattage": "550-850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V2 Gold ATX 3.0",
+    "wattage": "1050 / 1250W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V2 Gold ATX 3.1",
+    "wattage": "550-850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V2 Gold ATX 3.1",
+    "wattage": "1050/1250W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V3 ATX 3.1 Bronze 230V",
+    "wattage": "550/650W",
+    "tier": "C"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V3 ATX 3.1 Bronze 230V",
+    "wattage": "750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V3 ATX 3.1 Bronze",
+    "wattage": "550/650/750W",
+    "tier": "B"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V3 ATX 3.1 Gold Modular",
+    "wattage": "750 / 850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V3 ATX 3.1 Gold Non-Mod.",
+    "wattage": "550/650W",
+    "tier": "B"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "MWE V3 ATX 3.1 Gold Non-Mod.",
+    "wattage": "750/850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "Reactor Gold",
+    "wattage": "750/850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "V-Series \"Vanguard\" Gold V1",
+    "wattage": "550/650W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "V-Series \"Vanguard\" Gold V1",
+    "wattage": "750/850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "V-Series \"Vanguard\" Gold V2",
+    "wattage": "550-850W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "V-Series \"Vanguard\" Gold i Multi",
+    "wattage": "550-850W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "V-Series \"Vanguard\" Gold SFX",
+    "wattage": "650/750/850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "V-Series \"Vanguard\" Gold SFX ATX 3.0",
+    "wattage": "750/ 850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "V-Series \"Vanguard\" Gold SFX ATX 3.1",
+    "wattage": "750/850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "V-Series \"Vanguard\" Platinum Standard",
+    "wattage": "850-1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "V-Series \"Vanguard\" Platinum 30th Anniversary",
+    "wattage": "1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "V-Series \"Vanguard\" Platinum V2",
+    "wattage": "1100/1300/ 1600W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "V-Series \"Vanguard\" Platinum SFX ATX 3.0",
+    "wattage": "1100W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "V-Series \"Vanguard\" Platinum SFX ATX 3.0",
+    "wattage": "1300W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "X Silent Edge Plat. North America",
+    "wattage": "850W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "X Silent Edge Plat. Global",
+    "wattage": "1100W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "X Silent MAX Platinum",
+    "wattage": "1300W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "XG Platinum",
+    "wattage": "650/750/850W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Cooler Master",
+    "series": "XG Plus Platinum",
+    "wattage": "650 / 750 / 850W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "AX",
+    "wattage": "850 / 1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "AX-i",
+    "wattage": "1600W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CS",
+    "wattage": "750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CV",
+    "wattage": "450/550W",
+    "tier": "D"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CV",
+    "wattage": "650/750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CX-m 2013",
+    "wattage": "430/500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CX-m 2013",
+    "wattage": "750/850W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CX-m 2017",
+    "wattage": "450/550/650W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CX-m 2017",
+    "wattage": "750/850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CX-m 2021",
+    "wattage": "550 / 650 / 750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CX-m 2025",
+    "wattage": "650 / 750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CX 2013",
+    "wattage": "430/500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CX 2013",
+    "wattage": "750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CX 2016",
+    "wattage": "450-750W",
+    "tier": "B"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CX 2016",
+    "wattage": "450-750W",
+    "tier": "B"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CX 2023",
+    "wattage": "550W",
+    "tier": "D"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CX 2023",
+    "wattage": "650 / 750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Corsair",
+    "series": "CX-F RGB",
+    "wattage": "550/650/750W",
+    "tier": "B"
+  },
+  {
+    "brand": "Corsair",
+    "series": "HX 2017",
+    "wattage": "750 / 850 /1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "HX 2017",
+    "wattage": "1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "HX-i 2013",
+    "wattage": "750/850/1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Corsair",
+    "series": "HX-i 2013",
+    "wattage": "1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Corsair",
+    "series": "HX-i 2022",
+    "wattage": "1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "HX-i 2022",
+    "wattage": "1500W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "HX-i 2023",
+    "wattage": "1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "HX-i 2023",
+    "wattage": "1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "HX-i 2023",
+    "wattage": "1500W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "HX-i 2025",
+    "wattage": "1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Corsair",
+    "series": "HX-i 2025",
+    "wattage": "1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "HX-i 2025",
+    "wattage": "1500W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-e 2022",
+    "wattage": "750/850/1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-e 2023",
+    "wattage": "750 - 1200W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-e 2025",
+    "wattage": "650 - 1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-i",
+    "wattage": "650W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-i",
+    "wattage": "750/850/1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-i Special Edition",
+    "wattage": "1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-x 2015 Black",
+    "wattage": "550/650W",
+    "tier": "A"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-x 2015 Black",
+    "wattage": "750/850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-x 2015 Black",
+    "wattage": "1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-x 2015 White",
+    "wattage": "750/850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-x 2018 / v2 Black",
+    "wattage": "550 - 850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-x 2018 / v2 White",
+    "wattage": "750/850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-x 2021",
+    "wattage": "650/ 750 / 850W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-x 2021",
+    "wattage": "1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-x 2024",
+    "wattage": "750 / 850 / 1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-x Shift 2023",
+    "wattage": "750 - 1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM-x Shift 2025",
+    "wattage": "750/ 850 / 1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM 2019",
+    "wattage": "650/ 750 /850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM 2021 Black",
+    "wattage": "650 /750/850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM 2021 White",
+    "wattage": "750 / 850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "RM 2023",
+    "wattage": "650W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "SF Gold",
+    "wattage": "450/600W",
+    "tier": "A"
+  },
+  {
+    "brand": "Corsair",
+    "series": "SF Platinum 2019",
+    "wattage": "450/600/ 750W",
+    "tier": "A"
+  },
+  {
+    "brand": "Corsair",
+    "series": "SF Platinum 2024",
+    "wattage": "750 / 850 / 1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "SF-L",
+    "wattage": "850 / 1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Corsair",
+    "series": "TX",
+    "wattage": "750-1200W",
+    "tier": "B"
+  },
+  {
+    "brand": "Corsair",
+    "series": "TX-m 2017",
+    "wattage": "550-850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "TX-m 2021",
+    "wattage": "550/650/750W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Corsair",
+    "series": "Vengeance Bronze",
+    "wattage": "400/500W",
+    "tier": "C"
+  },
+  {
+    "brand": "Corsair",
+    "series": "Vengeance Bronze",
+    "wattage": "550/650W",
+    "tier": "C"
+  },
+  {
+    "brand": "Corsair",
+    "series": "Vengeance Silver",
+    "wattage": "650/750W",
+    "tier": "B"
+  },
+  {
+    "brand": "Corsair",
+    "series": "VS Gray Label",
+    "wattage": "400/500/600W",
+    "tier": "D"
+  },
+  {
+    "brand": "Corsair",
+    "series": "VS Gray Label",
+    "wattage": "450/550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "Corsair",
+    "series": "VS Black Label",
+    "wattage": "500/600W",
+    "tier": "D"
+  },
+  {
+    "brand": "Cougar",
+    "series": "Atlas 2023",
+    "wattage": "600/650/750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Cougar",
+    "series": "BXM",
+    "wattage": "700/850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Cougar",
+    "series": "GEX",
+    "wattage": "650/750/ 850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Cougar",
+    "series": "GEX",
+    "wattage": "1050W",
+    "tier": "B"
+  },
+  {
+    "brand": "Cougar",
+    "series": "GEX X2",
+    "wattage": "850/ 1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cougar",
+    "series": "GX-F",
+    "wattage": "550/650/750W",
+    "tier": "A"
+  },
+  {
+    "brand": "Cougar",
+    "series": "GX-F Aurum",
+    "wattage": "550/650/750W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Cougar",
+    "series": "GX-S",
+    "wattage": "450-750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Cougar",
+    "series": "LX",
+    "wattage": "600W",
+    "tier": "C"
+  },
+  {
+    "brand": "Cougar",
+    "series": "LLC",
+    "wattage": "750W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Cougar",
+    "series": "Polar",
+    "wattage": "1050/1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Cougar",
+    "series": "Polar X2",
+    "wattage": "1050 / 1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Cougar",
+    "series": "STE",
+    "wattage": "400/500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Cougar",
+    "series": "STX",
+    "wattage": "350-750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Cougar",
+    "series": "VTC",
+    "wattage": "400/500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Cougar",
+    "series": "VTE",
+    "wattage": "400/500/600W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Cougar",
+    "series": "VTE X2",
+    "wattage": "600-750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Cougar",
+    "series": "VTE X2 ver.2",
+    "wattage": "600-750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Cougar",
+    "series": "VTK",
+    "wattage": "550W",
+    "tier": "E"
+  },
+  {
+    "brand": "Cougar",
+    "series": "VTX",
+    "wattage": "400-700/450W",
+    "tier": "E"
+  },
+  {
+    "brand": "Cougar",
+    "series": "XTC",
+    "wattage": "400-650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "DarkFlash",
+    "series": "GS Bronze",
+    "wattage": "550/650/750W",
+    "tier": "C"
+  },
+  {
+    "brand": "DarkFlash",
+    "series": "Perfectmost",
+    "wattage": "650/ 750 / 850W",
+    "tier": "B"
+  },
+  {
+    "brand": "DarkFlash",
+    "series": "Perfectmost",
+    "wattage": "1050W / 1250W",
+    "tier": "A-"
+  },
+  {
+    "brand": "DarkFlash",
+    "series": "Upmost",
+    "wattage": "1250W",
+    "tier": "B"
+  },
+  {
+    "brand": "DarkFlash",
+    "series": "Warcraft",
+    "wattage": "600/700/800W",
+    "tier": "E"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "Aurora DA",
+    "wattage": "500/600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "Aurora DA-M",
+    "wattage": "500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "Explorer DE",
+    "wattage": "530W",
+    "tier": "F"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "Nova DN",
+    "wattage": "450-650W",
+    "tier": "E"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "Gamer Storm DQ-M",
+    "wattage": "650/750/850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "Gamer Storm DQ-M V2L",
+    "wattage": "650W",
+    "tier": "B"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "Gamer Storm DQ-M V2L",
+    "wattage": "750W",
+    "tier": "B"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "Gamer Storm DQ-M V2L",
+    "wattage": "850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PF",
+    "wattage": "350-650W",
+    "tier": "E"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PF",
+    "wattage": "700/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PK-D",
+    "wattage": "450-800W",
+    "tier": "C"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PL-D",
+    "wattage": "550W",
+    "tier": "C-"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PL-D",
+    "wattage": "650W",
+    "tier": "C-"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PL-D",
+    "wattage": "750/800W",
+    "tier": "C"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PM-D",
+    "wattage": "500-850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PN-D",
+    "wattage": "550-850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PN-M",
+    "wattage": "650-850W",
+    "tier": "B"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PN-M",
+    "wattage": "1000/1200W",
+    "tier": "B-"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PQ-G",
+    "wattage": "750/850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PQ-G",
+    "wattage": "1000/1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PQ-M",
+    "wattage": "650-1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PQ-M V2",
+    "wattage": "750/850/1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PX G",
+    "wattage": "850/1000/1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "DeepCool (GamerStorm)",
+    "series": "PX P",
+    "wattage": "1000/1300W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Endorfy",
+    "series": "Elementum E2",
+    "wattage": "350/450W",
+    "tier": "E"
+  },
+  {
+    "brand": "Endorfy",
+    "series": "Elementum E2 Retail",
+    "wattage": "550W",
+    "tier": "E"
+  },
+  {
+    "brand": "Endorfy",
+    "series": "Supremo Gold L2",
+    "wattage": "550/650W",
+    "tier": "F"
+  },
+  {
+    "brand": "Endorfy",
+    "series": "Supremo Gold M2",
+    "wattage": "550W",
+    "tier": "E"
+  },
+  {
+    "brand": "Endorfy",
+    "series": "Supremo Gold FM2",
+    "wattage": "650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Endorfy",
+    "series": "Supremo Gold FM5",
+    "wattage": "650 -1000W",
+    "tier": "C"
+  },
+  {
+    "brand": "Endorfy",
+    "series": "Supremo Gold FM6",
+    "wattage": "850/1000W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Endorfy",
+    "series": "Vero L6",
+    "wattage": "550/650/750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Enermax",
+    "series": "CyberBron",
+    "wattage": "500/600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Enermax",
+    "series": "CyberBron III",
+    "wattage": "750/850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Digifanless",
+    "wattage": "550W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Enermax",
+    "series": "MarbleBron",
+    "wattage": "550-850W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Enermax",
+    "series": "MaxPro II",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Enermax",
+    "series": "MaxTytan",
+    "wattage": "750/800W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Enermax",
+    "series": "MaxTytan",
+    "wattage": "1050/1250W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Enermax",
+    "series": "PlatiGemini",
+    "wattage": "1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Platimax D.F.",
+    "wattage": "500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Platimax D.F.",
+    "wattage": "750-1200W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Platimax D.F. II",
+    "wattage": "1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Enermax",
+    "series": "RevoBron",
+    "wattage": "500/600/700W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Enermax",
+    "series": "RevoBron ED2",
+    "wattage": "500/600/700W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Revolution SFX",
+    "wattage": "650W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Revolution ATX 3.0",
+    "wattage": "1000/1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Revolution X'T",
+    "wattage": "430-730W",
+    "tier": "E"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Revolution X'T II",
+    "wattage": "450-750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Revolution D.F. 12",
+    "wattage": "750 / 850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Revolution D.F. 2",
+    "wattage": "850 / 1050 / 1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Revolution D.F. X",
+    "wattage": "850 / 1050 / 1200W",
+    "tier": "B"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Revolution D.F. X",
+    "wattage": "1350 / 1650W",
+    "tier": "B"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Revolution D.F.",
+    "wattage": "650W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Enermax",
+    "series": "Revolution D.F.",
+    "wattage": "750 / 850W",
+    "tier": "A"
+  },
+  {
+    "brand": "EVGA",
+    "series": "B Series B2",
+    "wattage": "750/850W",
+    "tier": "C"
+  },
+  {
+    "brand": "EVGA",
+    "series": "B Series B3",
+    "wattage": "450/550/650W",
+    "tier": "C-"
+  },
+  {
+    "brand": "EVGA",
+    "series": "B Series B3",
+    "wattage": "750/850W",
+    "tier": "C-"
+  },
+  {
+    "brand": "EVGA",
+    "series": "B Series B5",
+    "wattage": "550 - 850W",
+    "tier": "B"
+  },
+  {
+    "brand": "EVGA",
+    "series": "B Series BR",
+    "wattage": "450- 700W",
+    "tier": "C-"
+  },
+  {
+    "brand": "EVGA",
+    "series": "B Series BT",
+    "wattage": "450W",
+    "tier": "D"
+  },
+  {
+    "brand": "EVGA",
+    "series": "B Series BP",
+    "wattage": "460-710W",
+    "tier": "C"
+  },
+  {
+    "brand": "EVGA",
+    "series": "B Series BQ",
+    "wattage": "500/ 600 / 700W",
+    "tier": "C"
+  },
+  {
+    "brand": "EVGA",
+    "series": "B Series BQ",
+    "wattage": "650 /750W",
+    "tier": "C"
+  },
+  {
+    "brand": "EVGA",
+    "series": "B Series BQ",
+    "wattage": "850W",
+    "tier": "E"
+  },
+  {
+    "brand": "EVGA",
+    "series": "B Series BV",
+    "wattage": "450/500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "EVGA",
+    "series": "G Series GE",
+    "wattage": "500-800W",
+    "tier": "B+"
+  },
+  {
+    "brand": "EVGA",
+    "series": "G Series GD 2017 - V1",
+    "wattage": "550/650W",
+    "tier": "B"
+  },
+  {
+    "brand": "EVGA",
+    "series": "G Series GD 2019 - R1/V1",
+    "wattage": "500/ 600 / 700W",
+    "tier": "C"
+  },
+  {
+    "brand": "EVGA",
+    "series": "G Series GD 2019 - B1",
+    "wattage": "500/600/700W",
+    "tier": "B-"
+  },
+  {
+    "brand": "EVGA",
+    "series": "G Series GD 2022 - R3",
+    "wattage": "500/600/700W",
+    "tier": "B+"
+  },
+  {
+    "brand": "EVGA",
+    "series": "G Series GD 2022 - BC",
+    "wattage": "500/600/700W",
+    "tier": "B+"
+  },
+  {
+    "brand": "EVGA",
+    "series": "N1",
+    "wattage": "400W",
+    "tier": "F"
+  },
+  {
+    "brand": "EVGA",
+    "series": "N1",
+    "wattage": "550/650/750W",
+    "tier": "F"
+  },
+  {
+    "brand": "EVGA",
+    "series": "M1",
+    "wattage": "1300W",
+    "tier": "C"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA FTW",
+    "wattage": "850 / 1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA G+",
+    "wattage": "650/750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA G+",
+    "wattage": "850/1000W",
+    "tier": "B"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA GA",
+    "wattage": "550- 850W",
+    "tier": "B"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA GQ",
+    "wattage": "600/700W",
+    "tier": "C+"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA GQ",
+    "wattage": "650/750W",
+    "tier": "C"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA GQ",
+    "wattage": "850/1000W",
+    "tier": "B"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA GM",
+    "wattage": "450 / 550 / 650W",
+    "tier": "B"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA GM",
+    "wattage": "750/ 850W",
+    "tier": "B"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA G2",
+    "wattage": "550-850W",
+    "tier": "A"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA G2",
+    "wattage": "1000/1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA G2",
+    "wattage": "1600W",
+    "tier": "A"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA G2L",
+    "wattage": "750/850W",
+    "tier": "A"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA G3",
+    "wattage": "550 - 1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA G5",
+    "wattage": "650 - 1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA G6",
+    "wattage": "850 / 1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA G6",
+    "wattage": "650 /750W",
+    "tier": "A"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA G7",
+    "wattage": "650 - 1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA GT",
+    "wattage": "550 -1000W",
+    "tier": "B-"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA P+",
+    "wattage": "1300 / 1600W",
+    "tier": "B+"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA P2",
+    "wattage": "650 / 750 / 850W",
+    "tier": "A"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA P2",
+    "wattage": "1000 / 1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA P2",
+    "wattage": "1600W",
+    "tier": "A"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA P5",
+    "wattage": "650 - 1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA P6",
+    "wattage": "850 / 1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA P6",
+    "wattage": "650 /750W",
+    "tier": "A"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA PQ",
+    "wattage": "750/850/1000W",
+    "tier": "B"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA T2",
+    "wattage": "750/ 850 / 1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "EVGA",
+    "series": "SuperNOVA T2",
+    "wattage": "1600W",
+    "tier": "A+"
+  },
+  {
+    "brand": "EVGA",
+    "series": "W Series W1",
+    "wattage": "500/600/700W",
+    "tier": "F"
+  },
+  {
+    "brand": "EVGA",
+    "series": "W Series W2",
+    "wattage": "500/600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "EVGA",
+    "series": "W Series W3",
+    "wattage": "500/600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Fractal Design",
+    "series": "Anode SFX",
+    "wattage": "450W",
+    "tier": "C"
+  },
+  {
+    "brand": "Fractal Design",
+    "series": "Anode Bronze",
+    "wattage": "550/ 650 / 750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Fractal Design",
+    "series": "ION Platinum Plus",
+    "wattage": "560-860W",
+    "tier": "A"
+  },
+  {
+    "brand": "Fractal Design",
+    "series": "ION Platinum Plus 2",
+    "wattage": "560- 860W",
+    "tier": "A"
+  },
+  {
+    "brand": "Fractal Design",
+    "series": "ION Gold",
+    "wattage": "550- 850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Fractal Design",
+    "series": "ION SFX",
+    "wattage": "500/650W",
+    "tier": "A"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Aurum Platinum",
+    "wattage": "850/1000/1200W",
+    "tier": "B+"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Aurum S",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Dagger",
+    "wattage": "500/600W",
+    "tier": "B-"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Dagger Pro",
+    "wattage": "550-850W",
+    "tier": "F"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hexa Plus",
+    "wattage": "400/500W",
+    "tier": "F"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro G",
+    "wattage": "650/750/850W",
+    "tier": "B"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro G Pro",
+    "wattage": "850/1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro G Pro",
+    "wattage": "650/750W",
+    "tier": "A-"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro G Pro ATX 3.0",
+    "wattage": "850 / 1000 / 1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro GD",
+    "wattage": "450/550/650W",
+    "tier": "C"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro GE",
+    "wattage": "450-850W",
+    "tier": "C"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro GT Pro",
+    "wattage": "850/1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro GT Pro ATX 3.0",
+    "wattage": "850/1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro K",
+    "wattage": "500/600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro M PRO",
+    "wattage": "500-800W",
+    "tier": "C"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro MX",
+    "wattage": "550/650/750W",
+    "tier": "C"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro PRO",
+    "wattage": "500-800W",
+    "tier": "C"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro PTM",
+    "wattage": "550/650/750W",
+    "tier": "A-"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro PTM Pro",
+    "wattage": "850/1000/1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro PTM Pro ATX 3.0",
+    "wattage": "850/1000/ 1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro PTM Pro ATX 3.1",
+    "wattage": "1350W",
+    "tier": "A"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro PTM Pro ATX 3.1",
+    "wattage": "1650W",
+    "tier": "A+"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro PTM X Pro",
+    "wattage": "850/ 1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro PTM X Pro ATX 3.0",
+    "wattage": "850 - 1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro Ti Pro",
+    "wattage": "850 / 1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hydro X",
+    "wattage": "450/550/650W",
+    "tier": "B"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "HV Pro",
+    "wattage": "550/650W",
+    "tier": "C-"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hyper K",
+    "wattage": "500/600/700W",
+    "tier": "F"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hyper M85+",
+    "wattage": "550/ 650W",
+    "tier": "C"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Hyper S",
+    "wattage": "500/600/700W",
+    "tier": "F"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Mega GM",
+    "wattage": "850/1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Mega Ti",
+    "wattage": "1350/1650W",
+    "tier": "A"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Raider II",
+    "wattage": "450/550W",
+    "tier": "C-"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Raider II",
+    "wattage": "650/750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "SFX Pro",
+    "wattage": "350/450W",
+    "tier": "C"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Vita GM",
+    "wattage": "650W",
+    "tier": "B-"
+  },
+  {
+    "brand": "FSP (Fortron/Sparkle)",
+    "series": "Vita GM",
+    "wattage": "650 - 1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "G.Skill",
+    "series": "MB Bronze",
+    "wattage": "650W",
+    "tier": "E"
+  },
+  {
+    "brand": "G.Skill",
+    "series": "MB Gold",
+    "wattage": "750/850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Galax",
+    "series": "Omega GLS",
+    "wattage": "500/650W",
+    "tier": "C"
+  },
+  {
+    "brand": "Galax",
+    "series": "Hall of Fame",
+    "wattage": "850/1000/1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Astrape E1",
+    "wattage": "550W",
+    "tier": "E"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Astrape M1 White",
+    "wattage": "550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Astrape M1 Bronze",
+    "wattage": "650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Astrape P1",
+    "wattage": "650/750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Cyclops X1",
+    "wattage": "1200W",
+    "tier": "B"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Helios E1",
+    "wattage": "500/600W",
+    "tier": "F"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Helios M1-B",
+    "wattage": "450/550W",
+    "tier": "E"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Helios M1-B",
+    "wattage": "650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Helios M1-B",
+    "wattage": "850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Helios P1-G",
+    "wattage": "600/650W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Helios P1-G",
+    "wattage": "600/650/750W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Helios P2-G",
+    "wattage": "750W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Helios P2-G",
+    "wattage": "850/ 1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Helios P2-G",
+    "wattage": "1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Helios M2",
+    "wattage": "550/650W",
+    "tier": "C"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Helios M2",
+    "wattage": "750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Helios M2",
+    "wattage": "850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Kratos E1",
+    "wattage": "500/600W",
+    "tier": "F"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Kratos M1",
+    "wattage": "550-750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Kratos P1A-G",
+    "wattage": "650/750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Gamdias",
+    "series": "Kratos P1-G",
+    "wattage": "650/750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Gamemax",
+    "series": "All PSUs",
+    "wattage": "All PSUs",
+    "tier": "E"
+  },
+  {
+    "brand": "Gamemax",
+    "series": "All PSUs",
+    "wattage": "All PSUs",
+    "tier": "E"
+  },
+  {
+    "brand": "Gamemax",
+    "series": "All PSUs",
+    "wattage": "All PSUs",
+    "tier": "E"
+  },
+  {
+    "brand": "Gamemax",
+    "series": "All PSUs",
+    "wattage": "All PSUs",
+    "tier": "E"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "Aorus Elite AE-PM PG5",
+    "wattage": "850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "Aorus Elite AE-PM PG5",
+    "wattage": "1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "Aorus Elite AE-PM PG5 ICE",
+    "wattage": "850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "Aorus Elite AE-PM PG5 ICE",
+    "wattage": "1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "Aorus P-W AP-GM",
+    "wattage": "750/850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "BH",
+    "wattage": "700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "P-B",
+    "wattage": "450/550W",
+    "tier": "E"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "P-B",
+    "wattage": "650W",
+    "tier": "C"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "PB",
+    "wattage": "500W",
+    "tier": "E"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "P-G",
+    "wattage": "650W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "GH",
+    "wattage": "750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "P-GM Rev. 1",
+    "wattage": "750/850W",
+    "tier": "F"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "P-GM Rev. 2",
+    "wattage": "750/850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "PW",
+    "wattage": "400W",
+    "tier": "E"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "Ultra Durable UD-GM",
+    "wattage": "750 / 850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Gigabyte",
+    "series": "Ultra Durable UD-GM PG5",
+    "wattage": "1000W",
+    "tier": "C+"
+  },
+  {
+    "brand": "High Power",
+    "series": "Astro Lite",
+    "wattage": "650/750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "High Power",
+    "series": "ECO II Bronze",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "High Power",
+    "series": "ECO II White",
+    "wattage": "450W",
+    "tier": "E"
+  },
+  {
+    "brand": "High Power",
+    "series": "Element Bronze II",
+    "wattage": "600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "High Power",
+    "series": "Element HPQ Bronze",
+    "wattage": "500W",
+    "tier": "E"
+  },
+  {
+    "brand": "High Power",
+    "series": "Element HPQ ST",
+    "wattage": "500W",
+    "tier": "E"
+  },
+  {
+    "brand": "High Power",
+    "series": "Element Smart",
+    "wattage": "650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "High Power",
+    "series": "OEM Super Gold ATX 3.0",
+    "wattage": "750/850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "High Power",
+    "series": "OEM Super Gold",
+    "wattage": "600 - 850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "High Power",
+    "series": "OEM Super Bronze",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "High Power",
+    "series": "OEM White Label",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "High Power",
+    "series": "Performance FS ATX 3.1",
+    "wattage": "850/1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "High Power",
+    "series": "Performance GD",
+    "wattage": "600-800W",
+    "tier": "B+"
+  },
+  {
+    "brand": "High Power",
+    "series": "Simplicity HPG",
+    "wattage": "600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "High Power",
+    "series": "Simplicity HPG - Red LED",
+    "wattage": "600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "High Power",
+    "series": "Super GD+",
+    "wattage": "750/850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "High Power",
+    "series": "Super GD+",
+    "wattage": "1050W",
+    "tier": "B+"
+  },
+  {
+    "brand": "High Power",
+    "series": "Super GD 3.0",
+    "wattage": "1000 / 1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "Huntkey",
+    "series": "GS New",
+    "wattage": "500-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Huntkey",
+    "series": "GS Old",
+    "wattage": "450/550W",
+    "tier": "F"
+  },
+  {
+    "brand": "Huntkey",
+    "series": "GX Pro",
+    "wattage": "650-950W",
+    "tier": "F"
+  },
+  {
+    "brand": "Huntkey",
+    "series": "MVP Gold",
+    "wattage": "850/950/1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Huntkey",
+    "series": "MVP K Gold Old",
+    "wattage": "650-1200W",
+    "tier": "F"
+  },
+  {
+    "brand": "Huntkey",
+    "series": "MVP Platinum",
+    "wattage": "750/850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Huntkey",
+    "series": "MVP Platinum X",
+    "wattage": "1200W",
+    "tier": "F"
+  },
+  {
+    "brand": "Huntkey",
+    "series": "WD -K",
+    "wattage": "600-900W",
+    "tier": "C-"
+  },
+  {
+    "brand": "InWin",
+    "series": "A-series",
+    "wattage": "450/550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "InWin",
+    "series": "A1 Plus",
+    "wattage": "650W",
+    "tier": "C"
+  },
+  {
+    "brand": "InWin",
+    "series": "C Platinum",
+    "wattage": "750/900W",
+    "tier": "C"
+  },
+  {
+    "brand": "InWin",
+    "series": "Force F1",
+    "wattage": "500/600W",
+    "tier": "C"
+  },
+  {
+    "brand": "InWin",
+    "series": "PB Gold",
+    "wattage": "750/850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "InWin",
+    "series": "PF Gold",
+    "wattage": "550/650/750W",
+    "tier": "B+"
+  },
+  {
+    "brand": "InWin",
+    "series": "P Gold",
+    "wattage": "650 /750/ 850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "InWin",
+    "series": "P Gold",
+    "wattage": "1050/1250W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Kolink",
+    "series": "Classic Power",
+    "wattage": "400-700W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Kolink",
+    "series": "Core",
+    "wattage": "300/400/500W",
+    "tier": "F"
+  },
+  {
+    "brand": "Kolink",
+    "series": "Core",
+    "wattage": "600-1000W",
+    "tier": "F"
+  },
+  {
+    "brand": "Kolink",
+    "series": "Continuum V1",
+    "wattage": "850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Kolink",
+    "series": "Continuum V1",
+    "wattage": "1050/1200W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Kolink",
+    "series": "Continuum V1",
+    "wattage": "1500W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Kolink",
+    "series": "Enclave",
+    "wattage": "500/600/700W",
+    "tier": "B-"
+  },
+  {
+    "brand": "LEPA",
+    "series": "G-MA",
+    "wattage": "1600W",
+    "tier": "B"
+  },
+  {
+    "brand": "Lian Li",
+    "series": "PE",
+    "wattage": "550W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Lian Li",
+    "series": "PE",
+    "wattage": "750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Lian Li",
+    "series": "Edge EG Gold",
+    "wattage": "750 - 1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Lian Li",
+    "series": "Edge Platinum",
+    "wattage": "850 / 1000 / 1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "Lian Li",
+    "series": "SP",
+    "wattage": "750W",
+    "tier": "B"
+  },
+  {
+    "brand": "Lian Li",
+    "series": "SP",
+    "wattage": "850W",
+    "tier": "F"
+  },
+  {
+    "brand": "Lian Li",
+    "series": "SX-P",
+    "wattage": "850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Lian Li",
+    "series": "RS-G",
+    "wattage": "1000/1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Mars Gaming",
+    "series": "MPB-P",
+    "wattage": "1000W",
+    "tier": "F"
+  },
+  {
+    "brand": "Mars Gaming",
+    "series": "MP -B",
+    "wattage": "550-850W",
+    "tier": "E"
+  },
+  {
+    "brand": "Mars Gaming",
+    "series": "MP -BSI",
+    "wattage": "550-850W",
+    "tier": "E"
+  },
+  {
+    "brand": "Montech",
+    "series": "AP",
+    "wattage": "450-750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Montech",
+    "series": "AP",
+    "wattage": "450-750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Montech",
+    "series": "APX",
+    "wattage": "550 / 650 / 750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Montech",
+    "series": "Alpha X",
+    "wattage": "500-700W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Montech",
+    "series": "Beta",
+    "wattage": "550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "Montech",
+    "series": "Century Mini",
+    "wattage": "650/ 750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Montech",
+    "series": "Century Gold",
+    "wattage": "550/650W",
+    "tier": "B"
+  },
+  {
+    "brand": "Montech",
+    "series": "Century Gold",
+    "wattage": "850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Montech",
+    "series": "Century G5 Gold ATX 3.0",
+    "wattage": "750 / 850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Montech",
+    "series": "Century II Gold ATX 3.1",
+    "wattage": "850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Montech",
+    "series": "Century II Gold ATX 3.1",
+    "wattage": "1050 / 1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Montech",
+    "series": "Gamma",
+    "wattage": "550-750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Montech",
+    "series": "Gamma II",
+    "wattage": "550-750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Montech",
+    "series": "Titan Gold",
+    "wattage": "750- 1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Montech",
+    "series": "Titan Platinum",
+    "wattage": "750 - 1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "MSI",
+    "series": "MAG A-BE",
+    "wattage": "550/ 650 /750W",
+    "tier": "C"
+  },
+  {
+    "brand": "MSI",
+    "series": "MAG A-BN",
+    "wattage": "550 / 650W",
+    "tier": "C"
+  },
+  {
+    "brand": "MSI",
+    "series": "MAG A-BN",
+    "wattage": "550 / 650W",
+    "tier": "C"
+  },
+  {
+    "brand": "MSI",
+    "series": "MAG A-BN PCIE5",
+    "wattage": "750W",
+    "tier": "C"
+  },
+  {
+    "brand": "MSI",
+    "series": "MAG A-BNL 230V",
+    "wattage": "550/650W",
+    "tier": "F"
+  },
+  {
+    "brand": "MSI",
+    "series": "MAG A-BNL Full Range",
+    "wattage": "550/650W",
+    "tier": "C-"
+  },
+  {
+    "brand": "MSI",
+    "series": "MAG A-DN",
+    "wattage": "500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "MSI",
+    "series": "MAG A-GL",
+    "wattage": "650W",
+    "tier": "B"
+  },
+  {
+    "brand": "MSI",
+    "series": "MAG A-GL PCIE5",
+    "wattage": "750 / 850W",
+    "tier": "B"
+  },
+  {
+    "brand": "MSI",
+    "series": "MAG A-GL PCIE5",
+    "wattage": "1000 / 1250W",
+    "tier": "B+"
+  },
+  {
+    "brand": "MSI",
+    "series": "MAG A-GLS PCIE5",
+    "wattage": "650/750W",
+    "tier": "A-"
+  },
+  {
+    "brand": "MSI",
+    "series": "MAG A-GLS PCIE5",
+    "wattage": "850/1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "MSI",
+    "series": "MEG Ai-P PCIE5",
+    "wattage": "1000 / 1300W",
+    "tier": "A+"
+  },
+  {
+    "brand": "MSI",
+    "series": "MEG Ai-T PCIE5",
+    "wattage": "1600W",
+    "tier": "A"
+  },
+  {
+    "brand": "MSI",
+    "series": "MPG A-G",
+    "wattage": "1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "MSI",
+    "series": "MPG A-G PCIE5",
+    "wattage": "750 / 850 / 1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "MSI",
+    "series": "MPG A-GF",
+    "wattage": "650 / 750 / 850W",
+    "tier": "A"
+  },
+  {
+    "brand": "MSI",
+    "series": "MPG A-GS PCIE5",
+    "wattage": "850W",
+    "tier": "A"
+  },
+  {
+    "brand": "MSI",
+    "series": "MPG A-GS PCIE5",
+    "wattage": "1000 / 1250W",
+    "tier": "A"
+  },
+  {
+    "brand": "MSI",
+    "series": "PRO Series A-PL PCIE5",
+    "wattage": "850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "MSI",
+    "series": "PRO Series A-PL PCIE5",
+    "wattage": "1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "NZXT",
+    "series": "C Series Bronze V1",
+    "wattage": "550/650/750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "NZXT",
+    "series": "C Series Bronze V2",
+    "wattage": "750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "NZXT",
+    "series": "C Series Gold V1",
+    "wattage": "650/750/850W",
+    "tier": "A"
+  },
+  {
+    "brand": "NZXT",
+    "series": "C Series Gold V2",
+    "wattage": "650 - 1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "NZXT",
+    "series": "C Series Gold ATX 3.0",
+    "wattage": "1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "NZXT",
+    "series": "C Series Gold ATX 3.1",
+    "wattage": "850 / 1000 / 1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "NZXT",
+    "series": "C Series Gold Core ATX 3.1",
+    "wattage": "850 / 1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "NZXT",
+    "series": "C Series Platinum",
+    "wattage": "1500W",
+    "tier": "A+"
+  },
+  {
+    "brand": "NZXT",
+    "series": "E Series",
+    "wattage": "500/650/ 850W",
+    "tier": "A"
+  },
+  {
+    "brand": "PCCooler/ CPS",
+    "series": "KF",
+    "wattage": "450-750W",
+    "tier": "F"
+  },
+  {
+    "brand": "PCCooler/ CPS",
+    "series": "YN",
+    "wattage": "750/850/1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Ocypus",
+    "series": "Beta P-ND",
+    "wattage": "400-700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Phanteks",
+    "series": "AMP",
+    "wattage": "550-1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Phanteks",
+    "series": "AMP GH Gold",
+    "wattage": "750/850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Phanteks",
+    "series": "AMP GH Platinum",
+    "wattage": "1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Phanteks",
+    "series": "AMP GH Platinum",
+    "wattage": "1200W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Phanteks",
+    "series": "AMP V2",
+    "wattage": "1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Phanteks",
+    "series": "Revolt Pro",
+    "wattage": "850 / 1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Phanteks",
+    "series": "Revolt X",
+    "wattage": "1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Phanteks",
+    "series": "Revolt SFX Gold",
+    "wattage": "650/750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Phanteks",
+    "series": "Revolt SFX Platinum",
+    "wattage": "750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Phanteks",
+    "series": "Revolt SFX Platinum",
+    "wattage": "850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "PowerSpec (MicroCenter)",
+    "series": "PS1 GFM",
+    "wattage": "750/850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "PowerSpec (MicroCenter)",
+    "series": "PS BF",
+    "wattage": "550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "PowerSpec (MicroCenter)",
+    "series": "PS BSM",
+    "wattage": "650W",
+    "tier": "E"
+  },
+  {
+    "brand": "PowerSpec (MicroCenter)",
+    "series": "PS WF",
+    "wattage": "430/500/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "PowerSpec (MicroCenter)",
+    "series": "PS X GFM",
+    "wattage": "850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Raidmax",
+    "series": "Cobra ATX 3.1 Non-Modular",
+    "wattage": "650 / 750 /850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Raidmax",
+    "series": "Cobra ATX 3.1 Fully-Modular",
+    "wattage": "650/750/ 850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Raidmax",
+    "series": "Monster",
+    "wattage": "700W",
+    "tier": "B"
+  },
+  {
+    "brand": "Raidmax",
+    "series": "Vortex White",
+    "wattage": "600/800W",
+    "tier": "E"
+  },
+  {
+    "brand": "Raidmax",
+    "series": "Vortex Bronze",
+    "wattage": "500/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Raidmax",
+    "series": "XTB",
+    "wattage": "350-650W",
+    "tier": "F"
+  },
+  {
+    "brand": "Raijintek",
+    "series": "Ampere",
+    "wattage": "1200W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Raijintek",
+    "series": "Cratos",
+    "wattage": "850/1000/1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Raijintek",
+    "series": "Ermis",
+    "wattage": "450/550W",
+    "tier": "F"
+  },
+  {
+    "brand": "Razer",
+    "series": "Katana Chroma",
+    "wattage": "850 / 1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Redragon",
+    "series": "Master RGPS PRO ATX 3.1",
+    "wattage": "1000/1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Redragon",
+    "series": "Master RGPS ATX 3.1",
+    "wattage": "850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Redragon",
+    "series": "PSU 014",
+    "wattage": "650W",
+    "tier": "B"
+  },
+  {
+    "brand": "Redragon",
+    "series": "PSU 015",
+    "wattage": "750W",
+    "tier": "B"
+  },
+  {
+    "brand": "Redragon",
+    "series": "RGPS Bronze Full Modular",
+    "wattage": "600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Redragon",
+    "series": "RGPS Bronze Non-Modular",
+    "wattage": "500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Redragon",
+    "series": "RGPS Gold Full Modular",
+    "wattage": "650/750/850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Rosewill",
+    "series": "Quark",
+    "wattage": "850/1050/1200W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Rosewill",
+    "series": "Photon",
+    "wattage": "550-850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Rosewill",
+    "series": "Photon",
+    "wattage": "1050W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Rosewill",
+    "series": "Photon",
+    "wattage": "1200W",
+    "tier": "E"
+  },
+  {
+    "brand": "Rosewill",
+    "series": "S400A01-Z",
+    "wattage": "400W",
+    "tier": "F"
+  },
+  {
+    "brand": "Rosewill",
+    "series": "SMG",
+    "wattage": "650/750W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Rosewill",
+    "series": "SMG",
+    "wattage": "850/1050/1200W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Rosewill",
+    "series": "Tokamak",
+    "wattage": "1200/1500W",
+    "tier": "B"
+  },
+  {
+    "brand": "Rosewill",
+    "series": "VSB",
+    "wattage": "650 / 750 / 850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Rosewill",
+    "series": "VMG",
+    "wattage": "750 / 850W",
+    "tier": "B"
+  },
+  {
+    "brand": "SAMA",
+    "series": "Armor",
+    "wattage": "550-1000W",
+    "tier": "C"
+  },
+  {
+    "brand": "SAMA",
+    "series": "Black Diamond",
+    "wattage": "750/850/1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "SAMA",
+    "series": "Black Diamond V2",
+    "wattage": "750/850/1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "SAMA",
+    "series": "Black Hole",
+    "wattage": "750-1200W",
+    "tier": "E"
+  },
+  {
+    "brand": "SAMA",
+    "series": "Forza Titanium",
+    "wattage": "800W",
+    "tier": "B-"
+  },
+  {
+    "brand": "SAMA",
+    "series": "G",
+    "wattage": "650 / 750W",
+    "tier": "A-"
+  },
+  {
+    "brand": "SAMA",
+    "series": "G",
+    "wattage": "850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "SAMA",
+    "series": "G",
+    "wattage": "1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "SAMA",
+    "series": "GT",
+    "wattage": "650W",
+    "tier": "C"
+  },
+  {
+    "brand": "SAMA",
+    "series": "P",
+    "wattage": "850 / 1000 / 1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "SAMA",
+    "series": "XF",
+    "wattage": "750 /850/ 1000W",
+    "tier": "C"
+  },
+  {
+    "brand": "SAMA",
+    "series": "XM",
+    "wattage": "750W/850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "SAMA",
+    "series": "XP",
+    "wattage": "850/1000/1200W",
+    "tier": "E"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "A12",
+    "wattage": "500/600/700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "B12 BC",
+    "wattage": "550-850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "G12 GC Global",
+    "wattage": "550-850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "G12 GC China Only",
+    "wattage": "550-850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "G12 GM",
+    "wattage": "550-850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Core GC",
+    "wattage": "500/550/650W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Core GM",
+    "wattage": "500/550/650W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Core GX",
+    "wattage": "500/550/650W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Core GX ATX 3.0",
+    "wattage": "650 / 750 / 850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "S12III",
+    "wattage": "500/550/650W",
+    "tier": "F"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Focus Gold",
+    "wattage": "450 - 850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Focus Plus Gold",
+    "wattage": "550 - 1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Focus Plus Platinum",
+    "wattage": "550-850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Focus GM",
+    "wattage": "500-850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Focus GX",
+    "wattage": "550-1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Focus GX White",
+    "wattage": "750/850/1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Focus GX V4 ATX 3.1",
+    "wattage": "750/ 850 / 1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Focus PX",
+    "wattage": "550- 850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Focus SGX SFX-L",
+    "wattage": "450/500/650W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Focus SGX SFX",
+    "wattage": "550/650/750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Focus SPX",
+    "wattage": "650/750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Connect",
+    "wattage": "750W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Gold",
+    "wattage": "650-1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Platinum",
+    "wattage": "650-1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Titanium",
+    "wattage": "650-1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Ultra Gold",
+    "wattage": "550/650/750W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Ultra Gold",
+    "wattage": "850/1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Ultra Platinum",
+    "wattage": "550/650/750W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Ultra Platinum",
+    "wattage": "850/1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Ultra Titanium",
+    "wattage": "650-1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Gold",
+    "wattage": "650 / 750W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Gold",
+    "wattage": "850/1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Platinum",
+    "wattage": "650/ 750W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Platinum",
+    "wattage": "850-1300W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Platinum",
+    "wattage": "1600W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Titanium",
+    "wattage": "650- 1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Titanium",
+    "wattage": "1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Titanium",
+    "wattage": "1600W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Titanium ATX 3.0",
+    "wattage": "1300 / 1600W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Titanium Noctua",
+    "wattage": "1600W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Airtouch",
+    "wattage": "850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime SnowSilent",
+    "wattage": "550W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime SnowSilent",
+    "wattage": "650W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime SnowSilent",
+    "wattage": "750W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Fanless Platinum",
+    "wattage": "450/ 500W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Fanless Titanium",
+    "wattage": "600W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Prime Fanless New Titanium",
+    "wattage": "600/ 700W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Syncro Connect",
+    "wattage": "650/750/850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Vertex Gold",
+    "wattage": "750 - 1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Seasonic",
+    "series": "Vertex Platinum",
+    "wattage": "750- 1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Segotep",
+    "series": "GM",
+    "wattage": "750/850W",
+    "tier": "F"
+  },
+  {
+    "brand": "Segotep",
+    "series": "GM",
+    "wattage": "1250W",
+    "tier": "E"
+  },
+  {
+    "brand": "Segotep",
+    "series": "GN",
+    "wattage": "650W",
+    "tier": "E"
+  },
+  {
+    "brand": "Segotep",
+    "series": "KL-MG",
+    "wattage": "750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Segotep",
+    "series": "PM W",
+    "wattage": "650W",
+    "tier": "F"
+  },
+  {
+    "brand": "Segotep",
+    "series": "PM W",
+    "wattage": "750/850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Segotep",
+    "series": "U5",
+    "wattage": "500W",
+    "tier": "F"
+  },
+  {
+    "brand": "Segotep",
+    "series": "U6+",
+    "wattage": "650W",
+    "tier": "F"
+  },
+  {
+    "brand": "Sharkoon",
+    "series": "Rebel P10 Silver",
+    "wattage": "550/650/750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Sharkoon",
+    "series": "Rebel P10 Silver",
+    "wattage": "850W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Sharkoon",
+    "series": "Rebel P15 Gold",
+    "wattage": "650/750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Sharkoon",
+    "series": "Rebel P20 Gold",
+    "wattage": "750/850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Sharkoon",
+    "series": "Rebel P20 Platinum ATX",
+    "wattage": "1000/1200W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Sharkoon",
+    "series": "Rebel P20 Platinum SFX",
+    "wattage": "750/850/1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Sharkoon",
+    "series": "Rebel P30 Gold",
+    "wattage": "850/1000/1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "Sharkoon",
+    "series": "SHP Bronze",
+    "wattage": "500/600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Sharkoon",
+    "series": "SilentStorm SFX Bronze",
+    "wattage": "350/450W",
+    "tier": "E"
+  },
+  {
+    "brand": "Sharkoon",
+    "series": "SilentStorm SFX Gold",
+    "wattage": "500W",
+    "tier": "B"
+  },
+  {
+    "brand": "Sharkoon",
+    "series": "SilentStorm Cool Zero",
+    "wattage": "650/750/850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Sharkoon",
+    "series": "SilentStorm Icewind",
+    "wattage": "550/650/750W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Sharkoon",
+    "series": "WPM Gold Zero",
+    "wattage": "550/650/750W",
+    "tier": "C"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "ATTIS Bronze",
+    "wattage": "650/750/850W",
+    "tier": "F"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Decathlon DA Gold",
+    "wattage": "550 / 650W",
+    "tier": "B"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Decathlon DA Gold",
+    "wattage": "750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Decathlon DA Gold",
+    "wattage": "850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Decathlon DA Gold",
+    "wattage": "1000W",
+    "tier": "B"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Decathlon DA Gold",
+    "wattage": "1650W",
+    "tier": "B+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Decathlon DA-R GM",
+    "wattage": "750 / 850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Decathlon DA-R GM",
+    "wattage": "1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Decathlon DA-R GMA",
+    "wattage": "750 / 850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Essential ET-G",
+    "wattage": "550/650/ 750W",
+    "tier": "B"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Essential ET-HG",
+    "wattage": "550 /650/ 750W",
+    "tier": "B"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Essential ET-MG",
+    "wattage": "500/600/700W",
+    "tier": "B-"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Essential ET-B",
+    "wattage": "450-750W",
+    "tier": "E"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Essential ET-ARGB",
+    "wattage": "500W",
+    "tier": "E"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Essential ET",
+    "wattage": "500W",
+    "tier": "F"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Extreme Bronze",
+    "wattage": "350/ 500W",
+    "tier": "C-"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Extreme R Platinum SFX-L",
+    "wattage": "850W",
+    "tier": "A"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Extreme Rz Platinum",
+    "wattage": "1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "HELA R Platinum HAR-PM",
+    "wattage": "850W",
+    "tier": "A"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "HELA R Platinum HAR-PM",
+    "wattage": "1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "HELA R Platinum HAR-PM",
+    "wattage": "1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "HELA R Platinum HAR-PM",
+    "wattage": "2050W",
+    "tier": "A"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "HELA R Platinum HAR-PM",
+    "wattage": "2500W",
+    "tier": "E"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "HELA Platinum HA-PT",
+    "wattage": "2050W",
+    "tier": "A"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Nightjar SFX-L Platinum",
+    "wattage": "450W",
+    "tier": "A+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Nightjar ATX Platinum",
+    "wattage": "520W",
+    "tier": "A"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Nightjar ATX Titanium",
+    "wattage": "600/700W",
+    "tier": "A-"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "SFX-L SX-LTI",
+    "wattage": "800W",
+    "tier": "B"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "SFX-L SX-LPT",
+    "wattage": "700W",
+    "tier": "F"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "SFX-L SX Platinum",
+    "wattage": "1000W",
+    "tier": "C+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "SFX SX",
+    "wattage": "550W",
+    "tier": "C+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "SFX SX-B",
+    "wattage": "300/450W",
+    "tier": "C"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "SFX SX-G",
+    "wattage": "500/650/700W",
+    "tier": "B"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "SFX SX-G",
+    "wattage": "600W",
+    "tier": "C-"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "SFX SX Gold",
+    "wattage": "750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "SFX SX-PT",
+    "wattage": "700W",
+    "tier": "B"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "SFX SX Platinum",
+    "wattage": "750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "SFX SX-LG",
+    "wattage": "500W",
+    "tier": "B"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "SFX ST-SF-G",
+    "wattage": "450W",
+    "tier": "C"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "SFX ST-SF V3",
+    "wattage": "300/450W",
+    "tier": "C"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST-ES",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST-ES",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST-ES 230V",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST-ES 230V",
+    "wattage": "400-700W",
+    "tier": "E"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST-EF",
+    "wattage": "550/650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST-EFA",
+    "wattage": "650W",
+    "tier": "E"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST-P",
+    "wattage": "500/600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST-PB",
+    "wattage": "550/650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST-PT",
+    "wattage": "550 -850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST-PT",
+    "wattage": "1000/ 1200W",
+    "tier": "B-"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST-PTS",
+    "wattage": "1000W",
+    "tier": "F"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST-PTS",
+    "wattage": "1200W",
+    "tier": "B-"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST F-TI",
+    "wattage": "600/700/800W",
+    "tier": "B"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Strider ST-TI",
+    "wattage": "1100-1500W",
+    "tier": "E"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Triton Rx Gold",
+    "wattage": "650W",
+    "tier": "B-"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Triton Rx Gold",
+    "wattage": "750/850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Triton Rz Gold",
+    "wattage": "650W",
+    "tier": "B-"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Triton Rz Gold",
+    "wattage": "750 / 850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "Triton Rz Gold",
+    "wattage": "1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "VIVA Gold",
+    "wattage": "650/750W",
+    "tier": "B+"
+  },
+  {
+    "brand": "SilverStone",
+    "series": "VIVA Bronze",
+    "wattage": "550/650/750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Combat FG",
+    "wattage": "650/ 750 / 850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Combat SG",
+    "wattage": "650/750/850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Legion GX Pro",
+    "wattage": "550-850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex Silver",
+    "wattage": "550/650W",
+    "tier": "C"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex Gold",
+    "wattage": "550/650/750W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex Gold",
+    "wattage": "1000/1300W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex Gold SE",
+    "wattage": "1000/1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex Platinum",
+    "wattage": "550-850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex Platinum",
+    "wattage": "1000/1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex Platinum",
+    "wattage": "1600W",
+    "tier": "A"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex Platinum",
+    "wattage": "2000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex Platinum",
+    "wattage": "2800W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex Platinum SE",
+    "wattage": "850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex Platinum SE",
+    "wattage": "1000/1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex Titanium",
+    "wattage": "750-1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex Titanium",
+    "wattage": "1600W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex II",
+    "wattage": "750/850/1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex III ARGB",
+    "wattage": "550- 850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex III Gold Up ATX 3.1",
+    "wattage": "650- 1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex III Gold Up ATX 3.1",
+    "wattage": "1300W",
+    "tier": "A"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex III HG",
+    "wattage": "550 - 850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex III Pro ARGB",
+    "wattage": "650/750/850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex III Super Bronze Pro",
+    "wattage": "550-850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex V Gold Pro",
+    "wattage": "750/850/ 1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex V Platinum Pro",
+    "wattage": "850 / 1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex VI Platinum Pro",
+    "wattage": "850 / 1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex VII Gold",
+    "wattage": "750- 1300W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Leadex VII Platinum Pro",
+    "wattage": "850 / 1000 / 1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Platinum King",
+    "wattage": "450/550/650W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Zillion DB Bronze",
+    "wattage": "550W",
+    "tier": "E"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Zillion DB Bronze",
+    "wattage": "650W",
+    "tier": "F"
+  },
+  {
+    "brand": "Super Flower",
+    "series": "Zillion DW White",
+    "wattage": "550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Litepower New",
+    "wattage": "350-650W",
+    "tier": "F"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Litepower RGB",
+    "wattage": "450/550/650W",
+    "tier": "F"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "SMART BX1 Standard",
+    "wattage": "450-750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "SMART BX1 RGB",
+    "wattage": "550/650W",
+    "tier": "E"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "SMART BX1 RGB",
+    "wattage": "750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "SMART BM1",
+    "wattage": "500/600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "SMART BM2 Ver. A",
+    "wattage": "450- 750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "SMART BM3",
+    "wattage": "650 / 750 / 850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "SMART RGB",
+    "wattage": "500/600/700W",
+    "tier": "D"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "SMART Pro RGB",
+    "wattage": "850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "SMART DPS G Bronze",
+    "wattage": "500/600/700W",
+    "tier": "D"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "SMART DPS G Gold",
+    "wattage": "650/750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "SMART Gold",
+    "wattage": "600W",
+    "tier": "C"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "SMART White Label",
+    "wattage": "430-700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "TR2 S",
+    "wattage": "350-700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "TR2 Gold",
+    "wattage": "450-700W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower Gold",
+    "wattage": "650/750W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower DPS G RGB Gold",
+    "wattage": "650/750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower DPS G RGB Gold",
+    "wattage": "850W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower DPS G RGB Titanium",
+    "wattage": "850/1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower DPS G RGB Titanium",
+    "wattage": "1250W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower DPS G RGB Titanium",
+    "wattage": "1500W",
+    "tier": "F"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower Grand Platinum",
+    "wattage": "700W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower Grand Platinum",
+    "wattage": "850-1200W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower Grand RGB Gold",
+    "wattage": "650 / 750 / 850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower Grand RGB Gold Sync Ed.",
+    "wattage": "650/750W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower Grand RGB Gold Sync Ed.",
+    "wattage": "850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower Grand RGB Platinum",
+    "wattage": "850/1050W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower Grand RGB Platinum",
+    "wattage": "1200W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower iRGB Plus Gold",
+    "wattage": "1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower iRGB Plus Gold",
+    "wattage": "750 / 850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower iRGB Plus Platinum",
+    "wattage": "850 -1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower iRGB Plus Titanium",
+    "wattage": "1250W",
+    "tier": "A"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower iRGB Plus Titanium",
+    "wattage": "1650W",
+    "tier": "A"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF Standard",
+    "wattage": "550-850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF1 ARGB",
+    "wattage": "650 / 750 /850W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF1 Premium",
+    "wattage": "650/750/ 850W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF1 Premium",
+    "wattage": "1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF1 Premium",
+    "wattage": "1200W",
+    "tier": "A"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF1 Snow",
+    "wattage": "650/750/850W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF2 ARGB",
+    "wattage": "650 / 750 / 850W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF3 ARGB",
+    "wattage": "750/850W",
+    "tier": "A"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF3 Premium, Original",
+    "wattage": "750 - 1000W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF3 Premium, Original",
+    "wattage": "1200W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF3 Premium, Original",
+    "wattage": "1350W",
+    "tier": "A"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF3 Premium, Original",
+    "wattage": "1650W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF A3 Global",
+    "wattage": "650/750/850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF A3 Global",
+    "wattage": "1050/1200W",
+    "tier": "B"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF A3 Hydrangea Blue",
+    "wattage": "1050W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GF A3 Swap",
+    "wattage": "650 /750/850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GX1",
+    "wattage": "500/600/700W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GX1 RGB",
+    "wattage": "500/600/700W",
+    "tier": "C"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GX2 Original",
+    "wattage": "500/ 600 /700W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower GX3",
+    "wattage": "850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower PF3",
+    "wattage": "750 - 1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower PF1 Premium",
+    "wattage": "650/750/850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower PF1 Premium",
+    "wattage": "1050 / 1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower PF1 ARGB",
+    "wattage": "850 - 1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower PT",
+    "wattage": "850/1000/1200W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower TF1",
+    "wattage": "1550W",
+    "tier": "A+"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower SFX Old",
+    "wattage": "450/600W",
+    "tier": "F"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower SFX Gold ATX 3.0",
+    "wattage": "450-850W",
+    "tier": "F"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower SFX Gold ATX 3.0",
+    "wattage": "1000W",
+    "tier": "A-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower SFX Platinum ATX 3.1",
+    "wattage": "750 / 850W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Thermaltake",
+    "series": "Toughpower SFX Platinum ATX 3.1",
+    "wattage": "1000W",
+    "tier": "F"
+  },
+  {
+    "brand": "Thermalright",
+    "series": "TR-ABFX",
+    "wattage": "500W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Thermalright",
+    "series": "TR-TG",
+    "wattage": "1200W",
+    "tier": "E"
+  },
+  {
+    "brand": "Thermalright",
+    "series": "TR-TG FX",
+    "wattage": "550/650W",
+    "tier": "B"
+  },
+  {
+    "brand": "Vetroo",
+    "series": "GV/G5 2023",
+    "wattage": "850/1000W",
+    "tier": "A"
+  },
+  {
+    "brand": "Vetroo",
+    "series": "GV/G5 2024",
+    "wattage": "850/ 1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Vetroo",
+    "series": "SFX",
+    "wattage": "850W",
+    "tier": "B"
+  },
+  {
+    "brand": "Vida",
+    "series": "Lite",
+    "wattage": "500/600/750W",
+    "tier": "F"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "Fury GD",
+    "wattage": "850W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "Fury GD",
+    "wattage": "1100W",
+    "tier": "A"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "Harrier",
+    "wattage": "550/650W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "Hera Gold",
+    "wattage": "650/750/850W",
+    "tier": "E"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "Hydra M",
+    "wattage": "550/650/750W",
+    "tier": "C"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "Hyper H",
+    "wattage": "750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "LOKI",
+    "wattage": "750/850W",
+    "tier": "F"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "Maverick S",
+    "wattage": "400/500/600W",
+    "tier": "F"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "Prime M Pro",
+    "wattage": "850/1000W",
+    "tier": "B-"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "THOR V1",
+    "wattage": "450/550W",
+    "tier": "E"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "THOR V1",
+    "wattage": "650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "THOR V2 T",
+    "wattage": "750W",
+    "tier": "F"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "THOR V2 T-M",
+    "wattage": "750/850W",
+    "tier": "C"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "THOR V3 T",
+    "wattage": "750/850W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "THOR V3 T-M",
+    "wattage": "750/850W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "Titan PT",
+    "wattage": "1200W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Xigmatek",
+    "series": "Vector P",
+    "wattage": "600/700W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Yeyian",
+    "series": "Raiden Gold",
+    "wattage": "650W",
+    "tier": "F"
+  },
+  {
+    "brand": "Yeyian",
+    "series": "Raiden Bronze",
+    "wattage": "550/650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Xilence",
+    "series": "Gaming Bronze",
+    "wattage": "450-850W",
+    "tier": "E"
+  },
+  {
+    "brand": "Xilence",
+    "series": "Performance A",
+    "wattage": "430-730W",
+    "tier": "E"
+  },
+  {
+    "brand": "Xilence",
+    "series": "Performance C",
+    "wattage": "400/500/600W",
+    "tier": "E"
+  },
+  {
+    "brand": "Xilence",
+    "series": "Redwing R7",
+    "wattage": "350-600W",
+    "tier": "F"
+  },
+  {
+    "brand": "Xilence",
+    "series": "Redwing R7",
+    "wattage": "700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Zalman",
+    "series": "Acrux",
+    "wattage": "750-1200W",
+    "tier": "B"
+  },
+  {
+    "brand": "Zalman",
+    "series": "EBT",
+    "wattage": "650/750W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Zalman",
+    "series": "EBT",
+    "wattage": "850/1000/1200W",
+    "tier": "C+"
+  },
+  {
+    "brand": "Zalman",
+    "series": "Gigamax GV II-A",
+    "wattage": "500/600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Zalman",
+    "series": "Gigamax GV III",
+    "wattage": "550/650/750W",
+    "tier": "E"
+  },
+  {
+    "brand": "Zalman",
+    "series": "GVM",
+    "wattage": "500/600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Zalman",
+    "series": "Megamax TXII V1",
+    "wattage": "500/600/700W",
+    "tier": "E"
+  },
+  {
+    "brand": "Zalman",
+    "series": "Megamax TXII V2",
+    "wattage": "500-800W",
+    "tier": "E"
+  },
+  {
+    "brand": "Zalman",
+    "series": "Megamax II",
+    "wattage": "500/600/700W",
+    "tier": "F"
+  },
+  {
+    "brand": "Zalman",
+    "series": "TX",
+    "wattage": "500/600/700W",
+    "tier": "C-"
+  },
+  {
+    "brand": "Zalman",
+    "series": "Teramax II SE",
+    "wattage": "750/850/1000W",
+    "tier": "B+"
+  },
+  {
+    "brand": "Zalman",
+    "series": "Wattbitt II",
+    "wattage": "400/500/600W",
+    "tier": "F"
+  },
+  {
+    "brand": "Zalman",
+    "series": "Wattbitt 83+",
+    "wattage": "400/500/600W",
+    "tier": "F"
+  },
+  {
+    "brand": "Zalman",
+    "series": "WattGiga",
+    "wattage": "500/600/700W",
+    "tier": "E"
+  }
+]
