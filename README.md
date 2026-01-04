@@ -2,11 +2,12 @@
 
 ![CI Status](https://github.com/FeikoWielsma/psu-tier-userscript/actions/workflows/ci.yml/badge.svg)
 
-A tool that parses **SPL's PSU Tier List** (Google Sheet) and generates a userscript (`psutier.user.js`). This userscript injects visible Tier Badges directly onto **PCPartPicker** product listing pages, helping you choose high-quality power supplies at a glance.
+A tool that parses **SPL's PSU Tier List** (Google Sheet) and generates a userscript (`psutier.user.js`). This userscript injects visible Tier Badges directly onto **PCPartPicker** and **Tweakers.net** product listing pages, helping you choose high-quality power supplies at a glance.
 
 ## 🌟 Features
 
-*   **Live Injection**: Adds colored labels (Tier A, B, C, etc.) next to PSU names on PCPartPicker.
+*   **Multi-Site Support**: Works on both [PCPartPicker](https://pcpartpicker.com) and [Tweakers.net](https://tweakers.net/voedingen/vergelijken/).
+*   **Live Injection**: Adds colored labels (Tier A, B, C, etc.) next to PSU names.
 *   **Smart Matching**:
     *   Handles complex series names (e.g., "MWE Gold V2" matching "MWE V2 Gold").
     *   Filters out "noise" words to ensure accuracy.
@@ -20,7 +21,7 @@ A tool that parses **SPL's PSU Tier List** (Google Sheet) and generates a usersc
 2.  Go to the [**Releases**](https://github.com/FeikoWielsma/psu-tier-userscript/releases) page.
 3.  Download the latest `psutier.user.js`.
 4.  Your extension should ask to install it. Click **Install**.
-5.  Visit [PCPartPicker Power Supplies](https://pcpartpicker.com/products/power-supply/) and enjoy!
+5.  Visit PCPartPicker or [Tweakers.net Pricewatch](https://tweakers.net/voedingen/vergelijken/) and enjoy!
 
 ## 🛠️ Development
 

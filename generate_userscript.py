@@ -87,6 +87,7 @@ def generate_userscript():
 // @description  Display PSU Tiers from SPL's list on PCPartPicker
 // @author       Antigravity
 // @match        https://pcpartpicker.com/products/power-supply/*
+// @match        https://tweakers.net/voedingen/vergelijken/*
 // @match        https://pcpartpicker.com/list/*
 // @grant        none
 // ==/UserScript==
@@ -179,23 +180,69 @@ def generate_userscript():
         return null;
     }}
 
+    const SiteAdapters = {{
+        'pcpartpicker': {{
+            selector: 'tr.tr__product',
+            getName: (row) => row.querySelector('td.td__name')?.innerText.split('\\n')[0].trim(),
+            getWattage: (row) => {{
+                 const cell = row.querySelector('td.td__spec--3');
+                 return cell ? parseInt(cell.innerText.replace('W', '').trim(), 10) : 0;
+            }},
+            insertBadge: (row, badge) => {{
+                 const nameCell = row.querySelector('td.td__name');
+                 if (nameCell) {{
+                     const link = nameCell.querySelector('a');
+                     if (link) nameCell.insertBefore(badge, link.nextSibling);
+                     else nameCell.appendChild(badge);
+                 }}
+            }}
+        }},
+        'tweakers': {{
+            selector: 'ul.item-listing li, tr.listerTableItem', 
+            getName: (row) => row.querySelector('a.editionName')?.innerText.trim(),
+            getWattage: (row) => {{
+                 // Try to look for spec column with 'W'
+                 const specs = Array.from(row.querySelectorAll('.spec, td'));
+                 for (const s of specs) {{
+                     const text = s.innerText.trim();
+                     // Match "850W" or "1.000W"
+                     if (/^\\d+[\\d\\.]*\\s*W$/.test(text)) {{
+                         return parseInt(text.replace('.', '').replace('W', ''), 10);
+                     }}
+                 }}
+                 return 0;
+            }},
+            insertBadge: (row, badge) => {{
+                 const nameEl = row.querySelector('a.editionName');
+                 if (nameEl) {{
+                     // Insert after the link, maybe wrapped?
+                     // Tweakers structure: <p class="edition"> <a ...> ... </a> </p>
+                     // Or direct child.
+                     nameEl.after(badge);
+                 }}
+            }}
+        }}
+    }};
+
+    function getAdapter() {{
+        if (window.location.hostname.includes('pcpartpicker')) return SiteAdapters['pcpartpicker'];
+        if (window.location.hostname.includes('tweakers')) return SiteAdapters['tweakers'];
+        return null;
+    }}
+
     function addBadges() {{
-        // Updated selectors for PCPP live site (double underscores)
-        const rows = document.querySelectorAll('tr.tr__product');
+        const adapter = getAdapter();
+        if (!adapter) return;
+
+        const rows = document.querySelectorAll(adapter.selector);
         rows.forEach(row => {{
             if (row.dataset.tierBadged) return;
             
-            const nameCell = row.querySelector('td.td__name');
-            // Wattage is usually the 3rd spec column: td.td__spec--3
-            const wattageCell = row.querySelector('td.td__spec--3');
-            
-            if (!nameCell) return;
-            
-            const fullName = nameCell.innerText.trim().split('\\n')[0]; 
-            
-            const wattageText = wattageCell ? wattageCell.innerText.replace('W', '').trim() : "0";
-            const wattage = parseInt(wattageText, 10);
+            const fullName = adapter.getName(row);
+            if (!fullName) return;
 
+            const wattage = adapter.getWattage(row);
+            
             const tier = findTier(fullName, wattage);
             
             if (tier) {{
@@ -210,12 +257,7 @@ def generate_userscript():
                 badge.style.fontWeight = 'bold';
                 badge.className = "tier-badge";
                 
-                const link = nameCell.querySelector('a');
-                if (link) {{
-                    nameCell.insertBefore(badge, link.nextSibling);
-                }} else {{
-                    nameCell.appendChild(badge);
-                }}
+                adapter.insertBadge(row, badge);
             }}
             
             row.dataset.tierBadged = 'true';
