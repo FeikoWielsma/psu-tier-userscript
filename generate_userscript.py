@@ -264,10 +264,9 @@ def generate_userscript():
                     badge.style.border = '2px dashed #777';
                 }}
 
-                badge.style.float = 'right';
-                badge.style.padding = '2px 6px';
-                badge.style.borderRadius = '4px';
-                badge.style.marginLeft = '8px';
+                badge.style.marginLeft = '10px';
+                badge.style.verticalAlign = 'middle';
+                badge.style.display = 'inline-block';
                 badge.style.fontSize = '0.8em';
                 badge.style.fontWeight = 'bold';
                 badge.className = "tier-badge";
