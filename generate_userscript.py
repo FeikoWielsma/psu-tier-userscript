@@ -197,9 +197,13 @@ def generate_userscript():
             insertBadge: (row, badge) => {{
                  const nameCell = row.querySelector('td.td__name');
                  if (nameCell) {{
-                     const link = nameCell.querySelector('a');
-                     if (link) nameCell.insertBefore(badge, link.nextSibling);
-                     else nameCell.appendChild(badge);
+                     const links = nameCell.querySelectorAll('a');
+                     if (links.length > 0) {{
+                         const lastLink = links[links.length - 1];
+                         lastLink.after(badge);
+                     }} else {{
+                         nameCell.appendChild(badge);
+                     }}
                  }}
             }}
         }},
