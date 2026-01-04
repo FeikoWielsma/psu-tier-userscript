@@ -28,6 +28,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Install Playwright Browsers
+      run: |
+        playwright install chromium
+
     - name: Parse Data
       run: python parse_tier_list.py
 
@@ -36,3 +40,7 @@ jobs:
 
     - name: Run Validation Tests
       run: node tests/test_matching.js
+
+    - name: Run E2E Verification
+      run: pytest tests/test_e2e.py
+      continue-on-error: true

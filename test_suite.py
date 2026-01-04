@@ -36,6 +36,12 @@ def main():
     if not run_command("node tests/test_matching.js", cwd=base_dir):
         return sys.exit(1)
 
+    # 4. Run E2E Tests (Playwright)
+    print("\n[4/4] Running E2E Browser Tests...")
+    if not run_command("pytest tests/test_e2e.py", cwd=base_dir):
+        print("!! E2E tests failed. Ensure you have installed browsers: 'playwright install'")
+        return sys.exit(1)
+
     print("=== All Tests Passed! ===")
     sys.exit(0)
 
