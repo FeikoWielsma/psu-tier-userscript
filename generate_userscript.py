@@ -98,18 +98,12 @@ def generate_userscript():
     const psuData = {json_str};
 
     const TierStyles = {{
-        'A':  {{ bg: '#34ebb4', color: '#000' }},
-        'A+': {{ bg: '#80f2ff', color: '#000' }},
-        'A-': {{ bg: '#00c78e', color: '#000' }},
-        'B':  {{ bg: '#76db35', color: '#000' }},
-        'B+': {{ bg: '#a3ff75', color: '#000' }},
-        'B-': {{ bg: '#48b509', color: '#000' }},
-        'C':  {{ bg: '#ffe14c', color: '#000' }},
-        'C+': {{ bg: '#fff566', color: '#000' }},
-        'C-': {{ bg: '#eebb00', color: '#000' }},
-        'D':  {{ bg: '#ff9f43', color: '#000' }},
-        'E':  {{ bg: '#ff6b6b', color: '#000' }},
-        'F':  {{ bg: '#c92a2a', color: '#fff' }}
+        'A': {{ bg: '#00ebb9', color: '#000' }},
+        'B': {{ bg: '#a4de9a', color: '#000' }},
+        'C': {{ bg: '#ffd966', color: '#000' }},
+        'D': {{ bg: '#f29738', color: '#000' }},
+        'E': {{ bg: '#e06666', color: '#fff' }},
+        'F': {{ bg: '#ff4f4f', color: '#fff' }}
     }};
 
     function normalize(s) {{
@@ -258,9 +252,19 @@ def generate_userscript():
             if (tier) {{
                 const badge = document.createElement('span');
                 badge.innerText = `Tier ${{tier}}`;
-                const style = TierStyles[tier] || TierStyles[tier.substring(0, 1)] || {{ bg: '#333', color: '#fff' }};
+                const base = tier.replace(/[+-]/g, '');
+                const style = TierStyles[base] || {{ bg: '#333', color: '#fff' }};
                 badge.style.backgroundColor = style.bg;
                 badge.style.color = style.color;
+
+                if (tier.includes('+')) {{
+                    badge.style.border = '2px solid gold';
+                }}
+                if (tier.includes('-')) {{
+                    badge.style.border = '2px dashed #777';
+                }}
+
+                badge.style.float = 'right';
                 badge.style.padding = '2px 6px';
                 badge.style.borderRadius = '4px';
                 badge.style.marginLeft = '8px';
