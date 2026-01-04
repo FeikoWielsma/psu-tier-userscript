@@ -267,6 +267,8 @@ def generate_userscript():
                 badge.style.marginLeft = '10px';
                 badge.style.verticalAlign = 'middle';
                 badge.style.display = 'inline-block';
+                badge.style.padding = '2px 6px';
+                badge.style.borderRadius = '4px';
                 badge.style.fontSize = '0.8em';
                 badge.style.fontWeight = 'bold';
                 badge.className = "tier-badge";
