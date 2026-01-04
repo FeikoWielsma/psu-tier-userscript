@@ -23,6 +23,11 @@ jobs:
       with:
         node-version: '18'
 
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
     - name: Parse Data
       run: python parse_tier_list.py
 
