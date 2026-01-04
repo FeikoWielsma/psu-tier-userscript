@@ -183,7 +183,7 @@ def generate_userscript():
     const SiteAdapters = {{
         'pcpartpicker': {{
             selector: 'tr.tr__product',
-            getName: (row) => row.querySelector('td.td__name')?.innerText.split('\\n')[0].trim(),
+            getName: (row) => row.querySelector('td.td__name')?.innerText.trim().split('\\n')[0],
             getWattage: (row) => {{
                  const cell = row.querySelector('td.td__spec--3');
                  return cell ? parseInt(cell.innerText.replace('W', '').trim(), 10) : 0;
