@@ -28,6 +28,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Fetch Tier List HTML
+      run: python fetch_sheet.py
+
     - name: Parse Data
       run: python parse_tier_list.py
 
