@@ -21,3 +21,6 @@ Thumbs.db
 # We might ignore the intermediate JSONs if we want to force generation.
 # But for now, let's include them so the repo works out of the box.
 # except maybe the huge temp lookup map? No, keep it for tests.
+psu_data_var.js
+psu_lookup_map.json
+psutier.user.js
