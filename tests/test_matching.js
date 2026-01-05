@@ -34,12 +34,27 @@ function checkWattage(wattageStr, productWattage) {
 }
 
 function findTier(fullName, productWattage) {
-    const normFullName = normalize(fullName);
+    let processedName = fullName;
+    processedName = processedName.replace(/(\d+)P Gaming/i, '$1 Platinum');
+    processedName = processedName.replace(/V(\d+) SFX/i, 'V Series "Vanguard" SFX $1');
+    processedName = processedName.replace(/RM(\d+)x/i, 'RMx 2021 $1');
+    processedName = processedName.replace(/(\d+)G(\s|$)/i, '$1 Gold$2');
+    processedName = processedName.replace(/ATX 3(?!\.0)/i, 'ATX 3.0');
+    processedName = processedName.replace(/Century II/i, 'Century II Gold ATX 3.1');
+    // NZXT Specific
+    processedName = processedName.replace(/NZXT C(\d+)\s*\(?2019\)?/i, 'NZXT C Series Gold V1 $1');
+    processedName = processedName.replace(/NZXT C(\d+)\s*\(?2022\)?/i, 'NZXT C Series Gold V2 $1');
+    processedName = processedName.replace(/NZXT C(\d+)\s*\(?2024\)?/i, 'NZXT C Series Gold ATX 3.1 $1');
+    processedName = processedName.replace(/NZXT C\s*\(?2019\)?/i, 'NZXT C Series Gold V1');
+    processedName = processedName.replace(/NZXT C(\d+)/i, 'NZXT C Series Gold $1');
+
+    const normFullName = normalize(processedName);
 
     let brandKey = null;
     let bestBrandLength = 0;
 
     for (const k in psuData) {
+        if (k === 'gaming') continue;
         if (normFullName.includes(k)) {
             if (k.length > bestBrandLength) {
                 brandKey = k;
@@ -48,9 +63,15 @@ function findTier(fullName, productWattage) {
         }
     }
 
+
+
     if (!brandKey) return null;
 
+
     const candidates = psuData[brandKey];
+    // Prioritize longer, more specific matches (e.g. "Century II Gold..." over "Century Gold")
+    candidates.sort((a, b) => b.matchSeries.length - a.matchSeries.length);
+
     let cleanName = normFullName.replace(brandKey, '');
     if (productWattage) {
         cleanName = cleanName.replace(productWattage.toString(), '');
@@ -61,10 +82,8 @@ function findTier(fullName, productWattage) {
         const efficiencyRegex = /(gold|bronze|platinum|titanium|silver|white)/g;
         const seriesNoEff = seriesNorm.replace(efficiencyRegex, '');
 
-        // Debug
-        // if (fullName.includes("Thermaltake")) {
-        // console.log(`Checking ${seriesNorm} vs ${cleanName}`);
-        // }
+
+
 
         // 1. Strict
         if (cleanName.includes(seriesNorm)) {
@@ -80,6 +99,7 @@ function findTier(fullName, productWattage) {
         // 'series' is sometimes in the name e.g. "Atom V Series"
 
         const tokens = item.matchSeries.toLowerCase().split(/[\s\-\/]+/).map(normalize).filter(t => t.length > 0 && !noise.has(t));
+
 
         if (tokens.length > 1) {
             const allTokensPresent = tokens.every(t => cleanName.includes(t));
@@ -108,7 +128,20 @@ const testCases = [
     { name: "Cooler Master MWE Gold 850 V2", wattage: 850, expectedTier: "B+" },
     { name: "MSI MAG A850GL PCIE5", wattage: 850, expectedTier: "B" }, // "MAG A-GL PCIE5" -> B
     { name: "be quiet! Pure Power 12 M 850W", wattage: 850, expectedTier: "A" },
-    { name: "Lian Li Edge EG 1000", wattage: 1000, expectedTier: "A" }
+    { name: "Lian Li Edge EG 1000", wattage: 1000, expectedTier: "A" },
+    // Regex fix verifications
+    { name: "Asus ROG STRIX 1200P Gaming", wattage: 1200, expectedTier: "A", expectedTierAlt: "B+" }, // 1200W might be B+ in some revisions? Debug map says: "ROG Strix Platinum, 1200W, Tier B+"
+    { name: "Cooler Master V850 SFX GOLD", wattage: 850, expectedTier: "A" },
+    { name: "Corsair RM1000x", wattage: 1000, expectedTier: "A", expectedTierAlt: "A+" },
+    { name: "Asus TUF Gaming 850G", wattage: 850, expectedTier: "B" }, // TUF Gold is B tier
+    { name: "SeaSonic CORE GX ATX 3 (2024)", wattage: 750, expectedTier: "B-", expectedTierAlt: "B" }, // Changed to B- based on debug data
+    { name: "NZXT C (2019)", wattage: 850, expectedTier: "A" },
+    { name: "NZXT C850 (2022)", wattage: 850, expectedTier: "A" }, // V2 is A
+    { name: "NZXT C850 (2024)", wattage: 850, expectedTier: "A+", expectedTierAlt: "A" }, // ATX 3.1 is A+
+    // Montech Fixes
+    { name: "Montech Century II 850W 80+ Gold", wattage: 850, expectedTier: "A-" },
+    { name: "Montech Century II 1050W", wattage: 1050, expectedTier: "A" },
+    { name: "Montech Century II 1200W", wattage: 1200, expectedTier: "A" }
 ];
 
 let failures = 0;

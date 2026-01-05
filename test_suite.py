@@ -28,7 +28,7 @@ def main():
 
     # 2. Generate Userscript (and test map)
     print("[2/3] Generating Userscript & Test Data...")
-    if not run_command("python -W ignore generate_userscript.py", cwd=base_dir):
+    if not run_command("python -W ignore generate_userscript.py --test", cwd=base_dir):
         return sys.exit(1)
 
     # 3. Run Node.js Tests
