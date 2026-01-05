@@ -35,7 +35,7 @@ jobs:
       run: python parse_tier_list.py
 
     - name: Generate Userscript
-      run: python generate_userscript.py
+      run: python generate_userscript.py --test
 
     - name: Run Validation Tests
       run: node tests/test_matching.js
