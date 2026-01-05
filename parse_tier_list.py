@@ -124,12 +124,118 @@ def parse_html_table(html_file):
         # Optional: Clean up Wattage strings (remove links if they were just text, though get_text handles it)
         # Clean Tier: sometimes it has footnote markers or links
         
+        # Extract additional details - CORRECTED MAPPING (v1.8)
+        # Col 0: Index
+        # Col 1: Brand
+        # Col 2-4: Series
+        # Col 5: Wattage
+        # Col 6: ?
+        # Col 7: Form Factor
+        # Col 8: ATX Version
+        # Col 9: ?
+        # Col 10: Modular
+        # Col 11: Efficiency (W, B, S, G, P, T)
+        # Col 12: Topology Primary
+        # Col 13: Topology Secondary
+        # Col 14: Topology SR
+        # Col 15: ODM
+        # Col 16: Platform
+        # Col 17: Notes
+
+        def safe_get(idx):
+            return row_data[idx] if len(row_data) > idx and row_data[idx] else None
+        
+        # Debug block removed
+
+
+
+
+        year = None # Year is apparently not in a fixed column or was misidentified. 
+        # User said "Release year" is in sheet. 
+        # In Corsair sample (Step 1353), Col 5 was "2018". But Col 5 is also Wattage?
+        # Actually Wattage is Col 5 usually (Step 1293: `wattage = row_data[5]`).
+        # If Col 5 is 2018, then Wattage is elsewhere?
+        # Wait, for Corsair AX: Col 3: "850 / 1000W". Col 5: "2018". 
+        # So Wattage is Col 3?
+        # Let's STRICTLY use the manual inspection from Step 1353 for Corsair AX.
+        # Col 3: Wattage/Model key
+        # Col 5: Year
+        
+        # But `parse_html_table` logic says:
+        # `wattage = row_data[5]` (Line 117).
+        # And `series` uses cols 2,3,4.
+        
+        # This implies `parse_html_table` top logic is flawed for the rows I inspected.
+        # However, `wattage` (Col 5) works for most?
+        # If Corsair AX has 2018 at Col 5, then current script puts "2018" as Wattage?
+        # If so, that's a bug.
+        
+        # Recalibrating based on Corsair AX Row 339:
+        # Col 3: "850 / 1000W" -> This is the Wattage column.
+        # Col 5: "2018" -> Year.
+        
+        # Adjusting the extraction completely.
+        
+        # Series was 2, 3, 4. 
+        # In Corsair AX Row: 2="AX (Grey Label)", 3="850 / 1000W", 4="A+".
+        # So Series is ONLY Col 2? Or 2+3+4?
+        # If script joins 2,3,4: "AX (Grey Label) 850 / 1000W A+".
+        # That's messy.
+        
+        # Let's fix Wattage index first. 
+        # It seems Wattage is Col 3 (or range).
+        # Let's assume Col 5 is Year.
+
+        # Corrected Mapping (v1.9)
+        # Based on Offset 4 (Dump Col + 4 = Row Index)
+        year = safe_get(7)
+        form_factor = safe_get(9)
+        atx_version = safe_get(10)
+        # Col 11 is Input Voltage (Full/230V)
+        modular = safe_get(12)
+        
+        eff_code = safe_get(13)
+        efficiency = eff_code
+        if eff_code:
+            eff_map = {
+                'W': '80+ White/Standard',
+                'B': '80+ Bronze',
+                'S': '80+ Silver',
+                'G': '80+ Gold',
+                'P': '80+ Platinum',
+                'T': '80+ Titanium',
+                'N': 'Unrated/None'
+            }
+            if len(eff_code) == 1 and eff_code in eff_map:
+                efficiency = eff_map[eff_code]
+
+        topo_parts = [safe_get(14), safe_get(15), safe_get(16)]
+        topology = " + ".join([t for t in topo_parts if t])
+        
+        odm = safe_get(17)
+        platform = safe_get(18)
+        notes = safe_get(19)
+
         item = {
             "brand": brand,
             "series": series,
-            "wattage": wattage,
-            "tier": tier
+            "wattage": wattage, # Confirmed Col 5
+            "tier": tier,
+            "year": year,
+            "form_factor": form_factor,
+            "atx_version": atx_version,
+            "modular": modular,
+            "efficiency": efficiency,
+            "topology": topology,
+            "odm": odm,
+            "platform": platform,
+            "notes": notes
         }
+        
+        # Remove legacy fix for Wattage vs Year mixup as indices are now confident
+        # (The mixup was due to using Col 5 for Year when it was Wattage)
+
+
         extracted_data.append(item)
 
     return extracted_data

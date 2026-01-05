@@ -47,7 +47,6 @@ def generate_js_data(json_path):
             if k not in psu_map:
                 psu_map[k] = []
             
-            # Create a copy to modify series for matching if needed
             # We will handle multiple series aliases here too
             # "RM-x 2018 / v2 Black" -> split by "/"
             series_str = item['series']

@@ -9,7 +9,7 @@ if (!fs.existsSync(psuDataPath)) {
 }
 const psuData = JSON.parse(fs.readFileSync(psuDataPath, 'utf8'));
 
-// MATCHING LOGIC (Must match userscript EXACTLY)
+// MATCHING LOGIC (Synced with userscript v1.8)
 function normalize(s) {
     return s.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
@@ -33,6 +33,53 @@ function checkWattage(wattageStr, productWattage) {
     }
 }
 
+function checkEfficiency(itemEfficiency, productName) {
+    if (!itemEfficiency) return true;
+    const nameLower = productName.toLowerCase();
+
+    const hasGold = nameLower.includes('gold');
+    const hasBronze = nameLower.includes('bronze');
+    const hasSilver = nameLower.includes('silver');
+    const hasPlatinum = nameLower.includes('platinum');
+    const hasTitanium = nameLower.includes('titanium');
+    const hasWhite = nameLower.includes('white') || nameLower.includes('standard') || (nameLower.includes('80+') && !nameLower.includes('gold') && !nameLower.includes('bronze') && !nameLower.includes('silver') && !nameLower.includes('platinum') && !nameLower.includes('titanium'));
+
+    const iEff = itemEfficiency.toLowerCase();
+    const isGold = iEff.includes('gold');
+    const isBronze = iEff.includes('bronze');
+    const isSilver = iEff.includes('silver');
+    const isPlatinum = iEff.includes('platinum');
+    const isTitanium = iEff.includes('titanium');
+    const isWhite = iEff.includes('white') || iEff.includes('standard');
+
+    // Mismatch logic
+    if (isGold && (hasBronze || hasSilver || hasPlatinum || hasTitanium || hasWhite)) return false;
+    if (isBronze && (hasGold || hasSilver || hasPlatinum || hasTitanium || hasWhite)) return false;
+    if (isSilver && (hasGold || hasBronze || hasPlatinum || hasTitanium || hasWhite)) return false;
+    if (isPlatinum && (hasGold || hasBronze || hasSilver || hasTitanium || hasWhite)) return false;
+    if (isTitanium && (hasGold || hasBronze || hasSilver || hasPlatinum || hasWhite)) return false;
+    if (isWhite && (hasGold || hasBronze || hasSilver || hasPlatinum || hasTitanium)) return false;
+
+    return true;
+}
+
+function getEffectiveLength(str) {
+    const effWords = /(gold|bronze|platinum|titanium|silver|white|80\+|standard)/gi;
+    return str.replace(effWords, '').replace(/[^a-z0-9]/gi, '').length;
+}
+
+function checkSignificantMismatch(candidateSeries, productName) {
+    const sigRegex = /\b(GF\s*A3|GF\d+|BM\d+|BX\d+|GT|GX|PX|TX|SFX|TR2)\b/ig;
+    const nameMatches = productName.match(sigRegex);
+    if (!nameMatches) return false;
+
+    const candNorm = normalize(candidateSeries);
+    for (const m of nameMatches) {
+        if (!candNorm.includes(normalize(m))) return true;
+    }
+    return false;
+}
+
 function findTier(fullName, productWattage) {
     let processedName = fullName;
     processedName = processedName.replace(/(\d+)P Gaming/i, '$1 Platinum');
@@ -47,6 +94,13 @@ function findTier(fullName, productWattage) {
     processedName = processedName.replace(/NZXT C(\d+)\s*\(?2024\)?/i, 'NZXT C Series Gold ATX 3.1 $1');
     processedName = processedName.replace(/NZXT C\s*\(?2019\)?/i, 'NZXT C Series Gold V1');
     processedName = processedName.replace(/NZXT C(\d+)/i, 'NZXT C Series Gold $1');
+
+    // Thermaltake Smart 80+ (White) handling
+    if (/Thermaltake\s+Smart\b.*80\+/i.test(processedName) && !/(BX|BM|DPS|Pro|RGB|Gold|Bronze|Platinum)/i.test(processedName)) {
+        processedName = processedName.replace(/Smart/i, 'Smart White Label');
+    }
+    processedName = processedName.replace(/Toughpower GF3(?! ARGB| Snow)/i, 'Toughpower GF3 Premium, Original');
+    processedName = processedName.replace(/Toughpower GF A3(?! Global| Hydrangea| Swap| Snow)/i, 'Toughpower GF A3 Swap');
 
     const normFullName = normalize(processedName);
 
@@ -63,54 +117,54 @@ function findTier(fullName, productWattage) {
         }
     }
 
-
-
     if (!brandKey) return null;
 
-
     const candidates = psuData[brandKey];
-    // Prioritize longer, more specific matches (e.g. "Century II Gold..." over "Century Gold")
-    candidates.sort((a, b) => b.matchSeries.length - a.matchSeries.length);
+    // Prioritize longer, but discount efficiency words for "Effective Length"
+    candidates.sort((a, b) => {
+        const lenA = getEffectiveLength(a.matchSeries);
+        const lenB = getEffectiveLength(b.matchSeries);
+        if (lenA !== lenB) return lenB - lenA; // Descending effective length
+        return a.matchSeries.length - b.matchSeries.length;
+    });
 
     let cleanName = normFullName.replace(brandKey, '');
     if (productWattage) {
-        cleanName = cleanName.replace(productWattage.toString(), '');
+        const wattageStr = productWattage.toString();
+        cleanName = cleanName.replace(wattageStr + 'w', '').replace(wattageStr, '');
     }
 
     for (const item of candidates) {
         let seriesNorm = normalize(item.matchSeries);
-        const efficiencyRegex = /(gold|bronze|platinum|titanium|silver|white)/g;
-        const seriesNoEff = seriesNorm.replace(efficiencyRegex, '');
-
-
-
+        if (cleanName.includes('gf3') && item.matchSeries.toLowerCase().includes('gf3')) {
+            console.log(`[DEBUG] Checking ${item.matchSeries} (Norm: ${seriesNorm}) against ${cleanName}`);
+            const wCheck = checkWattage(item.wattage, productWattage);
+            const eCheck = checkEfficiency(item.efficiency, fullName);
+            const mCheck = !checkSignificantMismatch(item.matchSeries, fullName);
+            console.log(`       Stats: Wattage=${wCheck}, Eff=${eCheck}, Mismotch=${mCheck}`);
+        }
 
         // 1. Strict
         if (cleanName.includes(seriesNorm)) {
-            if (checkWattage(item.wattage, productWattage)) return item.tier;
+            if (checkWattage(item.wattage, productWattage) && checkEfficiency(item.efficiency, fullName) && !checkSignificantMismatch(item.matchSeries, fullName)) return item.tier;
         }
 
-        // 2. Tokenized Match (Handle "V2 Gold" vs "Gold V2")
-        // item.matchSeries is specific e.g. "MWE V2 Gold"
-        // Normalize each token and check if cleanName has it.
-        // We filter out "noise" tokens like "modular", "non", "full" to prevent mismatch 
-        // if the product name in PCPP is "MWE Gold V2" (implied full modular).
+        // 2. Tokenized Match
         const noise = new Set(['modular', 'non', 'full', 'mod', 'semi', 'series']);
-        // 'series' is sometimes in the name e.g. "Atom V Series"
-
         const tokens = item.matchSeries.toLowerCase().split(/[\s\-\/]+/).map(normalize).filter(t => t.length > 0 && !noise.has(t));
-
 
         if (tokens.length > 1) {
             const allTokensPresent = tokens.every(t => cleanName.includes(t));
             if (allTokensPresent) {
-                if (checkWattage(item.wattage, productWattage)) return item.tier;
+                if (checkWattage(item.wattage, productWattage) && checkEfficiency(item.efficiency, fullName) && !checkSignificantMismatch(item.matchSeries, fullName)) return item.tier;
             }
         }
 
         // 3. Fallback (No efficiency)
+        const efficiencyRegex = /(gold|bronze|platinum|titanium|silver|white)/g;
+        const seriesNoEff = seriesNorm.replace(efficiencyRegex, '');
         if (seriesNoEff.length > 2 && cleanName.includes(seriesNoEff)) {
-            if (checkWattage(item.wattage, productWattage)) return item.tier;
+            if (checkWattage(item.wattage, productWattage) && checkEfficiency(item.efficiency, fullName) && !checkSignificantMismatch(item.matchSeries, fullName)) return item.tier;
         }
     }
 
@@ -126,26 +180,33 @@ const testCases = [
     { name: "Corsair RM750e (2023)", wattage: 750, expectedTier: "B+" },
     { name: "Lian Li SP750", wattage: 750, expectedTier: "B" },
     { name: "Cooler Master MWE Gold 850 V2", wattage: 850, expectedTier: "B+" },
-    { name: "MSI MAG A850GL PCIE5", wattage: 850, expectedTier: "B" }, // "MAG A-GL PCIE5" -> B
+    { name: "MSI MAG A850GL PCIE5", wattage: 850, expectedTier: "B" },
     { name: "be quiet! Pure Power 12 M 850W", wattage: 850, expectedTier: "A" },
     { name: "Lian Li Edge EG 1000", wattage: 1000, expectedTier: "A" },
-    // Regex fix verifications
-    { name: "Asus ROG STRIX 1200P Gaming", wattage: 1200, expectedTier: "A", expectedTierAlt: "B+" }, // 1200W might be B+ in some revisions? Debug map says: "ROG Strix Platinum, 1200W, Tier B+"
+    { name: "Asus ROG STRIX 1200P Gaming", wattage: 1200, expectedTier: "A", expectedTierAlt: "B+" },
     { name: "Cooler Master V850 SFX GOLD", wattage: 850, expectedTier: "A" },
     { name: "Corsair RM1000x", wattage: 1000, expectedTier: "A", expectedTierAlt: "A+" },
-    { name: "Asus TUF Gaming 850G", wattage: 850, expectedTier: "B" }, // TUF Gold is B tier
-    { name: "SeaSonic CORE GX ATX 3 (2024)", wattage: 750, expectedTier: "B-", expectedTierAlt: "B" }, // Changed to B- based on debug data
+    { name: "Asus TUF Gaming 850G", wattage: 850, expectedTier: "B" },
+    { name: "SeaSonic CORE GX ATX 3 (2024)", wattage: 750, expectedTier: "B-", expectedTierAlt: "B" },
     { name: "NZXT C (2019)", wattage: 850, expectedTier: "A" },
-    { name: "NZXT C850 (2022)", wattage: 850, expectedTier: "A" }, // V2 is A
-    { name: "NZXT C850 (2024)", wattage: 850, expectedTier: "A+", expectedTierAlt: "A" }, // ATX 3.1 is A+
-    // Montech Fixes
+    { name: "NZXT C850 (2022)", wattage: 850, expectedTier: "A" },
+    { name: "NZXT C850 (2024)", wattage: 850, expectedTier: "A+", expectedTierAlt: "A" },
     { name: "Montech Century II 850W 80+ Gold", wattage: 850, expectedTier: "A-" },
     { name: "Montech Century II 1050W", wattage: 1050, expectedTier: "A" },
-    { name: "Montech Century II 1200W", wattage: 1200, expectedTier: "A" }
+    { name: "Montech Century II 1200W", wattage: 1200, expectedTier: "A" },
+
+    // Thermaltake Regression Tests (Added v1.8)
+    { name: "Thermaltake Smart 600W 80+", wattage: 600, expectedTier: "F" },
+    { name: "Thermaltake Toughpower GF1 (2024)", wattage: 750, expectedTier: null }, // Unrated
+    { name: "Thermaltake Toughpower GT", wattage: 750, expectedTier: null }, // Unrated
+    { name: "Thermaltake Toughpower GF3 850W", wattage: 850, expectedTier: "A+", expectedTierAlt: "A" },
+
+    // GF A3 matching issue (v1.9)
+    { name: "Thermaltake Toughpower GF A3 ATX 3.0", wattage: 750, expectedTier: "B-", expectedTierAlt: "B" }
 ];
 
 let failures = 0;
-console.log("Running PSU Tier Matching Tests...\n");
+console.log("Running PSU Tier Matching Tests (v1.8 Logic)...\n");
 
 testCases.forEach((tc, idx) => {
     const tier = findTier(tc.name, tc.wattage);
@@ -155,8 +216,8 @@ testCases.forEach((tc, idx) => {
         console.log(`[PASS] ${tc.name} (${tc.wattage}W) -> Tier ${tier}`);
     } else {
         failures++;
-        console.error(`[FAIL] ${tc.name} (${tc.wattage}W)`);
-        console.error(`       Expected: ${tc.expectedTier}, Got: ${tier}`);
+        console.log(`[FAIL] ${tc.name} (${tc.wattage}W)`);
+        console.log(`       Expected: ${tc.expectedTier}, Got: ${tier}`);
     }
 });
 

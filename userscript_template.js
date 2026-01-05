@@ -33,7 +33,6 @@
 
         // Handle "550/650W" or "550-750W"
         const parts = wattageStr.toLowerCase().replace('w', '').split(/[\/\-]/);
-        // It's a range if there matches '-', actually my regex split handles both.
         // Let's look at the original string to decide logic
         if (wattageStr.includes('-')) {
             const min = parseInt(parts[0]);
@@ -43,6 +42,56 @@
             // Discrete list
             return parts.some(p => Math.abs(parseInt(p) - productWattage) < 10); // Tolerance of 10W?
         }
+    }
+
+    function checkEfficiency(itemEfficiency, productName) {
+        // If item has no efficiency specified, we can't easily filter.
+        // Assuming itemEfficiency comes from our parsed JSON (e.g. "80+ Gold", "80+ Bronze")
+        if (!itemEfficiency) return true;
+
+        const nameLower = productName.toLowerCase();
+
+        // Extract ratings from name
+        const hasGold = nameLower.includes('gold');
+        const hasBronze = nameLower.includes('bronze');
+        const hasSilver = nameLower.includes('silver');
+        const hasPlatinum = nameLower.includes('platinum');
+        const hasTitanium = nameLower.includes('titanium');
+        const hasWhite = nameLower.includes('white') || nameLower.includes('standard') || (nameLower.includes('80+') && !nameLower.includes('gold') && !nameLower.includes('bronze') && !nameLower.includes('silver') && !nameLower.includes('platinum') && !nameLower.includes('titanium'));
+
+        // Identify item rating
+        const iEff = itemEfficiency.toLowerCase();
+        const isGold = iEff.includes('gold');
+        const isBronze = iEff.includes('bronze');
+        const isSilver = iEff.includes('silver');
+        const isPlatinum = iEff.includes('platinum');
+        const isTitanium = iEff.includes('titanium');
+        const isWhite = iEff.includes('white') || iEff.includes('standard');
+
+        // Mismatch logic: If Item is Gold, but Name is Bronze -> Fail.
+        // If Name has NO rating, we usually assume match is okay (unless strict?).
+        // But for "Smart 600W 80+", name has "80+" which implies White.
+
+        if (isGold && (hasBronze || hasSilver || hasPlatinum || hasTitanium || hasWhite)) return false;
+        if (isBronze && (hasGold || hasSilver || hasPlatinum || hasTitanium || hasWhite)) return false;
+        if (isSilver && (hasGold || hasBronze || hasPlatinum || hasTitanium || hasWhite)) return false;
+        if (isPlatinum && (hasGold || hasBronze || hasSilver || hasTitanium || hasWhite)) return false;
+        if (isTitanium && (hasGold || hasBronze || hasSilver || hasPlatinum || hasWhite)) return false;
+        if (isWhite && (hasGold || hasBronze || hasSilver || hasPlatinum || hasTitanium)) return false;
+
+        return true;
+    }
+
+    function checkSignificantMismatch(candidateSeries, productName) {
+        const sigRegex = /\b(GF\s*A3|GF\d+|BM\d+|BX\d+|GT|GX|PX|TX|SFX|TR2)\b/ig;
+        const nameMatches = productName.match(sigRegex);
+        if (!nameMatches) return false;
+
+        const candNorm = normalize(candidateSeries);
+        for (const m of nameMatches) {
+            if (!candNorm.includes(normalize(m))) return true;
+        }
+        return false;
     }
 
     function findTier(fullName, productWattage) {
@@ -59,6 +108,19 @@
         processedName = processedName.replace(/NZXT C\s*\(?2019\)?/i, 'NZXT C Series Gold V1');
         processedName = processedName.replace(/NZXT C(\d+)/i, 'NZXT C Series Gold $1');
 
+        // Thermaltake Smart 80+ (White) handling
+        if (/Thermaltake\s+Smart\b.*80\+/i.test(processedName) && !/(BX|BM|DPS|Pro|RGB|Gold|Bronze|Platinum)/i.test(processedName)) {
+            processedName = processedName.replace(/Smart/i, 'Smart White Label');
+        }
+
+        // Thermaltake GF3 handling (Tier list uses "Premium, Original")
+        // If it's just "Toughpower GF3" and not ARGB/Snow (unless those are separate?)
+        // The list has "GF3 ARGB" as separate.
+        // So we map "Toughpower GF3" to include "Premium, Original" if needed, OR just ensure flexible matching?
+        // Better to map:
+        processedName = processedName.replace(/Toughpower GF3(?! ARGB| Snow)/i, 'Toughpower GF3 Premium, Original');
+        processedName = processedName.replace(/Toughpower GF A3(?! Global| Hydrangea| Swap| Snow)/i, 'Toughpower GF A3 Swap');
+
         const normFullName = normalize(processedName);
 
         let brandKey = null;
@@ -74,15 +136,33 @@
             }
         }
 
+        function getEffectiveLength(str) {
+            // Remove efficiency words to determine specificness
+            const effWords = /(gold|bronze|platinum|titanium|silver|white|80\+|standard)/gi;
+            return str.replace(effWords, '').replace(/[^a-z0-9]/gi, '').length;
+        }
+
         if (!brandKey) return null;
 
         const candidates = psuData[brandKey];
-        // Prioritize longer matches
-        candidates.sort((a, b) => b.matchSeries.length - a.matchSeries.length);
+        // Prioritize longer matches, but discount efficiency words
+        candidates.sort((a, b) => {
+            const lenA = getEffectiveLength(a.matchSeries);
+            const lenB = getEffectiveLength(b.matchSeries);
+            if (lenA !== lenB) return lenB - lenA; // Descending effective length
+            return b.matchSeries.length - a.matchSeries.length; // Tie-break with total length
+        });
 
         let cleanName = normFullName.replace(brandKey, '');
         if (productWattage) {
-            cleanName = cleanName.replace(productWattage.toString(), '');
+            // Remove wattage + optional 'w' from the normalized string.
+            // Since normFullName has removed non-alphanumerics, '600W' became '600w' or '600'.
+            // But normalize() lowercases everything.
+            const wattageStr = productWattage.toString();
+            // We want to remove "600w" or "600".
+            // Replace "600w" first, then "600" if "600w" didn't match?
+            // Or just replace tokens.
+            cleanName = cleanName.replace(wattageStr + 'w', '').replace(wattageStr, '');
         }
 
         for (const item of candidates) {
@@ -90,7 +170,7 @@
 
             // 1. Strict Match
             if (cleanName.includes(seriesNorm)) {
-                if (checkWattage(item.wattage, productWattage)) return item.tier;
+                if (checkWattage(item.wattage, productWattage) && checkEfficiency(item.efficiency, fullName) && !checkSignificantMismatch(item.matchSeries, fullName)) return item;
             }
 
             // 2. Tokenized Match (Handle "V2 Gold" vs "Gold V2")
@@ -100,7 +180,7 @@
             if (tokens.length > 1) {
                 const allTokensPresent = tokens.every(t => cleanName.includes(t));
                 if (allTokensPresent) {
-                    if (checkWattage(item.wattage, productWattage)) return item.tier;
+                    if (checkWattage(item.wattage, productWattage) && checkEfficiency(item.efficiency, fullName) && !checkSignificantMismatch(item.matchSeries, fullName)) return item;
                 }
             }
 
@@ -108,11 +188,86 @@
             const efficiencyRegex = /(gold|bronze|platinum|titanium|silver|white)/g;
             const seriesNoEff = seriesNorm.replace(efficiencyRegex, '');
             if (seriesNoEff.length > 2 && cleanName.includes(seriesNoEff)) {
-                if (checkWattage(item.wattage, productWattage)) return item.tier;
+                if (checkWattage(item.wattage, productWattage) && checkEfficiency(item.efficiency, fullName) && !checkSignificantMismatch(item.matchSeries, fullName)) return item;
             }
         }
 
         return null;
+    }
+
+    function showPopup(data, anchorElement) {
+        // Remove existing popup if any
+        const existing = document.getElementById('psu-tier-popup');
+        if (existing) existing.remove();
+
+        const popup = document.createElement('div');
+        popup.id = 'psu-tier-popup';
+        popup.style.position = 'absolute';
+        popup.style.backgroundColor = '#1a1a1a';
+        popup.style.color = '#fff';
+        popup.style.padding = '15px';
+        popup.style.borderRadius = '8px';
+        popup.style.boxShadow = '0 4px 15px rgba(0,0,0,0.5)';
+        popup.style.zIndex = '999999';
+        popup.style.minWidth = '300px';
+        popup.style.maxWidth = '400px';
+        popup.style.fontFamily = 'sans-serif';
+        popup.style.fontSize = '14px';
+        popup.style.lineHeight = '1.4';
+        popup.style.border = '1px solid #444';
+
+        const keys = [
+            { label: 'Brand', val: data.brand },
+            { label: 'Series', val: data.series },
+            { label: 'Model', val: data.matchSeries },
+            { label: 'Wattage', val: data.wattage },
+            { label: 'Year', val: data.year },
+            { label: 'Form Factor', val: data.form_factor },
+            { label: 'ATX Version', val: data.atx_version },
+            { label: 'Modular', val: data.modular },
+            { label: 'Topology', val: data.topology },
+            { label: 'ODM', val: data.odm },
+            { label: 'Platform', val: data.platform },
+            { label: 'Notes', val: data.notes }
+        ];
+
+        let contentHtml = '<h3 style="margin:0 0 10px; border-bottom:1px solid #555; padding-bottom:5px;">PSU Details</h3>';
+        contentHtml += '<div style="display:grid; grid-template-columns: 120px 1fr; gap: 5px;">';
+
+        keys.forEach(k => {
+            if (k.val && k.val.toString().trim() !== '') {
+                contentHtml += `<div style="color:#aaa; font-weight:bold;">${k.label}:</div><div>${k.val}</div>`;
+            }
+        });
+        contentHtml += '</div>';
+
+        // Close button
+        contentHtml += '<div style="margin-top:10px; text-align:right;"><button id="psu-popup-close" style="background:#555; color:white; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">Close</button></div>';
+
+        popup.innerHTML = contentHtml;
+        document.body.appendChild(popup);
+
+        // Position popup
+        const rect = anchorElement.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+        popup.style.top = (rect.bottom + scrollTop + 5) + 'px';
+        popup.style.left = (rect.left + scrollLeft) + 'px';
+
+        // Close handlers
+        document.getElementById('psu-popup-close').onclick = () => popup.remove();
+
+        // Click outside to close
+        setTimeout(() => {
+            const closeHandler = (e) => {
+                if (!popup.contains(e.target)) {
+                    popup.remove();
+                    document.removeEventListener('click', closeHandler);
+                }
+            };
+            document.addEventListener('click', closeHandler);
+        }, 10);
     }
 
     const SiteAdapters = {
@@ -128,7 +283,17 @@
                 }
                 return true;
             },
-            getName: (row) => row.querySelector('td.td__name')?.innerText.trim().split('\n')[0],
+            getName: (row) => {
+                let name = row.querySelector('td.td__name')?.innerText.trim().split('\n')[0];
+                const specCells = row.querySelectorAll('td[class*="td__spec"]');
+                for (const cell of specCells) {
+                    if (cell.innerText.includes('80+')) {
+                        name += ' ' + cell.innerText.replace(/Efficiency Rating\s*/gi, '').trim();
+                        break;
+                    }
+                }
+                return name;
+            },
             getWattage: (row) => {
                 const cell = row.querySelector('td.td__spec--3');
                 return cell ? parseInt(cell.innerText.replace('W', '').trim(), 10) : 0;
@@ -193,9 +358,10 @@
 
             const wattage = adapter.getWattage(row);
 
-            const tier = findTier(fullName, wattage);
+            const psuItem = findTier(fullName, wattage);
 
-            if (tier) {
+            if (psuItem) {
+                const tier = psuItem.tier;
                 const badge = document.createElement('span');
                 badge.innerText = `Tier ${tier}`;
                 const base = tier.replace(/[+-]/g, '');
@@ -220,6 +386,15 @@
                 badge.className = "tier-badge";
 
                 adapter.insertBadge(row, badge);
+
+                // Add click handler for details
+                badge.style.cursor = 'pointer';
+                badge.title = 'Click for details';
+                badge.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    showPopup(psuItem, badge);
+                });
             }
 
             row.dataset.tierBadged = 'true';
