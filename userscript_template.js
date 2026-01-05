@@ -301,13 +301,15 @@
             insertBadge: (row, badge) => {
                 const nameCell = row.querySelector('td.td__name');
                 if (nameCell) {
-                    const links = nameCell.querySelectorAll('a');
-                    if (links.length > 0) {
-                        const lastLink = links[links.length - 1];
-                        lastLink.after(badge);
-                    } else {
-                        nameCell.appendChild(badge);
-                    }
+                    nameCell.style.position = 'relative'; // Ensure positioning context
+                    // Position badge to the right
+                    badge.style.position = 'absolute';
+                    badge.style.right = '10px';
+                    badge.style.top = '50%';
+                    badge.style.transform = 'translateY(-50%)';
+                    badge.style.marginLeft = '0'; // Reset margin
+
+                    nameCell.appendChild(badge);
                 }
             }
         },
