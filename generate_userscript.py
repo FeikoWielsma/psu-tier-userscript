@@ -1,6 +1,9 @@
 import json
 import re
 import sys
+import copy
+import fetch_sheet
+import parse_tier_list
 
 # Helper to normalize brand keys
 def normalize_key(s):
@@ -59,17 +62,30 @@ def generate_js_data(json_path):
                 # Let's keep the original series name for display/tie-breaking, 
                 # but maybe add a "matchSeries" field.
                 
-                entry = item.copy()
-                entry['matchSeries'] = s # The specific alias
-                psu_map[k].append(entry)
+                
+                entires_copy = copy.deepcopy(item)
+                entires_copy['matchSeries'] = s # The specific alias
+                psu_map[k].append(entires_copy)
 
     # Sort entries by series length (descending) to match longest specific name first
     for k in psu_map:
         psu_map[k].sort(key=lambda x: len(x['matchSeries']), reverse=True)
 
-    return json.dumps(psu_map)
+    # Serialize to JSON but perform safety replacements for XSS prevention
+    # We escape <, >, and & to their unicode sequences so they fit in a JS string safely
+    # without breaking the JSON structure for the JS interpreter.
+    json_raw = json.dumps(psu_map)
+    json_safe = json_raw.replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+    
+    return json_safe
 
 def generate_userscript():
+    # If --update is present, run fetch and parse first
+    if "--update" in sys.argv:
+        print("Update flag detected: Fetching and parsing latest data...")
+        fetch_sheet.main()
+        parse_tier_list.main()
+
     json_str = generate_js_data('psu_data.json')
     
     

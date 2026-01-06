@@ -240,8 +240,11 @@ def parse_html_table(html_file):
 
     return extracted_data
 
-if __name__ == "__main__":
+def main():
     data = parse_html_table("psu_tier.html")
     print(f"Extracted {len(data)} items.")
     with open("psu_data.json", "w", encoding='utf-8') as f:
         json.dump(data, f, indent=2)
+
+if __name__ == "__main__":
+    main()

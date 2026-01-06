@@ -14,6 +14,12 @@ A tool that parses **SPL's PSU Tier List** (Google Sheet) and generates a usersc
     *   Verifies Wattage compatibility (e.g., matches "RMx 2018" only if wattage aligns with the specific unit details).
 *   **Automated Updates**: The script is generated from the latest Tier List data.
 
+> [!WARNING]  
+> **Parsing & Matching Accuracy**  
+> While this tool strives for accuracy, **false positives and false negatives can occur**.  
+> Manufacturer naming schemes are often inconsistent (e.g., *GF1* vs *GF1 ARGB* vs *GF1 Snow*), and data may be mismatched.  
+> **ALWAYS verify the Tier on the official spreadsheet before making a purchase decision.**
+
 ## 🚀 Installation
 
 ### For Users
@@ -43,9 +49,19 @@ A tool that parses **SPL's PSU Tier List** (Google Sheet) and generates a usersc
 ### Building & Testing
 We provide a master script that runs the entire pipeline (parsing -> generation -> testing):
 
+
+### Building & Testing
+We provide a master script that runs the entire pipeline (parsing -> generation -> testing):
+
 ```bash
 python test_suite.py
 ```
+
+**To update data and generate the userscript in one go:**
+```bash
+python generate_userscript.py --update
+```
+This command will download the latest spreadsheet, parse it, and generate the userscript.
 
 **What this does:**
 1.  `parse_tier_list.py`: Downloads and parses the latest Tier List HTML into `psu_data.json`.
