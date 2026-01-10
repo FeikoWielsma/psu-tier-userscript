@@ -20,11 +20,15 @@ RUN python fetch_sheet.py && \
 # We use an unprivileged Nginx image (safe for OpenShift)
 FROM nginxinc/nginx-unprivileged:alpine
 
-# Copy the generated JS file from Stage 1 to the Nginx web root
+USER root
+
+# Copy the generated JS file
 COPY --from=generator /app/psutier.user.js /usr/share/nginx/html/psutier.user.js
 
-# Optional: Create a simple index.html so you can click to download
 RUN echo '<h1>PSU Tier Userscript</h1><a href="psutier.user.js">Download Script</a>' > /usr/share/nginx/html/index.html
 
-# OpenShift runs containers on random ports, but Nginx Unprivileged listens on 8080 by default.
+RUN chmod -R 755 /usr/share/nginx/html
+
+USER 101
+
 EXPOSE 8080
