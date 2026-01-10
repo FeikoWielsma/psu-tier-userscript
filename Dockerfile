@@ -25,10 +25,11 @@ USER root
 # Copy the generated JS file
 COPY --from=generator /app/psutier.user.js /usr/share/nginx/html/psutier.user.js
 
-RUN echo '<h1>PSU Tier Userscript</h1><a href="psutier.user.js">Download Script</a>' > /usr/share/nginx/html/index.html
+RUN echo '<h2>PSU Tier Userscript</h2><a href="psutier.user.js">Download Script</a>' > /usr/share/nginx/html/index.html
 
-RUN chmod -R 755 /usr/share/nginx/html
-
+RUN chown -R 101:0 /usr/share/nginx/html && \
+    chmod -R g+w /usr/share/nginx/html
+    
 USER 101
 
 EXPOSE 8080
