@@ -1,10 +1,10 @@
 # --- Stage 1: The Builder (Python) ---
-FROM python:3.9-slim AS generator
-WORKDIR /app
+FROM registry.access.redhat.com/ubi9/python-39 AS generator
+USER 0
+RUN dnf install -y nodejs && dnf clean all
+USER 1001
 
-RUN apt-get update && \
-    apt-get install -y nodejs && \
-    rm -rf /var/lib/apt/lists/*
+WORKDIR /opt/app-root/src
 
 # Install dependencies
 COPY requirements.txt .
