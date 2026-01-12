@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 RUN python fetch_sheet.py && \
     python parse_tier_list.py && \
-    python generate_userscript.py
+    python generate_userscript.py --test
 
 RUN node tests/test_matching.js
 
