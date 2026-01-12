@@ -21,7 +21,7 @@ USER root
 COPY --from=generator /app/psutier.user.js /usr/share/nginx/html/psutier.user.js
 
 # Create a simple download page
-RUN echo '<h1>PSU Tier Userscript</h1><a href="psutier.user.js">Download Script</a>' > /usr/share/nginx/html/index.html
+RUN echo '<h1>PSU Tier Userscript V2</h1><a href="psutier.user.js">Download Script</a>' > /usr/share/nginx/html/index.html
 
 # OpenShift runs containers with a random User ID in Group 0.
 # We must ensure Group 0 can read/write the web folder.
