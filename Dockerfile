@@ -26,5 +26,5 @@ COPY --from=generator --chown=1001:0 /opt/app-root/src/psutier.user.js /opt/app-
 USER 0
 RUN echo '<h1>PSU Tier Userscript (UBI Version)</h1><a href="psutier.user.js">Download Script</a>' > /opt/app-root/src/index.html && \
     chown 1001:0 /opt/app-root/src/index.html && \
-    chmod 644 /opt/app-root/src/index.htm
+    chmod 644 /opt/app-root/src/index.html
 USER 1001
