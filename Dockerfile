@@ -12,7 +12,7 @@ RUN python fetch_sheet.py && \
     python parse_tier_list.py && \
     python generate_userscript.py
 # --- Stage 2: The Host (Nginx) ---
-FROM nginxinc/nginx-unprivileged:alpine
+FROM docker.io/nginxinc/nginx-unprivileged:alpine
 
 # Temporarily switch to root to set up files
 USER root
