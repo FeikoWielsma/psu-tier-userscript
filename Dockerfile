@@ -19,12 +19,12 @@ RUN node tests/test_matching.js
 # --- Stage 2: The Host (Nginx) ---
 FROM registry.access.redhat.com/ubi9/nginx-122
 
-USER root
-
-COPY --from=generator --chown=1001:0 /opt/app-root/src/psutier.user.js /opt/app-root/src/psutier.user.js
+COPY --from=generator /opt/app-root/src/psutier.user.js /opt/app-root/src/psutier.user.js
 
 USER 0
-RUN echo '<h1>PSU Tier Userscript (UBI Version)</h1><a href="psutier.user.js">Download Script</a>' > /opt/app-root/src/index.html && \
-    chown 1001:0 /opt/app-root/src/index.html && \
-    chmod 644 /opt/app-root/src/index.html
+RUN echo '<h1>PSU Tier Userscript (V6)</h1><a href="psutier.user.js">Download Script</a>' > /opt/app-root/src/index.html
+
+RUN chown -R 1001:0 /opt/app-root/src && \
+    chmod -R g+rwX /opt/app-root/src
+    
 USER 1001
