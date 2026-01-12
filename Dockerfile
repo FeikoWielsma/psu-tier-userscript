@@ -20,7 +20,7 @@ RUN chown -R 0:0 /opt/app-root/src \
  && chmod -R g+rwX /opt/app-root/src
 
 # --- Stage 2: Nginx ---
-FROM registry.access.redhat.com/ubi9/nginx-122
+FROM registry.access.redhat.com/ubi9/nginx-122-minimal
 
 USER 0
 
