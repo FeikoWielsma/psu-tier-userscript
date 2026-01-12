@@ -2,6 +2,10 @@
 FROM python:3.9-slim AS generator
 WORKDIR /app
 
+RUN apt-get update && \
+    apt-get install -y nodejs && \
+    rm -rf /var/lib/apt/lists/*
+
 # Install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
@@ -11,6 +15,9 @@ COPY . .
 RUN python fetch_sheet.py && \
     python parse_tier_list.py && \
     python generate_userscript.py
+
+RUN node tests/test_matching.js
+
 # --- Stage 2: The Host (Nginx) ---
 FROM docker.io/nginxinc/nginx-unprivileged:alpine
 
