@@ -52,5 +52,13 @@
   { "name": "NZXT C550", "wattage": 550, "efficiency": "80+ Bronze", "formFactor": "ATX", "site": "pcpp", "expectTier": "C+" },
   { "name": "NZXT C1500", "wattage": 1500, "efficiency": "80+ Platinum", "formFactor": "ATX", "site": "pcpp", "expectTier": "A+" },
   { "name": "Corsair HX850", "wattage": 850, "efficiency": "80+ Platinum", "formFactor": "ATX", "site": "pcpp", "expectTier": "A+", "note": "structured Platinum efficiency yields the correct HX match" },
-  { "name": "Thermalright TG", "wattage": 650, "efficiency": "80+ Gold", "formFactor": "ATX", "expectTier": null, "note": "ATX listing must not match the SFX TR-TG (form-factor constraint)" }
+  { "name": "Thermalright TG", "wattage": 650, "efficiency": "80+ Gold", "formFactor": "ATX", "expectTier": null, "note": "ATX listing must not match the SFX TR-TG (form-factor constraint)" },
+  { "name": "ASRock PRO-650G", "wattage": 650, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "B+", "minBand": "strong" },
+  { "name": "ASRock PRO-750G", "wattage": 750, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "B+", "minBand": "strong" },
+  { "name": "SAMA GT 750", "wattage": 750, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "B", "minBand": "strong" },
+  { "name": "NZXT C750 Core", "wattage": 750, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "A", "minBand": "strong" },
+  { "name": "NZXT C850 Core", "wattage": 850, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "A", "minBand": "strong" },
+  { "name": "Lian Li SX1000P", "wattage": 1000, "efficiency": "80+ Platinum", "formFactor": "ATX", "site": "pcpp", "expectTier": "A", "minBand": "strong" },
+  { "name": "ASRock SL-1000P", "wattage": 1000, "efficiency": "80+ Platinum", "formFactor": "ATX", "site": "pcpp", "expectTier": "A+", "minBand": "strong" },
+  { "name": "Fractal Design Ion 3 Gold", "wattage": 850, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "A", "minBand": "strong" }
 ]

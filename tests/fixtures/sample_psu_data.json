@@ -13072,7 +13072,7 @@
     "series": "C Series",
     "variant": "Core ATX 3.1 (2025)",
     "model": "C Series Core ATX 3.1 (2025)",
-    "wattage": "850/1000W",
+    "wattage": "750/850/1000W",
     "tier": "A",
     "year": "2025",
     "form_factor": "ATX",

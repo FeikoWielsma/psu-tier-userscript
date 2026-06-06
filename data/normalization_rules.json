@@ -36,6 +36,8 @@
     { "pattern": "\\b(\\d{3,4})\\s*g\\b", "replace": "$1 gold", "flags": "ig", "note": "ASUS TUF '850G' suffix denotes Gold efficiency" },
     { "pattern": "\\bgaming\\b", "replace": "", "flags": "ig", "note": "marketing word, never part of a tier-sheet model name" },
     { "pattern": "\\bion\\+?\\s*3\\b", "replace": "ION V3", "flags": "ig", "note": "Fractal 'Ion 3' is the sheet's 'ION V3' generation" },
-    { "pattern": "\\bion\\+\\s*2\\b", "replace": "ION Plus 2", "flags": "ig", "note": "Fractal 'Ion+ 2' is the sheet's 'ION Plus 2'" }
+    { "pattern": "\\bion\\+\\s*2\\b", "replace": "ION Plus 2", "flags": "ig", "note": "Fractal 'Ion+ 2' is the sheet's 'ION Plus 2'" },
+    { "pattern": "\\bsl\\s*-\\s*(\\d{3,4})p\\b", "replace": "Steel Legend Platinum $1p", "flags": "ig", "note": "ASRock SL-P is Steel Legend Platinum" },
+    { "pattern": "\\bsl\\s*-\\s*(\\d{3,4})g\\b", "replace": "Steel Legend Gold $1g", "flags": "ig", "note": "ASRock SL-G is Steel Legend Gold" }
   ]
 }

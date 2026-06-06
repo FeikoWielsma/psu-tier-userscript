@@ -102,12 +102,17 @@ def parse_csv(path):
                         clean(row[COL_TOPO_REGULATION])) if p
         )
 
+        # Apply local data corrections/patches for sheet gaps or erroneous values
+        wattage = clean(row[COL_WATTAGE]) or None
+        if brand == "NZXT" and series_clean == "C Series" and variant == "Core ATX 3.1 (2025)":
+            wattage = "750/850/1000W"
+
         entries.append({
             "brand": brand,
             "series": series_clean,
             "variant": variant or None,
             "model": model,
-            "wattage": clean(row[COL_WATTAGE]) or None,
+            "wattage": wattage,
             "tier": tier,
             "year": clean(row[COL_YEAR]) or None,
             "form_factor": clean(row[COL_SIZE]) or None,
