@@ -63,5 +63,9 @@
   { "name": "Fractal Design Ion 3 Gold", "wattage": 850, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "A", "minBand": "strong" },
   { "name": "1st Player ACK Gold 750W", "wattage": 750, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "B", "expectLimited": true },
   { "name": "Abko Ultimate GX 850W", "wattage": 850, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "A", "expectLimited": true },
-  { "name": "Thermaltake Smart DC-DC 650W", "wattage": 650, "efficiency": "80+ Bronze", "formFactor": "ATX", "site": "pcpp", "expectTier": "C-", "expectLimited": true }
+  { "name": "Thermaltake Smart DC-DC 650W", "wattage": 650, "efficiency": "80+ Bronze", "formFactor": "ATX", "site": "pcpp", "expectTier": "C-", "expectLimited": true },
+  { "name": "NZXT C1200 Gold ATX 3.1, Zwart", "wattage": 1200, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "tweakers", "expectTier": "A+" },
+  { "name": "Lian Li Edge Gold 850W Wit, geen USB-hub", "wattage": 850, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "tweakers", "expectTier": "A" },
+  { "name": "Seasonic FOCUS GX White ATX 3 (2024) 1000W", "wattage": 1000, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "tweakers", "expectTier": "A-" },
+  { "name": "FSP Hydro PTM PRO 1650W ATX3.0(12V-2x6)", "wattage": 1650, "efficiency": "80+ Platinum", "formFactor": "ATX", "site": "tweakers", "expectTier": "A+" }
 ]
