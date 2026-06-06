@@ -1,0 +1,6701 @@
+[
+ {
+  "name": "1STPLAYER NGDP",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "1STPLAYER NGDP",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "1STPLAYER NGDP ATX 3.0",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ADATA XPG CORE Reactor 650",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ADATA XPG CORE Reactor 750",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ADATA XPG CORE Reactor 850",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ADATA XPG Core Reactor II",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ADATA XPG Core Reactor II",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ADATA XPG Core Reactor II",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ADATA XPG Core Reactor II VE",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ADATA XPG Core Reactor II VE",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ADATA XPG Core Reactor II VE",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ADATA XPG KYBER",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ADATA XPG KYBER",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ADATA XPG PYLON",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ADATA XPG PYLON",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ADATA XPG PYLON",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Aerocool Integrator",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Aerocool Integrator",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Aerocool Integrator",
+  "wattage": 700,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Aerocool Integrator Gold",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Aerocool Integrator Gold",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Aerocool LUX RGB 750M (230V EU)",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Antec Basiq",
+  "wattage": 550,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Antec CSK",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Antec CSK",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Antec CSK",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Antec Earthwatts Green",
+  "wattage": 430,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Antec EarthWatts Platinum",
+  "wattage": 550,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Antec GSK ATX3.1",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Antec GSK ATX3.1",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Antec High Current Gamer Gold",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Antec High Current Gamer Gold",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Antec High Current Gamer Gold",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Antec NE1000G M ATX3.0",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Antec NE1000G M White ATX 3.0",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Apevia ATX-PR850W PCIE5.0",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Apevia CAPTAIN",
+  "wattage": 550,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Apevia Galaxy",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Apevia Galaxy",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Apevia Galaxy",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Apevia Premier",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Apevia Prestige",
+  "wattage": 600,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Apevia Prestige",
+  "wattage": 800,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Apex AL-8250SFX",
+  "wattage": 250,
+  "efficiency": null,
+  "formFactor": "SFX",
+  "modular": "No"
+ },
+ {
+  "name": "ARESGAME AGK",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ARESGAME AGT",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ARESGAME AGV",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ARESGAME AGV",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "ARESGAME AGV",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ASRock Challenger CL-550B",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ASRock Challenger CL-650B",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ASRock Challenger CL-650G",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ASRock Challenger CL-750B",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ASRock Challenger CL-750G",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ASRock Challenger CL-850G",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ASRock Phantom Gaming PG-1000G",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Phantom Gaming PG-1300G",
+  "wattage": 1300,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Phantom Gaming PG-1600G",
+  "wattage": 1600,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Phantom Gaming PG-750G",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Phantom Gaming PG-850G",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock PRO-650G",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ASRock PRO-750G",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ASRock PRO-850G",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ASRock PRO-M750G",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock SL-1000P",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock SL-1200P",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock SL-850P",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Steel Legend SL-1000G",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Steel Legend SL-1000GW",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Steel Legend SL-1200G",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Steel Legend SL-1200GW",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Steel Legend SL-650G",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Steel Legend SL-750G",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Steel Legend SL-850G",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Steel Legend SL-850GW",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Taichi TC-1300T",
+  "wattage": 1300,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ASRock Taichi TC-1650T",
+  "wattage": 1650,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus Prime",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Asus Prime AP-750G",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus Prime AP-850G",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG LOKI",
+  "wattage": 1200,
+  "efficiency": "80+ Titanium",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG LOKI",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG LOKI",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG LOKI",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG Strix",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG Strix",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG Strix",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG Strix",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG Strix",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG Strix",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG STRIX 1000G",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG STRIX 1000P GAMING",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG STRIX 1200P Gaming",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG Strix Aura Edition",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG Strix Aura Edition",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG Strix Aura Edition",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG Strix Aura Edition",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG THOR 1200P",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG THOR 1600T Gaming",
+  "wattage": 1600,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG THOR 850P",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG THOR P2 Gaming",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG THOR P2 Gaming",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG THOR P2 Gaming",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG Thor P3 Gaming",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG Thor P3 Gaming",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG Thor P3 Hatsune Miku Edition",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG THOR T3 GAMING",
+  "wattage": 1600,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus ROG-STRIX-850G",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus TUF Gaming",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Asus TUF Gaming 1000G",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus TUF Gaming 1200G",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus TUF Gaming 650B",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Asus TUF Gaming 750G",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus TUF Gaming 850G",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Asus TUF Gaming B",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Athena Power AP-MFATX40",
+  "wattage": 400,
+  "efficiency": "80+ Bronze",
+  "formFactor": "Mini ITX",
+  "modular": "No"
+ },
+ {
+  "name": "Athena Power AP-MFATX40P8",
+  "wattage": 400,
+  "efficiency": "80+ Bronze",
+  "formFactor": "Flex ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Azza PSAZ-550W",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Azza PSAZ-650W",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Azza PSAZ-750W",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! Dark Power 12",
+  "wattage": 850,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Dark Power 13",
+  "wattage": 1000,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Dark Power 13",
+  "wattage": 850,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Dark Power 13",
+  "wattage": 750,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Dark Power 14",
+  "wattage": 1200,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Dark Power 14",
+  "wattage": 850,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Dark Power 14",
+  "wattage": 1000,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Dark Power Pro 12",
+  "wattage": 1500,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Dark Power Pro 13",
+  "wattage": 1600,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Dark Power Pro 13",
+  "wattage": 1300,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Power Zone 2",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Power Zone 2",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Power Zone 2",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Power Zone 2",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Pure Power 11",
+  "wattage": 400,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! Pure Power 11",
+  "wattage": 300,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! Pure Power 11",
+  "wattage": 700,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! Pure Power 11",
+  "wattage": 500,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! Pure Power 11 600",
+  "wattage": 600,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! Pure Power 11 CM",
+  "wattage": 600,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "be quiet! Pure Power 11 FM 850",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Pure Power 12",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! Pure Power 12",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! Pure Power 12",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! Pure Power 12",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! Pure Power 12",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! Pure Power 12 M",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Pure Power 12 M",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Pure Power 12 M",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Pure Power 12 M",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Pure Power 12 M",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Pure Power 12 M",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Pure Power 13 M",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Pure Power 13 M",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Pure Power 13 M",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Pure Power 13 M",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Pure Power 13 M",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Pure Power 13 M",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! SFX L Power",
+  "wattage": 600,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! SFX L Power",
+  "wattage": 500,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! SFX Power 3 450",
+  "wattage": 450,
+  "efficiency": "80+ Bronze",
+  "formFactor": "SFX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! Straight Power 11 450W",
+  "wattage": 450,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Straight Power 11 650W",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Straight Power 11 750W",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Straight Power 11 850W",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Straight Power 12",
+  "wattage": 1500,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Straight Power 12",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Straight Power 12",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Straight Power 12",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! Straight Power 12",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "be quiet! System Power 10",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! System Power 10",
+  "wattage": 450,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! System Power 10",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! System Power 10",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! System Power 10",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! System Power 11 U",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! System Power 11 U",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! System Power 11 U",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! System Power 9",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! System Power 9",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! System Power 9",
+  "wattage": 400,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "be quiet! System Power 9 700 CM",
+  "wattage": 700,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Chieftec Vega",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Chieftec Vega",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Chieftec Vega M",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Chieftec Vega M",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master Elite Gold",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master Elite NEX White W700 Black Mesh 230V",
+  "wattage": 700,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master Elite V3",
+  "wattage": 600,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master Elite V3",
+  "wattage": 500,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master G600",
+  "wattage": 600,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master G800",
+  "wattage": 800,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master GX III GOLD",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master M2000",
+  "wattage": 2000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master MasterWatt",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Cooler Master MasterWatt",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Cooler Master MasterWatt 550",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Cooler Master MWE",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE 500",
+  "wattage": 500,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE Bronze",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE Bronze 550",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE Bronze 550 V3 230V",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE Bronze 650 V3 230V",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE BRONZE 750 V3",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE Bronze 750 V3 230V",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE Bronze V2",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE Bronze V2",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE Bronze V2",
+  "wattage": 450,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE Bronze V2",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE Gold 650",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master MWE GOLD 650 V2 FULL MODULAR",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master MWE GOLD 750 V2 FULL MODULAR",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master MWE Gold 750 V3",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master MWE Gold 850 - V2",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master MWE Gold 850 V3",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master MWE Gold V2 ATX 3.1",
+  "wattage": 1050,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master MWE Gold V2 ATX 3.1",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master MWE Gold V2 ATX 3.1",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master MWE Gold V2 ATX3.0",
+  "wattage": 1050,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master MWE Gold V3",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE Gold V3",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE Gold V3",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE Gold V3",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE White V2 230V",
+  "wattage": 400,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE White V2 230V",
+  "wattage": 700,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master MWE White V2 230V",
+  "wattage": 650,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cooler Master V Platinum V2",
+  "wattage": 1600,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master V Platinum V2",
+  "wattage": 1100,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master V SFX Gold ATX 3.0",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master V SFX Gold ATX 3.1",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master V SFX Gold ATX 3.1",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master V SFX Platinum",
+  "wattage": 1300,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master V SFX Platinum",
+  "wattage": 1100,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master V1300 Platinum",
+  "wattage": 1300,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master V550 SFX GOLD",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master V650 SFX GOLD",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master V650 V2",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master V750 SFX GOLD",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master V750 V2",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master V850 SFX GOLD",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cooler Master X Mighty 2000 230V",
+  "wattage": 2000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "CoolMax CUG-950B",
+  "wattage": 950,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "CoolMax RM-1000B",
+  "wattage": 1000,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "CoolMax V-400",
+  "wattage": 400,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair AX1000",
+  "wattage": 1000,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair AX1200",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair AX1200i",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair AX1500i",
+  "wattage": 1500,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair AX1600i",
+  "wattage": 1600,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair AX760",
+  "wattage": 760,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair AX850",
+  "wattage": 850,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair AX860",
+  "wattage": 860,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair CS550M",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CS650M",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CS750M",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CV450",
+  "wattage": 450,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CV550",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CV650",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CV750",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CX (2023)",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CX (2023)",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CX (2023)",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CX430",
+  "wattage": 430,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CX430M",
+  "wattage": 430,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CX450 (2017)",
+  "wattage": 450,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CX450M (2015)",
+  "wattage": 450,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CX500",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CX500M",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CX550 (2017)",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CX550F",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair CX550M",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CX550M (2021)",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CX600",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CX600M",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CX650 (2017)",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CX650F",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair CX650M",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CX650M (2021)",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CX650M (2025)",
+  "wattage": 650,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CX750",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CX750 (2017)",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair CX750F",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair CX750M (2021)",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CX750M (2025)",
+  "wattage": 750,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CX750M V2 (2017 Edition)",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CX850M",
+  "wattage": 850,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair CXM",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair GS800",
+  "wattage": 800,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair HX1000 Platinum",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair HX1000i",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair HX1000i (2023)",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair HX1000i SHIFT",
+  "wattage": 1000,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full / Side"
+ },
+ {
+  "name": "Corsair HX1200 Platinum",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair HX1200i",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair HX1200i (2025)",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair HX1200i SHIFT",
+  "wattage": 1200,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full / Side"
+ },
+ {
+  "name": "Corsair HX1500i (2022)",
+  "wattage": 1500,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair HX1500i (2023)",
+  "wattage": 1500,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair HX1500i (2025)",
+  "wattage": 1500,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair HX1500i SHIFT",
+  "wattage": 1500,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full / Side"
+ },
+ {
+  "name": "Corsair HX750",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair HX750 Platinum",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair HX750i",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair HX850",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair HX850",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair HX850 Platinum",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair HX850i",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM1000",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM1000e (2022)",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM1000e (2023)",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM1000e (2025)",
+  "wattage": 1000,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM1000x",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM1000x (2021)",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM1000x (2024)",
+  "wattage": 1000,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM1000x SHIFT",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full / Side"
+ },
+ {
+  "name": "Corsair RM1200e",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM1200x SHIFT",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full / Side"
+ },
+ {
+  "name": "Corsair RM450",
+  "wattage": 450,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM550",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM550x",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM550x (2018)",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM650",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM650 (2019)",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM650 (2023)",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM650e (2025)",
+  "wattage": 650,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM650x",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM650x (2018)",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM650x (2021)",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM750",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM750 (2019)",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM750e (2022)",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM750e (2023)",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM750e (2025)",
+  "wattage": 750,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM750i",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM750x",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM750x (2018)",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM750x (2021)",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM750x (2024)",
+  "wattage": 750,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM750x SHIFT",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full / Side"
+ },
+ {
+  "name": "Corsair RM750x White",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM750x White (2018)",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM850",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM850 (2019)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM850e (2022)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM850e (2023)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM850e (2025)",
+  "wattage": 850,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM850i",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM850x",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM850x (2018)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM850x (2021)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM850x (2024)",
+  "wattage": 850,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RM850x SHIFT",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full / Side"
+ },
+ {
+  "name": "Corsair RM850x White",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair RMx SHIFT (2025)",
+  "wattage": 1000,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full / Side"
+ },
+ {
+  "name": "Corsair SF1000 (2024)",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair SF1000L",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair SF450 (2016)",
+  "wattage": 450,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair SF450 (2018)",
+  "wattage": 450,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair SF600 (2016)",
+  "wattage": 600,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair SF600 (2018)",
+  "wattage": 600,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair SF750 (2018)",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair SF750 (2024)",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair SF850 (2024)",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair SF850L",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Corsair TX550M Gold",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair TX650",
+  "wattage": 650,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair TX650M",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair TX650M Gold",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair TX750",
+  "wattage": 750,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair TX750M",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair TX750M Gold",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair TX850",
+  "wattage": 850,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair TX850M Gold",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair TX950",
+  "wattage": 950,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair Vengeance 650M",
+  "wattage": 650,
+  "efficiency": "80+ Silver",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair Vengeance 750M",
+  "wattage": 750,
+  "efficiency": "80+ Silver",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Corsair VS350",
+  "wattage": 350,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair VS450",
+  "wattage": 450,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair VS550 (2018)",
+  "wattage": 550,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair VS600 (2020)",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair VS650",
+  "wattage": 650,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Corsair VS650 (2018)",
+  "wattage": 650,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cougar GEX",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cougar GEX",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Cougar VTE",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Cougar VTX",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool DQ750-M-V2L",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Deepcool GamerStorm PN1000M",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Deepcool GamerStorm PQ1000G",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Deepcool GamerStorm PQ750G",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Deepcool GamerStorm PQ850G",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Deepcool PF350 230V",
+  "wattage": 350,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PF400 230V",
+  "wattage": 400,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PF500 230V",
+  "wattage": 500,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PF600 230V",
+  "wattage": 600,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PF650 230V",
+  "wattage": 650,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PF700 230V",
+  "wattage": 700,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PF750 230V",
+  "wattage": 750,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PK550D",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PK650D",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PK750D",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PL550D",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PL650D",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PL750D",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PN650M",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Deepcool PN750M",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Deepcool PN850D",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Deepcool PN850M",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Deepcool PN850M WH",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Deepcool PQ850M",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Deepcool PX1000P",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ENDORFY Supremo FM5",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ENDORFY Supremo FM6",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ENDORFY Supremo FM6",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "ENDORFY Vero L5",
+  "wattage": 700,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ENDORFY Vero L5",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "ENDORFY Vero L5",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Enermax EMG900EWT",
+  "wattage": 900,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Enermax Revolution D.F. 12",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Enermax REVOLUTION III",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Enermax REVOLUTION III",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Enermax REVOLUTION III",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Enermax REVOLUTION III",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Enhance ENP-7660",
+  "wattage": 600,
+  "efficiency": "80+ Platinum",
+  "formFactor": "Flex ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 1000 GQ",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "EVGA 400 N1",
+  "wattage": 400,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 450 BR",
+  "wattage": 450,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 450 BT",
+  "wattage": 450,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 500 B1",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 500 BQ",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "EVGA 500 BR",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 500 GD",
+  "wattage": 500,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 500 W1",
+  "wattage": 500,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 550 B5",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA 600 B1",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 600 BQ",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "EVGA 600 BR",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 600 GD",
+  "wattage": 600,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 600 W1",
+  "wattage": 600,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 650 B5",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA 650 BQ",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "EVGA 650 GQ",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "EVGA 650BP",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 700 BR",
+  "wattage": 700,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 700 GD",
+  "wattage": 700,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 750 B5",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA 750 BQ",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "EVGA 750 GQ",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "EVGA 750 N1",
+  "wattage": 750,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA 850 B5",
+  "wattage": 850,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA 850 BQ",
+  "wattage": 850,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "EVGA 850 GQ",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "EVGA GE",
+  "wattage": 800,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "EVGA SuperNOVA 1000 G+",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1000 G2",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1000 G3",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1000 G5",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1000 G6",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1000 GT",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1000 P2",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1000 P5",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1000 P6",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1000 T2",
+  "wattage": 1000,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1200 P2",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1200 P3",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1300 G+",
+  "wattage": 1300,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1300 G2",
+  "wattage": 1300,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1300 P+",
+  "wattage": 1300,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1600 G+",
+  "wattage": 1600,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1600 P+",
+  "wattage": 1600,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1600 P2",
+  "wattage": 1600,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 1600 T2",
+  "wattage": 1600,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 550 G2",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 550 G3",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 550 GA",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 550 GM",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 650 G+",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 650 G1",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 650 G2",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 650 G3",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 650 G5",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 650 GA",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 650 GM",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 650 GT",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 650 P2",
+  "wattage": 650,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 750 G+",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 750 G2",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 750 G3",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 750 G5",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 750 GA",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 750 GT",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 750 P2",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 850 G2",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 850 G3",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 850 G5",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 850 G6",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 850 GA",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 850 GM",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 850 GT",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA 850 P2",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "EVGA SuperNOVA NEX650G Gold",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Fractal Design Anode Bronze",
+  "wattage": 450,
+  "efficiency": "80+ Bronze",
+  "formFactor": "SFX",
+  "modular": "No"
+ },
+ {
+  "name": "Fractal Design Ion 3 Gold",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Fractal Design Ion 3 Gold",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Fractal Design Ion 3 Gold",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Fractal Design Ion SFX 650G",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "FSP Group Dagger Pro",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "FSP Group Dagger Pro",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "FSP Group FSP300-57FCB",
+  "wattage": 300,
+  "efficiency": "80+ Gold",
+  "formFactor": "Flex ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "FSP Group FSP300-60LG-5K",
+  "wattage": 300,
+  "efficiency": "80+ Bronze",
+  "formFactor": "Flex ATX",
+  "modular": "No"
+ },
+ {
+  "name": "FSP Group FSP400-60FGGBA",
+  "wattage": 400,
+  "efficiency": "80+ Gold",
+  "formFactor": "Flex ATX",
+  "modular": "No"
+ },
+ {
+  "name": "FSP Group FSP500-50FGGBN",
+  "wattage": 500,
+  "efficiency": "80+ Gold",
+  "formFactor": "Flex ATX",
+  "modular": "No"
+ },
+ {
+  "name": "FSP Group HEXA 85+ PRO",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "FSP Group HV PRO",
+  "wattage": 650,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "FSP Group Hydro G Pro",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "FSP Group Hydro G Pro",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "FSP Group Hydro Pro",
+  "wattage": 700,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "FSP Group Hydro Pro",
+  "wattage": 800,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "FSP Group Hydro PTM X PRO,Gen5",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "FSP Group Hydro Ti PRO,Gen 5",
+  "wattage": 1000,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "FSP Group Hyper M85+",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "FSP Group MEGA TI",
+  "wattage": 1650,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "FSP Group VITA GD",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "FSP Group VITA-GM",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "FSP Group VITA-GM",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "FSP Group VITA-GM",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "GAMDIAS HELIOS P2-1000G",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "GAMDIAS HELIOS P2-750G",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "GAMDIAS HELIOS P2-850G",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "GAMDIAS KRATOS M1 B",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "GAMDIAS KRATOS M1 B",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "GAMDIAS KRATOS M1 B",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "GAMDIAS KRATOS P1 G",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "GameMax GM",
+  "wattage": 800,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "GameMax GM",
+  "wattage": 300,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "GameMax GP",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "GameMax GP",
+  "wattage": 400,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "GameMax GX Pro Rampage",
+  "wattage": 1050,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "GameMax GX-750 Modular",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "GameMax Rampage",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "GameMax Rampage",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "GameMax RGB Pro",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "GameMax RGB Pro",
+  "wattage": 1050,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "GameMax RGB Rainbow",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "GameMax RGB Rainbow",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte AORUS ELITE P1000",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte AORUS ELITE P1000 ICE",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte AORUS ELITE P850",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte AORUS ELITE P850 ICE",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte AORUS P1200W",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte B700H",
+  "wattage": 700,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Gigabyte GP-P650G PG5",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Gigabyte GreenMax Plus",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Gigabyte P-B",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Gigabyte P450B",
+  "wattage": 450,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Gigabyte P550B",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Gigabyte P550SS",
+  "wattage": 550,
+  "efficiency": "80+ Silver",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Gigabyte P650G",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Gigabyte P650SS",
+  "wattage": 650,
+  "efficiency": "80+ Silver",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Gigabyte P750BS (230V)",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Gigabyte P750GM",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte P850GM",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte PW400",
+  "wattage": 400,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Gigabyte UD-GM PG5",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte UD-GM PG5",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte UD1000GM",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte UD1000GM PG5",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte UD1000GM PG5 (rev. 2.0)",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte UD1000GM PG5 V2",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte UD1600PM PG5 AI TOP",
+  "wattage": 1600,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte UD750GM",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte UD750GM PG5 V2",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte UD850GM",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte UD850GM PG5 (rev. 2.0)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte UD850GM PG5 V2",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte UD850GM-A",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Gigabyte UD850GM-A PG5",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "HEC XP1080",
+  "wattage": 1080,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "High Power PG-750",
+  "wattage": 750,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "In Win IP-P300BN7-2",
+  "wattage": 300,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "In Win IP-S200DF1-0",
+  "wattage": 200,
+  "efficiency": null,
+  "formFactor": "TFX",
+  "modular": "No"
+ },
+ {
+  "name": "Inter-Tech Argus RGB CM II",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "iTek GF750 EVO",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "KOLINK ENCLAVE",
+  "wattage": 700,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "LC-Power LC6 V2.31",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li EDGE",
+  "wattage": 1300,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li EDGE",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li EDGE",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li EDGE GOLD",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li EDGE GOLD",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li EDGE GOLD",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li EDGE GOLD",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li RB",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Lian Li RB",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Lian Li RB",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Lian Li SP",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li SP V2",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li SP V2",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li SP0850P",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li SP1000P",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li SP750",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li SP850",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li SX0850P",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li SX1000P",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Lian Li SX1200P",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Logisys PS480D",
+  "wattage": 480,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Logisys PS480D2",
+  "wattage": 480,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Mars Gaming MPII650",
+  "wattage": 650,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Mars Gaming MPIII750",
+  "wattage": 750,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Montech APX",
+  "wattage": 750,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Montech APX",
+  "wattage": 650,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Montech APX",
+  "wattage": 550,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Montech CENTURY II",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Montech CENTURY II",
+  "wattage": 1050,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Montech CENTURY II",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Montech TITAN GOLD 1000W",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Montech TITAN GOLD 850W",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Montech TITAN PLA",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Montech TITAN PLA",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Montech TITAN PLA",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI A1000G PCIE5",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI A850GLS MLG EDITION",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A-GL PCIE5 II",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A1000GL PCIE5",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A1000GLS PCIE5",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A1000PLS PCIE5",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A1200PLS PCIE5",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A1250GL PCIE5",
+  "wattage": 1250,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A500DN",
+  "wattage": 500,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "MSI MAG A550BN",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "MSI MAG A550BNL",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "MSI MAG A600DN",
+  "wattage": 600,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "MSI MAG A650BE",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "MSI MAG A650BN",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "MSI MAG A650BNL",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "MSI MAG A650GL",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A650GLS PCIE5",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A750BE",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "MSI MAG A750BN PCIE5",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "MSI MAG A750GL PCIE5",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A750GL PCIE5 II",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A750GLS PCIE5",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A750GN PCIE5",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "MSI MAG A850GL PCIE5",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A850GL PCIE5 II",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A850GLS PCIE5",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MAG A850GN PCIE5",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "MSI MEG Ai1300P PCIE5",
+  "wattage": 1300,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MEG Ai1600T PCIE5",
+  "wattage": 1600,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MPG A1000G",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MPG A1000GS PCIE5",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MPG A1250GS PCIE5",
+  "wattage": 1250,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MPG A650GF",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MPG A750GF",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MPG A750GF WHITE",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MPG A850G PCIE5",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MPG A850GF",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MPG A850GS PCIE5",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MPG Ai1300TS PCIE5",
+  "wattage": 1300,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "MSI MPG Ai1600TS PCIE5",
+  "wattage": 1600,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NOX URANO VX",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "NZXT C (2019)",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C (2019)",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C (2019)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C1000 (2022)",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C1000 (2024)",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C1000 Core",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C1200",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C1200 (2024)",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C1500",
+  "wattage": 1500,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C550",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "NZXT C650",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "NZXT C650 (2022)",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C750",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "NZXT C750 (2022)",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C750 (2023)",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "NZXT C750 Core",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C850 (2022)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C850 (2024)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C850 (2026)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT C850 Core",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT E500",
+  "wattage": 500,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT E650",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT E850",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT HALE 90",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT HALE 90",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT HALE 90",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT HALE 90",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT HALE82",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "NZXT HALE82",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "NZXT HALE82",
+  "wattage": 850,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "NZXT HALE82 V2 550W",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT HALE82 V2 700W",
+  "wattage": 700,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT HALE82N 550W",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "NZXT HALE82N 650W",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "NZXT HALE82N 750W",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "NZXT HALE90 V2",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT HALE90 V2",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT HALE90 V2",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT HALE90 V2 1000W",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT HALE90 V2 1200W",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "NZXT HALE90 V2 850W",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "PC Cooler KN650",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "PC Cooler KN850",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "PC Power & Cooling PM0600",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "PC Power & Cooling Silencer MK III",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Phanteks AMP GH",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Phanteks AMP GH",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Phanteks AMP GH",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Phanteks AMP GH",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Phanteks Revolt SFX",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Phanteks Revolt X",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "PowerSpec GFM",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "PowerSpec PS 650BSM",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "PowerSpec PS 650GSM",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "PowerSpec PS 750BSM",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "PowerSpec PSX 850GFM",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Raidmax Cobra",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Raidmax Cobra",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "RAIJINTEK CRATOS",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "RAIJINTEK CRATOS",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Rosewill CMG1000G5",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Rosewill CMG1200G5",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Rosewill CMG850",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Rosewill CMG850G5",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Rosewill VMG",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Rosewill VMG",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Rosewill VMG",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Rosewill VNW550",
+  "wattage": 550,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Rosewill VNW650",
+  "wattage": 650,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Rosewill VNW750",
+  "wattage": 750,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Rosewill VSB",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Rosewill VSB",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Rosewill VSB",
+  "wattage": 850,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "SAMA G1000",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SAMA G650",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SAMA G750",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SAMA G850",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SAMA GT",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SAMA GT",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SAMA GT",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SAMA P1000",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SAMA P1200",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SAMA P850",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic ATX3-FOCUS-GX-850-WHITE",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic Core GC",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "SeaSonic CORE GM",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "SeaSonic CORE GX ATX 3 (2024)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic CORE GX ATX 3 (2024)",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic CORE GX ATX 3 (2024)",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic CORE GX-650",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "SeaSonic FOCUS Gold",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "SeaSonic FOCUS Gold",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "SeaSonic FOCUS GX",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS GX",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS GX",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS GX",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic Focus GX V4 ATX 3 (2024)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic Focus GX V4 ATX 3 (2024)",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic Focus GX V4 ATX 3 (2024)",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS GX-1000 ATX 3.0",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS GX-750 ATX 3.0",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS GX-850 ATX 3.0",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS Plus 550 Gold",
+  "wattage": 550,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS Plus 650 Gold",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS Plus 750 Gold",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS PLUS 850 Gold",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS Plus Gold",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS Plus Platinum",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS PX",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS SGX",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS SGX",
+  "wattage": 450,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS SGX (2021)",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS SGX (2021)",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic FOCUS SPX (2021)",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic G12 GC",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "SeaSonic G12 GC",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "SeaSonic G12 GC",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "SeaSonic G12 GM",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "SeaSonic G12 GM",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "SeaSonic M12II",
+  "wattage": 620,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic M12II EVO",
+  "wattage": 520,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic Platinum",
+  "wattage": 400,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic PRIME 600 Titanium",
+  "wattage": 600,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic PRIME Fanless",
+  "wattage": 700,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic Prime Fanless PX-500",
+  "wattage": 500,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic PRIME PX-1300",
+  "wattage": 1300,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic PRIME PX-1600 ATX 3.0",
+  "wattage": 1600,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic PRIME PX-2200 ATX 3 (2024)",
+  "wattage": 2200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic PRIME SNOWSILENT",
+  "wattage": 750,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic PRIME TX",
+  "wattage": 1600,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic PRIME TX-1000",
+  "wattage": 1000,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic PRIME TX-1300 ATX 3.1",
+  "wattage": 1300,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic PRIME TX-1600 ATX 3.1",
+  "wattage": 1600,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic PRIME TX-1600 Noctua Edition",
+  "wattage": 1600,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic PRIME TX-850",
+  "wattage": 850,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic S12II",
+  "wattage": 350,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "SeaSonic S12II",
+  "wattage": 520,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "SeaSonic S12III",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "SeaSonic S12III",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "SeaSonic S12III",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "SeaSonic SS-400ET Bronze",
+  "wattage": 400,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "SeaSonic SS-850HT Silver",
+  "wattage": 850,
+  "efficiency": "80+ Silver",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "SeaSonic SSP-300SFG",
+  "wattage": 300,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "No"
+ },
+ {
+  "name": "SeaSonic SSP-300SUG",
+  "wattage": 300,
+  "efficiency": "80+ Gold",
+  "formFactor": "Flex ATX",
+  "modular": "No"
+ },
+ {
+  "name": "SeaSonic VERTEX GX-1000",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic VERTEX GX-1200",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic VERTEX GX-850",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic VERTEX PX-1000",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic VERTEX PX-1200",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SeaSonic VERTEX PX-750",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Segotep GM",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Segotep GM",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Segotep GN",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Segotep GP",
+  "wattage": 600,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "SHARKOON Rebel P20 750",
+  "wattage": 750,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "SHARKOON Rebel P20 SFX",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "SHARKOON Rebel P20 SFX",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "SHARKOON Rebel P20 SFX",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "SHARKOON SilentStorm",
+  "wattage": 500,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "SHARKOON SilentStorm Icewind Black",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "SHARKOON SilentStorm Icewind Black",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Silverstone ATTIS 650R",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Silverstone ATTIS 750R",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Silverstone DA650 Gold",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone DA750 Gold",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone DA750R-GMA",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone DA850R-GMA",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone Essential",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Silverstone Essential",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Silverstone Extreme 1200R Platinum",
+  "wattage": 1200,
+  "efficiency": null,
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone Extreme 500 Bronze",
+  "wattage": 500,
+  "efficiency": "80+ Bronze",
+  "formFactor": "SFX",
+  "modular": "No"
+ },
+ {
+  "name": "Silverstone FX350-G",
+  "wattage": 350,
+  "efficiency": "80+ Gold",
+  "formFactor": "Flex ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Silverstone FX500-G",
+  "wattage": 500,
+  "efficiency": "80+ Gold",
+  "formFactor": "Flex ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Silverstone FX600 Platinum",
+  "wattage": 600,
+  "efficiency": null,
+  "formFactor": "Flex ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Silverstone HELA",
+  "wattage": 2050,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone HELA 1200R",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone HELA 1300R",
+  "wattage": 1300,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone HELA 2050R Platinum",
+  "wattage": 2050,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone SFX",
+  "wattage": 500,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone SFX",
+  "wattage": 800,
+  "efficiency": "80+ Titanium",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone SFX",
+  "wattage": 300,
+  "efficiency": "80+ Bronze",
+  "formFactor": "SFX",
+  "modular": "No"
+ },
+ {
+  "name": "Silverstone SFX",
+  "wattage": 700,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone SST-TX300",
+  "wattage": 300,
+  "efficiency": "80+ Bronze",
+  "formFactor": "TFX",
+  "modular": "No"
+ },
+ {
+  "name": "Silverstone ST85F-GS-V2",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone Strider",
+  "wattage": 700,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone Strider Platinum S",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone Strider Platinum S",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone Strider Titanium",
+  "wattage": 800,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone SX-G",
+  "wattage": 700,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone SX1000-LPT",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone SX500-G",
+  "wattage": 500,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone SX700-PT",
+  "wattage": 700,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone SX750-PT",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Silverstone Triton 850Rx",
+  "wattage": 850,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Silverstone TX300",
+  "wattage": 300,
+  "efficiency": "80+ Bronze",
+  "formFactor": "TFX",
+  "modular": "No"
+ },
+ {
+  "name": "Silverstone TX500-G",
+  "wattage": 500,
+  "efficiency": "80+ Gold",
+  "formFactor": "TFX",
+  "modular": "No"
+ },
+ {
+  "name": "Silverstone TX700-G",
+  "wattage": 700,
+  "efficiency": "80+ Gold",
+  "formFactor": "TFX",
+  "modular": "No"
+ },
+ {
+  "name": "Silverstone Zeus 1650R",
+  "wattage": 1650,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Sparkle FSP300-60ATV",
+  "wattage": 300,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Super Flower Leadex",
+  "wattage": 2000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower Leadex III Gold",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower Leadex III Gold",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower Leadex III Gold",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower Leadex III Gold UP",
+  "wattage": 1300,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower Leadex III Gold UP",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower Leadex III Gold UP",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower Leadex III Gold UP",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower Leadex Titanium",
+  "wattage": 2800,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower Leadex Titanium",
+  "wattage": 1600,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower LEADEX VII Platinum PRO",
+  "wattage": 1200,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower LEADEX VII Platinum PRO",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower LEADEX VII Platinum PRO",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower LEADEX VII XG",
+  "wattage": 1300,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower LEADEX VII XG",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower LEADEX VII XG",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower Zillion FG",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower Zillion FG",
+  "wattage": 1250,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Super Flower Zillion FG",
+  "wattage": 1050,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Tecnoware Free Silent",
+  "wattage": 500,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermalright KG-850",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermalright TB-650",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermalright TB-750",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermalright TB750S",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermalright TG",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermalright TG",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermalright TG",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermalright TP",
+  "wattage": 1650,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermalright TR-SGFX 650",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermalright TR-SGFX 650W",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Litepower",
+  "wattage": 550,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Litepower",
+  "wattage": 650,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Litepower GEN2 230V",
+  "wattage": 450,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Smart",
+  "wattage": 500,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Smart",
+  "wattage": 600,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Smart",
+  "wattage": 700,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Smart",
+  "wattage": 430,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Smart BM3",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Thermaltake Smart BM3",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Thermaltake Smart BM3",
+  "wattage": 850,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "Semi"
+ },
+ {
+  "name": "Thermaltake Smart BX1",
+  "wattage": 750,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Smart BX1 550",
+  "wattage": 550,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Smart BX1 650",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Smart RGB",
+  "wattage": 500,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Smart W3",
+  "wattage": 600,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Smart W3",
+  "wattage": 700,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Smart W3",
+  "wattage": 500,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Toughpower GF A3 - TT Premium Edition",
+  "wattage": 1050,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF A3 - TT Premium Edition",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF A3 - TT Premium Edition",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF A3 ATX 3.0",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF A3 ATX 3.0",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF A3 Snow",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF A3 Snow",
+  "wattage": 1050,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF1 (2024)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF1 (2024)",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF1 ARGB",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF1 ARGB",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF1 PE",
+  "wattage": 650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF3 Snow",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF3 TT Premium",
+  "wattage": 1650,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF3 TT Premium",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF3 TT Premium",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF3 TT Premium",
+  "wattage": 1350,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GF3 TT Premium",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower Grand",
+  "wattage": 1050,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower Grand RGB",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GT",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GT",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GT",
+  "wattage": 1200,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GT",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower GX2",
+  "wattage": 600,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Toughpower GX3",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake Toughpower iRGB PLUS 750",
+  "wattage": 750,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower PF3",
+  "wattage": 1050,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower PF3-L",
+  "wattage": 1050,
+  "efficiency": "80+ Platinum",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower SFX",
+  "wattage": 1000,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower SFX",
+  "wattage": 750,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower SFX",
+  "wattage": 850,
+  "efficiency": "80+ Platinum",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake Toughpower TF1 - TT Premium",
+  "wattage": 1550,
+  "efficiency": "80+ Titanium",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Thermaltake TR2 S",
+  "wattage": 600,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Thermaltake TR2 S",
+  "wattage": 700,
+  "efficiency": "80+",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Vetroo 50315153244479",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Vetroo 50315153277247",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Vetroo CP-PSU-VT-850W-SFX (BK)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Vetroo CP-PSU-VT-850W-SFX (PK)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Vetroo CP-PSU-VT-850W-SFX (WT)",
+  "wattage": 850,
+  "efficiency": "80+ Gold",
+  "formFactor": "SFX",
+  "modular": "Full"
+ },
+ {
+  "name": "Vetroo GV1000",
+  "wattage": 1000,
+  "efficiency": "80+ Gold",
+  "formFactor": "ATX",
+  "modular": "Full"
+ },
+ {
+  "name": "Vida Lite",
+  "wattage": 500,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Vida Lite",
+  "wattage": 750,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Xigmatek NRP-PC602",
+  "wattage": 600,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Xilence XP500R6",
+  "wattage": 500,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Xilence XP600R6",
+  "wattage": 600,
+  "efficiency": null,
+  "formFactor": "ATX",
+  "modular": "No"
+ },
+ {
+  "name": "Xilence XP650R10",
+  "wattage": 650,
+  "efficiency": "80+ Bronze",
+  "formFactor": "ATX",
+  "modular": "No"
+ }
+]

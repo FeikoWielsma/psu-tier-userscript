@@ -1,0 +1,19 @@
+{
+  "//": "Lightweight static type checking (npm run typecheck). checkJs infers types and catches real logic/type errors without requiring full JSDoc annotations (noImplicitAny is off). The userscript template and generated artifacts are excluded.",
+  "compilerOptions": {
+    "checkJs": true,
+    "allowJs": true,
+    "noEmit": true,
+    "target": "es2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "lib": ["es2022", "dom"],
+    "types": ["node"],
+    "noImplicitAny": false,
+    "strict": false,
+    "skipLibCheck": true,
+    "maxNodeModuleJsDepth": 0
+  },
+  "include": ["src/**/*.js", "tests/**/*.js", "tools/**/*.mjs"],
+  "exclude": ["node_modules", "src/userscript.template.js"]
+}

@@ -1,112 +1,98 @@
+"""Assemble psutier.user.js from the template, matcher, data and rules.
+
+The userscript is built by substituting three placeholders in
+src/userscript.template.js:
+  /*__PSU_DATA__*/  -> the parsed tier-list entries (psu_data.json)
+  /*__RULES__*/     -> data/normalization_rules.json
+  /*__MATCHER__*/   -> src/matcher.js verbatim (single source of truth)
+
+Flags:
+  --update   fetch + parse the latest sheet first
+  --test     also emit psu_data_var.js for the Node test harness
+"""
+
 import json
-import re
 import sys
-import copy
+
 import fetch_sheet
 import parse_tier_list
 
-# Helper to normalize brand keys
-def normalize_key(s):
-    return re.sub(r'[^a-zA-Z0-9]', '', s.lower())
+TEMPLATE = "src/userscript.template.js"
+MATCHER = "src/matcher.js"
+ADAPTERS = "src/adapters.js"
+DATA = "psu_data.json"
+RULES = "data/normalization_rules.json"
+OUTPUT = "psutier.user.js"
 
-def generate_js_data(json_path):
-    with open(json_path, 'r', encoding='utf-8') as f:
+
+def js_safe(json_str):
+    """Escape characters that could break out of a JS context.
+
+    JSON permits raw ``<``/``>``/``&`` and the U+2028/U+2029 line separators;
+    the former are an injection risk and the latter terminate JS string
+    literals, so escape all of them.
+    """
+    return (json_str
+            .replace("<", "\\u003c")
+            .replace(">", "\\u003e")
+            .replace("&", "\\u0026")
+            .replace(chr(0x2028), "\\u2028")
+            .replace(chr(0x2029), "\\u2029"))
+
+
+def _indent(text, spaces):
+    pad = " " * spaces
+    return "\n".join(pad + line if line.strip() else line
+                     for line in text.splitlines())
+
+
+def build():
+    with open(DATA, encoding="utf-8") as f:
         data = json.load(f)
+    with open(RULES, encoding="utf-8") as f:
+        rules = json.load(f)
+    with open(MATCHER, encoding="utf-8") as f:
+        matcher_src = f.read()
+    with open(ADAPTERS, encoding="utf-8") as f:
+        adapters_src = f.read()
+    with open(TEMPLATE, encoding="utf-8") as f:
+        template = f.read()
 
-    # Re-organize data by normalized brand for faster lookup
-    # Handle "Brand/Alias" by creating references for both
-    # e.g. "Antec/Atom" -> psuData['antec'] and psuData['atom']
-    psu_map = {}
-    
-    for item in data:
-        # Clean up the definition of brand aliases split by "/"
-        # Special case: "FSP (Fortron/Sparkle)" -> "fsp", "fortron", "sparkle"
-        raw_brands = item['brand']
-        # Remove parenthetical matches for cleaner splitting (e.g. "Abko (Abkoncore)" -> "Abko", "Abkoncore")
-        # But slashes inside parens might be tricky.
-        # Let's replace parens with space, replace slash with space, then split?
-        # "FSP (Fortron/Sparkle)" -> "FSP  Fortron Sparkle " -> ["FSP", "Fortron", "Sparkle"]
-        # "Antec/Atom" -> "Antec Atom" -> ["Antec", "Atom"]
-        
-        # Simple normalization approach:
-        cleaned_brand_str = raw_brands.replace('/', ' ').replace('(', ' ').replace(')', ' ')
-        brand_tokens = [t for t in cleaned_brand_str.split() if len(t) > 1]
-        
-        # Always include the original full normalized string just in case
-        brand_keys = set()
-        brand_keys.add(normalize_key(raw_brands)) # "antecatom"
-        for t in brand_tokens:
-            brand_keys.add(normalize_key(t)) # "antec", "atom"
+    data_json = js_safe(json.dumps(data, ensure_ascii=False))
+    rules_json = js_safe(json.dumps(rules, ensure_ascii=False))
 
-        # Special overrides
-        if "1st Player" in raw_brands:
-            brand_keys.add("1stplayer")
-        if "FSP" in raw_brands:
-            brand_keys.add("fsp")
-            brand_keys.add("fspgroup") 
+    replacements = {
+        "/*__PSU_DATA__*/ []": data_json,
+        "/*__RULES__*/ {}": rules_json,
+        "        /*__MATCHER__*/": _indent(matcher_src, 8),
+        "        /*__ADAPTERS__*/": _indent(adapters_src, 8),
+    }
+    out = template
+    for placeholder, value in replacements.items():
+        if placeholder not in out:
+            raise ValueError(f"Template placeholder not found: {placeholder!r}")
+        out = out.replace(placeholder, value)
+    return out
 
-        for k in brand_keys:
-            if not k: continue
-            if k not in psu_map:
-                psu_map[k] = []
-            
-            # We will handle multiple series aliases here too
-            # "RM-x 2018 / v2 Black" -> split by "/"
-            series_str = item['series']
-            series_list = [s.strip() for s in series_str.split('/')]
-            
-            for s in series_list:
-                # Remove common efficiency words from matching key because PCPP names often omit them or put them elsewhere
-                # e.g. "NGDP Gold" -> Match against "NGDP"
-                # But we must be careful not to over-match. "Focus" matches "Focus GX" and "Focus PX"?
-                # Let's keep the original series name for display/tie-breaking, 
-                # but maybe add a "matchSeries" field.
-                
-                
-                entires_copy = copy.deepcopy(item)
-                entires_copy['matchSeries'] = s # The specific alias
-                psu_map[k].append(entires_copy)
 
-    # Sort entries by series length (descending) to match longest specific name first
-    for k in psu_map:
-        psu_map[k].sort(key=lambda x: len(x['matchSeries']), reverse=True)
-
-    # Serialize to JSON but perform safety replacements for XSS prevention
-    # We escape <, >, and & to their unicode sequences so they fit in a JS string safely
-    # without breaking the JSON structure for the JS interpreter.
-    json_raw = json.dumps(psu_map)
-    json_safe = json_raw.replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
-    
-    return json_safe
-
-def generate_userscript():
-    # If --update is present, run fetch and parse first
+def main():
     if "--update" in sys.argv:
-        print("Update flag detected: Fetching and parsing latest data...")
+        print("Fetching and parsing latest tier list...")
         fetch_sheet.main()
         parse_tier_list.main()
 
-    json_str = generate_js_data('psu_data.json')
-    
-    
-    # Write processed data to map file for testing (ONLY IF --test ARG IS PRESENT)
+    out = build()
+    with open(OUTPUT, "w", encoding="utf-8") as f:
+        f.write(out)
+    print(f"Generated {OUTPUT} ({len(out)} bytes)")
+
     if "--test" in sys.argv:
-        with open('psu_lookup_map.json', 'w', encoding='utf-8') as f:
-            f.write(json_str)
+        with open(DATA, encoding="utf-8") as f:
+            data_raw = f.read()
+        with open("psu_data_var.js", "w", encoding="utf-8") as f:
+            f.write(f"window.psuData = {data_raw};")
+        print("Generated test artifact: psu_data_var.js")
 
-        # Write data var for testing usage in HTML
-        with open('psu_data_var.js', 'w', encoding='utf-8') as f:
-            f.write(f"window.psuData = {json_str};")
-        print("Generated test artifacts: psu_lookup_map.json and psu_data_var.js")
-
-    with open('userscript_template.js', 'r', encoding='utf-8') as f:
-        template = f.read()
-
-    js_content = template.replace("{ 'PSU_DATA_JSON': {} }", json_str)
-
-    with open('psutier.user.js', 'w', encoding='utf-8') as f:
-        f.write(js_content)
-    print("Generated psutier.user.js")
 
 if __name__ == "__main__":
-    generate_userscript()
+    main()

@@ -1,43 +1,49 @@
+"""Convenience local runner: build the userscript and run the JS test suite.
+
+Mirrors CI. The deterministic tests (npm test) run against the committed data
+snapshot, so they don't need network access. Pass --update to also refresh the
+data from the live sheet before building.
+
+    python test_suite.py            # build from current data + run tests
+    python test_suite.py --update   # fetch latest sheet, build, run tests
+"""
+
+import os
+import shutil
 import subprocess
 import sys
-import os
 
-def run_command(command, cwd=None):
-    print(f"Running: {command}")
-    try:
-        # Use subprocess.call to get exit code cleanly
-        ret = subprocess.call(command, shell=True, cwd=cwd)
-        if ret != 0:
-            print(f"Command failed with return code: {ret}")
-            return False
-        print("Success.\n")
-        return True
-    except Exception as e:
-        print(f"Error running command: {e}")
-        return False
+BASE = os.path.dirname(os.path.abspath(__file__))
+
+
+def run(cmd):
+    print(f"\n$ {cmd}")
+    if subprocess.call(cmd, shell=True, cwd=BASE) != 0:
+        sys.exit(f"Command failed: {cmd}")
+
 
 def main():
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    
-    print("=== PSU Tier List CI Test Suite ===\n")
+    update = "--update" in sys.argv
 
-    # 1. Parse Data
-    print("[1/3] Parsing Tier List...")
-    if not run_command("python parse_tier_list.py", cwd=base_dir):
-        return sys.exit(1)
+    if update:
+        run(f"{sys.executable} fetch_sheet.py")
+        run(f"{sys.executable} parse_tier_list.py")
 
-    # 2. Generate Userscript (and test map)
-    print("[2/3] Generating Userscript & Test Data...")
-    if not run_command("python -W ignore generate_userscript.py --test", cwd=base_dir):
-        return sys.exit(1)
+    # Ensure data exists (fall back to the committed snapshot).
+    if not os.path.exists(os.path.join(BASE, "psu_data.json")):
+        print("No psu_data.json; using committed snapshot.")
+        shutil.copy(
+            os.path.join(BASE, "tests", "fixtures", "sample_psu_data.json"),
+            os.path.join(BASE, "psu_data.json"),
+        )
 
-    # 3. Run Node.js Tests
-    print("[3/3] Running Node.js matching tests...")
-    if not run_command("node tests/test_matching.js", cwd=base_dir):
-        return sys.exit(1)
+    run(f"{sys.executable} generate_userscript.py --test")
+    run("npm run lint")
+    run("npm run typecheck")
+    run("uvx ruff check .")
+    run("npm test")
+    print("\nAll checks passed.")
 
-    print("=== All Tests Passed! ===")
-    sys.exit(0)
 
 if __name__ == "__main__":
     main()

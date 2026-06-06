@@ -9,39 +9,55 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+      - name: Install JS dev dependencies
+        run: npm ci
 
-    - name: Install Dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Lint JS
+        run: npm run lint
 
-    - name: Fetch Tier List HTML
-      run: python fetch_sheet.py
+      - name: Type-check JS
+        run: npm run typecheck
 
-    - name: Parse Data
-      run: python parse_tier_list.py
+      # Deterministic gate: matcher + adapter tests run against the committed
+      # data snapshot, so live sheet edits never flake the build.
+      - name: Run tests
+        run: npm test
 
-    - name: Generate Userscript
-      run: python generate_userscript.py --test
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-    - name: Run Validation Tests
-      run: node tests/test_matching.js
+      - name: Lint Python
+        run: pipx run ruff check .
 
-    - name: Upload Userscript
-      uses: actions/upload-artifact@v4
-      with:
-        name: psutier-userscript
-        path: psutier.user.js
+      # Non-fatal: confirms the live sheet still fetches and parses (structure),
+      # without gating CI on the sheet's contents.
+      - name: Live data structure check
+        id: live
+        continue-on-error: true
+        run: |
+          python fetch_sheet.py
+          python parse_tier_list.py
+
+      - name: Build userscript
+        run: |
+          if [ ! -f psu_data.json ]; then
+            echo "Live fetch unavailable; building from committed snapshot."
+            cp tests/fixtures/sample_psu_data.json psu_data.json
+          fi
+          python generate_userscript.py
+
+      - name: Upload userscript artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: psutier-userscript
+          path: psutier.user.js

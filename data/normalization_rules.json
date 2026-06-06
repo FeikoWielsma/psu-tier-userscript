@@ -1,0 +1,41 @@
+{
+  "_comment": "Declarative tuning for the matcher (src/matcher.js). This is the extension point: to fix a naming discrepancy between the tier sheet, PCPartPicker and Tweakers, add data here instead of editing matching code. 'aliases' rewrite incoming product names before tokenizing; 'generic' tokens score low (common marketing words); 'noise' tokens are dropped; 'thresholds' decide badge confidence bands.",
+
+  "thresholds": {
+    "strong": 0.75,
+    "likely": 0.45,
+    "floor": 0.45,
+    "minProductCoverage": 0.3
+  },
+
+  "weights": {
+    "candidateMiss": 0.35,
+    "productMiss": 0.2
+  },
+
+  "noise": [
+    "w", "watt", "watts", "the", "with", "edition",
+    "certified", "fully", "semi", "modular", "mod", "non", "full",
+    "power", "supply", "psu", "unit", "computer", "compact",
+    "rating", "efficiency", "form", "factor", "atx"
+  ],
+
+  "generic": [
+    "gold", "bronze", "silver", "platinum", "titanium", "white", "standard",
+    "series", "pcie", "gen", "plus", "v", "rgb", "argb", "black"
+  ],
+
+  "strip": [
+    { "pattern": "\\batx\\s*[0-9](\\.[0-9x]+)?\\b", "replace": "", "flags": "ig", "note": "ATX version tags differ across sources and never identify a model" },
+    { "pattern": "\\b80\\s*\\+?\\s*plus\\b", "replace": "", "flags": "ig", "note": "'80 Plus' rating prefix" },
+    { "pattern": "\\b80\\s*\\+", "replace": "", "flags": "ig", "note": "'80+' rating prefix (keeps the trailing Gold/Bronze word)" },
+    { "pattern": "\\bgen\\s*[0-9]\\b", "replace": "", "flags": "ig", "note": "'Gen 5' marketing tag" }
+  ],
+
+  "aliases": [
+    { "pattern": "\\b(\\d{3,4})\\s*g\\b", "replace": "$1 gold", "flags": "ig", "note": "ASUS TUF '850G' suffix denotes Gold efficiency" },
+    { "pattern": "\\bgaming\\b", "replace": "", "flags": "ig", "note": "marketing word, never part of a tier-sheet model name" },
+    { "pattern": "\\bion\\+?\\s*3\\b", "replace": "ION V3", "flags": "ig", "note": "Fractal 'Ion 3' is the sheet's 'ION V3' generation" },
+    { "pattern": "\\bion\\+\\s*2\\b", "replace": "ION Plus 2", "flags": "ig", "note": "Fractal 'Ion+ 2' is the sheet's 'ION Plus 2'" }
+  ]
+}

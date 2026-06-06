@@ -12,30 +12,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install JS dev dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Fetch Tier List HTML
-        run: python fetch_sheet.py
-
-      - name: Parse Data
-        run: python parse_tier_list.py
-
-      - name: Generate Userscript
-        run: python generate_userscript.py
+      # No pip install needed - the pipeline is standard-library only.
+      - name: Build userscript from the latest sheet
+        run: python generate_userscript.py --update
 
       - name: Create Release
-        id: create_release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: psutier.user.js
           generate_release_notes: true
