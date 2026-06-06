@@ -49,15 +49,24 @@
 
     function makeBadge(result) {
         const tier = result.entry.tier;
+        const isLimited = !!result.entry.is_limited;
         const style = tierStyle(tier);
         const likely = result.band === 'likely';
 
         const badge = document.createElement('span');
         badge.className = 'psu-tier-badge';
-        badge.textContent = likely ? `Tier ${tier}?` : `Tier ${tier}`;
-        badge.title = likely
+
+        let text = `Tier ${tier}`;
+        if (isLimited) text += '* (LC)';
+        if (likely) text += '?';
+        badge.textContent = text;
+
+        let title = '';
+        if (isLimited) title += '[LIMITED CONFIDENCE] Speculative rating! ';
+        title += likely
             ? `Likely match (${Math.round(result.confidence * 100)}% confidence) - click for details`
             : `Click for details (${Math.round(result.confidence * 100)}% confidence)`;
+        badge.title = title;
 
         Object.assign(badge.style, {
             display: 'inline-block',
@@ -70,10 +79,10 @@
             cursor: 'pointer',
             backgroundColor: style.bg,
             color: style.fg,
-            border: likely ? '2px dashed #555' : 'none',
-            opacity: likely ? '0.85' : '1'
+            border: isLimited ? '2px dotted #000' : (likely ? '2px dashed #555' : 'none'),
+            boxShadow: isLimited ? '0 0 0 2px #ff4f4f' : (tier.includes('+') ? '0 0 0 2px gold' : 'none'),
+            opacity: likely || isLimited ? '0.85' : '1'
         });
-        if (tier.includes('+')) badge.style.boxShadow = '0 0 0 2px gold';
 
         badge.addEventListener('click', (e) => {
             e.preventDefault();
@@ -110,14 +119,24 @@
             ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
         const confPct = Math.round(result.confidence * 100);
-        let html = `<h3 style="margin:0 0 8px;border-bottom:1px solid #555;padding-bottom:5px;">`
-            + `Tier ${esc(data.tier)} `
+        let html = '';
+        if (data.is_limited) {
+            html += `<div style="background-color: #ffd966; color: #000; padding: 8px; border-radius: 4px; margin-bottom: 10px; font-weight: bold; font-size: 0.9em; border-left: 5px solid #f29738; line-height: 1.3;">`
+                + `⚠️ Limited Confidence Rating<br/>`
+                + `<span style="font-weight: normal; font-size: 0.85em;">This rating is speculative due to insufficient data. NOT recommended until more info is available.</span>`
+                + `</div>`;
+        }
+        html += `<h3 style="margin:0 0 8px;border-bottom:1px solid #555;padding-bottom:5px;">`
+            + `Tier ${esc(data.tier)}${data.is_limited ? '*' : ''} `
             + `<span style="font-weight:normal;color:#aaa;font-size:0.85em;">`
             + `(${result.band === 'likely' ? 'likely, ' : ''}${confPct}% match)</span></h3>`;
         html += '<div style="display:grid;grid-template-columns:110px 1fr;gap:4px;">';
         for (const [label, val] of rows) {
             if (val == null || String(val).trim() === '') continue;
             html += `<div style="color:#aaa;font-weight:bold;">${esc(label)}:</div><div>${esc(val)}</div>`;
+        }
+        if (data.is_limited) {
+            html += `<div style="color:#ff4f4f;font-weight:bold;">Rating Type:</div><div style="color:#ff4f4f;font-weight:bold;">Limited Confidence (Speculative)</div>`;
         }
         html += '</div>';
 

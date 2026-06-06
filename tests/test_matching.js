@@ -31,6 +31,9 @@ for (const tc of corpus) {
         const allowed = Array.isArray(expected) ? expected : [expected];
         ok = result !== null && allowed.includes(tier);
         if (ok && tc.minBand) ok = BAND_RANK[result.band] >= BAND_RANK[tc.minBand];
+        if (ok && tc.expectLimited !== undefined) {
+            ok = !!result.entry.is_limited === tc.expectLimited;
+        }
     }
 
     if (ok) {

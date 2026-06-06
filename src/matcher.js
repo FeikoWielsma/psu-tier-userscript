@@ -284,7 +284,9 @@
 
     if (!scored.length) return null;
     scored.sort((a, b) =>
-      (b.confidence - a.confidence) || (b.distinctive - a.distinctive));
+      (b.confidence - a.confidence) ||
+      ((a.entry.is_limited ? 1 : 0) - (b.entry.is_limited ? 1 : 0)) ||
+      (b.distinctive - a.distinctive));
     const best = scored[0];
 
     if (best.confidence < thresholds.floor) return null;

@@ -23,6 +23,7 @@ Thumbs.db
 # Generated artifacts (rebuilt by the pipeline; the committed deterministic
 # snapshot for tests lives in tests/fixtures/sample_psu_data.json)
 psu_tier.csv
+psu_tier_limited.csv
 psu_tier.html
 psu_data.json
 psu_data_var.js

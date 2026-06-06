@@ -12,7 +12,8 @@ import json
 import re
 import sys
 
-INPUT_FILE = "psu_tier.csv"
+INPUT_FILE_PROPER = "psu_tier.csv"
+INPUT_FILE_LIMITED = "psu_tier_limited.csv"
 OUTPUT_FILE = "psu_data.json"
 
 # Column indices (0-based) in the gviz CSV export.
@@ -36,7 +37,8 @@ COL_PLATFORM = 16
 COL_NOTES = 17
 N_COLS = 18
 
-VALID_TIER = re.compile(r"^[A-F][+-]?$")
+# Allow an optional asterisk (*) representing limited confidence ratings.
+VALID_TIER = re.compile(r"^[A-F][+-]?\*?$")
 
 EFFICIENCY_MAP = {
     "W": "80+ White/Standard",
@@ -70,7 +72,7 @@ def build_variant(c1, c2):
     return " ".join(parts)
 
 
-def parse_csv(path):
+def parse_csv(path, only_limited=False):
     with open(path, encoding="utf-8") as f:
         rows = list(csv.reader(f))
     if not rows:
@@ -88,6 +90,14 @@ def parse_csv(path):
         tier = clean(row[COL_TIER])
         if not VALID_TIER.match(tier):
             continue  # section headers, blanks, footnotes
+
+        is_limited = False
+        if tier.endswith("*"):
+            is_limited = True
+            tier = tier.rstrip("*")
+
+        if only_limited and not is_limited:
+            continue
 
         series_clean = clean_series(series)
         variant = build_variant(row[COL_VARIANT_1], row[COL_VARIANT_2])
@@ -114,6 +124,7 @@ def parse_csv(path):
             "model": model,
             "wattage": wattage,
             "tier": tier,
+            "is_limited": is_limited,
             "year": clean(row[COL_YEAR]) or None,
             "form_factor": clean(row[COL_SIZE]) or None,
             "atx_version": clean(row[COL_ATX]) or None,
@@ -130,13 +141,20 @@ def parse_csv(path):
 
 
 def main():
-    entries = parse_csv(INPUT_FILE)
+    proper_entries = parse_csv(INPUT_FILE_PROPER, only_limited=False)
+    limited_entries = parse_csv(INPUT_FILE_LIMITED, only_limited=True)
+    entries = proper_entries + limited_entries
+
     if not entries:
-        print("ERROR: parsed 0 entries - check the CSV input.", file=sys.stderr)
+        print("ERROR: parsed 0 entries - check the CSV inputs.", file=sys.stderr)
         sys.exit(1)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(entries, f, indent=2, ensure_ascii=False)
-    print(f"Extracted {len(entries)} PSU entries -> {OUTPUT_FILE}")
+    print(
+        f"Extracted {len(proper_entries)} proper + "
+        f"{len(limited_entries)} limited = {len(entries)} "
+        f"PSU entries -> {OUTPUT_FILE}"
+    )
 
 
 if __name__ == "__main__":
