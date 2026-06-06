@@ -232,6 +232,7 @@
     // Prefer the structured efficiency column; fall back to parsing the name.
     const prodEff = efficiencyOf(signals.efficiency) || efficiencyOf(fullName);
     const prodForm = formClass(signals.formFactor);
+    const prodMod = signals.modular;
 
     const aliased = stripDescriptors(applyRules(fullName, rules.aliases), rules);
 
@@ -251,6 +252,13 @@
       // differ only by size (e.g. Lian Li SP is SFX, SX is ATX).
       const candForm = formClass(entry.form_factor);
       if (prodForm && candForm && prodForm !== candForm) continue;
+
+      const candMod = entry.modularity;
+      if (prodMod && candMod && prodMod !== candMod) {
+        if ((prodMod === 'Full' && candMod === 'No') || (prodMod === 'No' && candMod === 'Full')) {
+          continue;
+        }
+      }
 
       const candEff = efficiencyOf(entry.efficiency);
 
@@ -287,6 +295,10 @@
           });
           if (allIn) confidence = Math.max(confidence, constraintConf);
         }
+      }
+
+      if (prodMod && candMod && prodMod !== candMod) {
+        confidence *= 0.7; // soft modularity penalty for Semi-modular conflicts
       }
 
       if (confidence < thresholds.floor) continue;

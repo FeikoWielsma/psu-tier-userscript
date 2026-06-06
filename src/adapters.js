@@ -67,13 +67,28 @@
         if (!name) return null;
         let wattage = 0;
         let efficiency = null;
-        for (const s of row.querySelectorAll('.spec, td')) {
+        let modular = null;
+        for (const s of row.querySelectorAll('.spec, td, .specline, .spec-line')) {
           const t = cleanText(s);
-          const wm = t.match(/^([\d.]+)\s*W$/);
+          const wm = t.match(/\b([\d.]+)\s*W\b/i);
           if (wm && !wattage) wattage = parseInt(wm[1].replace(/\./g, ''), 10);
-          if (!efficiency && /80\s*plus|80\+/i.test(t)) efficiency = t;
+          if (!efficiency) {
+            if (/(80\s*plus|80\+)/i.test(t)) {
+              efficiency = t;
+            } else {
+              const cleaned = t.trim().toLowerCase();
+              if (['gold', 'bronze', 'silver', 'platinum', 'titanium', 'white', 'standard'].includes(cleaned)) {
+                efficiency = t;
+              }
+            }
+          }
+          if (!modular) {
+            if (/volledig\s*modulair/i.test(t)) modular = 'Full';
+            else if (/semi\s*-\s*modulair/i.test(t)) modular = 'Semi';
+            else if (/niet\s*-\s*modulair/i.test(t)) modular = 'No';
+          }
         }
-        return { name: name, formFactor: null, efficiency: efficiency, wattage: wattage, modular: null };
+        return { name: name, formFactor: null, efficiency: efficiency, wattage: wattage, modular: modular };
       },
       insertBadge: (row, badge) => {
         const el = row.querySelector('a.editionName, .productListItemName a');
