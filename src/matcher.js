@@ -152,7 +152,10 @@
   function efficiencyOf(text) {
     const t = (text || '').toLowerCase();
     for (const e of EFF) if (t.indexOf(e) !== -1) return e;
-    if (t.indexOf('white') !== -1 || t.indexOf('standard') !== -1) return 'white';
+    if (t.indexOf('standard') !== -1) return 'white';
+    if (t.indexOf('white') !== -1) {
+      if (t.length < 15 || /80\s*(plus|\+)\s*white/i.test(t)) return 'white';
+    }
     return null;
   }
 
@@ -271,11 +274,15 @@
       // *agree* (not merely not-conflict); wattage and form factor are already
       // gated above. This is what makes the structured columns pay off.
       if (confidence < thresholds.floor && prodEff && candEff && prodEff === candEff && productTokens.length) {
-        const allIn = entry._tokens.some((ts) => {
-          const set = new Set(ts);
-          return productTokens.every((t) => set.has(t));
-        });
-        if (allIn) confidence = Math.max(confidence, constraintConf);
+        const effWords = new Set(['gold', 'bronze', 'silver', 'platinum', 'titanium', 'white', 'standard']);
+        const nameTokens = productTokens.filter((t) => !effWords.has(t));
+        if (nameTokens.length) {
+          const allIn = entry._tokens.some((ts) => {
+            const set = new Set(ts);
+            return nameTokens.every((t) => set.has(t));
+          });
+          if (allIn) confidence = Math.max(confidence, constraintConf);
+        }
       }
 
       if (confidence < thresholds.floor) continue;
