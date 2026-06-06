@@ -29,7 +29,8 @@
   function tokenize(s) {
     return (s || '')
       .toLowerCase()
-      .replace(/[^a-z0-9]+/g, ' ')
+      .replace(/(\d)\.(\d)/g, '$1_$2')
+      .replace(/[^a-z0-9_]+/g, ' ')
       .replace(/([a-z])([0-9]{3,})/g, '$1 $2')
       .replace(/([0-9]{3,})([a-z])/g, '$1 $2')
       .trim()
@@ -90,13 +91,16 @@
 
   function buildIndex(psuData, rules) {
     const byBrand = {};         // brandKey -> [entry, ...]
+    const noise = new Set((rules && rules.noise) || []);
     for (const entry of psuData) {
       // A model may carry "/"-separated aliases, e.g. "Pro / Pro RGB".
       const names = stripDescriptors(String(entry.model || entry.series || ''), rules)
         .split('/')
         .map((s) => s.trim())
         .filter(Boolean);
-      const enriched = Object.assign({}, entry, { _tokens: names.map(tokenize) });
+      const enriched = Object.assign({}, entry, {
+        _tokens: names.map((s) => tokenize(s).filter((t) => !noise.has(t)))
+      });
       for (const k of brandKeys(entry.brand)) {
         (byBrand[k] || (byBrand[k] = [])).push(enriched);
       }
@@ -125,7 +129,7 @@
   // candidate, it should barely penalize - the product is just a less-specified
   // listing of the same unit, not a different one.
   function isSoftToken(t) {
-    return /^(19|20)\d\d$/.test(t) || /^v\d+$/.test(t);
+    return /^(19|20)\d\d$/.test(t) || /^v\d+$/.test(t) || /^\d+_\d+$/.test(t);
   }
 
   function parseWattages(spec) {

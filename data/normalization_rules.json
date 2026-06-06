@@ -29,7 +29,6 @@
   ],
 
   "strip": [
-    { "pattern": "\\batx\\s*[0-9](\\.[0-9x]+)?\\b", "replace": "", "flags": "ig", "note": "ATX version tags differ across sources and never identify a model" },
     { "pattern": "\\b80\\s*\\+?\\s*plus\\b", "replace": "", "flags": "ig", "note": "'80 Plus' rating prefix" },
     { "pattern": "\\b80\\s*\\+", "replace": "", "flags": "ig", "note": "'80+' rating prefix (keeps the trailing Gold/Bronze word)" },
     { "pattern": "\\bgen\\s*[0-9]\\b", "replace": "", "flags": "ig", "note": "'Gen 5' marketing tag" }
@@ -45,6 +44,7 @@
     { "pattern": "\\bhydro\\s+ptm\\s+pro\\b", "replace": "Hydro", "flags": "ig", "note": "FSP Hydro PTM Pro is listed as Hydro in the sheet" },
     { "pattern": "\\bhydro\\s+g\\s+pro\\b", "replace": "Hydro Pro", "flags": "ig", "note": "FSP Hydro G Pro is listed as Hydro Pro in the sheet" },
     { "pattern": "\\bfocus\\s+gx\\b.*\\b(2024|atx\\s*3\\.1)\\b", "replace": "Focus V4 GX", "flags": "ig", "note": "Seasonic Focus GX 2024/ATX 3.1 is V4 GX" },
-    { "pattern": "\\bfocus\\s+gx\\b.*\\b(2023|atx\\s*3\\.0)\\b", "replace": "Focus V3 GX", "flags": "ig", "note": "Seasonic Focus GX 2023/ATX 3.0 is V3 GX" }
+    { "pattern": "\\bfocus\\s+gx\\b.*\\b(2023|atx\\s*3\\.0)\\b", "replace": "Focus V3 GX", "flags": "ig", "note": "Seasonic Focus GX 2023/ATX 3.0 is V3 GX" },
+    { "pattern": "\\btoughpower\\s+gf\\s+a3\\b", "replace": "Toughpower GF A3 Global FAGK H", "flags": "ig", "note": "Thermaltake Toughpower GF A3 is listed as Global (FAGK-H) in the sheet" }
   ]
 }
