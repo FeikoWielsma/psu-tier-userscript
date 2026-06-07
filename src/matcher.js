@@ -195,7 +195,7 @@
       const overlap = Math.min(candCounts[t], pCounts[t] || 0);
       if (overlap > 0) {
         interW += w * overlap;
-        if (w >= 1) distinctiveMatched += overlap;
+        if (w >= 0.5 && !isSoftToken(t) && !generic.has(t)) distinctiveMatched += overlap;
       }
       const missed = candCounts[t] - overlap;
       if (missed > 0) missC += (isSoftToken(t) ? w * 0.2 : w) * missed;
@@ -277,7 +277,7 @@
         && local.coverageP >= minCoverage;
       if (tokenEligible) {
         confidence = local.score;
-        if (prodEff && candEff && prodEff !== candEff) confidence *= 0.3; // soft efficiency penalty
+        if (prodEff && candEff && prodEff !== candEff) confidence *= 0.5; // soft efficiency penalty
       }
 
       // Path B - constraint match: when the name is too thin to score (e.g.
