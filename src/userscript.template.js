@@ -172,9 +172,106 @@
         }, 10);
     }
 
+    // --- Filtering ----------------------------------------------------------
+
+    let currentFilter = {
+        minTier: 'ANY',
+        hideLimited: false,
+        hideUnrated: false
+    };
+
+    function applyFilters() {
+        const ranks = { 'A': 90, 'B': 70, 'C': 50, 'D': 40, 'E': 30, 'F': 20 };
+        const reqRank = currentFilter.minTier === 'ANY' ? 0 : ranks[currentFilter.minTier];
+
+        const adapter = PSUAdapters.activeAdapter();
+        if (!adapter) return;
+
+        for (const row of document.querySelectorAll(adapter.selector)) {
+            if (!row.dataset.psuTierDone) continue;
+
+            let show = true;
+            const tier = row.dataset.psuTier || 'UNRATED';
+            const isLC = row.dataset.psuIsLimited === '1';
+
+            if (currentFilter.hideUnrated && tier === 'UNRATED') {
+                show = false;
+            } else if (tier !== 'UNRATED') {
+                if (currentFilter.hideLimited && isLC) {
+                    show = false;
+                } else {
+                    const baseTier = tier.replace(/[^A-F]/g, '');
+                    const rank = ranks[baseTier] || 0;
+                    if (rank < reqRank) show = false;
+                }
+            }
+            
+            row.style.display = show ? '' : 'none';
+        }
+    }
+
+    function createFilterUI() {
+        if (document.getElementById('psu-filter-ui')) return;
+        
+        const container = document.createElement('div');
+        container.id = 'psu-filter-ui';
+        Object.assign(container.style, {
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            backgroundColor: '#1a1a1a',
+            color: '#eee',
+            padding: '10px 15px',
+            borderRadius: '8px',
+            border: '1px solid #444',
+            boxShadow: '0 4px 10px rgba(0,0,0,0.5)',
+            zIndex: '9999',
+            fontFamily: 'sans-serif',
+            fontSize: '13px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '8px'
+        });
+
+        const title = document.createElement('strong');
+        title.textContent = 'PSU Tier Filter';
+        title.style.marginBottom = '2px';
+        container.appendChild(title);
+
+        const lblMin = document.createElement('label');
+        lblMin.innerHTML = `Min Tier: <select id="psu-filter-tier" style="background:#333;color:#fff;border:1px solid #555;border-radius:4px;padding:2px 4px;margin-left:4px;cursor:pointer;">
+            <option value="ANY">Any</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+        </select>`;
+        container.appendChild(lblMin);
+
+        const lblLC = document.createElement('label');
+        lblLC.innerHTML = `<input type="checkbox" id="psu-filter-lc" style="margin-right:4px;cursor:pointer;"> Hide Speculative (LC)`;
+        lblLC.style.cursor = 'pointer';
+        container.appendChild(lblLC);
+
+        const lblUn = document.createElement('label');
+        lblUn.innerHTML = `<input type="checkbox" id="psu-filter-un" style="margin-right:4px;cursor:pointer;"> Hide Unrated`;
+        lblUn.style.cursor = 'pointer';
+        container.appendChild(lblUn);
+
+        container.addEventListener('change', (e) => {
+            if (e.target.id === 'psu-filter-tier') currentFilter.minTier = e.target.value;
+            if (e.target.id === 'psu-filter-lc') currentFilter.hideLimited = e.target.checked;
+            if (e.target.id === 'psu-filter-un') currentFilter.hideUnrated = e.target.checked;
+            applyFilters();
+        });
+
+        document.body.appendChild(container);
+    }
+
     // --- Main loop ----------------------------------------------------------
 
     function addBadges(adapter) {
+        let added = false;
         for (const row of document.querySelectorAll(adapter.selector)) {
             if (row.dataset.psuTierDone) continue;
             if (adapter.filter && !adapter.filter(row)) continue;
@@ -184,12 +281,21 @@
             row.dataset.psuTierDone = '1';
 
             const result = PSUMatcher.match(signals.name, signals, index, RULES);
-            if (result) adapter.insertBadge(row, makeBadge(result));
+            if (result) {
+                adapter.insertBadge(row, makeBadge(result));
+                row.dataset.psuTier = result.entry.tier;
+                row.dataset.psuIsLimited = result.entry.is_limited ? '1' : '0';
+            } else {
+                row.dataset.psuTier = 'UNRATED';
+            }
+            added = true;
         }
+        if (added) applyFilters();
     }
 
     const adapter = PSUAdapters.activeAdapter();
     if (adapter) {
+        createFilterUI();
         addBadges(adapter);
         let scheduled = false;
         const observer = new MutationObserver(() => {
