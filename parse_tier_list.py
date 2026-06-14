@@ -79,28 +79,48 @@ def parse_csv(path, only_limited=False):
         return []
 
     entries = []
-    brand = series = ""
-    for row in rows[1:]:  # skip header
+    brand = series = variant1 = variant2 = ""
+
+    # Data rows
+    for row in rows[1:]:
+        if not any(row): continue
         row = (row + [""] * N_COLS)[:N_COLS]
+        
         if row[COL_BRAND].strip():
             brand = clean(row[COL_BRAND])
-        if row[COL_SERIES].strip():
-            series = clean(row[COL_SERIES])
+            
+        series_cell = clean(row[COL_SERIES]) if row[COL_SERIES].strip() else ""
+        if series_cell:
+            series = series_cell
+            variant1 = "" # reset on series change
+            variant2 = "" # reset on series change
+            
+        v1_cell = clean(row[COL_VARIANT_1]) if row[COL_VARIANT_1].strip() else ""
+        if v1_cell:
+            variant1 = v1_cell
+            variant2 = "" # reset v2 when v1 changes
+            
+        v2_cell = clean(row[COL_VARIANT_2]) if row[COL_VARIANT_2].strip() else ""
+        if v2_cell:
+            variant2 = v2_cell
 
+        # Some cells explicitly have '-' to mean empty
+        if variant1 == "-": variant1 = ""
+        if variant2 == "-": variant2 = ""
+        
         tier = clean(row[COL_TIER])
         if not VALID_TIER.match(tier):
             continue  # section headers, blanks, footnotes
 
-        is_limited = False
-        if tier.endswith("*"):
-            is_limited = True
-            tier = tier.rstrip("*")
-
+        is_limited = "*" in tier
+        tier = tier.replace("*", "").strip()
         if only_limited and not is_limited:
             continue
 
         series_clean = clean_series(series)
-        variant = build_variant(row[COL_VARIANT_1], row[COL_VARIANT_2])
+        variant = build_variant(variant1, variant2)
+        
+        # Build model by joining series and variant
         model = " ".join(p for p in (series_clean, variant) if p)
 
         eff_code = clean(row[COL_EFFICIENCY])
@@ -114,8 +134,6 @@ def parse_csv(path, only_limited=False):
 
         # Apply local data corrections/patches for sheet gaps or erroneous values
         wattage = clean(row[COL_WATTAGE]) or None
-        if brand == "NZXT" and series_clean == "C Series" and variant == "Core ATX 3.1 (2025)":
-            wattage = "750/850/1000W"
 
         entries.append({
             "brand": brand,

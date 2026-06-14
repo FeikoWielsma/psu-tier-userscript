@@ -1,50 +1,187 @@
 {
   "_comment": "Declarative tuning for the matcher (src/matcher.js). This is the extension point: to fix a naming discrepancy between the tier sheet, PCPartPicker and Tweakers, add data here instead of editing matching code. 'aliases' rewrite incoming product names before tokenizing; 'generic' tokens score low (common marketing words); 'noise' tokens are dropped; 'thresholds' decide badge confidence bands.",
-
   "thresholds": {
     "strong": 0.75,
     "likely": 0.45,
     "floor": 0.45,
     "minProductCoverage": 0.3
   },
-
   "weights": {
     "candidateMiss": 0.35,
     "productMiss": 0.2
   },
-
   "noise": [
-    "w", "watt", "watts", "the", "with", "edition",
-    "certified", "fully", "semi", "modular", "mod", "non", "full",
-    "power", "supply", "psu", "unit", "computer", "compact",
-    "rating", "efficiency", "form", "factor", "atx",
-    "black", "white", "snow", "color", "colour", "hub", "fanless", "230v", "115v",
-    "wit", "zwart", "voeding", "geen", "met", "versie", "kabels", "connector", "poorten",
-    "12vhpwr", "12v", "2x6"
+    "w",
+    "watt",
+    "watts",
+    "the",
+    "with",
+    "edition",
+    "certified",
+    "fully",
+    "semi",
+    "modular",
+    "mod",
+    "non",
+    "full",
+    "power",
+    "supply",
+    "psu",
+    "unit",
+    "computer",
+    "compact",
+    "rating",
+    "efficiency",
+    "form",
+    "factor",
+    "atx",
+    "hub",
+    "fanless",
+    "230v",
+    "115v",
+    "wit",
+    "zwart",
+    "voeding",
+    "geen",
+    "met",
+    "versie",
+    "kabels",
+    "connector",
+    "poorten",
+    "12vhpwr",
+    "12v",
+    "2x6"
   ],
-
   "generic": [
-    "gold", "bronze", "silver", "platinum", "titanium", "white", "standard",
-    "series", "pcie", "gen", "plus", "v", "rgb", "argb", "black"
+    "gold",
+    "bronze",
+    "silver",
+    "platinum",
+    "titanium",
+    "white",
+    "standard",
+    "series",
+    "pcie",
+    "gen",
+    "plus",
+    "v",
+    "rgb",
+    "argb",
+    "black",
+    "snow",
+    "color",
+    "colour"
   ],
-
   "strip": [
-    { "pattern": "\\b80\\s*\\+?\\s*plus\\b", "replace": "", "flags": "ig", "note": "'80 Plus' rating prefix" },
-    { "pattern": "\\b80\\s*\\+", "replace": "", "flags": "ig", "note": "'80+' rating prefix (keeps the trailing Gold/Bronze word)" },
-    { "pattern": "\\bgen\\s*[0-9]\\b", "replace": "", "flags": "ig", "note": "'Gen 5' marketing tag" }
+    {
+      "pattern": "\\b80\\s*\\+?\\s*plus\\b",
+      "replace": "",
+      "flags": "ig",
+      "note": "'80 Plus' rating prefix"
+    },
+    {
+      "pattern": "\\b80\\s*\\+",
+      "replace": "",
+      "flags": "ig",
+      "note": "'80+' rating prefix (keeps the trailing Gold/Bronze word)"
+    },
+    {
+      "pattern": "\\bgen\\s*[0-9]\\b",
+      "replace": "",
+      "flags": "ig",
+      "note": "'Gen 5' marketing tag"
+    },
+    {
+      "pattern": "\\bversion\\s*[ab]\\s*\\(fnfag.*\\)",
+      "replace": "",
+      "flags": "ig",
+      "note": "Strip 'Version A/B (FNFAG)' from Toughpower GT so base listings match it"
+    },
+    {
+      "pattern": "\\b(?:global\\s*\\(fagk\\-h\\)|swap\\s*\\(fagu\\-l\\))",
+      "replace": "",
+      "flags": "ig",
+      "note": "Strip 'Global' and 'Swap' variants from Toughpower GF A3 so base listings match both"
+    },
+    {
+      "pattern": ",\\s*(?:original|swap)\\s*\\(tpd\\-[a-z]+\\)",
+      "replace": "",
+      "flags": "ig",
+      "note": "Strip 'Original' and 'Swap' variants from Toughpower GF3 Premium so base listings match all"
+    },
+    {
+      "pattern": "\\brev\\.\\s*[12]\\s*\\((?:explosive|fixed)\\)",
+      "replace": "",
+      "flags": "ig",
+      "note": "Strip Rev 1/2 from Gigabyte P-GM so base listings match both"
+    }
   ],
-
   "aliases": [
-    { "pattern": "\\b(\\d{3,4})\\s*g\\b", "replace": "$1 gold", "flags": "ig", "note": "ASUS TUF '850G' suffix denotes Gold efficiency" },
-    { "pattern": "\\bgaming\\b", "replace": "", "flags": "ig", "note": "marketing word, never part of a tier-sheet model name" },
-    { "pattern": "\\bion\\+?\\s*3\\b", "replace": "ION V3", "flags": "ig", "note": "Fractal 'Ion 3' is the sheet's 'ION V3' generation" },
-    { "pattern": "\\bion\\+\\s*2\\b", "replace": "ION Plus 2", "flags": "ig", "note": "Fractal 'Ion+ 2' is the sheet's 'ION Plus 2'" },
-    { "pattern": "\\bsl\\s*-\\s*(\\d{3,4})p\\b", "replace": "Steel Legend Platinum $1p", "flags": "ig", "note": "ASRock SL-P is Steel Legend Platinum" },
-    { "pattern": "\\bsl\\s*-\\s*(\\d{3,4})g\\b", "replace": "Steel Legend Gold $1g", "flags": "ig", "note": "ASRock SL-G is Steel Legend Gold" },
-    { "pattern": "\\bhydro\\s+ptm\\s+pro\\b", "replace": "Hydro", "flags": "ig", "note": "FSP Hydro PTM Pro is listed as Hydro in the sheet" },
-    { "pattern": "\\bhydro\\s+g\\s+pro\\b", "replace": "Hydro Pro", "flags": "ig", "note": "FSP Hydro G Pro is listed as Hydro Pro in the sheet" },
-    { "pattern": "\\bfocus\\s+gx\\b.*\\b(2024|atx\\s*3\\.1)\\b", "replace": "Focus V4 GX", "flags": "ig", "note": "Seasonic Focus GX 2024/ATX 3.1 is V4 GX" },
-    { "pattern": "\\bfocus\\s+gx\\b.*\\b(2023|atx\\s*3\\.0)\\b", "replace": "Focus V3 GX", "flags": "ig", "note": "Seasonic Focus GX 2023/ATX 3.0 is V3 GX" },
-    { "pattern": "\\btoughpower\\s+gf\\s+a3\\b", "replace": "Toughpower GF A3 Global FAGK H", "flags": "ig", "note": "Thermaltake Toughpower GF A3 is listed as Global (FAGK-H) in the sheet" }
+    {
+      "pattern": "\\bud\\s*(\\d{3,4})\\s*([a-z]{2})\\b",
+      "replace": "Ultra Durable UD-$2 $1",
+      "flags": "ig",
+      "note": "Gigabyte UD models omit 'Ultra Durable'"
+    },
+    {
+      "pattern": "\\b(\\d{3,4})\\s*g\\b",
+      "replace": "$1 gold",
+      "flags": "ig",
+      "note": "ASUS TUF '850G' suffix denotes Gold efficiency"
+    },
+    {
+      "pattern": "\\bgaming\\b",
+      "replace": "",
+      "flags": "ig",
+      "note": "marketing word, never part of a tier-sheet model name"
+    },
+    {
+      "pattern": "\\bion\\+?\\s*3\\b",
+      "replace": "ION V3",
+      "flags": "ig",
+      "note": "Fractal 'Ion 3' is the sheet's 'ION V3' generation"
+    },
+    {
+      "pattern": "\\bion\\+\\s*2\\b",
+      "replace": "ION Plus 2",
+      "flags": "ig",
+      "note": "Fractal 'Ion+ 2' is the sheet's 'ION Plus 2'"
+    },
+    {
+      "pattern": "\\bsl\\s*-\\s*(\\d{3,4})p\\b",
+      "replace": "Steel Legend Platinum $1p",
+      "flags": "ig",
+      "note": "ASRock SL-P is Steel Legend Platinum"
+    },
+    {
+      "pattern": "\\bsl\\s*-\\s*(\\d{3,4})g\\b",
+      "replace": "Steel Legend Gold $1g",
+      "flags": "ig",
+      "note": "ASRock SL-G is Steel Legend Gold"
+    },
+    {
+      "pattern": "\\bhydro\\s+ptm\\s+pro\\b",
+      "replace": "Hydro",
+      "flags": "ig",
+      "note": "FSP Hydro PTM Pro is listed as Hydro in the sheet"
+    },
+    {
+      "pattern": "\\bhydro\\s+g\\s+pro\\b",
+      "replace": "Hydro Pro",
+      "flags": "ig",
+      "note": "FSP Hydro G Pro is listed as Hydro Pro in the sheet"
+    },
+    {
+      "pattern": "\\bfocus\\s+gx\\b.*\\b(2024|atx\\s*3\\.1)\\b",
+      "replace": "Focus V4 GX",
+      "flags": "ig",
+      "note": "Seasonic Focus GX 2024/ATX 3.1 is V4 GX"
+    },
+    {
+      "pattern": "\\bfocus\\s+gx\\b.*\\b(2023|atx\\s*3\\.0)\\b",
+      "replace": "Focus V3 GX",
+      "flags": "ig",
+      "note": "Seasonic Focus GX 2023/ATX 3.0 is V3 GX"
+    }
   ]
 }

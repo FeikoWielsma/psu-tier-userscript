@@ -1,73 +1,599 @@
 [
-  { "name": "1STPLAYER NGDP 850W 80+ Gold", "wattage": 850, "site": "pcpp", "expectTier": "A-", "minBand": "strong" },
-  { "name": "Antec Earthwatts Gold Pro 750W", "wattage": 750, "site": "pcpp", "expectTier": "A-", "minBand": "strong" },
-  { "name": "Corsair RM850x (2018)", "wattage": 850, "site": "pcpp", "expectTier": "A", "minBand": "strong" },
-  { "name": "Corsair RM750e (2023)", "wattage": 750, "site": "pcpp", "expectTier": "B+", "minBand": "strong" },
-  { "name": "Corsair RM1000x", "wattage": 1000, "site": "pcpp", "expectTier": ["A", "A+"] },
-  { "name": "Lian Li SP750", "wattage": 750, "site": "pcpp", "expectTier": "B", "minBand": "strong" },
-  { "name": "Cooler Master MWE Gold 850 V2", "wattage": 850, "site": "pcpp", "expectTier": "B+", "minBand": "strong" },
-  { "name": "Cooler Master V850 SFX GOLD", "wattage": 850, "site": "pcpp", "expectTier": "A" },
-  { "name": "MSI MAG A850GL PCIE5", "wattage": 850, "site": "pcpp", "expectTier": "B" },
-  { "name": "be quiet! Pure Power 12 M 850W", "wattage": 850, "site": "pcpp", "expectTier": "A", "minBand": "strong" },
-  { "name": "Asus ROG STRIX 1200P Gaming", "wattage": 1200, "site": "pcpp", "expectTier": "A-", "note": "sheet only rates the Gold Strix (Aura Gold)" },
-  { "name": "Asus TUF Gaming 850G", "wattage": 850, "site": "pcpp", "expectTier": "B", "minBand": "strong" },
-  { "name": "NZXT C (2019)", "wattage": 850, "site": "pcpp", "expectTier": "A" },
-  { "name": "NZXT C850 (2022)", "wattage": 850, "site": "pcpp", "expectTier": "A" },
-  { "name": "NZXT C850 (2024)", "wattage": 850, "site": "pcpp", "expectTier": ["A+", "A"], "minBand": "strong" },
-  { "name": "Montech Century II 850W 80+ Gold", "wattage": 850, "site": "pcpp", "expectTier": "A-", "minBand": "strong" },
-  { "name": "Thermaltake Smart 600W 80+", "wattage": 600, "site": "pcpp", "expectTier": "D", "minBand": "strong" },
-  { "name": "Thermaltake Toughpower GF3 850W", "wattage": 850, "site": "pcpp", "expectTier": "A", "minBand": "strong" },
-  { "name": "Thermaltake Toughpower GF A3 ATX 3.0", "wattage": 750, "site": "pcpp", "expectTier": "B", "note": "must not collide with GF3" },
-  { "name": "EVGA SuperNOVA 850 G6", "wattage": 850, "site": "pcpp", "expectTier": "A+", "minBand": "strong", "note": "must not be hijacked by Super Flower brand alias" },
-  { "name": "Seasonic FOCUS GX-850", "wattage": 850, "site": "pcpp", "expectTier": "A", "minBand": "strong" },
-  { "name": "Super Flower Leadex VII Gold 1000W", "wattage": 1000, "site": "pcpp", "expectTier": ["A+", "A"] },
-
-  { "name": "Corsair RM850x", "wattage": 850, "site": "tweakers", "expectTier": ["A", "A+"] },
-  { "name": "be quiet! Straight Power 12 1000W", "wattage": 1000, "site": "tweakers", "expectTier": ["A", "A+", "A-"] },
-
-  { "name": "Corsair RM850x (2021) 850 W 80+ Gold Certified Fully Modular ATX Power Supply", "wattage": 850, "site": "pcpp", "expectTier": ["A+", "A"], "note": "verbose real PCPP name; year disambiguates RM-x 2021 (A+) from 2018 (A)" },
-  { "name": "be quiet! Pure Power 12 M 850 W 80+ Gold Certified Semi Modular ATX Power Supply", "wattage": 850, "site": "pcpp", "expectTier": "A" },
-  { "name": "Cooler Master MWE Gold 850 V2 850 W 80+ Gold Certified Fully Modular ATX Power Supply", "wattage": 850, "site": "pcpp", "expectTier": "B+" },
-  { "name": "Seasonic FOCUS GX-850 850 W 80+ Gold Certified Fully Modular ATX Power Supply", "wattage": 850, "site": "pcpp", "expectTier": "A" },
-  { "name": "Thermaltake Toughpower GF3 850 W 80+ Gold Certified Fully Modular ATX Power Supply", "wattage": 850, "site": "pcpp", "expectTier": "A" },
-  { "name": "EVGA SuperNOVA 850 G6 850 W 80+ Gold Certified Fully Modular ATX Power Supply", "wattage": 850, "site": "pcpp", "expectTier": "A+" },
-  { "name": "MSI MAG A850GL PCIE5 850 W 80+ Gold Certified Fully Modular ATX Power Supply", "wattage": 850, "site": "pcpp", "expectTier": "B" },
-
-  { "name": "MSI MAG A750GL PCIE5 80+ Gold", "wattage": 750, "site": "pcpp", "expectTier": "B", "note": "verified from real PCPP page" },
-  { "name": "MSI MAG A750GLS PCIE5 80+ Gold", "wattage": 750, "site": "pcpp", "expectTier": "A-", "note": "GLS variant distinct from GL" },
-  { "name": "Corsair SF1000 (2024) 80+ Platinum", "wattage": 1000, "site": "pcpp", "expectTier": "A+" },
-  { "name": "EVGA SuperNOVA 750 G2 80+ Gold", "wattage": 750, "site": "pcpp", "expectTier": "A" },
-  { "name": "ADATA XPG Core Reactor II 80+ Gold", "wattage": 850, "site": "pcpp", "expectTier": "A+" },
-  { "name": "Cooler Master MWE Gold 750 V3 80+ Gold", "wattage": 750, "site": "pcpp", "expectTier": ["B", "B+"] },
-  { "name": "NZXT E850 80+ Gold", "wattage": 850, "site": "pcpp", "expectTier": "A" },
-  { "name": "NZXT C750 (2023) 80+ Bronze", "wattage": 750, "site": "pcpp", "expectTier": "C", "note": "year disambiguates among NZXT C variants" },
-  { "name": "be quiet! SFX L Power 80+ Gold", "wattage": 600, "site": "pcpp", "expectTier": "B" },
-
-  { "name": "Totally Unknown Brand 750W", "wattage": 750, "expectTier": null, "note": "no brand -> no badge" },
-  { "name": "Corsair Vengeance LPX 16GB DDR4", "wattage": 0, "expectTier": null, "note": "Corsair brand but not a PSU model" },
-  { "name": "EVGA 500 B1", "wattage": 500, "efficiency": "80+ Bronze", "formFactor": "ATX", "expectTier": null, "note": "budget Bronze unit not in sheet; the only 'B1' is a Gold G-series, rejected by efficiency disagreement" },
-  { "name": "NZXT HALE82 V2 700W", "wattage": 700, "efficiency": "80+ Bronze", "formFactor": "ATX", "expectTier": null, "note": "old NZXT not in sheet; must not be mistaken for a C-series" },
-
-  { "name": "NZXT C750", "wattage": 750, "efficiency": "80+ Bronze", "formFactor": "ATX", "site": "pcpp", "expectTier": ["C+", "C"], "note": "thin name resolved via structured efficiency+wattage signals" },
-  { "name": "NZXT C550", "wattage": 550, "efficiency": "80+ Bronze", "formFactor": "ATX", "site": "pcpp", "expectTier": "C+" },
-  { "name": "NZXT C1500", "wattage": 1500, "efficiency": "80+ Platinum", "formFactor": "ATX", "site": "pcpp", "expectTier": "A+" },
-  { "name": "Corsair HX850", "wattage": 850, "efficiency": "80+ Platinum", "formFactor": "ATX", "site": "pcpp", "expectTier": "A+", "note": "structured Platinum efficiency yields the correct HX match" },
-  { "name": "Thermalright TG", "wattage": 650, "efficiency": "80+ Gold", "formFactor": "ATX", "expectTier": "C", "expectLimited": true, "note": "matches the ATX TR-TG entry in the limited confidence list" },
-  { "name": "ASRock PRO-650G", "wattage": 650, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "B+", "minBand": "strong" },
-  { "name": "ASRock PRO-750G", "wattage": 750, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "B+", "minBand": "strong" },
-  { "name": "SAMA GT 750", "wattage": 750, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "B", "minBand": "strong" },
-  { "name": "NZXT C750 Core", "wattage": 750, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "A", "minBand": "strong" },
-  { "name": "NZXT C850 Core", "wattage": 850, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "A", "minBand": "strong" },
-  { "name": "Lian Li SX1000P", "wattage": 1000, "efficiency": "80+ Platinum", "formFactor": "ATX", "site": "pcpp", "expectTier": "A", "minBand": "strong" },
-  { "name": "ASRock SL-1000P", "wattage": 1000, "efficiency": "80+ Platinum", "formFactor": "ATX", "site": "pcpp", "expectTier": "A+", "minBand": "strong" },
-  { "name": "Fractal Design Ion 3 Gold", "wattage": 850, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "A", "minBand": "strong" },
-  { "name": "1st Player ACK Gold 750W", "wattage": 750, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "B", "expectLimited": true },
-  { "name": "Abko Ultimate GX 850W", "wattage": 850, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "pcpp", "expectTier": "A", "expectLimited": true },
-  { "name": "Thermaltake Smart DC-DC 650W", "wattage": 650, "efficiency": "80+ Bronze", "formFactor": "ATX", "site": "pcpp", "expectTier": "C-", "expectLimited": true },
-  { "name": "NZXT C1200 Gold ATX 3.1, Zwart", "wattage": 1200, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "tweakers", "expectTier": "A+", "minBand": "strong" },
-  { "name": "NZXT C850 Gold ATX 3.1, Zwart", "wattage": 850, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "tweakers", "expectTier": "A+", "minBand": "strong" },
-  { "name": "NZXT C1000 Gold ATX 3.1, Wit", "wattage": 1000, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "tweakers", "expectTier": "A+", "minBand": "strong" },
-  { "name": "Lian Li Edge Gold 850W Wit, geen USB-hub", "wattage": 850, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "tweakers", "expectTier": "A" },
-  { "name": "Seasonic FOCUS GX White ATX 3 (2024) 1000W", "wattage": 1000, "efficiency": "80+ Gold", "formFactor": "ATX", "site": "tweakers", "expectTier": "A-" },
-  { "name": "FSP Hydro PTM PRO 1650W ATX3.0(12V-2x6)", "wattage": 1650, "efficiency": "80+ Platinum", "formFactor": "ATX", "site": "tweakers", "expectTier": "A+" }
+  {
+    "name": "1STPLAYER NGDP 850W 80+ Gold",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A-",
+    "minBand": "strong"
+  },
+  {
+    "name": "Antec Earthwatts Gold Pro 750W",
+    "wattage": 750,
+    "site": "pcpp",
+    "expectTier": "A-",
+    "minBand": "strong"
+  },
+  {
+    "name": "Corsair RM850x (2018)",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A",
+    "minBand": "strong"
+  },
+  {
+    "name": "Corsair RM750e (2023)",
+    "wattage": 750,
+    "site": "pcpp",
+    "expectTier": "B+",
+    "minBand": "strong"
+  },
+  {
+    "name": "Corsair RM1000x",
+    "wattage": 1000,
+    "site": "pcpp",
+    "expectTier": [
+      "A",
+      "A+"
+    ]
+  },
+  {
+    "name": "Lian Li SP750",
+    "wattage": 750,
+    "site": "pcpp",
+    "expectTier": "B",
+    "minBand": "strong"
+  },
+  {
+    "name": "Cooler Master MWE Gold 850 V2",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "B+",
+    "minBand": "strong"
+  },
+  {
+    "name": "Cooler Master V850 SFX GOLD",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A"
+  },
+  {
+    "name": "MSI MAG A850GL PCIE5",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "B"
+  },
+  {
+    "name": "be quiet! Pure Power 12 M 850W",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A",
+    "minBand": "strong"
+  },
+  {
+    "name": "Asus ROG STRIX 1200P Gaming",
+    "wattage": 1200,
+    "site": "pcpp",
+    "expectTier": "B+",
+    "note": "sheet only rates the Gold Strix (Aura Gold)"
+  },
+  {
+    "name": "Asus TUF Gaming 850G",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "B",
+    "minBand": "strong"
+  },
+  {
+    "name": "NZXT C (2019)",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A"
+  },
+  {
+    "name": "NZXT C850 (2022)",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A"
+  },
+  {
+    "name": "NZXT C850 (2024)",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": [
+      "A+",
+      "A"
+    ],
+    "minBand": "strong"
+  },
+  {
+    "name": "Montech Century II 850W 80+ Gold",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A-",
+    "minBand": "strong"
+  },
+  {
+    "name": "Thermaltake Smart 600W 80+",
+    "wattage": 600,
+    "site": "pcpp",
+    "expectTier": "D",
+    "minBand": "strong"
+  },
+  {
+    "name": "Thermaltake Toughpower GF3 850W",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A",
+    "minBand": "strong"
+  },
+  {
+    "name": "Thermaltake Toughpower GF A3 ATX 3.0",
+    "wattage": 750,
+    "site": "pcpp",
+    "expectTier": "B",
+    "note": "must not collide with GF3"
+  },
+  {
+    "name": "EVGA SuperNOVA 850 G6",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A+",
+    "minBand": "strong",
+    "note": "must not be hijacked by Super Flower brand alias"
+  },
+  {
+    "name": "Seasonic FOCUS GX-850",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A",
+    "minBand": "strong"
+  },
+  {
+    "name": "Super Flower Leadex VII Gold 1000W",
+    "wattage": 1000,
+    "site": "pcpp",
+    "expectTier": [
+      "A+",
+      "A"
+    ]
+  },
+  {
+    "name": "Corsair RM850x",
+    "wattage": 850,
+    "site": "tweakers",
+    "expectTier": [
+      "A",
+      "A+"
+    ]
+  },
+  {
+    "name": "be quiet! Straight Power 12 1000W",
+    "wattage": 1000,
+    "site": "tweakers",
+    "expectTier": [
+      "A",
+      "A+",
+      "A-"
+    ]
+  },
+  {
+    "name": "Corsair RM850x (2021) 850 W 80+ Gold Certified Fully Modular ATX Power Supply",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": [
+      "A+",
+      "A"
+    ],
+    "note": "verbose real PCPP name; year disambiguates RM-x 2021 (A+) from 2018 (A)"
+  },
+  {
+    "name": "be quiet! Pure Power 12 M 850 W 80+ Gold Certified Semi Modular ATX Power Supply",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A"
+  },
+  {
+    "name": "Cooler Master MWE Gold 850 V2 850 W 80+ Gold Certified Fully Modular ATX Power Supply",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "B+"
+  },
+  {
+    "name": "Seasonic FOCUS GX-850 850 W 80+ Gold Certified Fully Modular ATX Power Supply",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A"
+  },
+  {
+    "name": "Thermaltake Toughpower GF3 850 W 80+ Gold Certified Fully Modular ATX Power Supply",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A"
+  },
+  {
+    "name": "EVGA SuperNOVA 850 G6 850 W 80+ Gold Certified Fully Modular ATX Power Supply",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A+"
+  },
+  {
+    "name": "MSI MAG A850GL PCIE5 850 W 80+ Gold Certified Fully Modular ATX Power Supply",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "B"
+  },
+  {
+    "name": "MSI MAG A750GL PCIE5 80+ Gold",
+    "wattage": 750,
+    "site": "pcpp",
+    "expectTier": "B",
+    "note": "verified from real PCPP page"
+  },
+  {
+    "name": "MSI MAG A750GLS PCIE5 80+ Gold",
+    "wattage": 750,
+    "site": "pcpp",
+    "expectTier": "A-",
+    "note": "GLS variant distinct from GL"
+  },
+  {
+    "name": "Corsair SF1000 (2024) 80+ Platinum",
+    "wattage": 1000,
+    "site": "pcpp",
+    "expectTier": "A+"
+  },
+  {
+    "name": "EVGA SuperNOVA 750 G2 80+ Gold",
+    "wattage": 750,
+    "site": "pcpp",
+    "expectTier": "A"
+  },
+  {
+    "name": "ADATA XPG Core Reactor II 80+ Gold",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A+"
+  },
+  {
+    "name": "Cooler Master MWE Gold 750 V3 80+ Gold",
+    "wattage": 750,
+    "site": "pcpp",
+    "expectTier": [
+      "B",
+      "B+"
+    ]
+  },
+  {
+    "name": "NZXT E850 80+ Gold",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": "A"
+  },
+  {
+    "name": "NZXT C750 (2023) 80+ Bronze",
+    "wattage": 750,
+    "site": "pcpp",
+    "expectTier": "C",
+    "note": "year disambiguates among NZXT C variants"
+  },
+  {
+    "name": "be quiet! SFX L Power 80+ Gold",
+    "wattage": 600,
+    "site": "pcpp",
+    "expectTier": "B"
+  },
+  {
+    "name": "Totally Unknown Brand 750W",
+    "wattage": 750,
+    "expectTier": null,
+    "note": "no brand -> no badge"
+  },
+  {
+    "name": "Corsair Vengeance LPX 16GB DDR4",
+    "wattage": 0,
+    "expectTier": null,
+    "note": "Corsair brand but not a PSU model"
+  },
+  {
+    "name": "EVGA 500 B1",
+    "wattage": 500,
+    "efficiency": "80+ Bronze",
+    "formFactor": "ATX",
+    "expectTier": null,
+    "note": "budget Bronze unit not in sheet; the only 'B1' is a Gold G-series, rejected by efficiency disagreement"
+  },
+  {
+    "name": "NZXT HALE82 V2 700W",
+    "wattage": 700,
+    "efficiency": "80+ Bronze",
+    "formFactor": "ATX",
+    "expectTier": null,
+    "note": "old NZXT not in sheet; must not be mistaken for a C-series"
+  },
+  {
+    "name": "NZXT C750",
+    "wattage": 750,
+    "efficiency": "80+ Bronze",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": [
+      "C+",
+      "C"
+    ],
+    "note": "thin name resolved via structured efficiency+wattage signals"
+  },
+  {
+    "name": "NZXT C550",
+    "wattage": 550,
+    "efficiency": "80+ Bronze",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "C+"
+  },
+  {
+    "name": "NZXT C1500",
+    "wattage": 1500,
+    "efficiency": "80+ Platinum",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "A+"
+  },
+  {
+    "name": "Corsair HX850",
+    "wattage": 850,
+    "efficiency": "80+ Platinum",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "A+",
+    "note": "structured Platinum efficiency yields the correct HX match"
+  },
+  {
+    "name": "Thermalright TG",
+    "wattage": 650,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "expectTier": "C",
+    "expectLimited": true,
+    "note": "matches the ATX TR-TG entry in the limited confidence list"
+  },
+  {
+    "name": "ASRock PRO-650G",
+    "wattage": 650,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "B+",
+    "minBand": "strong"
+  },
+  {
+    "name": "ASRock PRO-750G",
+    "wattage": 750,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "B+",
+    "minBand": "strong"
+  },
+  {
+    "name": "SAMA GT 750",
+    "wattage": 750,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "B",
+    "minBand": "strong"
+  },
+  {
+    "name": "NZXT C750 Core",
+    "wattage": 750,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "A-",
+    "minBand": "strong"
+  },
+  {
+    "name": "NZXT C850 Core",
+    "wattage": 850,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "A",
+    "minBand": "strong"
+  },
+  {
+    "name": "Lian Li SX1000P",
+    "wattage": 1000,
+    "efficiency": "80+ Platinum",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "A",
+    "minBand": "strong"
+  },
+  {
+    "name": "ASRock SL-1000P",
+    "wattage": 1000,
+    "efficiency": "80+ Platinum",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "A+",
+    "minBand": "strong"
+  },
+  {
+    "name": "Fractal Design Ion 3 Gold",
+    "wattage": 850,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "A",
+    "minBand": "strong"
+  },
+  {
+    "name": "1st Player ACK Gold 750W",
+    "wattage": 750,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "B",
+    "expectLimited": true
+  },
+  {
+    "name": "Abko Ultimate GX 850W",
+    "wattage": 850,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "A",
+    "expectLimited": true
+  },
+  {
+    "name": "Thermaltake Smart DC-DC 650W",
+    "wattage": 650,
+    "efficiency": "80+ Bronze",
+    "formFactor": "ATX",
+    "site": "pcpp",
+    "expectTier": "C-",
+    "expectLimited": true
+  },
+  {
+    "name": "NZXT C1200 Gold ATX 3.1, Zwart",
+    "wattage": 1200,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "site": "tweakers",
+    "expectTier": "A+",
+    "minBand": "strong"
+  },
+  {
+    "name": "NZXT C850 Gold ATX 3.1, Zwart",
+    "wattage": 850,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "site": "tweakers",
+    "expectTier": "A+",
+    "minBand": "strong"
+  },
+  {
+    "name": "NZXT C1000 Gold ATX 3.1, Wit",
+    "wattage": 1000,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "site": "tweakers",
+    "expectTier": "A+",
+    "minBand": "strong"
+  },
+  {
+    "name": "Lian Li Edge Gold 850W Wit, geen USB-hub",
+    "wattage": 850,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "site": "tweakers",
+    "expectTier": "A"
+  },
+  {
+    "name": "Seasonic FOCUS GX White ATX 3 (2024) 1000W",
+    "wattage": 1000,
+    "efficiency": "80+ Gold",
+    "formFactor": "ATX",
+    "site": "tweakers",
+    "expectTier": "A-"
+  },
+  {
+    "name": "FSP Hydro PTM PRO 1650W ATX3.0(12V-2x6)",
+    "wattage": 1650,
+    "efficiency": "80+ Platinum",
+    "formFactor": "ATX",
+    "site": "tweakers",
+    "expectTier": "A+"
+  },
+  {
+    "name": "Thermaltake Toughpower GF A3 Snow",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": [
+      "B",
+      "B*"
+    ],
+    "minBand": "strong"
+  },
+  {
+    "name": "Thermaltake Toughpower GF A3 ATX 3.0",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": [
+      "B",
+      "B-",
+      "B-",
+      "B*"
+    ],
+    "minBand": "strong"
+  },
+  {
+    "name": "Thermaltake Toughpower GT",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": [
+      "B",
+      "B-"
+    ],
+    "minBand": "strong"
+  },
+  {
+    "name": "Thermaltake Toughpower GT Snow",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": [
+      "B",
+      "B-",
+      "B-*"
+    ],
+    "minBand": "strong"
+  },
+  {
+    "name": "Thermaltake Toughpower GF3 TT Premium",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": [
+      "A+",
+      "B",
+      "B*"
+    ],
+    "minBand": "strong"
+  },
+  {
+    "name": "Gigabyte UD1000GM",
+    "wattage": 1000,
+    "site": "pcpp",
+    "expectTier": "C+",
+    "expectLimited": true,
+    "minBand": "strong"
+  },
+  {
+    "name": "Gigabyte UD750GM",
+    "wattage": 750,
+    "site": "pcpp",
+    "expectTier": "B+",
+    "expectLimited": false,
+    "minBand": "strong"
+  },
+  {
+    "name": "Gigabyte P850GM",
+    "wattage": 850,
+    "site": "pcpp",
+    "expectTier": [
+      "B-",
+      "F"
+    ],
+    "minBand": "strong"
+  },
+  {
+    "name": "Gigabyte P750GM",
+    "wattage": 750,
+    "site": "pcpp",
+    "expectTier": [
+      "B-",
+      "F"
+    ],
+    "minBand": "strong"
+  }
 ]

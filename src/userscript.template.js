@@ -144,7 +144,8 @@
             html += '<div style="margin-top:10px;border-top:1px solid #444;padding-top:6px;color:#bbb;">'
                 + '<div style="font-weight:bold;margin-bottom:3px;">Other possible matches:</div>';
             for (const alt of result.alternates) {
-                html += `<div style="font-size:0.9em;">Tier ${esc(alt.entry.tier)} - `
+                const ts = tierStyle(alt.entry.tier);
+                html += `<div style="font-size:0.9em;"><span style="color:${ts.bg};font-weight:bold;">Tier ${esc(alt.entry.tier)}</span> - `
                     + `${esc(alt.entry.model)} (${Math.round(alt.confidence * 100)}%)</div>`;
             }
             html += '</div>';
