@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PSU Tier Badges (PCPartPicker & Tweakers)
 // @namespace    https://github.com/FeikoWielsma/psu-tier-userscript
-// @version      2.0.5
+// @version      2.0.6
 // @description  Show SPL's PSU Tier List ratings as badges on PCPartPicker and Tweakers, with match-confidence and details.
 // @author       Feiko Wielsma
 // @match        https://*.pcpartpicker.com/products/power-supply/*
@@ -307,7 +307,8 @@
 
     const adapter = PSUAdapters.activeAdapter();
     if (adapter) {
-        if (location.pathname.indexOf('/products/power-supply/') !== -1) {
+        if (location.pathname.indexOf('/products/power-supply/') !== -1 ||
+            location.pathname.indexOf('/voedingen/vergelijken/') !== -1) {
             createFilterUI();
         }
         addBadges(adapter);
