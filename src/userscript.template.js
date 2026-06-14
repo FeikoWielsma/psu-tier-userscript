@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PSU Tier Badges (PCPartPicker & Tweakers)
 // @namespace    https://github.com/FeikoWielsma/psu-tier-userscript
-// @version      2.0.4
+// @version      2.0.5
 // @description  Show SPL's PSU Tier List ratings as badges on PCPartPicker and Tweakers, with match-confidence and details.
 // @author       Feiko Wielsma
 // @match        https://*.pcpartpicker.com/products/power-supply/*
@@ -302,12 +302,14 @@
             }
             added = true;
         }
-        if (added) applyFilters();
+        if (added && document.getElementById('psu-filter-ui')) applyFilters();
     }
 
     const adapter = PSUAdapters.activeAdapter();
     if (adapter) {
-        createFilterUI();
+        if (location.pathname.indexOf('/products/power-supply/') !== -1) {
+            createFilterUI();
+        }
         addBadges(adapter);
         let scheduled = false;
         const observer = new MutationObserver(() => {
