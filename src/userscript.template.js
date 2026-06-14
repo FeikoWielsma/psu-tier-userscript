@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PSU Tier Badges (PCPartPicker & Tweakers)
 // @namespace    https://github.com/FeikoWielsma/psu-tier-userscript
-// @version      2.0.3
+// @version      2.0.4
 // @description  Show SPL's PSU Tier List ratings as badges on PCPartPicker and Tweakers, with match-confidence and details.
 // @author       Feiko Wielsma
 // @match        https://*.pcpartpicker.com/products/power-supply/*
@@ -181,7 +181,12 @@
     };
 
     function applyFilters() {
-        const ranks = { 'A': 90, 'B': 70, 'C': 50, 'D': 40, 'E': 30, 'F': 20 };
+        const ranks = {
+            'A+': 100, 'A': 95, 'A-': 90,
+            'B+': 80,  'B': 75, 'B-': 70,
+            'C+': 60,  'C': 55, 'C-': 50,
+            'D': 40,   'E': 30, 'F': 20
+        };
         const reqRank = currentFilter.minTier === 'ANY' ? 0 : ranks[currentFilter.minTier];
 
         const adapter = PSUAdapters.activeAdapter();
@@ -200,8 +205,7 @@
                 if (currentFilter.hideLimited && isLC) {
                     show = false;
                 } else {
-                    const baseTier = tier.replace(/[^A-F]/g, '');
-                    const rank = ranks[baseTier] || 0;
+                    const rank = ranks[tier] || ranks[tier.replace(/[^A-F]/g, '')] || 0;
                     if (rank < reqRank) show = false;
                 }
             }
@@ -241,10 +245,18 @@
         const lblMin = document.createElement('label');
         lblMin.innerHTML = `Min Tier: <select id="psu-filter-tier" style="background:#333;color:#fff;border:1px solid #555;border-radius:4px;padding:2px 4px;margin-left:4px;cursor:pointer;">
             <option value="ANY">Any</option>
+            <option value="A+">A+</option>
             <option value="A">A</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
             <option value="B">B</option>
+            <option value="B-">B-</option>
+            <option value="C+">C+</option>
             <option value="C">C</option>
+            <option value="C-">C-</option>
             <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
         </select>`;
         container.appendChild(lblMin);
 
