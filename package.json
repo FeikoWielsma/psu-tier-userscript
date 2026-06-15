@@ -1,6 +1,6 @@
 {
   "name": "psu-tier-userscript",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "description": "Userscript that shows SPL's PSU Tier List ratings on PCPartPicker and Tweakers.",
   "license": "MIT",
   "private": true,
@@ -14,7 +14,8 @@
     "check": "npm run lint && npm run typecheck && npm test",
     "capture": "node tools/live_capture.mjs --capture",
     "smoke": "node tools/live_capture.mjs --smoke",
-    "icons": "node tools/generate_icons.mjs"
+    "icons": "node tools/generate_icons.mjs",
+    "screenshots": "node tools/convert_screenshots.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
