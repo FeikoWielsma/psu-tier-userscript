@@ -1,6 +1,11 @@
 # PSU Tier List Userscript 🔌
 
-![CI Status](https://github.com/FeikoWielsma/psu-tier-userscript/actions/workflows/ci.yml/badge.svg)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/FeikoWielsma/psu-tier-userscript/ci.yml?branch=main&style=flat-square&label=Build)](https://github.com/FeikoWielsma/psu-tier-userscript/actions)
+[![Latest Release](https://img.shields.io/github/v/release/FeikoWielsma/psu-tier-userscript?style=flat-square&label=Release&color=success)](https://github.com/FeikoWielsma/psu-tier-userscript/releases)
+[![Platforms](https://img.shields.io/badge/supports-Firefox%20%7C%20Chrome%20%7C%20Brave-informational?style=flat-square)](#-installation)
+[![License](https://img.shields.io/github/license/FeikoWielsma/psu-tier-userscript?style=flat-square&label=License&color=blue)](https://github.com/FeikoWielsma/psu-tier-userscript/blob/main/LICENSE)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![ESLint](https://img.shields.io/badge/lint-ESLint-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
 
 A tool that turns **SPL's PSU Tier List** (a Google Sheet) into a userscript that
 injects coloured **Tier badges** directly onto power-supply listings on
