@@ -20,6 +20,7 @@ module.exports = [
       'src/userscript.template.js',
       'psutier.user.js',
       'psu_data_var.js',
+      'dist-extension/**',
       'node_modules/**'
     ]
   },

@@ -51,16 +51,19 @@ jobs:
           python fetch_sheet.py
           python parse_tier_list.py
 
-      - name: Build userscript
+      - name: Build userscript and extension
         run: |
           if [ ! -f psu_data.json ]; then
             echo "Live fetch unavailable; building from committed snapshot."
             cp tests/fixtures/sample_psu_data.json psu_data.json
           fi
           python generate_userscript.py
+          python build_extension.py
 
-      - name: Upload userscript artifact
+      - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: psutier-userscript
-          path: psutier.user.js
+          name: psutier-builds
+          path: |
+            psutier.user.js
+            psutier-extension.zip

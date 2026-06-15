@@ -29,3 +29,6 @@ psu_data.json
 psu_data_var.js
 psu_lookup_map.json
 psutier.user.js
+dist-extension/
+psutier-extension.zip
+

@@ -58,8 +58,14 @@ def build():
     with open(TEMPLATE, encoding="utf-8") as f:
         template = f.read()
 
-    data_json = js_safe(json.dumps(data, ensure_ascii=False))
-    rules_json = js_safe(json.dumps(rules, ensure_ascii=False))
+    # Format each PSU entry on its own line to avoid one massive single-line block
+    # that degrades text editor layout and rendering performance.
+    data_lines = [json.dumps(item, ensure_ascii=False) for item in data]
+    data_json = "[\n" + ",\n".join("        " + line for line in data_lines) + "\n    ]"
+    data_json = js_safe(data_json)
+
+    rules_json = js_safe(json.dumps(rules, indent=4, ensure_ascii=False))
+    rules_json = _indent(rules_json, 4).lstrip()
 
     replacements = {
         "/*__PSU_DATA__*/ []": data_json,
