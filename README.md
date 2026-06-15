@@ -19,6 +19,17 @@ confidence score, and other candidate matches.
 > before buying. The badge confidence and "other possible matches" list are there
 > to make disagreement visible rather than hidden.
 
+## 📸 Screenshots
+
+### Badges on PCPartPicker
+![PCPartPicker Badges](screenshots/badges.png)
+
+### Detail Specs Popup (after clicking badge)
+![Details Popup](screenshots/details.png)
+
+### Badges on Tweakers.net
+![Tweakers Badges](screenshots/tweakers.png)
+
 ## 🚀 Installation
 
 1. Install a userscript manager:
