@@ -45,7 +45,7 @@ jobs:
           AMO_JWT_SECRET: ${{ secrets.AMO_JWT_SECRET }}
         run: |
           if [ -n "$AMO_JWT_ISSUER" ] && [ -n "$AMO_JWT_SECRET" ]; then
-            npx web-ext sign --source-dir dist-extension --api-key "$AMO_JWT_ISSUER" --api-secret "$AMO_JWT_SECRET" --channel unlisted
+            npx web-ext sign --source-dir dist-extension --api-key "$AMO_JWT_ISSUER" --api-secret "$AMO_JWT_SECRET" --channel listed
             mv web-ext-artifacts/*.xpi ./psutier-extension.xpi
           else
             echo "AMO credentials not set, skipping extension signing."
