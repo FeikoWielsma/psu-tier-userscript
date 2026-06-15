@@ -2,7 +2,7 @@
   "name": "psu-tier-userscript",
   "version": "2.0.10",
   "description": "Userscript that shows SPL's PSU Tier List ratings on PCPartPicker and Tweakers.",
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "private": true,
   "scripts": {
     "test": "node tests/test_matching.js && node tests/test_adapters.js && node tests/test_coverage.js",
