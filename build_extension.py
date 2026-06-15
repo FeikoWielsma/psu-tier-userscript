@@ -67,9 +67,10 @@ def main():
         "version": version,
         "description": description,
         "icons": {
-            "48": "icon.svg",
-            "96": "icon.svg",
-            "128": "icon.svg"
+            "16": "icon-16.png",
+            "32": "icon-32.png",
+            "48": "icon-48.png",
+            "128": "icon-128.png"
         },
         "content_scripts": [
             {
@@ -86,6 +87,9 @@ def main():
     }
 
     dist_dir = "dist-extension"
+    if os.path.exists(dist_dir):
+        import shutil
+        shutil.rmtree(dist_dir)
     os.makedirs(dist_dir, exist_ok=True)
 
     # Write manifest.json
@@ -98,14 +102,16 @@ def main():
     with open(content_path, "w", encoding="utf-8") as f:
         f.write(userscript_src)
 
-    # Copy icon.svg
-    icon_src = os.path.join("extension", "icon.svg")
-    icon_dst = os.path.join(dist_dir, "icon.svg")
-    if os.path.exists(icon_src):
-        import shutil
-        shutil.copy2(icon_src, icon_dst)
-    else:
-        print("Warning: extension/icon.svg not found")
+    # Copy PNG icons
+    for size in [16, 32, 48, 128]:
+        icon_name = f"icon-{size}.png"
+        icon_src = os.path.join("extension", icon_name)
+        icon_dst = os.path.join(dist_dir, icon_name)
+        if os.path.exists(icon_src):
+            import shutil
+            shutil.copy2(icon_src, icon_dst)
+        else:
+            print(f"Warning: {icon_src} not found")
 
     zip_filename = "psutier-extension.zip"
     print(f"Packaging extension into {zip_filename}...")
