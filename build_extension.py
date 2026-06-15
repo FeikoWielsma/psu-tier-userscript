@@ -81,7 +81,10 @@ def main():
         ],
         "browser_specific_settings": {
             "gecko": {
-                "id": "psu-tier-badges@feikowielsma.github.io"
+                "id": "psu-tier-badges@feikowielsma.github.io",
+                "data_collection_permissions": {
+                    "required": ["none"]
+                }
             }
         }
     }
