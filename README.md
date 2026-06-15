@@ -32,6 +32,25 @@ confidence score, and other candidate matches.
 
 ## 🚀 Installation
 
+You can install this either as a standalone browser extension or as a userscript.
+
+### Option 1: Standalone Browser Extension (Recommended)
+
+#### Firefox (Easiest)
+1. Go to the [**Releases**](https://github.com/FeikoWielsma/psu-tier-userscript/releases) page.
+2. Download the signed `psutier-extension.xpi` file.
+3. Open Firefox, drag and drop the `.xpi` file into the browser (or press `Ctrl+O` / `Cmd+O` and select it) to install it. No extension manager required!
+
+#### Chrome / Brave
+1. Download `psutier-extension.zip` from the [**Releases**](https://github.com/FeikoWielsma/psu-tier-userscript/releases) page and extract it.
+2. Open `chrome://extensions` or `brave://extensions`.
+3. Toggle **Developer mode** on (top-right).
+4. Click **Load unpacked** and select the extracted folder.
+
+---
+
+### Option 2: Userscript (Requires Manager)
+
 1. Install a userscript manager:
    - **Brave / Chrome / Edge** (Chromium): install **Violentmonkey** (or
      Tampermonkey) from the Chrome Web Store.
@@ -43,9 +62,10 @@ confidence score, and other candidate matches.
 3. Download the latest `psutier.user.js` from the
    [**Releases**](https://github.com/FeikoWielsma/psu-tier-userscript/releases)
    page — your manager will offer to install it.
-4. Visit a [PCPartPicker PSU listing](https://pcpartpicker.com/products/power-supply/)
-   or the [Tweakers Pricewatch](https://tweakers.net/voedingen/vergelijken/) and
-   look for the badges.
+
+---
+
+Finally, visit a [PCPartPicker PSU listing](https://pcpartpicker.com/products/power-supply/) or the [Tweakers Pricewatch](https://tweakers.net/voedingen/vergelijken/) and look for the badges.
 
 ## 🧠 How it works
 
