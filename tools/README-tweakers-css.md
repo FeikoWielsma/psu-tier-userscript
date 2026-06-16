@@ -35,12 +35,15 @@ saved Pricewatch pages ──parse_tweakers_html.cjs──► tools/tweakers_see
 3. **Generate.** Runs the matcher over the seed and emits CSS into
    `dist-tweakers/`:
    ```bash
-   node tools/gen_tweakers_css.cjs               # boxed pills (default), ~36 KB, 1 entry
-   node tools/gen_tweakers_css.cjs --lite        # coloured tier letter only, ~36 KB
-   node tools/gen_tweakers_css.cjs --popup --split  # pills + hover popups, 15 entries
+   node tools/gen_tweakers_css.cjs               # boxed pills (default), ~40 KB, 1 entry
+   node tools/gen_tweakers_css.cjs --lite        # coloured tier letter only, ~37 KB
+   node tools/gen_tweakers_css.cjs --popup --split  # pills + hover popups, split into parts
    ```
 
-4. **Paste** the file(s) into Tweakers → *Voorkeuren* → *Custom CSS*.
+4. **Publish.** Paste `dist-tweakers/tweakers.boxed.css` into the shared snippet
+   (<https://tweakers.net/instellingen/customcss/snippets/bekijk/3538/>) so
+   everyone who enabled it gets the update. End users don't paste anything — they
+   just toggle that snippet on.
 
 ## How it fits
 

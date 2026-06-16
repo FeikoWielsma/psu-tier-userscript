@@ -61,20 +61,20 @@ You can install this either as a standalone browser extension or as a userscript
 
 ### Option 3: Tweakers custom CSS (no extension, Tweakers only)
 
-Tweakers' own **custom CSS** setting can carry the tier badges with no extension
-or userscript manager at all — a static stylesheet generated from the same
-matcher. It's **Tweakers Pricewatch only** (no PCPartPicker), and a snapshot:
-new products / tier changes need a regenerate-and-repaste. See
-[`tools/README-tweakers-css.md`](tools/README-tweakers-css.md) to (re)generate.
+Tweakers' own **custom CSS** carries the tier badges with no extension or
+userscript manager at all — just enable the shared snippet:
 
-- **`dist-tweakers/tweakers.boxed.css`** (~36 KB, one entry) — filled tier pills
-  on every matched PSU. Recommended.
-- **`dist-tweakers/tweakers.lite.css`** (~36 KB) — colored tier letter only.
-- **`dist-tweakers/tweakers.popup.partNN.css`** (15 entries) — pills **plus**
-  a hover spec popup, abusing `::before` `content`. The deluxe gag.
+> **▶ [Enable the snippet on Tweakers](https://tweakers.net/instellingen/customcss/snippets/bekijk/3538/)** — toggle it on and reload the Pricewatch.
 
-Paste into Tweakers → *Voorkeuren* → *Custom CSS*. Each entry caps at 65535
-bytes; the boxed/lite variants fit in one, the popup variant is pre-split.
+It's **Tweakers Pricewatch only** (no PCPartPicker) and a static snapshot of the
+tier list — new products / tier changes appear when the snippet is updated.
+
+To (re)generate it yourself (or build a different variant), see
+[`tools/README-tweakers-css.md`](tools/README-tweakers-css.md):
+
+- **boxed** (default, ~40 KB) — filled tier pills, matching the extension's look.
+- **lite** (~37 KB) — colored tier letter only.
+- **popup** — pills **plus** a hover spec popup, abusing `::before` `content`.
 
 ---
 
