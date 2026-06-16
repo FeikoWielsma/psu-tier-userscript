@@ -21,6 +21,9 @@ module.exports = [
       'psutier.user.js',
       'psu_data_var.js',
       'dist-extension/**',
+      'dist-tweakers/**',
+      'tweakers_html/**',          // manually-saved Tweakers pages (scratch input)
+      'tools/saved-tweakers/**',
       'node_modules/**'
     ]
   },
@@ -53,6 +56,15 @@ module.exports = [
       sourceType: 'module',
       // browser globals too: page.evaluate() callbacks run in the page context.
       globals: { ...globals.node, ...globals.browser }
+    }
+  },
+  {
+    // CommonJS build scripts (the Tweakers custom-CSS generator + parser).
+    files: ['tools/**/*.cjs'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'commonjs',
+      globals: { ...globals.node }
     }
   },
   {

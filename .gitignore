@@ -33,4 +33,10 @@ dist-extension/
 psutier-extension.zip
 psutier-source.zip
 
+# Tweakers custom-CSS pipeline
+# Manually-saved Pricewatch pages (scratch input, large) and generated CSS.
+tweakers_html/
+tools/saved-tweakers/
+dist-tweakers/
+
 
