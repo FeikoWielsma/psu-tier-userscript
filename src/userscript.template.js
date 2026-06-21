@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PSU Tier Badges (PCPartPicker & Tweakers)
 // @namespace    https://github.com/FeikoWielsma/psu-tier-userscript
-// @version      2.0.11
+// @version      2.0.12
 // @description  Show SPL's PSU Tier List ratings as badges on PCPartPicker and Tweakers, with match-confidence and details.
 // @author       Feiko Wielsma
 // @match        https://*.pcpartpicker.com/products/power-supply/*
