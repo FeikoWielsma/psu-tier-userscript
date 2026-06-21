@@ -14,6 +14,20 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      # Guard against version drift: the build takes its version from
+      # src/userscript.template.js, not from the tag. If they disagree, the
+      # stores would get a different version than the tag claims — fail loudly.
+      - name: Verify tag matches source version
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          SRC_VERSION="$(grep -m1 '@version' src/userscript.template.js | awk '{print $NF}')"
+          echo "Tag version:    $TAG_VERSION"
+          echo "Source version: $SRC_VERSION"
+          if [ "$TAG_VERSION" != "$SRC_VERSION" ]; then
+            echo "::error::Tag v$TAG_VERSION does not match @version $SRC_VERSION in src/userscript.template.js. Bump the source (and package.json) to match the tag, or tag the right version."
+            exit 1
+          fi
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -39,7 +53,7 @@ jobs:
           python generate_userscript.py --update
           python build_extension.py
 
-      - name: Sign Firefox extension
+      - name: Sign & publish Firefox extension (AMO)
         env:
           AMO_JWT_ISSUER: ${{ secrets.AMO_JWT_ISSUER }}
           AMO_JWT_SECRET: ${{ secrets.AMO_JWT_SECRET }}
@@ -49,6 +63,25 @@ jobs:
             mv web-ext-artifacts/*.xpi ./psutier-extension.xpi
           else
             echo "AMO credentials not set, skipping extension signing."
+          fi
+
+      - name: Publish to Chrome Web Store
+        env:
+          CWS_EXTENSION_ID: ${{ secrets.CWS_EXTENSION_ID }}
+          CWS_CLIENT_ID: ${{ secrets.CWS_CLIENT_ID }}
+          CWS_CLIENT_SECRET: ${{ secrets.CWS_CLIENT_SECRET }}
+          CWS_REFRESH_TOKEN: ${{ secrets.CWS_REFRESH_TOKEN }}
+        run: |
+          if [ -n "$CWS_CLIENT_ID" ] && [ -n "$CWS_CLIENT_SECRET" ] && [ -n "$CWS_REFRESH_TOKEN" ]; then
+            npx --yes chrome-webstore-upload-cli@3 upload \
+              --source psutier-extension.zip \
+              --extension-id "${CWS_EXTENSION_ID:-ngjfcbgocgihemnfbfffikmcdpplhemf}" \
+              --client-id "$CWS_CLIENT_ID" \
+              --client-secret "$CWS_CLIENT_SECRET" \
+              --refresh-token "$CWS_REFRESH_TOKEN" \
+              --auto-publish
+          else
+            echo "Chrome Web Store credentials not set, skipping Chrome publish."
           fi
 
       - name: Create Release
