@@ -1,8 +1,10 @@
 # PSU Tier List Userscript 🔌
 
+[![Firefox Add-on](https://img.shields.io/amo/v/psu-tier-badges?style=flat-square&logo=firefoxbrowser&logoColor=white&label=Firefox%20Add-on&color=FF7139)](https://addons.mozilla.org/en-US/firefox/addon/psu-tier-badges/)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ngjfcbgocgihemnfbfffikmcdpplhemf?style=flat-square&logo=googlechrome&logoColor=white&label=Chrome%20Web%20Store&color=4285F4)](https://chromewebstore.google.com/detail/psu-tier-badges-pcpartpic/ngjfcbgocgihemnfbfffikmcdpplhemf)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/FeikoWielsma/psu-tier-userscript/ci.yml?branch=main&style=flat-square&label=Build)](https://github.com/FeikoWielsma/psu-tier-userscript/actions)
 [![Latest Release](https://img.shields.io/github/v/release/FeikoWielsma/psu-tier-userscript?style=flat-square&label=Release&color=success)](https://github.com/FeikoWielsma/psu-tier-userscript/releases)
-[![Platforms](https://img.shields.io/badge/supports-Firefox%20%7C%20Chrome%20%7C%20Brave-informational?style=flat-square)](#-installation)
+[![Platforms](https://img.shields.io/badge/supports-Firefox%20%7C%20Chrome%20%7C%20Brave%20%7C%20Edge-informational?style=flat-square)](#-installation)
 [![License](https://img.shields.io/badge/License-GPL_v3-blue?style=flat-square)](https://github.com/FeikoWielsma/psu-tier-userscript/blob/main/LICENSE)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![ESLint](https://img.shields.io/badge/lint-ESLint-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
@@ -26,24 +28,60 @@ confidence score, and other candidate matches.
 
 ## 🚀 Installation
 
-You can install this either as a standalone browser extension or as a userscript.
+The easiest way is the **official store listing** for your browser — one click,
+with automatic updates. Prefer not to use a store? Manual and userscript options
+are below.
 
-### Option 1: Standalone Browser Extension (Recommended)
+### Option 1: Official browser stores (Recommended)
 
-#### Firefox (Easiest)
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/psu-tier-badges/">
+        <img src="https://img.shields.io/amo/v/psu-tier-badges?style=for-the-badge&logo=firefoxbrowser&logoColor=white&label=Firefox%20Add-on&color=FF7139" alt="Get the Firefox Add-on"><br>
+        🦊 <b>Get it for Firefox</b>
+      </a>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://chromewebstore.google.com/detail/psu-tier-badges-pcpartpic/ngjfcbgocgihemnfbfffikmcdpplhemf">
+        <img src="https://img.shields.io/chrome-web-store/v/ngjfcbgocgihemnfbfffikmcdpplhemf?style=for-the-badge&logo=googlechrome&logoColor=white&label=Chrome%20Web%20Store&color=4285F4" alt="Get it on the Chrome Web Store"><br>
+        🟢 <b>Get it for Chrome</b>
+      </a>
+    </td>
+  </tr>
+</table>
+
+- **Firefox** → [**Add to Firefox**](https://addons.mozilla.org/en-US/firefox/addon/psu-tier-badges/) from Mozilla Add-ons (AMO).
+- **Chrome** → [**Add to Chrome**](https://chromewebstore.google.com/detail/psu-tier-badges-pcpartpic/ngjfcbgocgihemnfbfffikmcdpplhemf) from the Chrome Web Store.
+- **Brave, Edge, Opera, Vivaldi & other Chromium browsers** → install straight
+  from the **[Chrome Web Store](https://chromewebstore.google.com/detail/psu-tier-badges-pcpartpic/ngjfcbgocgihemnfbfffikmcdpplhemf)** link above — these browsers accept
+  Chrome Web Store extensions directly. Notes:
+  - **Brave**: open the Chrome Web Store link, click **Add to Brave**. If
+    prompted, allow Chrome Web Store extensions (Brave enables this by default).
+  - **Edge**: open the link in Edge; the first time you may see a banner to
+    **Allow extensions from other stores** — click it, then **Add to Chrome →
+    Add extension**.
+  - **Opera**: install **[Install Chrome Extensions](https://addons.opera.com/extensions/details/install-chrome-extensions/)** first, then use the Chrome
+    Web Store link.
+
+---
+
+### Option 2: Manual install (no store account / sideload)
+
+#### Firefox
 1. Go to the [**Releases**](https://github.com/FeikoWielsma/psu-tier-userscript/releases) page.
 2. Download the signed `psutier-extension.xpi` file.
 3. Open Firefox, drag and drop the `.xpi` file into the browser (or press `Ctrl+O` / `Cmd+O` and select it) to install it. No extension manager required!
 
-#### Chrome / Brave
+#### Chrome / Brave / Edge
 1. Download `psutier-extension.zip` from the [**Releases**](https://github.com/FeikoWielsma/psu-tier-userscript/releases) page and extract it.
-2. Open `chrome://extensions` or `brave://extensions`.
+2. Open `chrome://extensions`, `brave://extensions`, or `edge://extensions`.
 3. Toggle **Developer mode** on (top-right).
 4. Click **Load unpacked** and select the extracted folder.
 
 ---
 
-### Option 2: Userscript (Requires Manager)
+### Option 3: Userscript (Requires Manager)
 
 1. Install a userscript manager:
    - **Brave / Chrome / Edge** (Chromium): install **Violentmonkey** (or
@@ -59,7 +97,7 @@ You can install this either as a standalone browser extension or as a userscript
 
 ---
 
-### Option 3: Tweakers custom CSS (no extension, Tweakers only)
+### Option 4: Tweakers custom CSS (no extension, Tweakers only)
 
 Tweakers' own **custom CSS** carries the tier badges with no extension or
 userscript manager at all — just enable the shared snippet:
