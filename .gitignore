@@ -1,3 +1,8 @@
+# Credentials - never commit these. OAuth client files for the Chrome Web
+# Store publish flow are only ever needed locally and transiently.
+client_secret*.json
+application_default_credentials.json
+
 # Python
 __pycache__/
 *.pyc
