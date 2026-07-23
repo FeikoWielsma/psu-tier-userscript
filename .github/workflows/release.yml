@@ -53,7 +53,12 @@ jobs:
           python generate_userscript.py --update
           python build_extension.py
 
+      # Both publish steps are non-fatal so that a rejected store credential
+      # can't cost us the GitHub release; the guard step at the end still fails
+      # the run, but only once the release exists.
       - name: Sign & publish Firefox extension (AMO)
+        id: amo
+        continue-on-error: true
         env:
           AMO_JWT_ISSUER: ${{ secrets.AMO_JWT_ISSUER }}
           AMO_JWT_SECRET: ${{ secrets.AMO_JWT_SECRET }}
@@ -66,6 +71,8 @@ jobs:
           fi
 
       - name: Publish to Chrome Web Store
+        id: cws
+        continue-on-error: true
         env:
           CWS_EXTENSION_ID: ${{ secrets.CWS_EXTENSION_ID }}
           CWS_CLIENT_ID: ${{ secrets.CWS_CLIENT_ID }}
@@ -93,3 +100,13 @@ jobs:
             psutier-extension.xpi
           fail_on_unmatched_files: false
           generate_release_notes: true
+
+      # Runs after the release so a store outage or expired credential is still
+      # reported as a failed run rather than passing silently.
+      - name: Report store publish failures
+        if: steps.amo.outcome == 'failure' || steps.cws.outcome == 'failure'
+        run: |
+          echo "AMO:               ${{ steps.amo.outcome }}"
+          echo "Chrome Web Store:  ${{ steps.cws.outcome }}"
+          echo "::error::A store publish failed. The GitHub release was still created; re-publish the failed store manually, or fix the credential and tag a new version."
+          exit 1
