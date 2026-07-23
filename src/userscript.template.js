@@ -47,6 +47,19 @@
         return TIER_STYLES[tier.replace(/[+-]/g, '')] || { bg: '#333', fg: '#fff' };
     }
 
+    /*
+     * Badge geometry that a site adapter may need to override lives here rather
+     * than in the per-badge inline styles, since inline styles would win over
+     * the adapter's stylesheet. Tier colours stay inline - they vary per badge.
+     */
+    function injectStyles(adapter) {
+        if (document.getElementById('psu-tier-styles')) return;
+        const el = document.createElement('style');
+        el.id = 'psu-tier-styles';
+        el.textContent = '.psu-tier-badge{margin-left:8px;}' + (adapter.styles || '');
+        (document.head || document.documentElement).appendChild(el);
+    }
+
     function makeBadge(result) {
         const tier = result.entry.tier;
         const isLimited = !!result.entry.is_limited;
@@ -71,12 +84,15 @@
         Object.assign(badge.style, {
             display: 'inline-block',
             padding: '2px 6px',
-            marginLeft: '8px',
             borderRadius: '4px',
             fontSize: '0.8em',
             fontWeight: 'bold',
             verticalAlign: 'middle',
             cursor: 'pointer',
+            // The badge sits inside the product link on PCPartPicker; don't
+            // inherit the link's underline or let the text wrap mid-badge.
+            textDecoration: 'none',
+            whiteSpace: 'nowrap',
             backgroundColor: style.bg,
             color: style.fg,
             border: isLimited ? '2px dotted #000' : (likely ? '2px dashed #555' : 'none'),
@@ -174,11 +190,29 @@
 
     // --- Filtering ----------------------------------------------------------
 
+    const TIER_OPTIONS = ['ANY', 'A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D', 'E', 'F'];
+    const PREFS_KEY = 'psuTierFilterPanel';
+
     let currentFilter = {
         minTier: 'ANY',
         hideLimited: false,
         hideUnrated: false
     };
+
+    // mode: 'docked' sits in the host site's own filter sidebar, 'floating' is
+    // the draggable panel. collapsed/left/top only apply while floating.
+    let panelPrefs = { mode: 'docked', collapsed: false, left: null, top: null };
+
+    function loadPrefs() {
+        try {
+            const raw = localStorage.getItem(PREFS_KEY);
+            if (raw) Object.assign(panelPrefs, JSON.parse(raw));
+        } catch (e) { /* storage blocked or corrupt - keep defaults */ }
+    }
+
+    function savePrefs() {
+        try { localStorage.setItem(PREFS_KEY, JSON.stringify(panelPrefs)); } catch (e) { /* ignore */ }
+    }
 
     function applyFilters() {
         const ranks = {
@@ -214,70 +248,215 @@
         }
     }
 
-    function createFilterUI() {
-        if (document.getElementById('psu-filter-ui')) return;
-        
+    function tierOptionsHtml() {
+        return TIER_OPTIONS.map((t) =>
+            `<option value="${t}"${t === currentFilter.minTier ? ' selected' : ''}>${t === 'ANY' ? 'Any' : t}</option>`
+        ).join('');
+    }
+
+    function bindControls(root) {
+        root.querySelector('#psu-filter-lc').checked = currentFilter.hideLimited;
+        root.querySelector('#psu-filter-un').checked = currentFilter.hideUnrated;
+        root.addEventListener('change', (e) => {
+            if (e.target.id === 'psu-filter-tier') currentFilter.minTier = e.target.value;
+            else if (e.target.id === 'psu-filter-lc') currentFilter.hideLimited = e.target.checked;
+            else if (e.target.id === 'psu-filter-un') currentFilter.hideUnrated = e.target.checked;
+            else return;
+            applyFilters();
+        });
+    }
+
+    function filterSpec(adapter) {
+        return {
+            title: 'PSU Tier Badges',
+            // Rendered by every dock. The docked panel wears the host site's
+            // own filter styling, so it has to say plainly that it isn't theirs.
+            note: `Added by the PSU Tier Badges extension — not a ${adapter.siteName} filter. `
+                + 'Ratings come from the SPL PSU Tier List.',
+            minLabel: 'Minimum tier',
+            lcLabel: 'Hide Speculative (LC)',
+            unLabel: 'Hide Unrated',
+            popOut: 'Pop out ↗'
+        };
+    }
+
+    function canDock(adapter) {
+        return !!(adapter.filterDock && adapter.filterDock.anchor());
+    }
+
+    /*
+     * Docked: a group inside the host site's own filter sidebar, built from
+     * their markup (see filterDock in adapters.js) so it themes, collapses and
+     * scrolls like a native filter instead of floating over the page.
+     */
+    function mountDockedFilter(adapter) {
+        const anchor = canDock(adapter) && adapter.filterDock.anchor();
+        if (!anchor || !anchor.parentNode) return false;
+
+        const holder = document.createElement('div');
+        holder.innerHTML = adapter.filterDock.render(filterSpec(adapter), tierOptionsHtml());
+        const group = holder.firstElementChild;
+        if (!group) return false;
+
+        anchor.parentNode.insertBefore(group, anchor);
+        bindControls(group);
+        group.querySelector('#psu-filter-popout').addEventListener('click', () => {
+            setPanelMode('floating', adapter);
+        });
+
+        const floating = document.getElementById('psu-filter-ui');
+        if (floating) floating.remove();
+        return true;
+    }
+
+    /* Popped out, and the fallback for pages without a filter sidebar: a
+     * floating panel that can be dragged out of the way, collapsed to its title
+     * bar, or docked back into the site's sidebar (filters stay applied
+     * throughout). Position, collapsed state and mode persist. */
+    function mountFloatingFilter(adapter) {
         const container = document.createElement('div');
         container.id = 'psu-filter-ui';
         Object.assign(container.style, {
             position: 'fixed',
-            bottom: '20px',
-            right: '20px',
             backgroundColor: '#1a1a1a',
             color: '#eee',
-            padding: '10px 15px',
             borderRadius: '8px',
             border: '1px solid #444',
             boxShadow: '0 4px 10px rgba(0,0,0,0.5)',
             zIndex: '9999',
             fontFamily: 'sans-serif',
             fontSize: '13px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '8px'
+            overflow: 'hidden'
         });
 
+        const header = document.createElement('div');
+        Object.assign(header.style, {
+            display: 'flex', alignItems: 'center', gap: '8px',
+            padding: '5px 6px 5px 12px', backgroundColor: '#26262e',
+            cursor: 'move', userSelect: 'none', touchAction: 'none'
+        });
         const title = document.createElement('strong');
-        title.textContent = 'PSU Tier Filter';
-        title.style.marginBottom = '2px';
-        container.appendChild(title);
+        title.textContent = 'PSU Tier Badges';
+        title.style.flex = '1';
+        title.style.whiteSpace = 'nowrap';
 
-        const lblMin = document.createElement('label');
-        lblMin.innerHTML = `Min Tier: <select id="psu-filter-tier" style="background:#333;color:#fff;border:1px solid #555;border-radius:4px;padding:2px 4px;margin-left:4px;cursor:pointer;">
-            <option value="ANY">Any</option>
-            <option value="A+">A+</option>
-            <option value="A">A</option>
-            <option value="A-">A-</option>
-            <option value="B+">B+</option>
-            <option value="B">B</option>
-            <option value="B-">B-</option>
-            <option value="C+">C+</option>
-            <option value="C">C</option>
-            <option value="C-">C-</option>
-            <option value="D">D</option>
-            <option value="E">E</option>
-            <option value="F">F</option>
-        </select>`;
-        container.appendChild(lblMin);
+        const headerButton = () => {
+            const b = document.createElement('button');
+            b.type = 'button';
+            Object.assign(b.style, {
+                background: 'none', border: 'none', color: '#eee', cursor: 'pointer',
+                fontSize: '14px', lineHeight: '1', padding: '3px 5px'
+            });
+            return b;
+        };
+        const dock = headerButton();
+        dock.textContent = '⇤';
+        dock.title = `Dock into the ${adapter.siteName} filter sidebar`;
+        dock.addEventListener('click', () => setPanelMode('docked', adapter));
+        const toggle = headerButton();
 
-        const lblLC = document.createElement('label');
-        lblLC.innerHTML = `<input type="checkbox" id="psu-filter-lc" style="margin-right:4px;cursor:pointer;"> Hide Speculative (LC)`;
-        lblLC.style.cursor = 'pointer';
-        container.appendChild(lblLC);
+        header.appendChild(title);
+        // Only offer docking where there's actually a sidebar to dock into.
+        if (canDock(adapter)) header.appendChild(dock);
+        header.appendChild(toggle);
 
-        const lblUn = document.createElement('label');
-        lblUn.innerHTML = `<input type="checkbox" id="psu-filter-un" style="margin-right:4px;cursor:pointer;"> Hide Unrated`;
-        lblUn.style.cursor = 'pointer';
-        container.appendChild(lblUn);
+        const body = document.createElement('div');
+        Object.assign(body.style, {
+            flexDirection: 'column', gap: '8px', padding: '10px 12px 12px'
+        });
+        body.innerHTML =
+            '<label>Min Tier: <select id="psu-filter-tier" style="background:#333;color:#fff;'
+            + `border:1px solid #555;border-radius:4px;padding:2px 4px;margin-left:4px;cursor:pointer;">${tierOptionsHtml()}</select></label>`
+            + '<label style="cursor:pointer;"><input type="checkbox" id="psu-filter-lc" '
+            + 'style="margin-right:4px;cursor:pointer;"> Hide Speculative (LC)</label>'
+            + '<label style="cursor:pointer;"><input type="checkbox" id="psu-filter-un" '
+            + 'style="margin-right:4px;cursor:pointer;"> Hide Unrated</label>'
+            + '<span style="opacity:0.6;font-size:11px;line-height:1.3;">'
+            + 'Ratings from the SPL PSU Tier List.</span>';
 
-        container.addEventListener('change', (e) => {
-            if (e.target.id === 'psu-filter-tier') currentFilter.minTier = e.target.value;
-            if (e.target.id === 'psu-filter-lc') currentFilter.hideLimited = e.target.checked;
-            if (e.target.id === 'psu-filter-un') currentFilter.hideUnrated = e.target.checked;
-            applyFilters();
+        container.appendChild(header);
+        container.appendChild(body);
+
+        const applyCollapsed = () => {
+            body.style.display = panelPrefs.collapsed ? 'none' : 'flex';
+            toggle.textContent = panelPrefs.collapsed ? '▸' : '▾';
+            toggle.title = panelPrefs.collapsed
+                ? 'Show PSU tier filter (filters stay applied)'
+                : 'Collapse PSU tier filter (filters stay applied)';
+        };
+        applyCollapsed();
+        toggle.addEventListener('click', () => {
+            panelPrefs.collapsed = !panelPrefs.collapsed;
+            applyCollapsed();
+            savePrefs();
         });
 
+        if (panelPrefs.left != null && panelPrefs.top != null) {
+            container.style.left = Math.max(0, Math.min(panelPrefs.left, window.innerWidth - 80)) + 'px';
+            container.style.top = Math.max(0, Math.min(panelPrefs.top, window.innerHeight - 30)) + 'px';
+        } else {
+            container.style.right = '20px';
+            container.style.bottom = '20px';
+        }
+
+        let drag = null;
+        header.addEventListener('pointerdown', (e) => {
+            const t = /** @type {any} */ (e.target);
+            if (e.button !== 0 || toggle.contains(t) || dock.contains(t)) return;
+            const rect = container.getBoundingClientRect();
+            drag = { dx: e.clientX - rect.left, dy: e.clientY - rect.top };
+            // Switch from the bottom/right anchoring to absolute coordinates.
+            Object.assign(container.style, {
+                left: rect.left + 'px', top: rect.top + 'px', right: 'auto', bottom: 'auto'
+            });
+            header.setPointerCapture(e.pointerId);
+            e.preventDefault();
+        });
+        header.addEventListener('pointermove', (e) => {
+            if (!drag) return;
+            const maxLeft = Math.max(0, window.innerWidth - container.offsetWidth);
+            const maxTop = Math.max(0, window.innerHeight - container.offsetHeight);
+            panelPrefs.left = Math.max(0, Math.min(e.clientX - drag.dx, maxLeft));
+            panelPrefs.top = Math.max(0, Math.min(e.clientY - drag.dy, maxTop));
+            container.style.left = panelPrefs.left + 'px';
+            container.style.top = panelPrefs.top + 'px';
+        });
+        const endDrag = (e) => {
+            if (!drag) return;
+            drag = null;
+            try { header.releasePointerCapture(e.pointerId); } catch (err) { /* already released */ }
+            savePrefs();
+        };
+        header.addEventListener('pointerup', endDrag);
+        header.addEventListener('pointercancel', endDrag);
+
+        bindControls(container);
         document.body.appendChild(container);
+        return true;
+    }
+
+    // Which mount is actually on the page right now. This can differ from
+    // panelPrefs.mode: a page with no sidebar falls back to floating without
+    // overwriting the user's stored preference.
+    let filterUiMode = null;
+
+    function setPanelMode(mode, adapter) {
+        panelPrefs.mode = mode;
+        savePrefs();
+        const old = document.getElementById(mode === 'docked' ? 'psu-filter-ui' : 'psu-filter-group');
+        if (old) old.remove();
+        filterUiMode = null;
+        ensureFilterUI(adapter);
+        applyFilters();
+    }
+
+    function ensureFilterUI(adapter) {
+        const id = filterUiMode === 'docked' ? 'psu-filter-group'
+            : filterUiMode === 'floating' ? 'psu-filter-ui' : null;
+        // Re-mount if the site re-rendered its sidebar out from under us.
+        if (id && document.getElementById(id)) return;
+        if (panelPrefs.mode === 'docked' && mountDockedFilter(adapter)) filterUiMode = 'docked';
+        else if (mountFloatingFilter(adapter)) filterUiMode = 'floating';
     }
 
     // --- Main loop ----------------------------------------------------------
@@ -302,21 +481,28 @@
             }
             added = true;
         }
-        if (added && document.getElementById('psu-filter-ui')) applyFilters();
+        if (added && filterUiMode) applyFilters();
     }
 
     const adapter = PSUAdapters.activeAdapter();
     if (adapter) {
-        if (location.pathname.indexOf('/products/power-supply/') !== -1 ||
-            location.pathname.indexOf('/voedingen/vergelijken/') !== -1) {
-            createFilterUI();
+        injectStyles(adapter);
+        const wantsFilter = location.pathname.indexOf('/products/power-supply/') !== -1
+            || location.pathname.indexOf('/voedingen/vergelijken/') !== -1;
+        if (wantsFilter) {
+            loadPrefs();
+            ensureFilterUI(adapter);
         }
         addBadges(adapter);
         let scheduled = false;
         const observer = new MutationObserver(() => {
             if (scheduled) return;
             scheduled = true;
-            requestAnimationFrame(() => { scheduled = false; addBadges(adapter); });
+            requestAnimationFrame(() => {
+                scheduled = false;
+                if (wantsFilter) ensureFilterUI(adapter);
+                addBadges(adapter);
+            });
         });
         observer.observe(document.body, { childList: true, subtree: true });
     }

@@ -33,6 +33,16 @@ dist-extension/
 psutier-extension.zip
 psutier-source.zip
 
+# Manually-saved PCPartPicker / Tweakers pages used as scratch input while
+# iterating on layout ("Save page as > Complete"); large, and the committed
+# fixtures under tests/fixtures/ are what the test suite actually uses.
+Choose A Power Supply - PCPartPicker.html
+Choose A Power Supply - PCPartPicker_files/
+Vergelijk voeding-prijzen en deals - Tweakers.html
+Vergelijk voeding-prijzen en deals - Tweakers_files/
+_psu_preview*.html
+_psu_script.js
+
 # Tweakers custom-CSS pipeline
 # Manually-saved Pricewatch pages (scratch input, large) and generated CSS.
 tweakers_html/
