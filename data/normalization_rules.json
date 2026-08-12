@@ -1,14 +1,16 @@
 {
-  "_comment": "Declarative tuning for the matcher (src/matcher.js). This is the extension point: to fix a naming discrepancy between the tier sheet, PCPartPicker and Tweakers, add data here instead of editing matching code. 'aliases' rewrite incoming product names before tokenizing; 'generic' tokens score low (common marketing words); 'noise' tokens are dropped; 'thresholds' decide badge confidence bands.",
+  "_comment": "Declarative tuning for the matcher (src/matcher.js). This is the extension point: to fix a naming discrepancy between the tier sheet, PCPartPicker and Tweakers, add data here instead of editing matching code. 'aliases' rewrite incoming product names before tokenizing; 'generic' tokens score low (common marketing words); 'noise' tokens are dropped; 'thresholds' decide badge confidence bands. 'weights.productMissNamed' is the steeper penalty for ignoring a product token that names the model (e.g. 'ELITE') rather than merely describing it.",
   "thresholds": {
     "strong": 0.75,
     "likely": 0.45,
     "floor": 0.45,
-    "minProductCoverage": 0.3
+    "minProductCoverage": 0.3,
+    "ambiguousGap": 0.02
   },
   "weights": {
     "candidateMiss": 0.35,
-    "productMiss": 0.2
+    "productMiss": 0.2,
+    "productMissNamed": 0.6
   },
   "noise": [
     "w",
@@ -35,6 +37,8 @@
     "form",
     "factor",
     "atx",
+    "atx3",
+    "group",
     "hub",
     "fanless",
     "230v",
@@ -158,6 +162,30 @@
       "replace": "Steel Legend Gold $1g",
       "flags": "ig",
       "note": "ASRock SL-G is Steel Legend Gold"
+    },
+    {
+      "pattern": "\\bsx\\s*(\\d{3,4})\\s*-\\s*lpt\\b",
+      "replace": "SFX-L SX-LPT Platinum $1",
+      "flags": "ig",
+      "note": "SilverStone's -LPT suffix is SFX-L Platinum; the sheet spells the 700W one 'SX-LPT' but the 1000W one 'SX Platinum'"
+    },
+    {
+      "pattern": "\\bthor\\s*(\\d{3,4})?\\s*p2\\b",
+      "replace": "THOR Platinum II $1",
+      "flags": "ig",
+      "note": "ASUS ROG Thor '1200P2' is the sheet's 'Platinum II' generation"
+    },
+    {
+      "pattern": "\\bthor\\s*(\\d{3,4})?\\s*p3\\b",
+      "replace": "THOR Platinum III $1",
+      "flags": "ig",
+      "note": "ASUS ROG Thor '1000P3' is the sheet's 'Platinum III' generation"
+    },
+    {
+      "pattern": "\\bthor\\s*(\\d{3,4})?\\s*t3\\b",
+      "replace": "THOR Titanium III $1",
+      "flags": "ig",
+      "note": "ASUS ROG Thor '1600T3' is the sheet's 'Titanium III' generation"
     },
     {
       "pattern": "\\bhydro\\s+ptm\\s+pro\\b",

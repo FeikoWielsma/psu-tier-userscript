@@ -33,6 +33,16 @@
     return isNaN(n) ? 0 : n;
   }
 
+  const EFF_LEVELS = ['gold', 'bronze', 'silver', 'platinum', 'titanium', 'white', 'standard'];
+
+  // True for a cell that is nothing but efficiency grades, e.g. "Gold" or
+  // "Gold, Platinum" (an 80 PLUS grade plus a Cybenetics ETA grade). Anything
+  // with other words in it is a spec sentence, not the certification column.
+  function isEfficiencyList(text) {
+    const parts = String(text || '').split(/[,/]/).map((p) => p.trim().toLowerCase());
+    return parts.length > 0 && parts.every((p) => EFF_LEVELS.indexOf(p) !== -1);
+  }
+
   const LINK_BUTTON = 'background:none;border:none;padding:0;font:inherit;'
     + 'cursor:pointer;text-decoration:underline;';
 
@@ -128,29 +138,36 @@
         const name = cleanText(el);
         if (!name) return null;
         let wattage = 0;
-        let efficiency = null;
+        let effList = null;      // the dedicated certification cell (preferred)
+        let effProse = null;     // a rating mentioned inside the spec sentence
         let modular = null;
         for (const s of row.querySelectorAll('.spec, td, .specline, .spec-line')) {
           const t = cleanText(s);
           const wm = t.match(/\b([\d.]+)\s*W\b/i);
           if (wm && !wattage) wattage = parseInt(wm[1].replace(/\./g, ''), 10);
-          if (!efficiency) {
-            if (/(80\s*plus|80\+)/i.test(t)) {
-              efficiency = t;
-            } else {
-              const cleaned = t.trim().toLowerCase();
-              if (['gold', 'bronze', 'silver', 'platinum', 'titanium', 'white', 'standard'].includes(cleaned)) {
-                efficiency = t;
-              }
-            }
-          }
+          // Tweakers' certification column lists every grade a unit holds,
+          // comma-separated, mixing 80 PLUS with Cybenetics ETA - "Gold" but
+          // also "Gold, Platinum". Accept the whole list; the matcher treats it
+          // as a set of acceptable levels. Requiring a single exact word here
+          // used to drop the signal entirely on dual-certified units.
+          if (!effList && isEfficiencyList(t)) effList = t;
+          if (!effProse && /(80\s*plus|80\+|cybenetics)/i.test(t)) effProse = t;
           if (!modular) {
             if (/volledig\s*modulair/i.test(t)) modular = 'Full';
             else if (/semi\s*-\s*modulair/i.test(t)) modular = 'Semi';
             else if (/niet\s*-\s*modulair/i.test(t)) modular = 'No';
           }
         }
-        return { name: name, formFactor: null, efficiency: efficiency, wattage: wattage, modular: modular };
+        return {
+          name: name,
+          formFactor: null,
+          efficiency: effList || effProse,
+          // Kept alongside: the prose names the certifying body, which decides
+          // how strictly the matcher reads the grade.
+          efficiencyNote: effProse,
+          wattage: wattage,
+          modular: modular
+        };
       },
       // Alongside the "vergelijk" button. That cell is its own grid area, so
       // the badge sits in space the row already reserves instead of competing

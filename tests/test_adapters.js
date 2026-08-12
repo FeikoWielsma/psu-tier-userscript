@@ -32,17 +32,26 @@ console.log('Adapter tests\n');
     const document = loadFixture('tweakers-voedingen.html');
     const rows = [...document.querySelectorAll(adapter.selector)];
     const expect = [
-        { nameIncludes: 'Corsair RM850x', wattage: 850 },
-        { nameIncludes: 'Straight Power 12', wattage: 1000 }
+        { nameIncludes: 'Corsair RM850x', wattage: 850, efficiency: null, modular: null },
+        { nameIncludes: 'Straight Power 12', wattage: 1000, efficiency: null, modular: null },
+        // The certification column wins over the prose spec-line, so a single
+        // 80 PLUS/Cybenetics grade comes through as just the grade...
+        { nameIncludes: 'A850GL PCIE5 Zwart', wattage: 850, efficiency: 'Gold', modular: 'Full' },
+        // ...and a dual-certified unit keeps BOTH grades. The matcher treats
+        // them as a set, so the 80+ Gold entry is no longer penalized for the
+        // unit's stricter Cybenetics Platinum grade (or vice versa).
+        { nameIncludes: 'A850GL PCIE5 Wit', wattage: 850, efficiency: 'Gold, Platinum', modular: 'Full' }
     ];
     if (!adapter || adapter.id !== 'tweakers') fail(`Tweakers adapter not active (got ${adapter && adapter.id})`);
     else if (rows.length !== expect.length) fail(`Tweakers selector matched ${rows.length} rows, expected ${expect.length}`);
     else rows.forEach((row, i) => {
         const s = adapter.extract(row);
-        if (s && s.name.indexOf(expect[i].nameIncludes) !== -1 && s.wattage === expect[i].wattage) {
-            console.log(`  PASS  Tweakers #${i + 1}: "${s.name}" @ ${s.wattage}W`);
+        const e = expect[i];
+        if (s && s.name.indexOf(e.nameIncludes) !== -1 && s.wattage === e.wattage
+            && (s.efficiency || null) === e.efficiency && (s.modular || null) === e.modular) {
+            console.log(`  PASS  Tweakers #${i + 1}: "${s.name}" @ ${s.wattage}W, cert=${s.efficiency || '-'}`);
         } else {
-            fail(`Tweakers #${i + 1}: ${JSON.stringify(s)}`);
+            fail(`Tweakers #${i + 1}: got ${JSON.stringify(s)}, expected ${JSON.stringify(e)}`);
         }
     });
 }

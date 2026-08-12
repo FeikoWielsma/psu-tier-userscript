@@ -1,8 +1,13 @@
 <!--
   Representative Tweakers Pricewatch "voedingen" listing markup, trimmed to the
-  parts the tweakers adapter reads (ul.item-listing li, a.editionName, and a
-  spec cell holding the wattage). Refresh with `npm run capture` if Tweakers
-  changes its DOM.
+  parts the tweakers adapter reads (ul.item-listing li, a.editionName, and the
+  spec cells holding wattage / certification / modularity). Refresh with
+  `npm run capture` if Tweakers changes its DOM.
+
+  The last two rows carry the current markup: a prose spec-line plus a
+  "shown-specs" block whose nr2 cell is the certification column. Tweakers puts
+  80 PLUS and Cybenetics ETA grades in that one cell, so it can read "Gold" or
+  "Gold, Platinum" - the dual-grade form used to be dropped entirely.
 -->
 <ul class="item-listing">
   <li>
@@ -12,5 +17,29 @@
   <li>
     <a class="editionName" href="/voedingen/456/be-quiet-straight-power-12.html">be quiet! Straight Power 12 1000W</a>
     <span class="spec">1.000W</span>
+  </li>
+  <li>
+    <a class="editionName" href="/voedingen/789/msi-mag-a850gl-pcie5-zwart.html">MSI MAG A850GL PCIE5 Zwart</a>
+    <span class="spec-line specline-wrapper">
+      <p class="ellipsis specline">
+        <a href="/voedingen/789/msi-mag-a850gl-pcie5-zwart.html">850W (Cybenetics ETA Gold (230V)) &bull; volledig modulair</a>
+      </p>
+    </span>
+    <span class="shown-specs">
+      <span class="spec nr1"><p title="850W">850W</p></span>
+      <span class="spec nr2"><p title="Gold">Gold</p></span>
+    </span>
+  </li>
+  <li>
+    <a class="editionName" href="/voedingen/790/msi-mag-a850gl-pcie5-wit.html">MSI MAG A850GL PCIE5 Wit</a>
+    <span class="spec-line specline-wrapper">
+      <p class="ellipsis specline">
+        <a href="/voedingen/790/msi-mag-a850gl-pcie5-wit.html">850W (Cybenetics ETA Platinum (230V)) &bull; volledig modulair</a>
+      </p>
+    </span>
+    <span class="shown-specs">
+      <span class="spec nr1"><p title="850W">850W</p></span>
+      <span class="spec nr2"><p title="Gold, Platinum">Gold, Platinum</p></span>
+    </span>
   </li>
 </ul>

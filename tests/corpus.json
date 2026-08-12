@@ -380,7 +380,7 @@
     "efficiency": "80+ Gold",
     "formFactor": "ATX",
     "site": "pcpp",
-    "expectTier": "B",
+    "expectTier": "B+",
     "minBand": "strong"
   },
   {
@@ -389,7 +389,7 @@
     "efficiency": "80+ Gold",
     "formFactor": "ATX",
     "site": "pcpp",
-    "expectTier": "A-",
+    "expectTier": "A",
     "minBand": "strong"
   },
   {
@@ -514,7 +514,8 @@
       "B",
       "B*"
     ],
-    "minBand": "strong"
+    "expectContested": true,
+    "note": "sheet lists sibling entries on different tiers at this wattage; the match is a tie, so the badge must read as uncertain"
   },
   {
     "name": "Thermaltake Toughpower GF A3 ATX 3.0",
@@ -526,7 +527,8 @@
       "B-",
       "B*"
     ],
-    "minBand": "strong"
+    "expectContested": true,
+    "note": "sheet lists sibling entries on different tiers at this wattage; the match is a tie, so the badge must read as uncertain"
   },
   {
     "name": "Thermaltake Toughpower GT",
@@ -558,14 +560,15 @@
       "B",
       "B*"
     ],
-    "minBand": "strong"
+    "expectContested": true,
+    "note": "sheet lists sibling entries on different tiers at this wattage; the match is a tie, so the badge must read as uncertain"
   },
   {
     "name": "Gigabyte UD1000GM",
     "wattage": 1000,
     "site": "pcpp",
     "expectTier": "C+",
-    "expectLimited": true,
+    "expectLimited": false,
     "minBand": "strong"
   },
   {
@@ -584,7 +587,8 @@
       "B-",
       "F"
     ],
-    "minBand": "strong"
+    "expectContested": true,
+    "note": "sheet lists sibling entries on different tiers at this wattage; the match is a tie, so the badge must read as uncertain"
   },
   {
     "name": "Gigabyte P750GM",
@@ -594,6 +598,162 @@
       "B-",
       "F"
     ],
+    "expectContested": true,
+    "note": "sheet lists sibling entries on different tiers at this wattage; the match is a tie, so the badge must read as uncertain"
+  },
+  {
+    "name": "MSI MAG A1000GL PCIE5 II",
+    "wattage": 1000,
+    "efficiency": "Gold, Platinum",
+    "modular": "Full",
+    "site": "tweakers",
+    "expectTier": "B+",
+    "expectModel": "MAG A-GL PCIE5 II",
+    "minBand": "strong",
+    "note": "reported mis-match: used to land on MAG A-PLS PCIE5 (A+). Dual Cybenetics/80+ cert cell must still yield an efficiency signal"
+  },
+  {
+    "name": "MSI MAG A850GL PCIE5 II",
+    "wattage": 850,
+    "efficiency": "Gold",
+    "modular": "Full",
+    "site": "tweakers",
+    "expectTier": "B",
+    "expectModel": "MAG A-GL PCIE5 II"
+  },
+  {
+    "name": "MSI MAG A650BNL",
+    "wattage": 650,
+    "efficiency": "Bronze",
+    "site": "tweakers",
+    "expectTier": [
+      "C-",
+      "F"
+    ],
+    "note": "A-BNL is not A-BN: a candidate token must not claim a longer product token it only prefixes"
+  },
+  {
+    "name": "Thermalright TR-SGFX 650",
+    "wattage": 650,
+    "efficiency": "80+ Gold",
+    "formFactor": "SFX",
+    "site": "pcpp",
+    "expectTier": "C",
+    "expectModel": "TR-SG FX",
+    "minBand": "strong",
+    "note": "glued code: TR-SGFX is TR-SG + FX, not TR-TG FX (tier B) - used to be an arbitrary tie"
+  },
+  {
+    "name": "Corsair RMx SHIFT (2025)",
+    "wattage": 1000,
+    "efficiency": "80+ Gold",
+    "site": "pcpp",
+    "expectTier": "A+",
+    "expectModel": "RM-x Shift 2025",
+    "note": "glued code: RMx is RM + x"
+  },
+  {
+    "name": "Asus ROG Thor 1000P3 Gaming",
+    "wattage": 1000,
+    "efficiency": "80+ Platinum",
+    "site": "pcpp",
+    "expectTier": "A",
+    "expectModel": "ROG THOR Platinum III",
+    "minBand": "strong",
+    "note": "P3 is the Platinum III generation, not Platinum II"
+  },
+  {
+    "name": "Asus ROG Thor 1200P2 Gaming",
+    "wattage": 1200,
+    "efficiency": "80+ Platinum",
+    "site": "pcpp",
+    "expectTier": "A",
+    "expectModel": "ROG THOR Platinum II",
     "minBand": "strong"
+  },
+  {
+    "name": "PowerSpec PSX 850GFM",
+    "wattage": 850,
+    "efficiency": "80+ Gold",
+    "site": "pcpp",
+    "expectTier": [
+      "C",
+      "B-"
+    ],
+    "expectContested": true,
+    "note": "sheet lists PS X GFM twice at 850W on tiers C and B-; the badge must read as uncertain"
+  },
+  {
+    "name": "Corsair RM1000x (2024)",
+    "wattage": 1000,
+    "efficiency": "Platinum",
+    "efficiencyNote": "1.000W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "modular": "Full",
+    "site": "tweakers",
+    "expectTier": "A+",
+    "expectModel": "RM-x 2024 (ATX 3.1)",
+    "minBand": "strong",
+    "note": "unit is 80+ Gold but Cybenetics ETA Platinum; the ETA grade alone must not veto the Gold entry"
+  },
+  {
+    "name": "Corsair RM850x (2024)",
+    "wattage": 850,
+    "efficiency": "Gold",
+    "efficiencyNote": "850W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "modular": "Full",
+    "site": "tweakers",
+    "expectTier": "A+",
+    "expectModel": "RM-x 2024 (ATX 3.1)",
+    "minBand": "strong"
+  },
+  {
+    "name": "Gigabyte AORUS ELITE P850",
+    "wattage": 850,
+    "efficiency": "80+ Platinum",
+    "site": "pcpp",
+    "expectTier": "A-",
+    "expectModel": "Aorus Elite AE-PM PG5 (rev. 2.0)",
+    "note": "'Aorus P-W AP-GM' used to win on the shared 'P' alone while ignoring ELITE; a product token that names the model is charged at weights.productMissNamed"
+  },
+  {
+    "name": "Silverstone SX1000-LPT",
+    "wattage": 1000,
+    "efficiency": "80+ Platinum",
+    "formFactor": "SFX-L",
+    "site": "pcpp",
+    "expectTier": "C+",
+    "expectModel": "SFX-L SX Platinum",
+    "note": "-LPT is SFX-L Platinum; sheet spells the 1000W unit 'SX Platinum'"
+  },
+  {
+    "name": "Silverstone SX700-LPT",
+    "wattage": 700,
+    "efficiency": "80+ Platinum",
+    "formFactor": "SFX-L",
+    "site": "pcpp",
+    "expectTier": "F",
+    "expectModel": "SFX-L SX-LPT",
+    "note": "same suffix, but at 700W the sheet does spell it SX-LPT - the alias must not collapse the two"
+  },
+  {
+    "name": "FSP Group Hydro G Pro",
+    "wattage": 1000,
+    "efficiency": "80+ Gold",
+    "site": "pcpp",
+    "expectTier": "A",
+    "minBand": "strong",
+    "note": "'Group' is a corporate suffix, not a model token - must not be charged as a naming miss"
+  },
+  {
+    "name": "SeaSonic ATX3-FOCUS-GX-850-WHITE",
+    "wattage": 850,
+    "efficiency": "80+ Gold",
+    "site": "pcpp",
+    "expectTier": [
+      "A",
+      "A-"
+    ],
+    "minBand": "strong",
+    "note": "unspaced 'ATX3' spec tag must be dropped like the spaced form"
   }
 ]

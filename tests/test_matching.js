@@ -19,7 +19,13 @@ let failures = 0;
 console.log(`Matching tests (${corpus.length} cases, ${data.length} PSU entries)\n`);
 
 for (const tc of corpus) {
-    const signals = { wattage: tc.wattage, efficiency: tc.efficiency, formFactor: tc.formFactor };
+    const signals = {
+        wattage: tc.wattage,
+        efficiency: tc.efficiency,
+        efficiencyNote: tc.efficiencyNote,
+        formFactor: tc.formFactor,
+        modular: tc.modular
+    };
     const result = match(tc.name, signals, index, rules);
     const expected = tc.expectTier;
     const tier = result ? result.entry.tier : null;
@@ -33,6 +39,17 @@ for (const tc of corpus) {
         if (ok && tc.minBand) ok = BAND_RANK[result.band] >= BAND_RANK[tc.minBand];
         if (ok && tc.expectLimited !== undefined) {
             ok = !!result.entry.is_limited === tc.expectLimited;
+        }
+        // Cases where several entries tie on confidence across different tiers.
+        // The badge must own up to that rather than presenting a coin flip as
+        // a settled rating.
+        if (ok && tc.expectContested !== undefined) {
+            ok = !!result.contested === tc.expectContested;
+        }
+        // Where sibling entries share a tier, the tier alone can't prove the
+        // right one was picked - pin the model name instead.
+        if (ok && tc.expectModel !== undefined) {
+            ok = result.entry.model === tc.expectModel;
         }
     }
 
