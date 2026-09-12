@@ -116,9 +116,12 @@
 
   // ---- scoring ------------------------------------------------------------
 
+  const ROMAN_NUMERALS = /^(ii|iii|iv|vi|vii|viii)$/i;
+
   function tokenWeight(tok, generic) {
     if (generic.has(tok)) return 0.3;          // common marketing words
     if (/[0-9]/.test(tok)) return 2.0;         // model numbers / years
+    if (ROMAN_NUMERALS.test(tok)) return 2.0;  // generation Roman numerals (II, III, IV)
     if (tok.length === 1) return 0.5;          // suffix letters (RM-x, M)
     if (tok.length >= 3) return 1.5;
     return 1.0;
@@ -140,10 +143,11 @@
 
   // A leftover product token that *names* the unit rather than describing it -
   // a word or code the storefront put in the title on purpose ("ELITE",
-  // "SHIFT", "PCIE5"). Bare numbers are excluded: wattages are stripped before
+  // "SHIFT", "PCIE5", "II"). Bare numbers are excluded: wattages are stripped before
   // scoring and years/versions are already handled as soft tokens.
   function isNamingToken(t, generic) {
-    return t.length >= 3 && !generic.has(t) && !isSoftToken(t) && !/^\d+$/.test(t);
+    return (t.length >= 2)
+      && !generic.has(t) && !isSoftToken(t) && !/^\d+$/.test(t);
   }
 
   // Share of a token's weight awarded when it only matches as the head or tail

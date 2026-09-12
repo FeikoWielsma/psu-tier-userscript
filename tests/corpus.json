@@ -755,5 +755,49 @@
     ],
     "minBand": "strong",
     "note": "unspaced 'ATX3' spec tag must be dropped like the spaced form"
+  },
+  {
+    "name": "be quiet! Pure Power 13 M | 1000W",
+    "wattage": 1000,
+    "efficiency": "Gold, Platinum",
+    "efficiencyNote": "1.000W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "modular": "Full",
+    "site": "tweakers",
+    "expectTier": "B+",
+    "expectModel": "Pure Power 13 M",
+    "minBand": "strong"
+  },
+  {
+    "name": "be quiet! Pure Power 13M 1000W",
+    "wattage": 1000,
+    "efficiency": "80+ Gold",
+    "site": "pcpp",
+    "expectTier": "B+",
+    "expectModel": "Pure Power 13 M",
+    "minBand": "strong",
+    "note": "unspaced 13M must normalize to 13 M"
+  },
+  {
+    "name": "Corsair RM650e (2025) Zwart",
+    "wattage": 650,
+    "efficiency": "Platinum",
+    "efficiencyNote": "650W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "modular": "Full",
+    "site": "tweakers",
+    "expectTier": "B+",
+    "expectModel": "RM-e 2025 (\"ATX 3.1\")",
+    "minBand": "strong"
+  },
+  {
+    "name": "XPG Core Reactor II VE 750W",
+    "wattage": 750,
+    "efficiency": "Gold",
+    "efficiencyNote": "750W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "modular": "Full",
+    "site": "tweakers",
+    "expectTier": "A",
+    "expectModel": "Core Reactor II VE",
+    "minBand": "strong",
+    "note": "Core Reactor II VE is Tier A costdown, must not be matched as regular Core Reactor II (Tier A+)"
   }
 ]

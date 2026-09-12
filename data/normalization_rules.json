@@ -210,6 +210,12 @@
       "replace": "Focus V3 GX",
       "flags": "ig",
       "note": "Seasonic Focus GX 2023/ATX 3.0 is V3 GX"
+    },
+    {
+      "pattern": "\\bpure\\s+power\\s+(\\d+)\\s*m\\b",
+      "replace": "Pure Power $1 M",
+      "flags": "ig",
+      "note": "be quiet! Pure Power generation number + M unspaced"
     }
   ]
 }
