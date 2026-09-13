@@ -68,6 +68,15 @@ module.exports = [
     }
   },
   {
+    // Browser console scripts (e.g. PCPP in-browser console auditor).
+    files: ['tools/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'script',
+      globals: { ...globals.browser }
+    }
+  },
+  {
     files: ['eslint.config.js'],
     languageOptions: { sourceType: 'commonjs', globals: { ...globals.node } }
   }

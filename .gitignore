@@ -53,5 +53,8 @@ _psu_script.js
 tweakers_html/
 tools/saved-tweakers/
 dist-tweakers/
-
-
+tools/.chrome-test-profile/
+tools/tweakers_audit_report.json
+tools/pcpp_audit_report.json
+tools/pcpp_dump.json
+*.xlsx

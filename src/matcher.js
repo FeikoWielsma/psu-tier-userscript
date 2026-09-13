@@ -186,6 +186,7 @@
     if (t.indexOf('white') !== -1) {
       if (t.length < 15 || /80\s*(plus|\+)\s*white/i.test(t)) return 'white';
     }
+    if (/80\s*(?:plus|\+)(?!\s*(?:gold|bronze|silver|platinum|titanium))/i.test(t)) return 'white';
     return null;
   }
 
@@ -227,6 +228,17 @@
     s = s.toLowerCase();
     if (/sfx|tfx|flex/.test(s)) return 'small';
     if (/atx/.test(s)) return 'atx';
+    return null;
+  }
+
+  // Normalize modularity string to 'full', 'semi', or 'no'.
+  // Tolerates variants like "Full / Side" (PCPP) or "volledig modulair" (Tweakers).
+  function normModularity(s) {
+    if (!s) return null;
+    s = s.toLowerCase();
+    if (/semi/.test(s)) return 'semi';
+    if (/full|volledig/.test(s)) return 'full';
+    if (/no|non|niet/.test(s)) return 'no';
     return null;
   }
 
@@ -349,7 +361,7 @@
     let prodEffs = efficienciesOf([signals.efficiency, signals.efficiencyNote].filter(Boolean).join(' '));
     if (!prodEffs.size) prodEffs = efficienciesOf(fullName);
     const prodForm = formClass(signals.formFactor);
-    const prodMod = signals.modular;
+    const prodMod = normModularity(signals.modular);
 
     const aliased = stripDescriptors(applyRules(fullName, rules.aliases), rules);
 
@@ -370,9 +382,9 @@
       const candForm = formClass(entry.form_factor);
       if (prodForm && candForm && prodForm !== candForm) continue;
 
-      const candMod = entry.modularity;
+      const candMod = normModularity(entry.modularity);
       if (prodMod && candMod && prodMod !== candMod) {
-        if ((prodMod === 'Full' && candMod === 'No') || (prodMod === 'No' && candMod === 'Full')) {
+        if ((prodMod === 'full' && candMod === 'no') || (prodMod === 'no' && candMod === 'full')) {
           continue;
         }
       }

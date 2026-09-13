@@ -54,7 +54,15 @@
     "poorten",
     "12vhpwr",
     "12v",
-    "2x6"
+    "2x6",
+    "retail",
+    "bulk",
+    "stekker",
+    "usb",
+    "12vpwr",
+    "kabel",
+    "pin",
+    "pins"
   ],
   "generic": [
     "gold",
@@ -74,7 +82,8 @@
     "black",
     "snow",
     "color",
-    "colour"
+    "colour",
+    "vanguard"
   ],
   "strip": [
     {
@@ -118,6 +127,54 @@
       "replace": "",
       "flags": "ig",
       "note": "Strip Rev 1/2 from Gigabyte P-GM so base listings match both"
+    },
+    {
+      "pattern": "\\(eu-stekker\\)",
+      "replace": "",
+      "flags": "ig",
+      "note": "Strip Dutch '(EU-stekker)' plug packaging tag"
+    },
+    {
+      "pattern": "(?<!core\\s+gx\\s*)\\batx\\s*3(?!\\.|\\d)\\b",
+      "replace": "",
+      "flags": "ig",
+      "note": "Strip bare 'ATX 3' standard tags so they don't score as unmatched '3' tokens (preserves Seasonic Core GX ATX 3)"
+    },
+    {
+      "pattern": "\\b(?:cpx-fc|ppg-[a-z]|zpu-s|ae-pm|har-pma?|ha-pt|pg5)\\b",
+      "replace": "",
+      "flags": "ig",
+      "note": "Strip internal factory platform codes from Chieftec, Gigabyte, and Silverstone models"
+    },
+    {
+      "pattern": "\\bplat\\.\\s*global\\b",
+      "replace": "Platinum",
+      "flags": "ig",
+      "note": "Normalize 'Plat. Global' in Cooler Master models to Platinum"
+    },
+    {
+      "pattern": "\\b(?:230|115)\\s*v(?:olt)?\\b",
+      "replace": "",
+      "flags": "ig",
+      "note": "Strip input voltage ratings e.g. 230V, 230 Volt, 115V"
+    },
+    {
+      "pattern": "\\((?:gray|grey|black|green)\\s+label[^)]*\\)",
+      "replace": "",
+      "flags": "ig",
+      "note": "Strip Corsair label color descriptors e.g. (Gray Label), (Black Label)"
+    },
+    {
+      "pattern": "\\(rev\\.\\s*\\d+(?:\\.\\d+)?\\)",
+      "replace": "",
+      "flags": "ig",
+      "note": "Strip Gigabyte / vendor revision parentheticals e.g. (rev. 2.0)"
+    },
+    {
+      "pattern": "\\bhatsune\\s+miku\\b",
+      "replace": "",
+      "flags": "ig",
+      "note": "Strip Hatsune Miku special edition branding"
     }
   ],
   "aliases": [
@@ -216,6 +273,108 @@
       "replace": "Pure Power $1 M",
       "flags": "ig",
       "note": "be quiet! Pure Power generation number + M unspaced"
+    },
+    {
+      "pattern": "\\bhcg\\s*(\\d{3,4})?\\b",
+      "replace": "High Current Gamer $1",
+      "flags": "ig",
+      "note": "Antec HCG abbreviation for High Current Gamer"
+    },
+    {
+      "pattern": "\\bedge\\s+(?!eg\\b)(gold|platinum)\\b",
+      "replace": "Edge EG $1",
+      "flags": "ig",
+      "note": "Lian Li Edge Gold/Platinum is Edge EG"
+    },
+    {
+      "pattern": "\\bcore\\s+gx\\b.*\\batx\\s*3\\.[01]\\b",
+      "replace": "Core GX ATX 3",
+      "flags": "ig",
+      "note": "Seasonic Core GX ATX 3.1 is the sheet's Core GX ATX 3"
+    },
+    {
+      "pattern": "\\b(gf\\s*a3|smart\\s*bm3|pf3|tf1|gf2|gf3\\s+snow|gf3\\s+argb)\\b.*\\btt\\s+premium(?:\\s+edition)?\\b",
+      "replace": "$1",
+      "flags": "ig",
+      "note": "Strip TT Premium suffix from GF A3, Smart BM3, PF3, TF1, GF2, GF3 Snow/ARGB"
+    },
+    {
+      "pattern": "\\bst(\\d{2,3})f\\s*-\\s*es\\b",
+      "replace": "Strider Essential ST-ES",
+      "flags": "ig",
+      "note": "SilverStone ST50F-ES model number is Strider Essential ST-ES"
+    },
+    {
+      "pattern": "\\bcsk\\s*(pro)?\\b",
+      "replace": "Cuprum Strike $1",
+      "flags": "ig",
+      "note": "Antec CSK is Cuprum Strike"
+    },
+    {
+      "pattern": "\\bda\\s*(\\d{3,4})?\\s*r(?:\\s+gold)?\\b",
+      "replace": "Decathlon DA-R GM $1",
+      "flags": "ig",
+      "note": "SilverStone DA-R Gold ATX 3.x models match Decathlon DA-R GM"
+    },
+    {
+      "pattern": "\\bplatimax\\s*ii\\b|\\bplatimaxii\\b",
+      "replace": "Platimax II",
+      "flags": "ig",
+      "note": "Normalize PlatimaxII to Platimax II"
+    },
+    {
+      "pattern": "\\b(\\d{3,4})\\s*df\\b",
+      "replace": "$1 D.F.",
+      "flags": "ig",
+      "note": "Enermax 1200DF is 1200 D.F."
+    },
+    {
+      "pattern": "\\bmet\\s*\\d+-pins\\b|\\(met\\s*\\d+-pins[^)]*\\)",
+      "replace": "",
+      "flags": "ig",
+      "note": "Strip Dutch cable accessory notes like (met16-pins kabel)"
+    },
+    {
+      "pattern": "\\brotational\\s+shift\\b",
+      "replace": "RS-G",
+      "flags": "ig",
+      "note": "Lian Li Rotational Shift matches sheet model RS-G"
+    },
+    {
+      "pattern": "\\btc\\s*-\\s*(\\d{3,4})t\\b",
+      "replace": "$1",
+      "flags": "ig",
+      "note": "ASRock Taichi TC-T model code (e.g. TC-1650T)"
+    },
+    {
+      "pattern": "\\bsf\\s*(\\d{3,4})?\\s*\\(?2018\\)?\\b",
+      "replace": "SF Platinum 2019 $1",
+      "flags": "ig",
+      "note": "Corsair SF (2018) is sheet SF Platinum 2019"
+    },
+    {
+      "pattern": "\\bsp\\s*0?(\\d{3,4})\\s*p\\b",
+      "replace": "SP -P Platinum $1",
+      "flags": "ig",
+      "note": "Lian Li SP-P Platinum (e.g. SP0850P)"
+    },
+    {
+      "pattern": "\\bcp-psu-vt-(\\d{3,4}w?-)?",
+      "replace": "",
+      "flags": "ig",
+      "note": "Vetroo model code prefix (e.g. CP-PSU-VT-850W-SFX)"
+    },
+    {
+      "pattern": "\\((?:bk|wt|pk|wh|black|white|pink)\\)",
+      "replace": "",
+      "flags": "ig",
+      "note": "Strip packaging color tags like (BK), (WT), (PK)"
+    },
+    {
+      "pattern": "\\brb\\b(?!-)",
+      "replace": "RB-B",
+      "flags": "ig",
+      "note": "Lian Li RB is sheet RB-B"
     }
   ]
 }

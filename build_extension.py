@@ -50,6 +50,15 @@ def main():
     matches = metadata.get("match", [])
     if isinstance(matches, str):
         matches = [matches]
+    expanded_matches = []
+    for m in matches:
+        if m not in expanded_matches:
+            expanded_matches.append(m)
+        if "://*." in m:
+            apex = m.replace("://*.", "://")
+            if apex not in expanded_matches:
+                expanded_matches.append(apex)
+    matches = expanded_matches
 
     # Map run-at
     run_at_raw = metadata.get("run-at", "document-idle")

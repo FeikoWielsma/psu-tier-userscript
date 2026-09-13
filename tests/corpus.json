@@ -54,7 +54,8 @@
     "name": "Cooler Master V850 SFX GOLD",
     "wattage": 850,
     "site": "pcpp",
-    "expectTier": "A"
+    "expectTier": "A",
+    "minBand": "strong"
   },
   {
     "name": "MSI MAG A850GL PCIE5",
@@ -713,6 +714,7 @@
     "site": "pcpp",
     "expectTier": "A-",
     "expectModel": "Aorus Elite AE-PM PG5 (rev. 2.0)",
+    "minBand": "strong",
     "note": "'Aorus P-W AP-GM' used to win on the shared 'P' alone while ignoring ELITE; a product token that names the model is charged at weights.productMissNamed"
   },
   {
@@ -799,5 +801,337 @@
     "expectModel": "Core Reactor II VE",
     "minBand": "strong",
     "note": "Core Reactor II VE is Tier A costdown, must not be matched as regular Core Reactor II (Tier A+)"
+  },
+  {
+    "name": "Seasonic CORE GX ATX3.1 850W",
+    "wattage": 850,
+    "efficiency": "Gold",
+    "efficiencyNote": "850W (80 Plus Gold) • volledig modulair",
+    "modular": "Full",
+    "site": "tweakers",
+    "expectTier": "A-",
+    "expectModel": "Core GX ATX 3",
+    "minBand": "strong",
+    "note": "unspaced ATX3.1 tag must match sheet's ATX 3 entry"
+  },
+  {
+    "name": "Lian Li Edge Gold 1000W Zwart, met USB-hub",
+    "wattage": 1000,
+    "efficiency": "Gold",
+    "efficiencyNote": "1.000W (80 Plus Gold) • volledig modulair",
+    "modular": "Full",
+    "site": "tweakers",
+    "expectTier": "A",
+    "expectModel": "Edge EG Gold",
+    "minBand": "strong",
+    "note": "Lian Li Edge Gold storefront title must match sheet's Edge EG Gold"
+  },
+  {
+    "name": "Thermaltake Smart BM3 Bronze 750W - TT Premium Edition",
+    "wattage": 750,
+    "efficiency": "Bronze",
+    "efficiencyNote": "750W (80 Plus Bronze) • semi-modulair",
+    "modular": "Semi",
+    "site": "tweakers",
+    "expectTier": "C",
+    "expectModel": "SMART BM3",
+    "minBand": "strong",
+    "note": "TT Premium Edition marketing suffix must be stripped"
+  },
+  {
+    "name": "Antec HCG1000 PRO Platinum ATX 3.1",
+    "wattage": 1000,
+    "efficiency": "Platinum",
+    "efficiencyNote": "1.000W (80 Plus Platinum) • volledig modulair",
+    "modular": "Full",
+    "site": "tweakers",
+    "expectTier": "A",
+    "expectModel": "High Current Gamer Pro Platinum ATX 3.1",
+    "minBand": "strong",
+    "note": "HCG1000 abbreviation must match High Current Gamer"
+  },
+  {
+    "name": "ASUS Prime 750W Gold Wit, retail",
+    "wattage": 750,
+    "efficiency": "Gold",
+    "efficiencyNote": "750W (80 Plus Gold)",
+    "site": "tweakers",
+    "expectTier": "B+",
+    "expectModel": "Prime Gold",
+    "minBand": "strong",
+    "note": "retail packaging suffix must not lower match confidence"
+  },
+  {
+    "name": "Silverstone Essential Series ST50F-ES230",
+    "wattage": 500,
+    "efficiency": "White",
+    "efficiencyNote": "500W (80 Plus (230V)) • niet-modulair",
+    "modular": "No",
+    "site": "tweakers",
+    "expectTier": "E",
+    "expectModel": "Strider Essential ST-ES",
+    "minBand": "likely",
+    "note": "ST50F-ES model number must match Strider Essential ST-ES"
+  },
+  {
+    "name": "Silverstone DA750R Gold (12V-2x6) Wit",
+    "wattage": 750,
+    "efficiency": "Gold",
+    "site": "tweakers",
+    "expectTier": "B+",
+    "expectModel": "Decathlon DA-R GM",
+    "minBand": "strong",
+    "note": "DA-R Gold ATX 3.x must match Decathlon DA-R GM (Tier B+), not legacy DA Gold (Tier B-)"
+  },
+  {
+    "name": "Silverstone DA750R Gold (12VPWR)",
+    "wattage": 750,
+    "efficiency": "Gold",
+    "site": "tweakers",
+    "expectTier": "B+",
+    "expectModel": "Decathlon DA-R GM",
+    "minBand": "strong",
+    "note": "12VPWR noise token without H must not break matching"
+  },
+  {
+    "name": "ASUS ROG Strix 1200W Gold Aura Edition (met16-pins kabel)",
+    "wattage": 1200,
+    "efficiency": "Gold",
+    "site": "tweakers",
+    "expectTier": "A-",
+    "expectModel": "ROG Strix Aura Gold",
+    "minBand": "strong",
+    "note": "Dutch (met16-pins kabel) must be stripped as noise"
+  },
+  {
+    "name": "Antec CSK PRO ATX3.1 1000W",
+    "wattage": 1000,
+    "efficiency": "Bronze",
+    "site": "tweakers",
+    "expectTier": "C",
+    "expectModel": "Cuprum Strike Pro ATX 3.1",
+    "minBand": "strong",
+    "note": "CSK abbreviation must match Cuprum Strike"
+  },
+  {
+    "name": "Thermaltake Toughpower GF3 Snow 1200W - TT Premium Edition",
+    "wattage": 1200,
+    "efficiency": "Gold",
+    "site": "tweakers",
+    "expectTier": "A-",
+    "expectModel": "Toughpower GF3 Snow",
+    "minBand": "strong",
+    "note": "GF3 Snow must match Toughpower GF3 Snow rather than black GF3 Premium"
+  },
+  {
+    "name": "Thermaltake Toughpower GF3 ARGB 850W Gold - TT Premium Edition",
+    "wattage": 850,
+    "efficiency": "Gold",
+    "site": "tweakers",
+    "expectTier": "A",
+    "expectModel": "Toughpower GF3 ARGB",
+    "minBand": "strong",
+    "note": "GF3 ARGB must match Toughpower GF3 ARGB rather than non-ARGB GF3 Premium"
+  },
+  {
+    "name": "Seasonic Prime PX-2200 ATX 3 (2024)",
+    "wattage": 2200,
+    "efficiency": "Platinum",
+    "site": "tweakers",
+    "expectTier": "A",
+    "expectModel": "Prime Platinum (PX)",
+    "minBand": "strong",
+    "note": "ATX 3 version tag must be stripped to cleanly match Prime PX"
+  },
+  {
+    "name": "Enermax PlatimaxII 1200DF Zwart",
+    "wattage": 1200,
+    "efficiency": "Platinum",
+    "site": "tweakers",
+    "expectTier": "A-",
+    "expectModel": "Platimax D.F. II",
+    "minBand": "strong",
+    "note": "PlatimaxII glued numeral and DF must match Platimax D.F. II"
+  },
+  {
+    "name": "Chieftec Atmos 750W",
+    "wattage": 750,
+    "efficiency": "Gold",
+    "site": "tweakers",
+    "expectTier": "A-",
+    "expectModel": "Atmos CPX-FC",
+    "minBand": "strong",
+    "note": "CPX-FC factory code stripped to allow clean Atmos match"
+  },
+  {
+    "name": "Chieftec Vega M 850 watt Zwart",
+    "wattage": 850,
+    "efficiency": "Gold",
+    "site": "tweakers",
+    "expectTier": "A",
+    "expectModel": "Vega Modular (M) PPG-C",
+    "minBand": "strong",
+    "note": "PPG-C factory code stripped so Vega M matches Vega Modular (M)"
+  },
+  {
+    "name": "Lian Li Rotational Shift 1000W, geen hub, Wit",
+    "wattage": 1000,
+    "efficiency": "Platinum",
+    "efficiencyNote": "1.000W (80 Plus Platinum) • volledig modulair",
+    "modular": "Full",
+    "site": "tweakers",
+    "expectTier": "A",
+    "expectModel": "RS-G",
+    "minBand": "strong",
+    "note": "Rotational Shift must match Lian Li RS-G in sheet"
+  },
+  {
+    "name": "FSP Vita BD 850W, niet-modulair",
+    "wattage": 850,
+    "efficiency": "Bronze",
+    "efficiencyNote": "850W (80 Plus Bronze (230V)) • niet-modulair",
+    "modular": "No",
+    "site": "tweakers",
+    "expectTier": "C",
+    "expectModel": "Vita BD",
+    "expectLimited": true,
+    "minBand": "likely",
+    "note": "Vita BD is in the limited confidence rating area (Tier C*)"
+  },
+  {
+    "name": "Corsair RM1000x SHIFT",
+    "wattage": 1000,
+    "efficiency": "80+ Gold",
+    "modular": "Full / Side",
+    "site": "pcpp",
+    "expectTier": "A+",
+    "expectModel": "RM-x Shift 2023",
+    "minBand": "strong",
+    "note": "PCPP modular Full / Side must not penalize fully modular units"
+  },
+  {
+    "name": "Silverstone HELA 2050R Platinum",
+    "wattage": 2050,
+    "efficiency": "80+ Platinum",
+    "site": "pcpp",
+    "expectTier": "A",
+    "expectModel": "HELA R Platinum HAR-PM",
+    "minBand": "strong",
+    "note": "HAR-PM platform code stripped so HELA 2050R matches cleanly"
+  },
+  {
+    "name": "ASRock Taichi TC-1650T",
+    "wattage": 1650,
+    "efficiency": "80+ Titanium",
+    "modular": "Full",
+    "site": "pcpp",
+    "expectTier": "A+",
+    "expectModel": "Taichi",
+    "minBand": "strong",
+    "note": "ASRock Taichi model code TC-1650T stripped"
+  },
+  {
+    "name": "Corsair SF750 (2018)",
+    "wattage": 750,
+    "efficiency": "80+ Platinum",
+    "formFactor": "SFX",
+    "modular": "Full",
+    "site": "pcpp",
+    "expectTier": "A",
+    "expectModel": "SF Platinum 2019",
+    "minBand": "strong",
+    "note": "Corsair SF750 (2018) matches SF Platinum 2019"
+  },
+  {
+    "name": "Lian Li SP0850P",
+    "wattage": 850,
+    "efficiency": "80+ Platinum",
+    "formFactor": "SFX",
+    "modular": "Full",
+    "site": "pcpp",
+    "expectTier": "A",
+    "expectModel": "SP -P (Platinum)",
+    "minBand": "strong",
+    "note": "Lian Li SP0850P matches SP -P (Platinum)"
+  },
+  {
+    "name": "Vetroo CP-PSU-VT-850W-SFX (BK)",
+    "wattage": 850,
+    "efficiency": "80+ Gold",
+    "formFactor": "SFX",
+    "modular": "Full",
+    "site": "pcpp",
+    "expectTier": "B",
+    "expectModel": "SFX",
+    "expectLimited": true,
+    "minBand": "strong",
+    "note": "Vetroo CP-PSU-VT model code and (BK) stripped, matches Vetroo SFX"
+  },
+  {
+    "name": "SeaSonic CORE GX ATX 3 (2024)",
+    "wattage": 650,
+    "efficiency": "80+ Gold",
+    "modular": "Full",
+    "site": "pcpp",
+    "expectTier": "A-",
+    "expectModel": "Core GX ATX 3",
+    "minBand": "strong",
+    "note": "Seasonic Core GX ATX 3 matches Core GX ATX 3 on Tier A- without contested tie"
+  },
+  {
+    "name": "Deepcool PF400 230V",
+    "wattage": 400,
+    "site": "pcpp",
+    "expectTier": "E",
+    "expectModel": "PF",
+    "minBand": "strong",
+    "note": "230V input voltage stripped, matches DeepCool PF"
+  },
+  {
+    "name": "Corsair RM750 (2019)",
+    "wattage": 750,
+    "efficiency": "80+ Gold",
+    "modular": "Full",
+    "site": "pcpp",
+    "expectTier": "B+",
+    "expectModel": "RM 2019 (Gray Label)",
+    "minBand": "strong",
+    "note": "(Gray Label) descriptor stripped, matches Corsair RM 2019"
+  },
+  {
+    "name": "Asus ROG Thor 1200P3 Hatsune Miku Edition",
+    "wattage": 1200,
+    "efficiency": "80+ Platinum",
+    "modular": "Full",
+    "site": "pcpp",
+    "expectTier": "A",
+    "expectModel": "ROG THOR Platinum III",
+    "minBand": "strong",
+    "note": "Hatsune Miku Edition stripped, matches ROG THOR Platinum III"
+  },
+  {
+    "name": "Lian Li RB",
+    "wattage": 550,
+    "efficiency": "80+ Bronze",
+    "modular": "No",
+    "site": "pcpp",
+    "expectTier": "C",
+    "expectModel": "RB-B/BX-B",
+    "expectLimited": true,
+    "minBand": "likely",
+    "note": "Lian Li RB matches RB-B/BX-B"
+  },
+  {
+    "name": "Vetroo CP-PSU-VT-850W-SFX (PK)",
+    "wattage": 850,
+    "efficiency": "80+ Gold",
+    "formFactor": "SFX",
+    "modular": "Full",
+    "site": "pcpp",
+    "expectTier": "B",
+    "expectModel": "SFX",
+    "expectLimited": true,
+    "minBand": "strong",
+    "note": "Vetroo CP-PSU-VT model code and (PK) stripped, matches Vetroo SFX"
   }
 ]
