@@ -1,6 +1,6 @@
 {
   "name": "psu-tier-userscript",
-  "version": "2.0.16",
+  "version": "2.0.17",
   "description": "Userscript that shows SPL's PSU Tier List ratings on PCPartPicker and Tweakers.",
   "license": "GPL-3.0-only",
   "private": true,
@@ -14,6 +14,8 @@
     "check": "npm run lint && npm run typecheck && npm test",
     "capture": "node tools/live_capture.mjs --capture",
     "smoke": "node tools/live_capture.mjs --smoke",
+    "audit:tweakers": "node tools/audit_tweakers.mjs",
+    "audit:pcpp": "node tools/audit_pcpp.mjs --auto",
     "icons": "node tools/generate_icons.mjs",
     "screenshots": "node tools/convert_screenshots.mjs"
   },
