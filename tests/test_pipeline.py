@@ -282,6 +282,9 @@ class BuildTests(unittest.TestCase):
         self.assertIn("--source-dir dist-extension-sign", signing)
         self.assertNotIn("--source-dir dist-extension ", signing)
         self.assertIn("cp -a dist-extension dist-extension-sign", workflow)
+        self.assertIn("chrome-webstore-upload-cli@4", workflow)
+        self.assertNotIn("chrome-webstore-upload-cli@3", workflow)
+        self.assertIn("PUBLISHER_ID:", workflow)
 
     def test_packaging_does_not_remove_unknown_user_files(self):
         unknown = self.directory / "dist-extension/do-not-delete.txt"
