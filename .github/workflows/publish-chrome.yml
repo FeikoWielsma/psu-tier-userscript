@@ -10,6 +10,14 @@ on:
         required: true
         default: v2.0.18
         type: string
+      mode:
+        description: status only reports the store item; upload submits the release zip
+        required: true
+        default: upload
+        type: choice
+        options:
+          - status
+          - upload
 
 permissions:
   contents: read
@@ -23,7 +31,62 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release download "${{ inputs.tag }}" --repo "${{ github.repository }}" --pattern psutier-extension.zip --output psutier-extension.zip
 
+      - name: Read Chrome Web Store item status
+        env:
+          CWS_EXTENSION_ID: ${{ secrets.CWS_EXTENSION_ID }}
+          CWS_CLIENT_ID: ${{ secrets.CWS_CLIENT_ID }}
+          CWS_CLIENT_SECRET: ${{ secrets.CWS_CLIENT_SECRET }}
+          CWS_REFRESH_TOKEN: ${{ secrets.CWS_REFRESH_TOKEN }}
+        run: |
+          node --input-type=module <<'EOF'
+          const body = new URLSearchParams({
+            client_id: process.env.CWS_CLIENT_ID,
+            client_secret: process.env.CWS_CLIENT_SECRET,
+            refresh_token: process.env.CWS_REFRESH_TOKEN,
+            grant_type: "refresh_token",
+          });
+          const tokenResponse = await fetch("https://oauth2.googleapis.com/token", {method: "POST", body});
+          const token = await tokenResponse.json();
+          if (!token.access_token) {
+            console.log(JSON.stringify({tokenError: token.error, description: token.error_description}));
+            process.exit(1);
+          }
+          const headers = {Authorization: `Bearer ${token.access_token}`};
+          const extensionId = process.env.CWS_EXTENSION_ID || "ngjfcbgocgihemnfbfffikmcdpplhemf";
+          const redact = (value) => {
+            if (Array.isArray(value)) return value.map(redact);
+            if (value && typeof value === "object") {
+              return Object.fromEntries(
+                Object.entries(value)
+                  .filter(([key]) => !/token|secret|publicKey|email/i.test(key))
+                  .map(([key, item]) => [key, redact(item)])
+              );
+            }
+            return value;
+          };
+          const show = async (label, url, options) => {
+            const response = await fetch(url, {headers, ...options});
+            const payload = await response.json().catch(() => ({}));
+            console.log(label, response.status, JSON.stringify(redact(payload), null, 2));
+            return payload;
+          };
+          const publishers = await show("publishers", "https://chromewebstore.googleapis.com/v2/publishers");
+          const publisherId = publishers.publishers?.[0]?.name?.split("/")?.[1]
+            || publishers.publishers?.[0]?.publisherId;
+          if (publisherId) {
+            await show(
+              "status",
+              `https://chromewebstore.googleapis.com/v2/publishers/${publisherId}/items/${extensionId}:fetchStatus`
+            );
+          }
+          await show(
+            "draft-v1",
+            `https://www.googleapis.com/chromewebstore/v1.1/items/${extensionId}?projection=DRAFT`
+          );
+          EOF
+
       - name: Publish to Chrome Web Store
+        if: inputs.mode == 'upload'
         env:
           CWS_EXTENSION_ID: ${{ secrets.CWS_EXTENSION_ID }}
           CWS_CLIENT_ID: ${{ secrets.CWS_CLIENT_ID }}
