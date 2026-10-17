@@ -83,9 +83,52 @@ jobs:
           CLIENT_SECRET: ${{ secrets.CWS_CLIENT_SECRET }}
           REFRESH_TOKEN: ${{ secrets.CWS_REFRESH_TOKEN }}
         run: |
-          if [ -n "$CLIENT_ID" ] && [ -n "$CLIENT_SECRET" ] && [ -n "$REFRESH_TOKEN" ] && [ -n "$PUBLISHER_ID" ]; then
-            npx --yes chrome-webstore-upload-cli@4 --source psutier-extension.zip
-          else
+          if [ -z "$CLIENT_ID" ] || [ -z "$CLIENT_SECRET" ] || [ -z "$REFRESH_TOKEN" ] || [ -z "$PUBLISHER_ID" ]; then
             echo "::error::Chrome Web Store credentials are not set."
             exit 1
           fi
+          node --input-type=module <<'EOF'
+          const body = new URLSearchParams({
+            client_id: process.env.CLIENT_ID,
+            client_secret: process.env.CLIENT_SECRET,
+            refresh_token: process.env.REFRESH_TOKEN,
+            grant_type: "refresh_token",
+          });
+          const tokenResponse = await fetch("https://oauth2.googleapis.com/token", {method: "POST", body});
+          const token = await tokenResponse.json();
+          if (!token.access_token) {
+            console.log(JSON.stringify({tokenError: token.error, description: token.error_description}));
+            process.exit(1);
+          }
+          const extensionId = process.env.EXTENSION_ID || "ngjfcbgocgihemnfbfffikmcdpplhemf";
+          const publisherId = process.env.PUBLISHER_ID;
+          const headers = {Authorization: `Bearer ${token.access_token}`};
+          const statusResponse = await fetch(
+            `https://chromewebstore.googleapis.com/v2/publishers/${publisherId}/items/${extensionId}:fetchStatus`,
+            {headers}
+          );
+          const status = await statusResponse.json();
+          const versionOf = (revision) => revision?.distributionChannels?.[0]?.crxVersion;
+          const publishedVersion = versionOf(status.publishedItemRevisionStatus);
+          const submitted = status.submittedItemRevisionStatus;
+          const submittedVersion = versionOf(submitted);
+          if (!submitted) {
+            console.log(`No in-review submission. Published version is ${publishedVersion}.`);
+          } else if (submitted.state === "PENDING_REVIEW" && submittedVersion === publishedVersion) {
+            console.log(`Cancelling the in-review resubmission of already published ${submittedVersion}.`);
+            const cancel = await fetch(
+              `https://chromewebstore.googleapis.com/v2/publishers/${publisherId}/items/${extensionId}:cancelSubmission`,
+              {method: "POST", headers: {...headers, "Content-Type": "application/json"}, body: "{}"}
+            );
+            const cancelBody = await cancel.json().catch(() => ({}));
+            console.log(cancel.status, JSON.stringify({
+              state: cancelBody.submittedItemRevisionStatus?.state || cancelBody.error?.status,
+              message: cancelBody.error?.message,
+            }));
+            if (!cancel.ok) process.exit(1);
+          } else {
+            console.log(`Refusing to cancel in-review ${submittedVersion} (${submitted.state}); published is ${publishedVersion}.`);
+            process.exit(1);
+          }
+          EOF
+          npx --yes chrome-webstore-upload-cli@4 --source psutier-extension.zip
