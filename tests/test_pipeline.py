@@ -276,6 +276,13 @@ class BuildTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Validation inputs changed"):
             verify_attestation(report, actual)
 
+    def test_release_workflow_signs_a_copy_of_the_extension(self):
+        workflow = (snapshot.ROOT / ".github/workflows/release.yml").read_text(encoding="utf-8")
+        signing = workflow.split("npx web-ext sign", 1)[1].split("\n", 1)[0]
+        self.assertIn("--source-dir dist-extension-sign", signing)
+        self.assertNotIn("--source-dir dist-extension ", signing)
+        self.assertIn("cp -a dist-extension dist-extension-sign", workflow)
+
     def test_packaging_does_not_remove_unknown_user_files(self):
         unknown = self.directory / "dist-extension/do-not-delete.txt"
         unknown.write_text("keep", encoding="utf-8")

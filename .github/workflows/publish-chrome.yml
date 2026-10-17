@@ -1,0 +1,44 @@
+name: Publish Chrome from GitHub release
+
+# Recovers a Chrome upload when the tag workflow already signed Firefox and
+# validated the zip, but stopped before the Chrome Web Store step.
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag whose validated psutier-extension.zip to upload
+        required: true
+        default: v2.0.18
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  chrome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download the validated extension archive
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release download "${{ inputs.tag }}" --repo "${{ github.repository }}" --pattern psutier-extension.zip --output psutier-extension.zip
+
+      - name: Publish to Chrome Web Store
+        env:
+          CWS_EXTENSION_ID: ${{ secrets.CWS_EXTENSION_ID }}
+          CWS_CLIENT_ID: ${{ secrets.CWS_CLIENT_ID }}
+          CWS_CLIENT_SECRET: ${{ secrets.CWS_CLIENT_SECRET }}
+          CWS_REFRESH_TOKEN: ${{ secrets.CWS_REFRESH_TOKEN }}
+        run: |
+          if [ -n "$CWS_CLIENT_ID" ] && [ -n "$CWS_CLIENT_SECRET" ] && [ -n "$CWS_REFRESH_TOKEN" ]; then
+            npx --yes chrome-webstore-upload-cli@3 upload \
+              --source psutier-extension.zip \
+              --extension-id "${CWS_EXTENSION_ID:-ngjfcbgocgihemnfbfffikmcdpplhemf}" \
+              --client-id "$CWS_CLIENT_ID" \
+              --client-secret "$CWS_CLIENT_SECRET" \
+              --refresh-token "$CWS_REFRESH_TOKEN" \
+              --auto-publish
+          else
+            echo "::error::Chrome Web Store credentials are not set."
+            exit 1
+          fi
