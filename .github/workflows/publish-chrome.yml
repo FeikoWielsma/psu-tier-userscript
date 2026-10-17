@@ -51,7 +51,10 @@ jobs:
             console.log(JSON.stringify({tokenError: token.error, description: token.error_description}));
             process.exit(1);
           }
-          const headers = {Authorization: `Bearer ${token.access_token}`};
+          const headers = {
+            Authorization: `Bearer ${token.access_token}`,
+            "x-goog-api-version": "2",
+          };
           const extensionId = process.env.CWS_EXTENSION_ID || "ngjfcbgocgihemnfbfffikmcdpplhemf";
           const redact = (value) => {
             if (Array.isArray(value)) return value.map(redact);
@@ -82,6 +85,10 @@ jobs:
           await show(
             "draft-v1",
             `https://www.googleapis.com/chromewebstore/v1.1/items/${extensionId}?projection=DRAFT`
+          );
+          await show(
+            "published-v1",
+            `https://www.googleapis.com/chromewebstore/v1.1/items/${extensionId}?projection=PUBLISHED`
           );
           EOF
 
