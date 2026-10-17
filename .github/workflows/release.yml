@@ -36,9 +36,6 @@ jobs:
       - name: Install JS dev dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm test
-
       - name: Install uv
         uses: astral-sh/setup-uv@v5
 
@@ -47,11 +44,23 @@ jobs:
         with:
           python-version: '3.x'
 
-      # No pip install needed - the pipeline is standard-library only.
-      - name: Build userscript and extension from the latest sheet
-        run: |
-          python generate_userscript.py --update
-          python build_extension.py
+      - name: Install Chromium for offline browser and extension tests
+        run: node node_modules/playwright/cli.js install --with-deps chromium
+
+      - name: Validate and build the reviewed committed snapshot
+        run: python test_suite.py --release
+
+      - name: Preserve validated artifacts and evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: psutier-release-validation
+          path: |
+            reports/
+            psutier.user.js
+            psutier-extension.zip
+
+      - name: Verify exact artifacts before Firefox publishing
+        run: python verify_artifacts.py
 
       # Both publish steps are non-fatal so that a rejected store credential
       # can't cost us the GitHub release; the guard step at the end still fails
@@ -69,6 +78,9 @@ jobs:
           else
             echo "AMO credentials not set, skipping extension signing."
           fi
+
+      - name: Verify exact artifacts before Chrome publishing
+        run: python verify_artifacts.py
 
       - name: Publish to Chrome Web Store
         id: cws
@@ -91,6 +103,9 @@ jobs:
             echo "Chrome Web Store credentials not set, skipping Chrome publish."
           fi
 
+      - name: Verify exact artifacts before GitHub publishing
+        run: python verify_artifacts.py
+
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
@@ -98,6 +113,8 @@ jobs:
             psutier.user.js
             psutier-extension.zip
             psutier-extension.xpi
+            reports/release-validation.json
+            reports/benchmark.json
           fail_on_unmatched_files: false
           generate_release_notes: true
 

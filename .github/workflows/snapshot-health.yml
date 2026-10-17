@@ -1,0 +1,26 @@
+name: Review a fresh sheet snapshot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Fetch both tabs and prepare a reviewable candidate
+        run: python snapshot.py --refresh
+      - name: Verify candidate provenance
+        run: python snapshot.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: candidate-snapshot-for-review
+          path: |
+            tests/fixtures/sample_psu_data.json
+            tests/fixtures/sheet/

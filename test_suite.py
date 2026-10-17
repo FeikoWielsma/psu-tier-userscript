@@ -1,48 +1,55 @@
-"""Convenience local runner: build the userscript and run the JS test suite.
+"""Full offline validation of reviewed data and the exact release artifacts.
 
-Mirrors CI. The deterministic tests (npm test) run against the committed data
-snapshot, so they don't need network access. Pass --update to also refresh the
-data from the live sheet before building.
-
-    python test_suite.py            # build from current data + run tests
-    python test_suite.py --update   # fetch latest sheet, build, run tests
+Run python snapshot.py --refresh separately, then review its diff before release.
+--quick omits browser tests for local iteration and cannot attest a release.
 """
 
+import argparse
+import json
 import os
-import shutil
 import subprocess
 import sys
 
-BASE = os.path.dirname(os.path.abspath(__file__))
+from snapshot import ROOT, SNAPSHOT, json_bytes, verify_snapshot
+from verify_artifacts import validation_inputs, verify_artifacts
 
 
-def run(cmd):
-    print(f"\n$ {cmd}")
-    if subprocess.call(cmd, shell=True, cwd=BASE) != 0:
-        sys.exit(f"Command failed: {cmd}")
+def run(command, env):
+    print("$ " + " ".join(map(str, command)), flush=True)
+    subprocess.run(command, cwd=ROOT, env=env, check=True)
 
 
 def main():
-    update = "--update" in sys.argv
-
-    if update:
-        run(f"{sys.executable} fetch_sheet.py")
-        run(f"{sys.executable} parse_tier_list.py")
-
-    # Ensure data exists (fall back to the committed snapshot).
-    if not os.path.exists(os.path.join(BASE, "psu_data.json")):
-        print("No psu_data.json; using committed snapshot.")
-        shutil.copy(
-            os.path.join(BASE, "tests", "fixtures", "sample_psu_data.json"),
-            os.path.join(BASE, "psu_data.json"),
-        )
-
-    run(f"{sys.executable} generate_userscript.py --test")
-    run("npm run lint")
-    run("npm run typecheck")
-    run("uvx ruff check .")
-    run("npm test")
-    print("\nAll checks passed.")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--release", action="store_true")
+    parser.add_argument("--quick", action="store_true")
+    args = parser.parse_args()
+    if args.release and args.quick:
+        parser.error("Release validation cannot skip browser tests")
+    verify_snapshot()
+    reports = ROOT / "reports"
+    reports.mkdir(exist_ok=True)
+    (reports / "release-validation.json").unlink(missing_ok=True)
+    env = dict(os.environ, PSU_DATA_FILE=str(SNAPSHOT))
+    commands = [
+        ["node", "tools/check.cjs"],
+        ["uvx", "ruff", "check", "."],
+        [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-p", "test_*.py"],
+        [sys.executable, "generate_userscript.py", "--data", str(SNAPSHOT)],
+        [sys.executable, "build_extension.py"],
+        ["node", "--check", "psutier.user.js"],
+    ]
+    if not args.quick:
+        commands.append(["node", "tools/check.cjs", "--browser"])
+    for command in commands:
+        run(command, env)
+    report = verify_artifacts()
+    report["checks"] = commands
+    report["releaseValidated"] = not args.quick
+    report["validationInputs"] = validation_inputs()
+    (reports / "release-validation.json").write_bytes(json_bytes(report))
+    print(json.dumps(report, indent=2))
+    print("All requested checks passed.")
 
 
 if __name__ == "__main__":

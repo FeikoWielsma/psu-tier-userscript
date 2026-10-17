@@ -15,7 +15,8 @@
  * --channel / --browser-path to drive an already-installed browser).
  */
 import { chromium } from 'playwright';
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -68,20 +69,31 @@ async function withPage(fn) {
 }
 
 async function gotoTarget(page, target) {
-  await page.goto(target.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-  await page.waitForSelector(target.waitFor, { timeout: 30000 }).catch(() => {
-    console.warn(`  ! "${target.waitFor}" never appeared on ${target.url}`);
-  });
-  await sleep(1500);
+  try {
+    const response = await page.goto(target.url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+    if (response && !response.ok()) return `HTTP ${response.status()}`;
+    await page.waitForSelector(target.waitFor, { timeout: 15000 });
+    return null;
+  } catch (error) {
+    return String(error.message || error).split('\n')[0];
+  }
 }
 
 async function capture() {
   await withPage(async (page) => {
     for (const target of targets()) {
       console.log(`Capturing ${target.url}`);
-      await gotoTarget(page, target);
+      const unavailable = await gotoTarget(page, target);
+      if (unavailable) {
+        console.log(`  INCONCLUSIVE: ${unavailable}`);
+        process.exitCode = 2;
+        continue;
+      }
       const html = await page.content();
-      const out = join(root, 'tests', 'fixtures', target.fixture);
+      // Captures are unreviewed evidence, never overwrite regression fixtures.
+      const directory = join(root, 'reports', 'captures', new Date().toISOString().replace(/[:.]/g, '-'));
+      mkdirSync(directory, { recursive: true });
+      const out = join(directory, target.fixture);
       writeFileSync(out, html, 'utf8');
       console.log(`  -> ${out} (${html.length} bytes)`);
       await sleep(2000);
@@ -96,11 +108,20 @@ async function smoke() {
     process.exit(1);
   }
   const userscript = readFileSync(scriptPath, 'utf8');
+  const evidence = { checkedAt: new Date().toISOString(), scriptSha256: createHash('sha256').update(userscript).digest('hex'),
+    scope: 'Live injection and popup smoke checks only; badge counts do not measure correctness.', targets: [] };
 
   await withPage(async (page) => {
     for (const target of targets()) {
       console.log(`\nSmoke testing ${target.url}`);
-      await gotoTarget(page, target);
+      const unavailable = await gotoTarget(page, target);
+      if (unavailable) {
+        evidence.targets.push({ url: target.url, status: 'inconclusive', reason: unavailable });
+        continue;
+      }
+      const errors = [];
+      const onError = (error) => errors.push(error.message);
+      page.on('pageerror', onError);
       await page.evaluate(userscript);
       await sleep(1500);
 
@@ -110,11 +131,23 @@ async function smoke() {
         const likely = badges.length - strong;
         return { badges: badges.length, strong, likely };
       });
-      console.log(`  badges: ${report.badges} (strong ${report.strong}, likely ${report.likely})`);
-      if (!report.badges) console.warn('  ! no badges - selectors may have drifted (refresh fixtures and check adapters)');
+      let popupOpened = false;
+      if (report.badges) {
+        await page.locator('.psu-tier-badge').first().click();
+        popupOpened = await page.locator('[role="dialog"]').isVisible();
+        await page.keyboard.press('Escape');
+      }
+      page.off('pageerror', onError);
+      const status = report.badges && popupOpened && !errors.length ? 'passed' : 'failed';
+      evidence.targets.push({ url: target.url, status, ...report, popupOpened, errors });
+      console.log(`  ${status}: ${report.badges} badges; popup ${popupOpened}; runtime errors ${errors.length}`);
       await sleep(2000);
     }
   });
+  mkdirSync(join(root, 'reports'), { recursive: true });
+  writeFileSync(join(root, 'reports/live-smoke.json'), JSON.stringify(evidence, null, 2) + '\n');
+  process.exitCode = evidence.targets.some((target) => target.status === 'failed') ? 1
+    : evidence.targets.some((target) => target.status === 'inconclusive') ? 2 : 0;
 }
 
 function targets() {

@@ -58,3 +58,4 @@ tools/tweakers_audit_report.json
 tools/pcpp_audit_report.json
 tools/pcpp_dump.json
 *.xlsx
+reports/

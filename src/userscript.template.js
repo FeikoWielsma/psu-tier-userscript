@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         PSU Tier Badges (PCPartPicker & Tweakers)
 // @namespace    https://github.com/FeikoWielsma/psu-tier-userscript
-// @version      2.0.17
-// @description  Show SPL's PSU Tier List ratings as badges on PCPartPicker and Tweakers, with match-confidence and details.
+// @version      2.0.18
+// @description  Show SPL's PSU Tier List ratings as badges on PCPartPicker and Tweakers, with match details and uncertainty.
 // @author       Feiko Wielsma
 // @match        https://pcpartpicker.com/products/power-supply/*
 // @match        https://*.pcpartpicker.com/products/power-supply/*
@@ -69,7 +69,8 @@
         const style = tierStyle(tier);
         const likely = result.band === 'likely';
 
-        const badge = document.createElement('span');
+        const badge = document.createElement('button');
+        badge.type = 'button';
         badge.className = 'psu-tier-badge';
 
         let text = `Tier ${tier}`;
@@ -80,9 +81,10 @@
         let title = '';
         if (isLimited) title += '[LIMITED CONFIDENCE] Speculative rating! ';
         title += likely
-            ? `Likely match (${Math.round(result.confidence * 100)}% confidence) - click for details`
-            : `Click for details (${Math.round(result.confidence * 100)}% confidence)`;
+            ? 'Likely match; product identity is uncertain - click for details'
+            : 'Strong match - click for details';
         badge.title = title;
+        badge.setAttribute('aria-label', `${text}: ${title}`);
 
         Object.assign(badge.style, {
             display: 'inline-block',
@@ -111,17 +113,23 @@
         return badge;
     }
 
+    let closeActivePopup = null;
     function showPopup(result, anchor) {
+        if (closeActivePopup) closeActivePopup();
         const old = document.getElementById('psu-tier-popup');
         if (old) old.remove();
 
         const data = result.entry;
         const popup = document.createElement('div');
         popup.id = 'psu-tier-popup';
+        popup.setAttribute('role', 'dialog');
+        popup.setAttribute('aria-label', 'PSU tier details');
         Object.assign(popup.style, {
             position: 'absolute', backgroundColor: '#1a1a1a', color: '#fff',
             padding: '15px', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.5)',
-            zIndex: '999999', minWidth: '300px', maxWidth: '420px',
+            zIndex: '999999', minWidth: 'min(300px, calc(100vw - 16px))',
+            maxWidth: 'min(420px, calc(100vw - 16px))', boxSizing: 'border-box',
+            maxHeight: 'calc(100vh - 16px)', overflowY: 'auto',
             fontFamily: 'sans-serif', fontSize: '14px', lineHeight: '1.4',
             border: '1px solid #444'
         });
@@ -137,7 +145,7 @@
         const esc = (s) => String(s).replace(/[&<>"]/g, (c) =>
             ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-        const confPct = Math.round(result.confidence * 100);
+        const similarity = result.confidence.toFixed(2);
         let html = '';
         if (data.is_limited) {
             html += `<div style="background-color: #ffd966; color: #000; padding: 8px; border-radius: 4px; margin-bottom: 10px; font-weight: bold; font-size: 0.9em; border-left: 5px solid #f29738; line-height: 1.3;">`
@@ -148,7 +156,10 @@
         html += `<h3 style="margin:0 0 8px;border-bottom:1px solid #555;padding-bottom:5px;">`
             + `Tier ${esc(data.tier)}${data.is_limited ? '*' : ''} `
             + `<span style="font-weight:normal;color:#aaa;font-size:0.85em;">`
-            + `(${result.band === 'likely' ? 'likely, ' : ''}${confPct}% match)</span></h3>`;
+            + `(${result.band === 'likely' ? 'likely match' : 'strong match'})</span></h3>`;
+        html += `<p style="color:#bbb;font-size:0.85em;">Similarity score: ${similarity} / 1. `
+            + 'This score is not a probability of a correct match.</p>';
+        if (result.ambiguous) html += '<p>Product identity is uncertain. Check the model and alternatives against the tier list.</p>';
         html += '<div style="display:grid;grid-template-columns:110px 1fr;gap:4px;">';
         for (const [label, val] of rows) {
             if (val == null || String(val).trim() === '') continue;
@@ -165,30 +176,38 @@
             for (const alt of result.alternates) {
                 const ts = tierStyle(alt.entry.tier);
                 html += `<div style="font-size:0.9em;"><span style="color:${ts.bg};font-weight:bold;">Tier ${esc(alt.entry.tier)}</span> - `
-                    + `${esc(alt.entry.model)} (${Math.round(alt.confidence * 100)}%)</div>`;
+                    + `${esc(alt.entry.model)} (similarity ${alt.confidence.toFixed(2)} / 1)</div>`;
             }
             html += '</div>';
         }
-        html += '<div style="margin-top:10px;text-align:right;">'
+        html += '<div style="margin-top:10px;border-top:1px solid #444;padding-top:8px;'
+            + 'display:flex;align-items:center;justify-content:space-between;gap:12px;">'
+            + '<a href="https://ko-fi.com/feiko" target="_blank" rel="noopener noreferrer" '
+            + 'style="color:#bbb;font-size:0.85em;">Support development on Ko-fi</a>'
             + '<button id="psu-popup-close" style="background:#555;color:#fff;border:none;'
             + 'padding:5px 10px;border-radius:4px;cursor:pointer;">Close</button></div>';
         popup.innerHTML = html;
         document.body.appendChild(popup);
 
         const rect = anchor.getBoundingClientRect();
-        popup.style.top = (rect.bottom + window.scrollY + 5) + 'px';
-        popup.style.left = (rect.left + window.scrollX) + 'px';
+        popup.style.top = (Math.max(8, Math.min(rect.bottom + 5, window.innerHeight - popup.offsetHeight - 8)) + window.scrollY) + 'px';
+        popup.style.left = (Math.max(8, Math.min(rect.left, window.innerWidth - popup.offsetWidth - 8)) + window.scrollX) + 'px';
 
-        popup.querySelector('#psu-popup-close').onclick = () => popup.remove();
-        setTimeout(() => {
-            const handler = (e) => {
-                if (!popup.contains(e.target)) {
-                    popup.remove();
-                    document.removeEventListener('click', handler);
-                }
-            };
-            document.addEventListener('click', handler);
-        }, 10);
+        const close = () => {
+            popup.remove();
+            document.removeEventListener('click', outside);
+            document.removeEventListener('keydown', keyboard);
+            if (closeActivePopup === close) closeActivePopup = null;
+            if (anchor.isConnected) anchor.focus();
+        };
+        const outside = (e) => { if (!popup.contains(e.target)) close(); };
+        const keyboard = (e) => { if (e.key === 'Escape') close(); };
+        closeActivePopup = close;
+        const closeButton = popup.querySelector('#psu-popup-close');
+        closeButton.onclick = close;
+        closeButton.focus();
+        document.addEventListener('click', outside);
+        document.addEventListener('keydown', keyboard);
     }
 
     // --- Filtering ----------------------------------------------------------
@@ -464,15 +483,25 @@
 
     // --- Main loop ----------------------------------------------------------
 
+    const processedRows = new WeakMap();
     function addBadges(adapter) {
         let added = false;
         for (const row of document.querySelectorAll(adapter.selector)) {
-            if (row.dataset.psuTierDone) continue;
-            if (adapter.filter && !adapter.filter(row)) continue;
-
-            const signals = adapter.extract(row);
-            if (!signals || !signals.name) continue;
-            row.dataset.psuTierDone = '1';
+            const eligible = !adapter.filter || adapter.filter(row);
+            const signals = eligible ? adapter.extract(row) : null;
+            const fingerprint = signals && signals.name ? JSON.stringify(signals) : '';
+            if (fingerprint && processedRows.get(row) === fingerprint
+                && (row.dataset.psuTier === 'UNRATED' || row.querySelector('.psu-tier-badge'))) continue;
+            const wasProcessed = row.dataset.psuTierDone != null;
+            row.querySelectorAll('.psu-tier-badge').forEach((badge) => badge.remove());
+            delete row.dataset.psuTierDone;
+            delete row.dataset.psuTier;
+            delete row.dataset.psuIsLimited;
+            processedRows.delete(row);
+            if (wasProcessed) row.style.display = '';
+            if (!fingerprint) continue;
+            row.dataset.psuTierDone = fingerprint;
+            processedRows.set(row, fingerprint);
 
             const result = PSUMatcher.match(signals.name, signals, index, RULES);
             if (result) {
@@ -507,6 +536,6 @@
                 addBadges(adapter);
             });
         });
-        observer.observe(document.body, { childList: true, subtree: true });
+        observer.observe(document.body, { childList: true, subtree: true, characterData: true });
     }
 })();

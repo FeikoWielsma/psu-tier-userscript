@@ -1,0 +1,362 @@
+[
+  {
+    "name": "MSI MAG A850GL PCIE5 Zwart",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "850W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "wattage": 850,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/1947926/msi-mag-a850gl-pcie5-zwart.html"
+  },
+  {
+    "name": "Corsair RM850x (2024)",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "850W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "wattage": 850,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2105062/corsair-rm850x-2024.html"
+  },
+  {
+    "name": "Corsair RM1000x (2024)",
+    "formFactor": null,
+    "efficiency": "Platinum",
+    "efficiencyNote": "1.000W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 1000,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2105066/corsair-rm1000x-2024.html"
+  },
+  {
+    "name": "Corsair SF1000 (2024)",
+    "formFactor": null,
+    "efficiency": "Platinum",
+    "efficiencyNote": "1.000W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 1000,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2085006/corsair-sf1000-2024.html"
+  },
+  {
+    "name": "Corsair RM650e (2025) Zwart",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "650W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "wattage": 650,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2158338/corsair-rm650e-2025-zwart.html"
+  },
+  {
+    "name": "be quiet! Pure Power 13 M | 850W",
+    "formFactor": null,
+    "efficiency": "Gold, Platinum",
+    "efficiencyNote": "850W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 850,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2223116/be-quiet-pure-power-13-m-850w.html"
+  },
+  {
+    "name": "Corsair RM850e (2025) Zwart",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "850W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "wattage": 850,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2158342/corsair-rm850e-2025-zwart.html"
+  },
+  {
+    "name": "MSI MAG A750GL PCIE5 Zwart",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "750W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "wattage": 750,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/1947924/msi-mag-a750gl-pcie5-zwart.html"
+  },
+  {
+    "name": "Corsair RM1000e (2025) Zwart",
+    "formFactor": null,
+    "efficiency": "Platinum",
+    "efficiencyNote": "1.000W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 1000,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2158344/corsair-rm1000e-2025-zwart.html"
+  },
+  {
+    "name": "be quiet! Pure Power 13 M | 1000W",
+    "formFactor": null,
+    "efficiency": "Gold, Platinum",
+    "efficiencyNote": "1.000W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 1000,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2224098/be-quiet-pure-power-13-m-1000w.html"
+  },
+  {
+    "name": "Cooler Master MWE GOLD 650 V3 ATX 3.1 Non-Modular",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "650W (Cybenetics ETA Gold (230V)) • niet-modulair",
+    "wattage": 650,
+    "modular": "No",
+    "url": "https://tweakers.net/pricewatch/2167450/cooler-master-mwe-gold-650-v3-atx-31-non-modular.html"
+  },
+  {
+    "name": "Corsair SF850 (2024)",
+    "formFactor": null,
+    "efficiency": "Platinum",
+    "efficiencyNote": "850W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 850,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2085016/corsair-sf850-2024.html"
+  },
+  {
+    "name": "Corsair SF750 (2024)",
+    "formFactor": null,
+    "efficiency": "Platinum",
+    "efficiencyNote": "750W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 750,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2085018/corsair-sf750-2024.html"
+  },
+  {
+    "name": "ASUS TUF Gaming 850W Gold",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "850W (80 Plus Gold (115V)) • volledig modulair",
+    "wattage": 850,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/1891638/asus-tuf-gaming-850w-gold.html"
+  },
+  {
+    "name": "MSI MAG A650BN",
+    "formFactor": null,
+    "efficiency": "Bronze",
+    "efficiencyNote": "650W (80 Plus Bronze (115V)) • niet-modulair",
+    "wattage": 650,
+    "modular": "No",
+    "url": "https://tweakers.net/pricewatch/1772506/msi-mag-a650bn.html"
+  },
+  {
+    "name": "be quiet! Dark Power 14 1000W",
+    "formFactor": null,
+    "efficiency": "Titanium",
+    "efficiencyNote": "1.000W (Cybenetics ETA Titanium (230V)) • volledig modulair",
+    "wattage": 1000,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2279770/be-quiet-dark-power-14-1000w.html"
+  },
+  {
+    "name": "NZXT C850 Gold ATX 3.1, Zwart",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "850W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "wattage": 850,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2086984/nzxt-c850-gold-atx-31-zwart.html"
+  },
+  {
+    "name": "MSI MAG A850GL PCIE5 II",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "850W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "wattage": 850,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2166296/msi-mag-a850gl-pcie5-ii.html"
+  },
+  {
+    "name": "DeepCool PQ1000M",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "1.000W (80 Plus Gold (115V)) • volledig modulair",
+    "wattage": 1000,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/1776570/deepcool-pq1000m.html"
+  },
+  {
+    "name": "Corsair RM750e (2025) Zwart",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "750W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "wattage": 750,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2158340/corsair-rm750e-2025-zwart.html"
+  },
+  {
+    "name": "MSI MAG A550BN",
+    "formFactor": null,
+    "efficiency": "Bronze",
+    "efficiencyNote": "550W (80 Plus Bronze (115V)) • niet-modulair",
+    "wattage": 550,
+    "modular": "No",
+    "url": "https://tweakers.net/pricewatch/1774204/msi-mag-a550bn.html"
+  },
+  {
+    "name": "HPE 865438-B21",
+    "formFactor": null,
+    "efficiency": null,
+    "efficiencyNote": null,
+    "wattage": 800,
+    "modular": null,
+    "url": "https://tweakers.net/pricewatch/1323526/hpe-865438-b21.html"
+  },
+  {
+    "name": "Corsair RM850e (2025) Wit",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "850W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "wattage": 850,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2198300/corsair-rm850e-2025-wit.html"
+  },
+  {
+    "name": "MSI MPG A1000G PCIE5",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "1.000W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "wattage": 1000,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/1884084/msi-mpg-a1000g-pcie5.html"
+  },
+  {
+    "name": "be quiet! Power Zone 2 1000W",
+    "formFactor": null,
+    "efficiency": "Platinum",
+    "efficiencyNote": "1.000W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 1000,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2164740/be-quiet-power-zone-2-1000w.html"
+  },
+  {
+    "name": "Seasonic FOCUS GX ATX 3 (2024) 850W",
+    "formFactor": null,
+    "efficiency": "Gold, Platinum",
+    "efficiencyNote": "850W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 850,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2104996/seasonic-focus-gx-atx-3-2024-850w.html"
+  },
+  {
+    "name": "MSI MAG A850GL PCIE5 Wit",
+    "formFactor": null,
+    "efficiency": "Gold, Platinum",
+    "efficiencyNote": "850W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 850,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/1997862/msi-mag-a850gl-pcie5-wit.html"
+  },
+  {
+    "name": "MSI MAG A650GL Zwart",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "650W (Cybenetics ETA Gold (115V)) • volledig modulair",
+    "wattage": 650,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/1995284/msi-mag-a650gl-zwart.html"
+  },
+  {
+    "name": "be quiet! Pure Power 13 M | 650W",
+    "formFactor": null,
+    "efficiency": "Gold, Platinum",
+    "efficiencyNote": "650W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 650,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2223112/be-quiet-pure-power-13-m-650w.html"
+  },
+  {
+    "name": "Cooler Master V SFX Gold 850 ATX 3.1",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "850W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "wattage": 850,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2111384/cooler-master-v-sfx-gold-850-atx-31.html"
+  },
+  {
+    "name": "Cooler Master MWE GOLD 550 V3 ATX 3.1 Non-Modular",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "550W (Cybenetics ETA Gold (230V)) • niet-modulair",
+    "wattage": 550,
+    "modular": "No",
+    "url": "https://tweakers.net/pricewatch/2167440/cooler-master-mwe-gold-550-v3-atx-31-non-modular.html"
+  },
+  {
+    "name": "Corsair RM1000e (2025) Wit",
+    "formFactor": null,
+    "efficiency": "Platinum",
+    "efficiencyNote": "1.000W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 1000,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2198298/corsair-rm1000e-2025-wit.html"
+  },
+  {
+    "name": "ASUS TUF Gaming 1000W Gold",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "1.000W (80 Plus Gold (115V)) • volledig modulair",
+    "wattage": 1000,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/1890718/asus-tuf-gaming-1000w-gold.html"
+  },
+  {
+    "name": "Seasonic Prime TX-1600 Noctua Edition",
+    "formFactor": null,
+    "efficiency": "Titanium",
+    "efficiencyNote": "1.600W (Cybenetics ETA Titanium (230V)) • volledig modulair",
+    "wattage": 1600,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2134640/seasonic-prime-tx-1600-noctua-edition.html"
+  },
+  {
+    "name": "NZXT C1000 Gold ATX 3.1, Zwart",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "1.000W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "wattage": 1000,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2086988/nzxt-c1000-gold-atx-31-zwart.html"
+  },
+  {
+    "name": "Corsair RM750x (2024)",
+    "formFactor": null,
+    "efficiency": "Gold",
+    "efficiencyNote": "750W (Cybenetics ETA Gold (230V)) • volledig modulair",
+    "wattage": 750,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2105064/corsair-rm750x-2024.html"
+  },
+  {
+    "name": "ASUS ROG Strix 1000W Platinum, Wit",
+    "formFactor": null,
+    "efficiency": "Platinum",
+    "efficiencyNote": "1.000W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 1000,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2185912/asus-rog-strix-1000w-platinum-wit.html"
+  },
+  {
+    "name": "MSI MEG Ai1600T PCIE5",
+    "formFactor": null,
+    "efficiency": "Titanium",
+    "efficiencyNote": "1.600W (Cybenetics ETA Titanium (230V)) • volledig modulair",
+    "wattage": 1600,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2174460/msi-meg-ai1600t-pcie5.html"
+  },
+  {
+    "name": "Corsair HX1500i ATX 3.1 (2025)",
+    "formFactor": null,
+    "efficiency": "Platinum",
+    "efficiencyNote": "1.500W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 1500,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2198884/corsair-hx1500i-atx-31-2025.html"
+  },
+  {
+    "name": "Cooler Master MWE Gold 1050 V2 ATX 3.1",
+    "formFactor": null,
+    "efficiency": "Gold, Platinum",
+    "efficiencyNote": "1.050W (Cybenetics ETA Platinum (230V)) • volledig modulair",
+    "wattage": 1050,
+    "modular": "Full",
+    "url": "https://tweakers.net/pricewatch/2113632/cooler-master-mwe-gold-1050-v2-atx-31.html"
+  }
+]

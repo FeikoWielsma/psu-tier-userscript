@@ -5,17 +5,16 @@ creates a manifest.json matching the userscript configuration,
 and packages it along with the icon into a deployable zip file.
 """
 
+import argparse
 import json
 import os
 import zipfile
+from pathlib import Path
 
-from generate_userscript import build
+from snapshot import ROOT
 
 
-def main():
-    print("Building userscript source...")
-    userscript_src = build()
-
+def make_manifest(userscript_src):
     # Parse metadata block from the userscript source
     metadata = {}
     in_metadata = False
@@ -65,7 +64,7 @@ def main():
     run_at_map = {
         "document-start": "document_start",
         "document-end": "document_end",
-        "document-idle": "document_idle"
+        "document-idle": "document_idle",
     }
     run_at = run_at_map.get(run_at_raw, "document_idle")
 
@@ -79,63 +78,72 @@ def main():
             "16": "icon-16.png",
             "32": "icon-32.png",
             "48": "icon-48.png",
-            "128": "icon-128.png"
+            "128": "icon-128.png",
         },
-        "content_scripts": [
-            {
-                "matches": matches,
-                "js": ["content.js"],
-                "run_at": run_at
-            }
-        ],
+        "content_scripts": [{"matches": matches, "js": ["content.js"], "run_at": run_at}],
         "browser_specific_settings": {
             "gecko": {
                 "id": "psu-tier-badges@feikowielsma.github.io",
-                "data_collection_permissions": {
-                    "required": ["none"]
-                }
+                "data_collection_permissions": {"required": ["none"]},
             }
-        }
+        },
     }
 
-    dist_dir = "dist-extension"
-    if os.path.exists(dist_dir):
-        import shutil
-        shutil.rmtree(dist_dir)
+    return manifest
+
+
+def package(userscript_src, dist_dir, zip_filename):
+    manifest = make_manifest(userscript_src)
+    expected_files = {"manifest.json", "content.js", *(f"icon-{n}.png" for n in (16, 32, 48, 128))}
+    if os.path.exists(dist_dir) and any(
+        p.name not in expected_files for p in Path(dist_dir).iterdir()
+    ):
+        raise ValueError(
+            "Extension output directory contains unexpected files; use a clean directory"
+        )
     os.makedirs(dist_dir, exist_ok=True)
 
     # Write manifest.json
     manifest_path = os.path.join(dist_dir, "manifest.json")
-    with open(manifest_path, "w", encoding="utf-8") as f:
+    with open(manifest_path, "w", encoding="utf-8", newline="\n") as f:
         json.dump(manifest, f, indent=2)
 
     # Write content.js
     content_path = os.path.join(dist_dir, "content.js")
-    with open(content_path, "w", encoding="utf-8") as f:
+    with open(content_path, "w", encoding="utf-8", newline="\n") as f:
         f.write(userscript_src)
 
     # Copy PNG icons
     for size in [16, 32, 48, 128]:
         icon_name = f"icon-{size}.png"
-        icon_src = os.path.join("extension", icon_name)
+        icon_src = ROOT / "extension" / icon_name
         icon_dst = os.path.join(dist_dir, icon_name)
         if os.path.exists(icon_src):
             import shutil
+
             shutil.copy2(icon_src, icon_dst)
         else:
-            print(f"Warning: {icon_src} not found")
+            raise FileNotFoundError(icon_src)
 
-    zip_filename = "psutier-extension.zip"
     print(f"Packaging extension into {zip_filename}...")
 
     with zipfile.ZipFile(zip_filename, "w", zipfile.ZIP_DEFLATED) as zipf:
-        for root, _dirs, files in os.walk(dist_dir):
-            for file in files:
-                file_path = os.path.join(root, file)
-                arcname = os.path.relpath(file_path, dist_dir)
-                zipf.write(file_path, arcname)
+        for file_path in sorted(Path(dist_dir).iterdir()):
+            info = zipfile.ZipInfo(file_path.name, date_time=(1980, 1, 1, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o100644 << 16
+            zipf.writestr(info, file_path.read_bytes())
 
     print(f"Extension built successfully: {zip_filename}")
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--userscript", type=Path, default=ROOT / "psutier.user.js")
+    parser.add_argument("--dist", type=Path, default=ROOT / "dist-extension")
+    parser.add_argument("--output", type=Path, default=ROOT / "psutier-extension.zip")
+    args = parser.parse_args()
+    package(args.userscript.read_text(encoding="utf-8"), args.dist, args.output)
 
 
 if __name__ == "__main__":

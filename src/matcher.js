@@ -9,9 +9,9 @@
  *
  * Approach: instead of a pile of per-product regex hacks, we tokenize both the
  * product name and each candidate model, then score a weighted token overlap
- * (Jaccard). Wattage is a hard gate; efficiency mismatch is a soft penalty.
- * The winning score doubles as a confidence value, which the UI turns into a
- * solid vs. "likely" badge. Tuning lives in data/normalization_rules.json.
+ * (Jaccard). Wattage and comparable certification conflicts are hard gates.
+ * Similarity is not a probability. Identity constraints run before scoring;
+ * missing qualifiers and competing identities make a match uncertain.
  */
 (function (root) {
   'use strict';
@@ -58,7 +58,85 @@
   // descriptors that are inconsistent across the sheet/PCPP/Tweakers and never
   // identify a model (ATX version tags, "80+" rating prefix, ...).
   function stripDescriptors(name, rules) {
-    return applyRules(name, rules.strip);
+    return applyRules(name, rules.strip).replace(/\b(?:atx|pcie)\s*\d+\.\d+\b/ig, ' ');
+  }
+
+  // Read identity evidence BEFORE descriptor stripping. Generation and revision
+  // conflicts must never be forgiven by scoring or the constraint fallback.
+  // Aliases are applied first so documented storefront/sheet naming mappings
+  // (e.g. SF 2018 -> SF Platinum 2019) remain explicit in the rules.
+  function qualifiersOf(name, wattage, rules, brandTokenCount = 0) {
+    const out = { generation: [], year: [], revision: [], label: [], standard: [], variant: [] };
+    let text = name.toLowerCase();
+    const identity = rules.identity || {};
+    for (const word of identity.revisionWords || []) {
+      if (new RegExp('\\b' + word + '\\b').test(text)) out.revision.push(word);
+    }
+    for (const field of ['revision', 'variant']) {
+      for (const rule of identity[field + 'Patterns'] || []) {
+        const found = new RegExp(rule.pattern, 'i').exec(text);
+        if (found) out[field].push(rule.value || found[rule.group || 0]);
+      }
+    }
+    for (const word of identity.variantWords || []) {
+      if (new RegExp('\\b' + word + '\\b').test(text)) out.variant.push(word);
+    }
+    text = text.replace(/\batx\s*(\d+\.\d+)\b/g, (_all, value) => {
+      out.standard.push(value);
+      return ' ';
+    });
+    text = text.replace(/\brev(?:ision)?\.?\s*(\d+(?:\.\d+)?)/g, (_all, value) => {
+      out.revision.push(String(Number(value)));
+      return ' ';
+    });
+    text = text.replace(/\b(gray|grey|black|green)\s+label\b/g, (_all, value) => {
+      out.label.push(value === 'grey' ? 'gray' : value);
+      return ' ';
+    });
+    text = text.replace(/\b(?:atx|pci[e-]*|gen)\s*\d+(?:\.\d+)?\b/g, ' ')
+      .replace(/\b(?:80\s*\+?\s*(?:plus)?|230\s*v|115\s*v)\b/g, ' ');
+    const roman = { i: '1', ii: '2', iii: '3', iv: '4', v: '5', vi: '6', vii: '7', viii: '8', ix: '9', x: '10' };
+    for (const [position, token] of tokenize(text).entries()) {
+      if (wattage && token === String(wattage)) continue;
+      if (/^(19|20)\d\d$/.test(token)) out.year.push(token);
+      else if (Object.hasOwn(roman, token) && (token.length > 1 || (position > brandTokenCount
+        && new RegExp('(?:^|\\s)' + token + '(?:\\s|$)').test(text)))) out.generation.push(roman[token]);
+      else if (/^[vx]\d{1,2}$/.test(token)) out.generation.push(token[0] === 'x' ? token : String(Number(token.slice(1))));
+      else if (/^[1-9]\d?$/.test(token)) out.generation.push(String(Number(token)));
+    }
+    return out;
+  }
+
+  function identityKey(entry) {
+    return JSON.stringify(['brand', 'model', 'wattage', 'year', 'form_factor',
+      'efficiency', 'modularity', 'input_range', 'atx_version', 'tier', 'is_limited']
+      .map((key) => entry[key] == null ? null : entry[key]));
+  }
+
+  function qualifierEvidence(product, candidate, entry) {
+    let specified = false;
+    let missing = false;
+    let missingRevision = false;
+    for (const key of Object.keys(product)) {
+      const wanted = product[key];
+      const available = candidate[key].length ? candidate[key]
+        : key === 'year' && entry.year ? String(entry.year).match(/(?:19|20)\d\d/g) || [] : [];
+      if (wanted.length) {
+        if (key === 'standard' && !available.length) {
+          const major = /(?:ATX\s*)?(\d+)\./i.exec(entry.atx_version || '');
+          if (major && wanted.some((value) => !value.startsWith(major[1] + '.'))) return null;
+          continue;
+        }
+        if (!wanted.every((value) => available.includes(value))) return null;
+        if (key !== 'variant') specified = true;
+      }
+      // Named editions are distinct products, unlike an omitted generation.
+      if (key === 'variant' && available.some((value) => !wanted.includes(value))) return null;
+      if (candidate[key].length && !wanted.length) missing = true;
+      if (key === 'revision' && candidate[key].length && !wanted.length) missingRevision = true;
+    }
+    // A year can identify a generation whose sheet name also spells out V2.
+    return { uncertain: missingRevision || (missing && !specified) };
   }
 
   // ---- brand index --------------------------------------------------------
@@ -96,7 +174,8 @@
   }
 
   function buildIndex(psuData, rules) {
-    const byBrand = {};         // brandKey -> [entry, ...]
+    rules = rules || {};
+    const byBrand = Object.create(null); // brandKey -> [entry, ...]
     const noise = new Set((rules && rules.noise) || []);
     for (const entry of psuData) {
       // A model may carry "/"-separated aliases, e.g. "Pro / Pro RGB".
@@ -105,8 +184,17 @@
         .map((s) => s.trim())
         .filter(Boolean);
       const enriched = Object.assign({}, entry, {
+        _identity: identityKey(entry),
+        _allModels: /^all psus$/i.test(entry.model || ''),
+        _recordKey: JSON.stringify(['source', 'odm', 'platform', 'topology', 'notes'].map((key) => entry[key] || null)),
+        _qualifiers: qualifiersOf(String(entry.model || entry.series || ''), 0, rules),
         _tokens: names.map((s) => tokenize(s).filter((t) => !noise.has(t)))
       });
+      const generic = new Set(rules.generic || []);
+      enriched._families = names.map((name) => [...new Set(tokenize(name.replace(/\([^)]*\)/g, '')
+        .replace(/\bsfx(?:[\s-]*l)?\b/ig, ''))
+        .filter((t) => !noise.has(t) && !generic.has(t) && !isSoftToken(t) && !ROMAN_NUMERALS.test(t)
+          && !/^\d+$/.test(t) && !((rules.identity || {}).familyNoise || []).includes(t)))].sort().join(' '));
       for (const k of brandKeys(entry.brand)) {
         (byBrand[k] || (byBrand[k] = [])).push(enriched);
       }
@@ -138,7 +226,7 @@
   // candidate, it should barely penalize - the product is just a less-specified
   // listing of the same unit, not a different one.
   function isSoftToken(t) {
-    return /^(19|20)\d\d$/.test(t) || /^v\d+$/.test(t) || /^\d+_\d+$/.test(t);
+    return /^(19|20)\d\d$/.test(t) || /^[vx]\d+$/.test(t) || /^\d+_\d+$/.test(t);
   }
 
   // A leftover product token that *names* the unit rather than describing it -
@@ -146,7 +234,7 @@
   // "SHIFT", "PCIE5", "II"). Bare numbers are excluded: wattages are stripped before
   // scoring and years/versions are already handled as soft tokens.
   function isNamingToken(t, generic) {
-    return (t.length >= 2)
+    return (t.length >= 1)
       && !generic.has(t) && !isSoftToken(t) && !/^\d+$/.test(t);
   }
 
@@ -156,29 +244,29 @@
   const GLUE_CREDIT = 0.6;
 
   function parseWattages(spec) {
-    // Returns { discrete: [..], range: [min,max] | null }
     if (!spec) return null;
-    const clean = spec.toLowerCase().replace(/w/g, '');
-    if (clean.indexOf('-') !== -1) {
-      const parts = clean.split('-').map((p) => parseInt(p, 10)).filter((n) => !isNaN(n));
-      if (parts.length >= 2) return { range: [parts[0], parts[parts.length - 1]] };
+    const discrete = [];
+    const ranges = [];
+    for (const part of spec.toLowerCase().replace(/w/g, '').split('/')) {
+      const range = /^\s*(\d+)\s*-\s*(\d+)\s*$/.exec(part);
+      if (range) ranges.push([Number(range[1]), Number(range[2])]);
+      else {
+        const value = parseInt(part, 10);
+        if (Number.isFinite(value)) discrete.push(value);
+      }
     }
-    const discrete = clean.split('/').map((p) => parseInt(p, 10)).filter((n) => !isNaN(n));
-    return discrete.length ? { discrete } : null;
+    return discrete.length || ranges.length ? { discrete, ranges } : null;
   }
 
   function wattageOk(spec, productWattage) {
     if (!spec || spec === 'All PSUs' || !productWattage) return true;
     const p = parseWattages(spec);
     if (!p) return true;
-    if (p.range) return productWattage >= p.range[0] && productWattage <= p.range[1];
-    return p.discrete.some((w) => Math.abs(w - productWattage) < 10);
+    return p.discrete.includes(productWattage)
+      || p.ranges.some(([min, max]) => productWattage >= min && productWattage <= max);
   }
 
   const EFF = ['gold', 'bronze', 'silver', 'platinum', 'titanium'];
-  // Efficiency grades in ascending order, used to relate the two certification
-  // schemes to each other (see efficienciesOf).
-  const EFF_LADDER = ['white', 'bronze', 'silver', 'gold', 'platinum', 'titanium'];
   function efficiencyOf(text) {
     const t = (text || '').toLowerCase();
     for (const e of EFF) if (t.indexOf(e) !== -1) return e;
@@ -190,43 +278,29 @@
     return null;
   }
 
-  // A storefront can report more than one certification level for one unit:
-  // Tweakers shows the 80 PLUS and Cybenetics ETA grades in a single cell
-  // ("Gold, Platinum"), and the two schemes disagree by design - Cybenetics
-  // tests at 230V on a stricter curve, so an 80+ Gold unit is often ETA
-  // Platinum. Collapsing that to one level would penalize the correct entry, so
-  // treat it as a set of acceptable levels instead: a candidate conflicts only
-  // when it matches none of them.
+  // Keep explicitly reported grades as a set. A Cybenetics-only description
+  // cannot establish an 80 PLUS grade; never invent a conversion between schemes.
   function efficienciesOf(text) {
     const t = (text || '').toLowerCase();
+    if (/cybenetics/.test(t) && !/80\s*(?:plus|\+)/.test(t)) return new Set();
     const out = [];
     for (const e of EFF) if (t.indexOf(e) !== -1) out.push(e);
     if (!out.length) {
       const one = efficiencyOf(text);
       if (one) out.push(one);
     }
-    const set = new Set(out);
-
-    // Cybenetics grades on a stricter 230V curve than 80 PLUS, so a unit's ETA
-    // grade is usually equal to - or one step above - its 80 PLUS grade
-    // (Corsair's RM1000x is 80+ Gold but ETA Platinum). When a grade is
-    // attributed to Cybenetics, accept the step below it as well, or the sheet's
-    // correct entry gets penalized for a rating it never claimed.
-    const cyb = /cybenetics[^a-z]*(?:eta|lambda)?[^a-z]*([a-z]+)/i.exec(t);
-    if (cyb) {
-      const i = EFF_LADDER.indexOf(cyb[1]);
-      if (i > 0) set.add(EFF_LADDER[i - 1]);
-    }
-    return set;
+    return new Set(out);
   }
 
-  // Collapse a form-factor string to a coarse class. SFX/SFX-L/TFX/Flex are all
-  // "small"; everything else with ATX is "atx". Used as a hard constraint so an
-  // SFX listing never matches an ATX entry (and vice versa).
+  // Retain distinct physical families. SFX/SFX-L compatibility is handled at
+  // the match site because storefront categories sometimes group them together.
   function formClass(s) {
     if (!s) return null;
     s = s.toLowerCase();
-    if (/sfx|tfx|flex/.test(s)) return 'small';
+    if (/sfx[\s-]*l/.test(s)) return 'sfx-l';
+    if (/sfx/.test(s)) return 'sfx';
+    if (/tfx/.test(s)) return 'tfx';
+    if (/flex/.test(s)) return 'flex';
     if (/atx/.test(s)) return 'atx';
     return null;
   }
@@ -251,12 +325,12 @@
   // are penalized at `beta`, or at the steeper `betaNamed` when the token is
   // one that names the model (see isNamingToken).
   function scoreTokens(productTokens, candTokens, generic, alpha, beta, betaNamed) {
-    const pCounts = {};
+    const pCounts = Object.create(null);
     for (const t of productTokens) pCounts[t] = (pCounts[t] || 0) + 1;
-    const candCounts = {};
+    const candCounts = Object.create(null);
     for (const t of candTokens) candCounts[t] = (candCounts[t] || 0) + 1;
 
-    const pUnmatched = Object.assign({}, pCounts);   // decremented as we explain them
+    const pUnmatched = Object.assign(Object.create(null), pCounts); // decremented as we explain them
     let interW = 0;
     let missC = 0;                 // candidate-only weight (soft-discounted)
     let distinctiveMatched = 0;
@@ -329,6 +403,7 @@
     const score = denom > 0 ? Math.min(1, interW / denom) : 0;
     return {
       score,
+      unexplainedNames: Object.keys(pUnmatched).filter((t) => pUnmatched[t] > 0 && !candCounts[t] && isNamingToken(t, generic)).length,
       distinctiveMatched,
       coverageP: prodW > 0 ? Math.min(1, interW / prodW) : 0, // share of product explained
       candHasDistinctive: candTokens.some((t) => tokenWeight(t, generic) >= 1)
@@ -360,10 +435,25 @@
     // lone "Platinum" is 80 PLUS or Cybenetics.
     let prodEffs = efficienciesOf([signals.efficiency, signals.efficiencyNote].filter(Boolean).join(' '));
     if (!prodEffs.size) prodEffs = efficienciesOf(fullName);
-    const prodForm = formClass(signals.formFactor);
+    const prodForm = formClass(signals.formFactor) || formClass(fullName);
     const prodMod = normModularity(signals.modular);
 
-    const aliased = stripDescriptors(applyRules(fullName, rules.aliases), rules);
+    const named = applyRules(fullName, rules.aliases);
+    if (!prodEffs.size) prodEffs = efficienciesOf(named);
+    const namedTokens = tokenize(named);
+    const namedBrand = detectBrand(namedTokens, index.byBrand);
+    if (!namedBrand) return null;
+    const qualifiers = qualifiersOf(named, productWattage, rules, namedTokens.length - namedBrand.rest.length);
+    const rawTokens = tokenize(fullName);
+    const rawBrand = detectBrand(rawTokens, index.byBrand);
+    const original = qualifiersOf(fullName, productWattage, rules, rawBrand ? rawTokens.length - rawBrand.rest.length : 0);
+    // An alias can explain a year-to-generation mapping, but cannot silently
+    // erase or rewrite an explicit conflicting generation supplied by a shop.
+    if (original.generation.some((value) => !qualifiers.generation.includes(value))) return null;
+    for (const key of ['revision', 'label', 'standard']) {
+      qualifiers[key] = [...new Set([...original[key], ...qualifiers[key]])];
+    }
+    const aliased = stripDescriptors(named, rules);
 
     // Detect brand from the leading tokens, then keep the rest for scoring,
     // dropping the known wattage and noise words.
@@ -376,11 +466,17 @@
 
     const scored = [];
     for (const entry of candidates) {
+      const evidence = entry._allModels && productWattage > 0
+        ? { uncertain: true } : qualifierEvidence(qualifiers, entry._qualifiers, entry);
+      if (!evidence) continue;
       if (!wattageOk(entry.wattage, productWattage)) continue;
       // Form factor is a hard constraint - it reliably disambiguates lines that
       // differ only by size (e.g. Lian Li SP is SFX, SX is ATX).
       const candForm = formClass(entry.form_factor);
-      if (prodForm && candForm && prodForm !== candForm) continue;
+      // Storefronts and the sheet both sometimes use SFX as an umbrella for
+      // SFX-L. It cannot establish a distinction they did not record reliably.
+      if (prodForm && candForm && prodForm !== candForm
+          && !([prodForm, candForm].every((form) => form === 'sfx' || form === 'sfx-l'))) continue;
 
       const candMod = normModularity(entry.modularity);
       if (prodMod && candMod && prodMod !== candMod) {
@@ -390,25 +486,23 @@
       }
 
       const candEff = efficiencyOf(entry.efficiency);
+      if (prodEffs.size && candEff && !prodEffs.has(candEff)) continue;
 
       // An entry can have several "/"-alias token sets; take its best.
-      let local = { score: 0, distinctiveMatched: 0, coverageP: 0, candHasDistinctive: false };
+      let local = { score: 0, distinctiveMatched: 0, coverageP: 0, candHasDistinctive: false, unexplainedNames: 0 };
       for (const candTokens of entry._tokens) {
         const r = scoreTokens(productTokens, candTokens, generic, alpha, beta, betaNamed);
-        if (r.score > local.score) local = r;
+        if (!r.unexplainedNames && r.score > local.score) local = r;
       }
 
       let confidence = 0;
+      if (entry._allModels && productWattage > 0) confidence = constraintConf;
 
       // Path A - token match: a distinctive token in common (never match on
       // "gold" alone) explaining a meaningful share of the product name.
-      const tokenEligible = !(local.candHasDistinctive && local.distinctiveMatched < 1)
-        && local.coverageP >= minCoverage;
+      const tokenEligible = local.distinctiveMatched >= 1 && local.coverageP >= minCoverage;
       if (tokenEligible) {
-        confidence = local.score;
-        // Soft efficiency penalty - only when the candidate matches none of the
-        // levels the storefront reported for this unit.
-        if (prodEffs.size && candEff && !prodEffs.has(candEff)) confidence *= 0.5;
+        confidence = Math.max(confidence, local.score);
       }
 
       // Path B - constraint match: when the name is too thin to score (e.g.
@@ -433,15 +527,18 @@
       }
 
       if (confidence < thresholds.floor) continue;
-      scored.push({ entry, confidence: confidence, distinctive: local.distinctiveMatched });
+      scored.push({ entry, confidence: confidence, distinctive: local.distinctiveMatched, uncertain: evidence.uncertain });
     }
 
     if (!scored.length) return null;
     scored.sort((a, b) =>
       (b.confidence - a.confidence) ||
       ((a.entry.is_limited ? 1 : 0) - (b.entry.is_limited ? 1 : 0)) ||
-      (b.distinctive - a.distinctive));
-    const best = scored[0];
+      (b.distinctive - a.distinctive) ||
+      (a.entry._identity < b.entry._identity ? -1 : a.entry._identity > b.entry._identity ? 1 : 0) ||
+      (a.entry._recordKey < b.entry._recordKey ? -1 : a.entry._recordKey > b.entry._recordKey ? 1 : 0));
+    const unique = scored.filter((s, i) => scored.findIndex((other) => other.entry._identity === s.entry._identity) === i);
+    const best = unique[0];
 
     if (best.confidence < thresholds.floor) return null;
 
@@ -451,16 +548,20 @@
     // marks them uncertain and shows the rival in the alternates list, rather
     // than stating one tier as settled.
     const gap = thresholds.ambiguousGap != null ? thresholds.ambiguousGap : 0.02;
-    const contested = scored.some((s) => s !== best
-      && s.entry.tier !== best.entry.tier
-      && best.confidence - s.confidence <= gap);
+    const rivals = unique.filter((s) => s !== best && (best.confidence - s.confidence <= gap
+      || ((s.uncertain || best.uncertain || (s.entry.year !== best.entry.year
+        && !qualifiers.year.length && !qualifiers.generation.length))
+        && s.entry._families.some((family) => family && best.entry._families.includes(family)))));
+    const contested = rivals.some((s) => s.entry.tier !== best.entry.tier);
+    const ambiguous = best.uncertain || rivals.length > 0;
 
     return {
       entry: best.entry,
       confidence: best.confidence,
-      band: !contested && best.confidence >= thresholds.strong ? 'strong' : 'likely',
+      band: !ambiguous && best.confidence >= thresholds.strong ? 'strong' : 'likely',
+      ambiguous: ambiguous,
       contested: contested,
-      alternates: scored.slice(1, 4)
+      alternates: unique.slice(1)
         .filter((s) => s.confidence >= thresholds.floor * 0.7)
         .map((s) => ({ entry: s.entry, confidence: s.confidence })),
     };

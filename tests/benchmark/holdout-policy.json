@@ -1,0 +1,7 @@
+{
+  "datasetSha256": "46f25d75bd1fac9e22544c4d791e3f5aeefe59eec4c2e25d3e24be7855d76727",
+  "minimumCorrect": {
+    "pcpp": 18,
+    "tweakers": 8
+  }
+}

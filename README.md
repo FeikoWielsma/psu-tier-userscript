@@ -14,16 +14,17 @@ injects coloured **Tier badges** directly onto power-supply listings on
 **PCPartPicker** (all regions) and **Tweakers.net**, so you can judge PSU quality
 at a glance.
 
-Badges show match **confidence**: a solid badge is a confident match, a dashed
-`Tier X?` badge is a *likely* match. Click any badge for full specs, the
-confidence score, and other candidate matches.
+A solid badge indicates a **strong match**; a dashed `Tier X?` badge indicates
+a **likely match**. Click for specifications, alternate identities and a
+similarity score from 0 to 1. That score is **not a probability of correctness**.
+Explicit generation conflicts are rejected; unspecified generations stay likely.
 
 > [!WARNING]
 > Manufacturer naming is inconsistent across the tier sheet, PCPartPicker and
 > Tweakers (and those three disagree with each other). The matcher is good but
 > **false positives/negatives happen** — always confirm on the
 > [official spreadsheet](https://docs.google.com/spreadsheets/d/1akCHL7Vhzk_EhrpIGkz8zTEvYfLDcaSpZRB6Xt6JWkc/htmlview)
-> before buying. The badge confidence and "other possible matches" list are there
+> before buying. The match band and "other possible matches" list are there
 > to make disagreement visible rather than hidden.
 
 ## 🚀 Installation
@@ -132,16 +133,21 @@ Finally, visit a [PCPartPicker PSU listing](https://pcpartpicker.com/products/po
 ## 🧠 How it works
 
 ```
-Google Sheet ──gviz CSV──► fetch_sheet.py ──► psu_tier.csv
+Google Sheet ── snapshot.py --refresh ──► frozen CSVs + metadata + semantic diff
+                                              │ review and commit
+                                              ▼
+                         tests/fixtures/sample_psu_data.json
                                               │
-                          parse_tier_list.py ─┘──► psu_data.json
-                                              │
-        ┌── src/matcher.js  (matching engine, single source of truth)
-        ├── src/adapters.js (per-site DOM extraction)
-        ├── data/normalization_rules.json (declarative tuning)
+        ┌── src/matcher.js  (shared matching engine)
+        ├── src/adapters.js (site extraction)
+        ├── data/normalization_rules.json (naming rules)
         └── src/userscript.template.js (UI)
                                               │
                         generate_userscript.py ──► psutier.user.js
+                                              │
+                           build_extension.py ──► extension ZIP
+                                              │
+                     test_suite.py --release ──► validation attestation
 ```
 
 - **Data source** is the sheet's `gviz` **CSV export** (stable columns, no HTML
@@ -151,8 +157,9 @@ Google Sheet ──gviz CSV──► fetch_sheet.py ──► psu_tier.csv
   **structured columns** as signals, not just the name: wattage and form factor
   (ATX vs SFX) are hard filters, and efficiency disambiguates variants. When a
   name is too thin to score on its own (e.g. "NZXT C750" → just "c"), those
-  signals resolve it by constraint (wattage + efficiency + form factor). The
-  winning score is the confidence shown on the badge. This is the **single
+  signals resolve it by constraint (wattage + efficiency + form factor). Explicit model years, generations, revisions and named editions must agree;
+  ambiguous identities are downgraded even when their tiers agree. The
+  winning score is a similarity measure shown in the detail popup. This is the **single
   source of truth** — the userscript and the test suite run the exact same code.
 - There are **no hardcoded per-product hacks.** Naming quirks are fixed by
   editing data, not code (see below).
@@ -165,7 +172,12 @@ Edit [`data/normalization_rules.json`](data/normalization_rules.json):
 - `strip` — remove descriptors that differ across sources and never identify a
   model (ATX version tags, the `80+` prefix, …); applied to both sides.
 - `generic` / `noise` — words that score low / are dropped.
-- `thresholds` / `weights` — confidence bands and scoring balance.
+- `identity` — meaningful revision, variant and family vocabulary.
+- `thresholds` / `weights` — match bands and scoring balance.
+
+Identity qualifiers are checked before descriptors are stripped. Aliases must
+not erase explicit conflicting generations. Include wrong-model and forbidden
+alternate assertions when changing naming rules.
 
 Add a case to [`tests/corpus.json`](tests/corpus.json), run `npm test`, done.
 
@@ -178,64 +190,98 @@ those from structured columns as the site exposes — the matcher uses them).
 
 ## 🛠️ Development
 
-**Prerequisites:** Python 3 (standard library only) and Node.js 20+.
-This repo uses [`uv`](https://docs.astral.sh/uv/) for Python.
+**Prerequisites:** Python 3, Node.js 20.19+ and [uv](https://docs.astral.sh/uv/).
 
 ```bash
-git clone https://github.com/FeikoWielsma/psu-tier-userscript.git
-cd psu-tier-userscript
-npm install
+npm ci
+node node_modules/playwright/cli.js install chromium
+python test_suite.py --release
+python verify_artifacts.py
 ```
 
-Build + test (deterministic, no network — uses the committed data snapshot):
+The full gate validates frozen CSV provenance, lint/types, matcher contracts,
+reviewed identity benchmarks, parser/build failure handling, browser behavior,
+and the exact generated userscript and extension ZIP. It needs no live sheet or
+storefront requests. Initial dependency/browser installation and uv tool setup
+require network access. CI installs Chromium's system dependencies too.
+
+For local iteration:
 
 ```bash
-python test_suite.py        # build + lint + typecheck + run npm test
-npm run check               # eslint + tsc --checkJs + tests
-npm test                    # just the JS tests
-npm run lint                # ESLint (src, tests, tools)
-npm run typecheck           # tsc --checkJs (type inference, no JSDoc needed)
-uvx ruff check .            # Python lint
+python test_suite.py --quick  # skips browser checks; cannot attest a release
+node tools/check.cjs          # lint, types and offline JavaScript checks
+node tools/check.cjs --browser
+node tools/benchmark.cjs
+node tools/benchmark.cjs --holdout
 ```
 
-Refresh data from the live sheet and rebuild:
+### Updating the sheet snapshot
 
 ```bash
-python generate_userscript.py --update
+python snapshot.py --refresh
 ```
 
-### Testing
+Review the frozen exports, `tests/fixtures/sheet/diff.json`, metadata and parsed
+snapshot together. Check changed names, generations, tiers, duplicate identities,
+conflicts and missing fields against the source rows. Update affected regression
+expectations and reviewed benchmark labels from source evidence, not matcher
+predictions. Dataset changes intentionally invalidate benchmark hash policies.
+Run the full release gate, inspect its reports, and commit the complete snapshot
+bundle and justified expectation changes before tagging a release.
 
-- **`npm test`** — offline, deterministic, CI-safe:
-  - `tests/test_matching.js` runs the real matcher over `tests/corpus.json`
-    (hand-labelled cases, incl. verbose real PCPP names) against the committed
-    `tests/fixtures/sample_psu_data.json`.
-  - `tests/test_adapters.js` runs the real adapters over saved HTML fixtures via
-    `linkedom` — including full real PCPartPicker pages in
-    `tests/fixtures/pcpp/` (100 rows each) to catch name/wattage extraction and
-    DOM drift.
-  - `tests/test_coverage.js` runs the matcher over ~900 real, deduplicated
-    product names (`tests/fixtures/pcpp-products.json`) and asserts it never
-    throws and overall match coverage stays above a floor. (A full listing
-    includes many genuinely unrated units, so <100% is expected.)
-- **Live browser** (local, on demand — never in CI):
-  ```bash
-  npx playwright install chromium          # once
-  npm run capture                          # refresh tests/fixtures/*.html
-  npm run smoke                             # inject the script, report matches
-  # drive Brave instead of bundled Chromium:
-  node tools/live_capture.mjs --smoke --browser-path "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe" --headed
-  ```
-  These do a handful of normal page loads with pauses — not bulk scraping.
+`python generate_userscript.py` builds from the committed snapshot. `--data PATH`
+selects alternative data for local investigation; the release gate always uses
+the committed snapshot. Refreshing never publishes.
+
+### What the tests measure
+
+The curated corpus asserts identities, tiers, uncertainty and forbidden matches.
+Saved storefront coverage is informational; adding wrong matches cannot make a
+coverage gate pass. Adapter checks include real saved rows before and after badge
+insertion. Chromium tests cover row reuse/replacement, unknown generations,
+limited/unrated/tier filters, popups, responsive bounds, preferences and actual
+manifest injection. Targeted mutation checks verify that generation, ambiguity
+and wattage protections are exercised.
+
+The 300-product reviewed sample is development evidence. A separate 50-product
+sample excludes its families and curated regression families. Reviews compare
+saved records with frozen sheet rows; they have **not been verified by a human
+or manufacturer**. Unresolved identities stay visible and are excluded from
+resolved-case precision. The frames are saved convenience samples, so neither
+coverage nor benchmark precision establishes a live-catalog error rate. See
+[validation results and limitations](docs/testing-results.md).
+
+### Live checks
+
+```bash
+node tools/live_capture.mjs --capture
+node tools/live_capture.mjs --smoke
+```
+
+Live captures go to `reports/captures/` for review and never overwrite committed
+fixtures. Smoke checks record the script hash, injection, runtime errors and a
+popup interaction in `reports/live-smoke.json`: exit 0 means passed, 1 failed,
+2 inconclusive (network, consent, challenges or missing listing selectors).
+These checks are on demand and separate from deterministic CI. They do not
+validate every returned identity. Use `--headed`, `--channel=chrome|msedge` or
+`--browser-path=...` for a local installed browser.
 
 ## 🤖 CI/CD
 
-- **CI** (`.github/workflows/ci.yml`): runs `npm test` (the deterministic gate),
-  does a non-fatal live fetch/parse structure check, then builds and uploads the
-  userscript artifact.
-- **Release** (`.github/workflows/release.yml`): pushing a `v*` tag runs the
-  tests, builds from the latest sheet, and publishes a GitHub Release with
-  `psutier.user.js`.
+CI and tagged releases run the same full offline gate. Releases build only the
+reviewed committed snapshot. Immediately before each publishing step, hashes and
+source/test inputs must still match the successful validation attestation.
+Signed Firefox packages, when present, must preserve the tested application
+files. This content comparison does not verify Mozilla's signature itself.
+
+The manually dispatched snapshot-health workflow produces a candidate refresh
+artifact for review. It neither commits changes nor publishes a release.
+
+## ☕ Support development
+
+If you find PSU Tier Badges useful, you can [support development on Ko-fi](https://ko-fi.com/feiko).
+Contributions are optional and support maintenance of this extension and userscript.
+PSU ratings are provided by SPL's PSU Tier List, credited below.
 
 ## 📜 Credits
 

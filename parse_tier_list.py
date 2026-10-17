@@ -1,10 +1,9 @@
 """Parse the PSU tier-list CSV into a normalized list of PSU entries.
 
 The CSV (see ``fetch_sheet.py``) has a fixed column layout. Brand (col 0) and
-Series (col 1) are merged cells in the sheet, so the export leaves them blank
-on continuation rows - we forward-fill those. The two variant columns (2, 3)
-are per-row qualifiers (e.g. "II", "Bronze", "Non-Modular"); wattage and
-efficiency disambiguate rows that share a series, so we do not fill them.
+Series (col 1) and variant columns (2, 3) use merged cells, so continuation
+rows inherit them. A new brand/series resets variants; a new first variant
+resets the second. Wattage and efficiency never forward-fill.
 """
 
 import csv
@@ -59,9 +58,17 @@ def clean(text):
 
 
 def clean_series(text):
-    """Series cleanup: drop parenthetical notes but keep the core name."""
+    """Drop alias prose, retaining parentheses that distinguish identities."""
     text = clean(text)
-    text = re.sub(r"\s*\(.*?\)", "", text)
+    text = re.sub(
+        r"\s*\((.*?)\)",
+        lambda m: (
+            m.group(0)
+            if re.search(r"\b(?:19|20)\d{2}\b|\brev\b|\batx\b|\blabel\b", m[1], re.I)
+            else ""
+        ),
+        text,
+    )
     return text.strip(" -")
 
 
@@ -72,34 +79,67 @@ def build_variant(c1, c2):
     return " ".join(parts)
 
 
-def parse_csv(path, only_limited=False):
+def validate_header(header):
+    """Check column positions, tolerating the sheet's changing disclaimer text."""
+    expected = {
+        0: "Brand",
+        1: "Series",
+        4: "Wattages",
+        5: "Tier",
+        6: "Year",
+        7: "Size",
+        8: "ATX",
+        9: "Input",
+        10: "Modularity",
+        11: "Efficiency",
+        12: "Prim.",
+        13: "Secondary",
+        14: "Reg.",
+        15: "ODM",
+        16: "Platform",
+        17: "Notes",
+    }
+    if len(header) < N_COLS:
+        raise ValueError("CSV header has too few columns")
+    for column, label in expected.items():
+        if label.casefold() not in header[column].casefold():
+            raise ValueError(f"CSV column {column} must contain {label!r}")
+
+
+def parse_csv(path, only_limited=False, source_gid=None):
     with open(path, encoding="utf-8") as f:
         rows = list(csv.reader(f))
     if not rows:
-        return []
+        raise ValueError("Empty CSV")
+    validate_header(rows[0])
 
     entries = []
     brand = series = variant1 = variant2 = ""
 
     # Data rows
-    for row in rows[1:]:
+    for row_number, row in enumerate(rows[1:], start=2):
         if not any(row):
             continue
+        if len(row) > COL_TIER and VALID_TIER.fullmatch(clean(row[COL_TIER])) and len(row) < 12:
+            raise ValueError(f"Truncated rated row {row_number}")
         row = (row + [""] * N_COLS)[:N_COLS]
 
         if row[COL_BRAND].strip():
-            brand = clean(row[COL_BRAND])
+            new_brand = clean(row[COL_BRAND])
+            if new_brand != brand:
+                series = variant1 = variant2 = ""
+            brand = new_brand
 
         series_cell = clean(row[COL_SERIES]) if row[COL_SERIES].strip() else ""
         if series_cell:
             series = series_cell
-            variant1 = "" # reset on series change
-            variant2 = "" # reset on series change
+            variant1 = ""  # reset on series change
+            variant2 = ""  # reset on series change
 
         v1_cell = clean(row[COL_VARIANT_1]) if row[COL_VARIANT_1].strip() else ""
         if v1_cell:
             variant1 = v1_cell
-            variant2 = "" # reset v2 when v1 changes
+            variant2 = ""  # reset v2 when v1 changes
 
         v2_cell = clean(row[COL_VARIANT_2]) if row[COL_VARIANT_2].strip() else ""
         if v2_cell:
@@ -119,6 +159,8 @@ def parse_csv(path, only_limited=False):
         tier = tier.replace("*", "").strip()
         if only_limited and not is_limited:
             continue
+        if not brand or not series:
+            raise ValueError(f"Rated row {row_number} is missing brand or series")
 
         series_clean = clean_series(series)
         variant = build_variant(variant1, variant2)
@@ -130,33 +172,40 @@ def parse_csv(path, only_limited=False):
         efficiency = EFFICIENCY_MAP.get(eff_code, eff_code) if eff_code else None
 
         topology = " + ".join(
-            p for p in (clean(row[COL_TOPO_PRIMARY]),
-                        clean(row[COL_TOPO_SECONDARY]),
-                        clean(row[COL_TOPO_REGULATION])) if p
+            p
+            for p in (
+                clean(row[COL_TOPO_PRIMARY]),
+                clean(row[COL_TOPO_SECONDARY]),
+                clean(row[COL_TOPO_REGULATION]),
+            )
+            if p
         )
 
-        # Apply local data corrections/patches for sheet gaps or erroneous values
         wattage = clean(row[COL_WATTAGE]) or None
 
-        entries.append({
-            "brand": brand,
-            "series": series_clean,
-            "variant": variant or None,
-            "model": model,
-            "wattage": wattage,
-            "tier": tier,
-            "is_limited": is_limited,
-            "year": clean(row[COL_YEAR]) or None,
-            "form_factor": clean(row[COL_SIZE]) or None,
-            "atx_version": clean(row[COL_ATX]) or None,
-            "input_range": clean(row[COL_INPUT]) or None,
-            "modularity": clean(row[COL_MODULARITY]) or None,
-            "efficiency": efficiency,
-            "topology": topology or None,
-            "odm": clean(row[COL_ODM]) or None,
-            "platform": clean(row[COL_PLATFORM]) or None,
-            "notes": clean(row[COL_NOTES]) or None,
-        })
+        entries.append(
+            {
+                "brand": brand,
+                "series": series_clean,
+                "variant": variant or None,
+                "model": model,
+                "wattage": wattage,
+                "tier": tier,
+                "is_limited": is_limited,
+                "year": clean(row[COL_YEAR]) or None,
+                "form_factor": clean(row[COL_SIZE]) or None,
+                "atx_version": clean(row[COL_ATX]) or None,
+                "input_range": clean(row[COL_INPUT]) or None,
+                "modularity": clean(row[COL_MODULARITY]) or None,
+                "efficiency": efficiency,
+                "topology": topology or None,
+                "odm": clean(row[COL_ODM]) or None,
+                "platform": clean(row[COL_PLATFORM]) or None,
+                "notes": clean(row[COL_NOTES]) or None,
+            }
+        )
+        if source_gid is not None:
+            entries[-1]["source"] = {"gid": str(source_gid), "row": row_number}
 
     return entries
 

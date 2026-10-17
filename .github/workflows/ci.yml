@@ -2,68 +2,32 @@ name: PSU Tier List CI
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: ["main", "master"]
   pull_request:
-    branches: [ "main", "master" ]
+    branches: ["main", "master"]
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Install JS dev dependencies
-        run: npm ci
-
-      - name: Lint JS
-        run: npm run lint
-
-      - name: Type-check JS
-        run: npm run typecheck
-
-      # Deterministic gate: matcher + adapter tests run against the committed
-      # data snapshot, so live sheet edits never flake the build.
-      - name: Run tests
-        run: npm test
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v5
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - run: npm ci
+      - uses: astral-sh/setup-uv@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-
-      - name: Lint Python
-        run: uvx ruff check .
-
-      # Non-fatal: confirms the live sheet still fetches and parses (structure),
-      # without gating CI on the sheet's contents.
-      - name: Live data structure check
-        id: live
-        continue-on-error: true
-        run: |
-          python fetch_sheet.py
-          python parse_tier_list.py
-
-      - name: Build userscript and extension
-        run: |
-          if [ ! -f psu_data.json ]; then
-            echo "Live fetch unavailable; building from committed snapshot."
-            cp tests/fixtures/sample_psu_data.json psu_data.json
-          fi
-          python generate_userscript.py
-          python build_extension.py
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+      - name: Install Chromium for offline browser and extension tests
+        run: node node_modules/playwright/cli.js install --with-deps chromium
+      - name: Validate reviewed snapshot, source contracts and exact build artifacts
+        run: python test_suite.py --release
+      - uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: psutier-builds
+          name: psutier-validation
           path: |
+            reports/
             psutier.user.js
             psutier-extension.zip

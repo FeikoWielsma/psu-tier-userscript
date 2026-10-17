@@ -50,6 +50,10 @@ module.exports = [
     }
   },
   {
+    files: ['tests/browser.test.js'],
+    languageOptions: { globals: { ...globals.browser } }
+  },
+  {
     files: ['tools/**/*.mjs'],
     languageOptions: {
       ecmaVersion: 2022,

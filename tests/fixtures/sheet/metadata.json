@@ -1,0 +1,17 @@
+{
+  "retrieved_at": "2026-10-17T16:50:06.197445+00:00",
+  "sources": {
+    "proper": {
+      "url": "https://docs.google.com/spreadsheets/d/1akCHL7Vhzk_EhrpIGkz8zTEvYfLDcaSpZRB6Xt6JWkc/gviz/tq?tqx=out:csv&gid=1078495601",
+      "sha256": "d4e2880d1e230dd68964152a44f1bbde53e3c2d6cc732c5482927bd11313eee4",
+      "entries": 1099
+    },
+    "limited": {
+      "url": "https://docs.google.com/spreadsheets/d/1akCHL7Vhzk_EhrpIGkz8zTEvYfLDcaSpZRB6Xt6JWkc/gviz/tq?tqx=out:csv&gid=931697732",
+      "sha256": "fa3b7d449d8c760db5198ceb0e40d33c870d0c3edbe451b831dc08bddd13dbf8",
+      "entries": 319
+    }
+  },
+  "entries": 1418,
+  "dataset_sha256": "46f25d75bd1fac9e22544c4d791e3f5aeefe59eec4c2e25d3e24be7855d76727"
+}

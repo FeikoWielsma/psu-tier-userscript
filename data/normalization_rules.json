@@ -62,7 +62,10 @@
     "12vpwr",
     "kabel",
     "pin",
-    "pins"
+    "pins",
+    "niet",
+    "modulair",
+    "tt"
   ],
   "generic": [
     "gold",
@@ -83,7 +86,10 @@
     "snow",
     "color",
     "colour",
-    "vanguard"
+    "vanguard",
+    "sfx",
+    "tfx",
+    "flex"
   ],
   "strip": [
     {
@@ -141,7 +147,7 @@
       "note": "Strip bare 'ATX 3' standard tags so they don't score as unmatched '3' tokens (preserves Seasonic Core GX ATX 3)"
     },
     {
-      "pattern": "\\b(?:cpx-fc|ppg-[a-z]|zpu-s|ae-pm|har-pma?|ha-pt|pg5)\\b",
+      "pattern": "\\b(?:cpx-fc|ppg-[a-z]|zpu-s|ae-pm|har-pma?|ha-pt)\\b",
       "replace": "",
       "flags": "ig",
       "note": "Strip internal factory platform codes from Chieftec, Gigabyte, and Silverstone models"
@@ -175,14 +181,116 @@
       "replace": "",
       "flags": "ig",
       "note": "Strip Hatsune Miku special edition branding"
+    },
+    {
+      "pattern": "\\bultra\\s+durable\\b",
+      "replace": "",
+      "flags": "ig",
+      "note": "Gigabyte marketing descriptor; preserves PG5 and variant suffixes as identity evidence."
+    },
+    {
+      "pattern": "\\btt\\s+premium(?:\\s+edition)?\\b",
+      "replace": "",
+      "flags": "ig",
+      "note": "Thermaltake TT Premium marketing phrase; specific GF/TF/SFX identities are retained."
+    },
+    {
+      "pattern": "\\bsfx[\\s-]*l\\b",
+      "replace": "SFX",
+      "flags": "ig",
+      "note": "Form factor is handled as a structured compatibility constraint; avoid treating the L descriptor as a model suffix."
     }
   ],
   "aliases": [
     {
-      "pattern": "\\bud\\s*(\\d{3,4})\\s*([a-z]{2})\\b",
-      "replace": "Ultra Durable UD-$2 $1",
+      "pattern": "(\\bvengeance\\s+)(\\d{3,4})m\\b",
+      "replace": "$1$2",
       "flags": "ig",
-      "note": "Gigabyte UD models omit 'Ultra Durable'"
+      "note": "Corsair Vengeance wattage-M codes indicate modularity; certification distinguishes Bronze/Silver in the sheet."
+    },
+    {
+      "pattern": "(\\bantec\\s+)ne\\s*(\\d{3,4})g\\s*m\\b",
+      "replace": "$1Neo Eco Gold Modular $2",
+      "flags": "ig",
+      "note": "Antec NE wattage G M is the Neo Eco Gold Modular family."
+    },
+    {
+      "pattern": "(\\brog\\s+thor\\s+)(\\d{3,4})p\\b",
+      "replace": "$1$2 Platinum",
+      "flags": "ig",
+      "note": "ASUS ROG Thor wattage-P is Platinum; this rule preserves explicit P2/P3 generation codes."
+    },
+    {
+      "pattern": "\\battis\\s*(\\d{3,4})r\\b",
+      "replace": "ATTIS Bronze $1",
+      "flags": "ig",
+      "note": "SilverStone ATTIS wattage-R code is named ATTIS Bronze in the sheet."
+    },
+    {
+      "pattern": "(\\bacrux\\b.*?)\\bzm(\\d{3,4})-arx\\b",
+      "replace": "$1 $2",
+      "flags": "ig",
+      "note": "Zalman Acrux redundant ZM wattage ARX SKU."
+    },
+    {
+      "pattern": "\\binter-tech\\s+sama\\b",
+      "replace": "SAMA",
+      "flags": "ig",
+      "note": "Explicit Inter-Tech SAMA reseller label retains the manufacturer named in the sheet."
+    },
+    {
+      "pattern": "\\bsama\\s+xph-(\\d{3,4})a\\b",
+      "replace": "SAMA XP XPH-A $1",
+      "flags": "ig",
+      "note": "SAMA XPH wattage A storefront SKU identifies the XP XPH-A family without asserting V3."
+    },
+    {
+      "pattern": "(\\bwatttera\\b)\\s*\\(ebtii\\)",
+      "replace": "$1",
+      "flags": "ig",
+      "note": "Zalman WattTera EBTII is a redundant storefront family code, not an assertion of Acrux II."
+    },
+    {
+      "pattern": "\\bsl\\s*-\\s*(\\d{3,4})gw\\b",
+      "replace": "Steel Legend Gold $1 white",
+      "flags": "ig",
+      "note": "ASRock SL wattage GW denotes the white Gold variant."
+    },
+    {
+      "pattern": "\\bsst-",
+      "replace": "",
+      "flags": "ig",
+      "note": "SilverStone SST SKU prefix; the actual model code is preserved."
+    },
+    {
+      "pattern": "(\\brog\\s+strix\\s+)(\\d{3,4})p\\b",
+      "replace": "$1$2 Platinum",
+      "flags": "ig",
+      "note": "ASUS ROG Strix wattage-P codes identify the Platinum family, not Aura Gold."
+    },
+    {
+      "pattern": "\\bsx\\s*1000\\s*-\\s*lpt\\b",
+      "replace": "SFX-L SX Platinum 1000",
+      "flags": "ig",
+      "note": "The sheet names the 1000W SX-LPT as SX Platinum, unlike its 700W sibling."
+    },
+    {
+      "pattern": "\\bst(\\d{2,3})f\\s*-\\s*es230\\b",
+      "replace": "Strider Essential ST-ES 230V",
+      "flags": "ig",
+      "note": "The ES230 code identifies the 230V Strider Essential variant."
+    },
+    {
+      "pattern": "(\\baorus\\s+elite\\s+)p(\\d{3,4})\\b",
+      "replace": "$1$2",
+      "flags": "ig",
+      "note": "Aorus Elite storefront P-wattage code is not the unrelated Aorus P-W series."
+    },
+    {
+      "pattern": "\\bud\\s*(\\d{3,4})\\s*([a-z]{2})\\b",
+      "replace": "UD-$2 $1",
+      "flags": "ig",
+      "note": "Split Gigabyte UD wattage codes while preserving suffixes; Ultra Durable is stripped on both sides."
     },
     {
       "pattern": "\\b(\\d{3,4})\\s*g\\b",
@@ -245,18 +353,6 @@
       "note": "ASUS ROG Thor '1600T3' is the sheet's 'Titanium III' generation"
     },
     {
-      "pattern": "\\bhydro\\s+ptm\\s+pro\\b",
-      "replace": "Hydro",
-      "flags": "ig",
-      "note": "FSP Hydro PTM Pro is listed as Hydro in the sheet"
-    },
-    {
-      "pattern": "\\bhydro\\s+g\\s+pro\\b",
-      "replace": "Hydro Pro",
-      "flags": "ig",
-      "note": "FSP Hydro G Pro is listed as Hydro Pro in the sheet"
-    },
-    {
       "pattern": "\\bfocus\\s+gx\\b.*\\b(2024|atx\\s*3\\.1)\\b",
       "replace": "Focus V4 GX",
       "flags": "ig",
@@ -279,12 +375,6 @@
       "replace": "High Current Gamer $1",
       "flags": "ig",
       "note": "Antec HCG abbreviation for High Current Gamer"
-    },
-    {
-      "pattern": "\\bedge\\s+(?!eg\\b)(gold|platinum)\\b",
-      "replace": "Edge EG $1",
-      "flags": "ig",
-      "note": "Lian Li Edge Gold/Platinum is Edge EG"
     },
     {
       "pattern": "\\bcore\\s+gx\\b.*\\batx\\s*3\\.[01]\\b",
@@ -312,9 +402,9 @@
     },
     {
       "pattern": "\\bda\\s*(\\d{3,4})?\\s*r(?:\\s+gold)?\\b",
-      "replace": "Decathlon DA-R GM $1",
+      "replace": "Decathlon DA-R $1",
       "flags": "ig",
-      "note": "SilverStone DA-R Gold ATX 3.x models match Decathlon DA-R GM"
+      "note": "SilverStone DA-R Gold title identifies the DA-R family, not its GM/GMA platform revision."
     },
     {
       "pattern": "\\bplatimax\\s*ii\\b|\\bplatimaxii\\b",
@@ -376,5 +466,50 @@
       "flags": "ig",
       "note": "Lian Li RB is sheet RB-B"
     }
-  ]
+  ],
+  "identity": {
+    "variantWords": [
+      "rgb",
+      "argb",
+      "snow",
+      "noctua",
+      "ice",
+      "shift",
+      "ve",
+      "elite",
+      "core"
+    ],
+    "revisionWords": [
+      "new",
+      "old",
+      "se"
+    ],
+    "revisionPatterns": [
+      {
+        "pattern": "\\bdc-dc\\s+ver\\b",
+        "value": "dc-dc"
+      },
+      {
+        "pattern": "\\bcircular\\s+fan\\s+grille\\b",
+        "value": "circular fan grille"
+      },
+      {
+        "pattern": "\\bdecathlon\\s+da-r\\s+(gma?)\\b",
+        "group": 1
+      }
+    ],
+    "variantPatterns": [
+      {
+        "pattern": "\\bd\\.\\s*f\\.",
+        "value": "d.f."
+      }
+    ],
+    "familyNoise": [
+      "new",
+      "old",
+      "se",
+      "dc",
+      "ver"
+    ]
+  }
 }

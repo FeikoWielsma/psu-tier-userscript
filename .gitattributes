@@ -1,0 +1,9 @@
+*.js text eol=lf
+*.cjs text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+# Preserve downloaded evidence byte-for-byte for source provenance hashes.
+tests/fixtures/sheet/*.csv -text

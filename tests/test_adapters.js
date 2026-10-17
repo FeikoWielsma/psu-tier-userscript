@@ -96,6 +96,28 @@ console.log('Adapter tests\n');
     }
 }
 
+// Sanitized rows from a real Tweakers page, with independently pinned extraction.
+{
+    const { activeAdapter } = loadAdapters('tweakers.net', '/voedingen/vergelijken/');
+    const adapter = activeAdapter();
+    const document = loadFixture('tweakers-real.html');
+    const rows = [...document.querySelectorAll(adapter.selector)];
+    const expected = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/tweakers-products.json'), 'utf8'));
+    if (rows.length !== expected.length) fail('Real Tweakers fixture row count changed');
+    rows.forEach((row, i) => {
+        const before = adapter.extract(row);
+        const signals = { ...expected[i] };
+        delete signals.url;
+        if (JSON.stringify(before) !== JSON.stringify(signals)) fail(`Real Tweakers extraction differs: ${i}`);
+        const badge = document.createElement('button');
+        badge.className = 'psu-tier-badge';
+        badge.textContent = 'Tier A?';
+        adapter.insertBadge(row, badge);
+        if (JSON.stringify(adapter.extract(row)) !== JSON.stringify(before)) fail(`Badge changed extraction: ${i}`);
+    });
+    console.log(`  Checked ${rows.length} real Tweakers rows before and after badge insertion`);
+}
+
 if (failures) {
     console.log(`\n${failures} adapter checks failed.`);
     process.exit(1);

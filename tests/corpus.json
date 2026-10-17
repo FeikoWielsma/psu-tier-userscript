@@ -18,7 +18,10 @@
     "wattage": 850,
     "site": "pcpp",
     "expectTier": "A",
-    "minBand": "strong"
+    "minBand": "likely",
+    "maxBand": "likely",
+    "expectAmbiguous": true,
+    "note": "Black/white sheet identities remain unresolved by this title."
   },
   {
     "name": "Corsair RM750e (2023)",
@@ -41,21 +44,30 @@
     "wattage": 750,
     "site": "pcpp",
     "expectTier": "B",
-    "minBand": "strong"
+    "minBand": "likely",
+    "maxBand": "likely",
+    "expectAmbiguous": true,
+    "note": "The title omits generation/standard qualifiers represented by multiple sheet identities."
   },
   {
     "name": "Cooler Master MWE Gold 850 V2",
     "wattage": 850,
     "site": "pcpp",
     "expectTier": "B+",
-    "minBand": "strong"
+    "minBand": "likely",
+    "maxBand": "likely",
+    "expectAmbiguous": true,
+    "note": "ATX-standard and modularity variants are not identified by this title."
   },
   {
     "name": "Cooler Master V850 SFX GOLD",
     "wattage": 850,
     "site": "pcpp",
     "expectTier": "A",
-    "minBand": "strong"
+    "minBand": "likely",
+    "maxBand": "likely",
+    "expectAmbiguous": true,
+    "note": "The title omits the ATX-standard variant."
   },
   {
     "name": "MSI MAG A850GL PCIE5",
@@ -75,7 +87,8 @@
     "wattage": 1200,
     "site": "pcpp",
     "expectTier": "B+",
-    "note": "sheet only rates the Gold Strix (Aura Gold)"
+    "note": "The 1200P code denotes Platinum; verified sheet proper row 169. Gold/Aura entries are different models.",
+    "expectModel": "ROG Strix Platinum"
   },
   {
     "name": "Asus TUF Gaming 850G",
@@ -117,22 +130,34 @@
     "name": "Thermaltake Smart 600W 80+",
     "wattage": 600,
     "site": "pcpp",
-    "expectTier": "D",
-    "minBand": "strong"
+    "expectTier": "F",
+    "minBand": "likely",
+    "expectModel": "SMART White Label",
+    "note": "The unqualified 600W Smart title matches proper sheet row 1006; the D-tier SMART RGB requires RGB identity evidence."
   },
   {
     "name": "Thermaltake Toughpower GF3 850W",
     "wattage": 850,
     "site": "pcpp",
-    "expectTier": "A",
-    "minBand": "strong"
+    "expectTier": [
+      "A+",
+      "B"
+    ],
+    "minBand": "likely",
+    "maxBand": "likely",
+    "expectContested": true,
+    "note": "GF3 Premium original/swap remain unresolved; ARGB and Snow are separate named products."
   },
   {
     "name": "Thermaltake Toughpower GF A3 ATX 3.0",
-    "wattage": 750,
+    "wattage": 850,
     "site": "pcpp",
-    "expectTier": "B",
-    "note": "must not collide with GF3"
+    "expectTier": [
+      "B",
+      "B-"
+    ],
+    "expectContested": true,
+    "note": "sheet lists sibling entries on different tiers at this wattage; the match is a tie, so the badge must read as uncertain"
   },
   {
     "name": "EVGA SuperNOVA 850 G6",
@@ -147,7 +172,10 @@
     "wattage": 850,
     "site": "pcpp",
     "expectTier": "A",
-    "minBand": "strong"
+    "minBand": "likely",
+    "maxBand": "likely",
+    "expectAmbiguous": true,
+    "note": "The title omits generation/standard qualifiers represented by multiple sheet identities."
   },
   {
     "name": "Super Flower Leadex VII Gold 1000W",
@@ -209,7 +237,14 @@
     "name": "Thermaltake Toughpower GF3 850 W 80+ Gold Certified Fully Modular ATX Power Supply",
     "wattage": 850,
     "site": "pcpp",
-    "expectTier": "A"
+    "expectTier": [
+      "A+",
+      "B"
+    ],
+    "minBand": "likely",
+    "maxBand": "likely",
+    "expectContested": true,
+    "note": "GF3 Premium original/swap remain unresolved; ARGB and Snow are separate named products."
   },
   {
     "name": "EVGA SuperNOVA 850 G6 850 W 80+ Gold Certified Fully Modular ATX Power Supply",
@@ -373,7 +408,10 @@
     "formFactor": "ATX",
     "site": "pcpp",
     "expectTier": "B+",
-    "minBand": "strong"
+    "minBand": "likely",
+    "maxBand": "likely",
+    "expectAmbiguous": true,
+    "note": "No structured modularity was provided. Pro Gold and Pro Modular Gold remain possible."
   },
   {
     "name": "SAMA GT 750",
@@ -391,7 +429,10 @@
     "formFactor": "ATX",
     "site": "pcpp",
     "expectTier": "A",
-    "minBand": "strong"
+    "minBand": "likely",
+    "maxBand": "likely",
+    "expectAmbiguous": true,
+    "note": "The title omits the sheet generation year."
   },
   {
     "name": "NZXT C850 Core",
@@ -400,7 +441,10 @@
     "formFactor": "ATX",
     "site": "pcpp",
     "expectTier": "A",
-    "minBand": "strong"
+    "minBand": "likely",
+    "maxBand": "likely",
+    "expectAmbiguous": true,
+    "note": "The title omits the sheet generation year."
   },
   {
     "name": "Lian Li SX1000P",
@@ -505,18 +549,18 @@
     "efficiency": "80+ Platinum",
     "formFactor": "ATX",
     "site": "tweakers",
-    "expectTier": "A+"
+    "expectTier": null,
+    "note": "The captured title says ATX 3.0, but the 1650W sheet entry explicitly says ATX 3.1. Reject the contradicted identity."
   },
   {
     "name": "Thermaltake Toughpower GF A3 Snow",
     "wattage": 850,
     "site": "pcpp",
     "expectTier": [
-      "B",
-      "B*"
+      "B"
     ],
-    "expectContested": true,
-    "note": "sheet lists sibling entries on different tiers at this wattage; the match is a tie, so the badge must read as uncertain"
+    "expectContested": false,
+    "note": "Explicit Snow identifies the Snow variant, not Global/Swap siblings."
   },
   {
     "name": "Thermaltake Toughpower GF A3 ATX 3.0",
@@ -524,9 +568,7 @@
     "site": "pcpp",
     "expectTier": [
       "B",
-      "B-",
-      "B-",
-      "B*"
+      "B-"
     ],
     "expectContested": true,
     "note": "sheet lists sibling entries on different tiers at this wattage; the match is a tie, so the badge must read as uncertain"
@@ -539,7 +581,10 @@
       "B",
       "B-"
     ],
-    "minBand": "strong"
+    "minBand": "likely",
+    "maxBand": "likely",
+    "expectAmbiguous": true,
+    "note": "Version A/B is omitted; normalization must not imply identity certainty."
   },
   {
     "name": "Thermaltake Toughpower GT Snow",
@@ -547,8 +592,7 @@
     "site": "pcpp",
     "expectTier": [
       "B",
-      "B-",
-      "B-*"
+      "B-"
     ],
     "minBand": "strong"
   },
@@ -558,8 +602,7 @@
     "site": "pcpp",
     "expectTier": [
       "A+",
-      "B",
-      "B*"
+      "B"
     ],
     "expectContested": true,
     "note": "sheet lists sibling entries on different tiers at this wattage; the match is a tie, so the badge must read as uncertain"
@@ -569,8 +612,10 @@
     "wattage": 1000,
     "site": "pcpp",
     "expectTier": "C+",
-    "expectLimited": false,
-    "minBand": "strong"
+    "expectLimited": true,
+    "minBand": "strong",
+    "expectModel": "UD-GM",
+    "note": "The 1000W base UD-GM is a limited rating (limited row 770); proper PG5 entries are distinct models."
   },
   {
     "name": "Gigabyte UD750GM",
@@ -714,8 +759,10 @@
     "site": "pcpp",
     "expectTier": "A-",
     "expectModel": "Aorus Elite AE-PM PG5 (rev. 2.0)",
-    "minBand": "strong",
-    "note": "'Aorus P-W AP-GM' used to win on the shared 'P' alone while ignoring ELITE; a product token that names the model is charged at weights.productMissNamed"
+    "minBand": "likely",
+    "note": "Revision 2.0 is not stated by the product.",
+    "maxBand": "likely",
+    "expectAmbiguous": true
   },
   {
     "name": "Silverstone SX1000-LPT",
@@ -743,8 +790,10 @@
     "efficiency": "80+ Gold",
     "site": "pcpp",
     "expectTier": "A",
-    "minBand": "strong",
-    "note": "'Group' is a corporate suffix, not a model token - must not be charged as a naming miss"
+    "minBand": "likely",
+    "note": "The title does not distinguish base and ATX 3.0 identities.",
+    "maxBand": "likely",
+    "expectAmbiguous": true
   },
   {
     "name": "SeaSonic ATX3-FOCUS-GX-850-WHITE",
@@ -755,8 +804,10 @@
       "A",
       "A-"
     ],
-    "minBand": "strong",
-    "note": "unspaced 'ATX3' spec tag must be dropped like the spaced form"
+    "minBand": "likely",
+    "note": "The title omits generation/standard qualifiers represented by multiple sheet identities.",
+    "maxBand": "likely",
+    "expectAmbiguous": true
   },
   {
     "name": "be quiet! Pure Power 13 M | 1000W",
@@ -822,9 +873,9 @@
     "modular": "Full",
     "site": "tweakers",
     "expectTier": "A",
-    "expectModel": "Edge EG Gold",
+    "expectModel": "Edge Gold",
     "minBand": "strong",
-    "note": "Lian Li Edge Gold storefront title must match sheet's Edge EG Gold"
+    "note": "Reviewed sheet source renamed Edge EG Gold to Edge Gold; the EG alias is removed."
   },
   {
     "name": "Thermaltake Smart BM3 Bronze 750W - TT Premium Edition",
@@ -847,8 +898,10 @@
     "site": "tweakers",
     "expectTier": "A",
     "expectModel": "High Current Gamer Pro Platinum ATX 3.1",
-    "minBand": "strong",
-    "note": "HCG1000 abbreviation must match High Current Gamer"
+    "minBand": "likely",
+    "note": "Multiple sheet identities survive the naming alias.",
+    "maxBand": "likely",
+    "expectAmbiguous": true
   },
   {
     "name": "ASUS Prime 750W Gold Wit, retail",
@@ -869,9 +922,9 @@
     "modular": "No",
     "site": "tweakers",
     "expectTier": "E",
-    "expectModel": "Strider Essential ST-ES",
+    "expectModel": "Strider Essential ST-ES 230V",
     "minBand": "likely",
-    "note": "ST50F-ES model number must match Strider Essential ST-ES"
+    "note": "ES230 explicitly identifies the 230V sheet variant, not the full-range ST-ES."
   },
   {
     "name": "Silverstone DA750R Gold (12V-2x6) Wit",
@@ -880,8 +933,10 @@
     "site": "tweakers",
     "expectTier": "B+",
     "expectModel": "Decathlon DA-R GM",
-    "minBand": "strong",
-    "note": "DA-R Gold ATX 3.x must match Decathlon DA-R GM (Tier B+), not legacy DA Gold (Tier B-)"
+    "minBand": "likely",
+    "note": "Connector prose alone does not identify the GM/GMA platform; no forced platform alias.",
+    "maxBand": "likely",
+    "expectAmbiguous": true
   },
   {
     "name": "Silverstone DA750R Gold (12VPWR)",
@@ -890,8 +945,10 @@
     "site": "tweakers",
     "expectTier": "B+",
     "expectModel": "Decathlon DA-R GM",
-    "minBand": "strong",
-    "note": "12VPWR noise token without H must not break matching"
+    "minBand": "likely",
+    "note": "Connector prose alone does not identify the GM/GMA platform; no forced platform alias.",
+    "maxBand": "likely",
+    "expectAmbiguous": true
   },
   {
     "name": "ASUS ROG Strix 1200W Gold Aura Edition (met16-pins kabel)",
@@ -1006,8 +1063,10 @@
     "site": "pcpp",
     "expectTier": "A+",
     "expectModel": "RM-x Shift 2023",
-    "minBand": "strong",
-    "note": "PCPP modular Full / Side must not penalize fully modular units"
+    "minBand": "likely",
+    "note": "The title does not distinguish the 2023 and 2025 generations.",
+    "maxBand": "likely",
+    "expectAmbiguous": true
   },
   {
     "name": "Silverstone HELA 2050R Platinum",
@@ -1064,8 +1123,9 @@
     "expectTier": "B",
     "expectModel": "SFX",
     "expectLimited": true,
-    "minBand": "strong",
-    "note": "Vetroo CP-PSU-VT model code and (BK) stripped, matches Vetroo SFX"
+    "minBand": "likely",
+    "note": "The SFX-only sheet model is established through form factor, wattage and certification constraints; a generic physical label alone cannot justify a strong token match.",
+    "maxBand": "likely"
   },
   {
     "name": "SeaSonic CORE GX ATX 3 (2024)",
@@ -1131,7 +1191,29 @@
     "expectTier": "B",
     "expectModel": "SFX",
     "expectLimited": true,
-    "minBand": "strong",
-    "note": "Vetroo CP-PSU-VT model code and (PK) stripped, matches Vetroo SFX"
+    "minBand": "likely",
+    "note": "The SFX-only sheet model is established through form factor, wattage and certification constraints; a generic physical label alone cannot justify a strong token match.",
+    "maxBand": "likely"
+  },
+  {
+    "name": "MSI MAG A850GL PCIE5 III",
+    "wattage": 850,
+    "expectTier": null,
+    "note": "Explicit unknown GL generation cannot match base or II."
+  },
+  {
+    "name": "MSI MAG A850GL PCIE5 IV",
+    "wattage": 850,
+    "expectTier": null
+  },
+  {
+    "name": "Corsair RM850x (2027)",
+    "wattage": 850,
+    "expectTier": null
+  },
+  {
+    "name": "Cooler Master MWE Gold 850 V9",
+    "wattage": 850,
+    "expectTier": null
   }
 ]

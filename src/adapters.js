@@ -25,7 +25,12 @@
   'use strict';
 
   function cleanText(el) {
-    return el ? el.textContent.replace(/\s+/g, ' ').trim() : '';
+    if (!el) return '';
+    // The adapter also runs after our own badge has been inserted. Reading it
+    // as part of the product name would continuously invalidate row identity.
+    const copy = el.cloneNode(true);
+    copy.querySelectorAll('.psu-tier-badge').forEach((badge) => badge.remove());
+    return copy.textContent.replace(/\s+/g, ' ').trim();
   }
 
   function parseWatt(text) {

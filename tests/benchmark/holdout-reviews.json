@@ -1,0 +1,1099 @@
+{
+  "datasetSha256": "46f25d75bd1fac9e22544c4d791e3f5aeefe59eec4c2e25d3e24be7855d76727",
+  "reviewMethod": "Saved names/specifications compared with frozen sheet before holdout predictions were inspected. Reviewed by Codex; no human or manufacturer verification. Conflicting or insufficient evidence stays unresolved.",
+  "holdoutStatus": "Fresh family-disjoint holdout selected after matcher implementation; excludes development sample and curated regression families. Conditional saved-frame remainder, not a live-catalog accuracy estimate. First evaluation revealed a demonstrable Vida Lite label error; corrected against proper row 1063. No matcher or rule changes followed holdout inspection. Gamdias extra B suffix remains a documented conservative miss.",
+  "records": [
+    {
+      "id": "pcpp:a50939681aa8e32d7157",
+      "productName": "Apevia Prestige",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "Apevia Prestige",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 131
+        },
+        {
+          "file": "tests/fixtures/sheet/limited.csv",
+          "gid": "931697732",
+          "row": 155
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 131
+        },
+        {
+          "gid": "931697732",
+          "row": 155
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Apevia Prestige Standard (600/700/800W, 80+ Gold, No); Apevia Prestige Standard (600/700/800W, 80+ Gold, No). Listing leaves a generation/label unspecified or uses a blanket brand rating; allow only likely.",
+      "maxBand": "likely"
+    },
+    {
+      "id": "pcpp:49db17d6f98e38021d0c",
+      "productName": "GAMDIAS KRATOS M1 B",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "GAMDIAS KRATOS M1 B",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 618
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 618
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Gamdias Kratos M1 (550-750W, 80+ Bronze, No).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "pcpp:37f583c62638f325bda6",
+      "productName": "Deepcool PN650M",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "Deepcool PN650M",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 459
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 459
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: DeepCool (GamerStorm) PN-M (650-850W, 80+ Gold, Full).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "pcpp:1b47356aef6a233c1036",
+      "productName": "ARESGAME AGT",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "ARESGAME AGT",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 145
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 145
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Aresgame (Pystar) All PSUs (None, None, None). Listing leaves a generation/label unspecified or uses a blanket brand rating; allow only likely.",
+      "maxBand": "likely"
+    },
+    {
+      "id": "pcpp:c098c0b60aad4cb3a29c",
+      "productName": "Cougar VTE",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "Cougar VTE",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 429
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 429
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Cougar VTE (400/500/600W, 80+ Bronze, No).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "pcpp:1fa68545c9a91e33eca7",
+      "productName": "Vida Lite",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "Vida Lite",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 1063
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 1063
+        }
+      ],
+      "rationale": "Vida Lite is explicitly listed at proper row 1063 for 500/600/750 W, non-modular, unrated efficiency. Initial absent-brand label was a reviewer error corrected after first evaluation; matcher unchanged.",
+      "maxBand": "strong"
+    },
+    {
+      "id": "pcpp:ef94d30eb312218400e3",
+      "productName": "Tecnoware Free Silent",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "Tecnoware Free Silent",
+          "url": null
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "pcpp:d0fd40e4db7840ec0511",
+      "productName": "SHARKOON SilentStorm Icewind Black",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "SHARKOON SilentStorm Icewind Black",
+          "url": null
+        }
+      ],
+      "status": "unresolved",
+      "identities": [],
+      "rationale": "Saved semi-modular specification conflicts with the fully modular Icewind sheet entry."
+    },
+    {
+      "id": "pcpp:32f9f3b85e6a046a97aa",
+      "productName": "EVGA 850 GQ",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "EVGA 850 GQ",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 523
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 523
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: EVGA SuperNOVA GQ (850/1000W, 80+ Gold, Semi).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "pcpp:04518ae8e69fc6e2d8fd",
+      "productName": "Corsair CX650M (2025)",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "Corsair CX650M (2025)",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 356
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 356
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Corsair CX-m 2025 (Black Label, ATX 3.1) (650/750W, 80+ Bronze, Full).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "pcpp:d0cb1cbc5fbac1261a7a",
+      "productName": "Corsair AX1200",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "Corsair AX1200",
+          "url": null
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "pcpp:d24ecac51f4a60df8efa",
+      "productName": "GameMax GX Pro Rampage",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "GameMax GX Pro Rampage",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 621
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 621
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Gamemax All PSUs (None, None, None). Listing leaves a generation/label unspecified or uses a blanket brand rating; allow only likely.",
+      "maxBand": "likely"
+    },
+    {
+      "id": "pcpp:498c005b0e6e632bf362",
+      "productName": "Corsair CS750M",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "Corsair CS750M",
+          "url": null
+        }
+      ],
+      "status": "unresolved",
+      "identities": [],
+      "rationale": "Saved semi-modular specification conflicts with the fully modular CS Black Label sheet entry."
+    },
+    {
+      "id": "pcpp:b69799d5cc64dd944adc",
+      "productName": "EVGA GE",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "EVGA GE",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/limited.csv",
+          "gid": "931697732",
+          "row": 599
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "931697732",
+          "row": 599
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: EVGA G Series GE (500-800W, 80+ Gold, No).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "pcpp:5a6636bc4b544ccfb780",
+      "productName": "Corsair CX650M (2021)",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "Corsair CX650M (2021)",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 355
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 355
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Corsair CX-m 2021 (Black Label) (550/650/750W, 80+ Bronze, Semi).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "pcpp:4dcd36de1eb415865c74",
+      "productName": "Silverstone Extreme 500 Bronze",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "Silverstone Extreme 500 Bronze",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 900
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 900
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: SilverStone Extreme Bronze (350/500W, 80+ Bronze, No).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "pcpp:4443f4b0629d0dcd00ec",
+      "productName": "Deepcool PN850M",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "Deepcool PN850M",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 459
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 459
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: DeepCool (GamerStorm) PN-M (650-850W, 80+ Gold, Full).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "pcpp:cf057f690c04c757c24f",
+      "productName": "Corsair AX850",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "Corsair AX850",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 347
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 347
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Corsair AX (Grey Label) (850/1000W, 80+ Titanium, Full). Listing leaves a generation/label unspecified or uses a blanket brand rating; allow only likely.",
+      "maxBand": "likely"
+    },
+    {
+      "id": "pcpp:601fae50053faa2fd632",
+      "productName": "EVGA 500 GD",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "EVGA 500 GD",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 511
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 512
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 513
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 514
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 511
+        },
+        {
+          "gid": "1078495601",
+          "row": 512
+        },
+        {
+          "gid": "1078495601",
+          "row": 513
+        },
+        {
+          "gid": "1078495601",
+          "row": 514
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: EVGA G Series GD 2019 - R1/V1 (500/600/700W, 80+ Gold, No); EVGA G Series GD 2019 - B1 (500/600/700W, 80+ Gold, No); EVGA G Series GD 2022 - R3 (500/600/700W, 80+ Gold, No); EVGA G Series GD 2022 - BC (500/600/700W, 80+ Gold, No). Listing leaves a generation/label unspecified or uses a blanket brand rating; allow only likely.",
+      "maxBand": "likely"
+    },
+    {
+      "id": "pcpp:8ac4e05a296187c3c0af",
+      "productName": "SeaSonic S12III",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "SeaSonic S12III",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 820
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 820
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Seasonic S12III (500/550/650W, 80+ Bronze, No).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "pcpp:51816cfb544f8165fcac",
+      "productName": "Corsair CX430M",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "Corsair CX430M",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 351
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 351
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Corsair CX-m 2013 (Green Label) (430/500/600W, 80+ Bronze, Semi). Listing leaves a generation/label unspecified or uses a blanket brand rating; allow only likely.",
+      "maxBand": "likely"
+    },
+    {
+      "id": "pcpp:3624de5faa074484aaf5",
+      "productName": "MSI A1000G PCIE5",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "MSI A1000G PCIE5",
+          "url": null
+        }
+      ],
+      "status": "unresolved",
+      "identities": [],
+      "rationale": "Listing omits the MPG family; A1000G alone does not establish that specific sheet identity."
+    },
+    {
+      "id": "pcpp:7d8d786a71b0795587c1",
+      "productName": "CoolMax RM-1000B",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "CoolMax RM-1000B",
+          "url": null
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "pcpp:dc49faf048266e9a26f5",
+      "productName": "GameMax Rampage",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "GameMax Rampage",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 621
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 621
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Gamemax All PSUs (None, None, None). Listing leaves a generation/label unspecified or uses a blanket brand rating; allow only likely.",
+      "maxBand": "likely"
+    },
+    {
+      "id": "pcpp:9c33a35a68bd72f5cb3f",
+      "productName": "SAMA G750",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tests/fixtures/pcpp-products.json",
+          "productName": "SAMA G750",
+          "url": null
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 802
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 802
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: SAMA G (650/750W, 80+ Gold, Full).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "tweakers:4d70bc12880c06713122",
+      "productName": "Phoenix Voeding - UNO-PS/1AC/48DC/ 60W",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Phoenix Voeding - UNO-PS/1AC/48DC/ 60W",
+          "url": "https://tweakers.net/pricewatch/1541218/"
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "tweakers:d5534e865c6021adc32a",
+      "productName": "Zalman GV2SE 500W",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Zalman GV2SE 500W",
+          "url": "https://tweakers.net/pricewatch/2250016/"
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 1096
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 1096
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Zalman Megamax II (GV2SE) (500/600/700W, 80+ Bronze, No). Listing leaves a generation/label unspecified or uses a blanket brand rating; allow only likely.",
+      "maxBand": "likely"
+    },
+    {
+      "id": "tweakers:de09ad006527886443b7",
+      "productName": "Cougar GEX1050",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Cougar GEX1050",
+          "url": "https://tweakers.net/pricewatch/2173190/"
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 412
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 412
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Cougar GEX (1050W, 80+ Gold, Full).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "tweakers:d7673b9de7ffff33df4e",
+      "productName": "DeepCool PX1200G",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "DeepCool PX1200G",
+          "url": "https://tweakers.net/pricewatch/1938600/"
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 468
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 468
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: DeepCool (GamerStorm) PX G (850/1000/1200W, 80+ Gold, Full).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "tweakers:5682b9a603d6b11d7514",
+      "productName": "UNYKAch ATX 300W",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "UNYKAch ATX 300W",
+          "url": "https://tweakers.net/pricewatch/2032424/"
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "tweakers:384fc0b4967640373cf1",
+      "productName": "Dell 450-ADEZ",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Dell 450-ADEZ",
+          "url": "https://tweakers.net/pricewatch/721789/"
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "tweakers:a95ebc0ac68fc3c8e5c2",
+      "productName": "HP J9443A",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "HP J9443A",
+          "url": "https://tweakers.net/pricewatch/376516/"
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "tweakers:8ab6ede841c5cf90f402",
+      "productName": "Cougar Atlas 2024 550W",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Cougar Atlas 2024 550W",
+          "url": "https://tweakers.net/pricewatch/2198328/"
+        },
+        {
+          "file": "tests/fixtures/sheet/limited.csv",
+          "gid": "931697732",
+          "row": 478
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "931697732",
+          "row": 478
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Cougar Atlas 2024 (BD) (450-750W, 80+ Bronze, No).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "tweakers:d94850f5b5f0bc7975ae",
+      "productName": "Silverstone SX1000R Platinum",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Silverstone SX1000R Platinum",
+          "url": "https://tweakers.net/pricewatch/1932028/"
+        }
+      ],
+      "status": "unresolved",
+      "identities": [],
+      "rationale": "SX1000R naming and saved semi-modular specification do not establish the Extreme Rz fully modular identity."
+    },
+    {
+      "id": "tweakers:7025bee7e06371cc0d30",
+      "productName": "Dell 450-AKPR",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Dell 450-AKPR",
+          "url": "https://tweakers.net/pricewatch/1859614/"
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "tweakers:cab6d7b246b51c162f94",
+      "productName": "Cougar WS 2000W",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Cougar WS 2000W",
+          "url": "https://tweakers.net/pricewatch/2353552/"
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "tweakers:6f0f2640567ed91603ef",
+      "productName": "HPE 866727-001",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "HPE 866727-001",
+          "url": "https://tweakers.net/pricewatch/2138200/"
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "tweakers:4b6e064de8cbdfcab01a",
+      "productName": "FSP H3-550",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "FSP H3-550",
+          "url": "https://tweakers.net/pricewatch/2291970/"
+        }
+      ],
+      "status": "unresolved",
+      "identities": [],
+      "rationale": "H3 code alone does not establish which FSP series is listed."
+    },
+    {
+      "id": "tweakers:7ef31df81da18f8eace3",
+      "productName": "Thermalright TB-550S",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Thermalright TB-550S",
+          "url": "https://tweakers.net/pricewatch/2184448/"
+        },
+        {
+          "file": "tests/fixtures/sheet/limited.csv",
+          "gid": "931697732",
+          "row": 1337
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "931697732",
+          "row": 1337
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Thermalright TR-TB S (450/550/650W, 80+ Bronze, No).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "tweakers:382302a369b8f65c4976",
+      "productName": "Phoenix TRIO-PS/3AC/24DC/ 5",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Phoenix TRIO-PS/3AC/24DC/ 5",
+          "url": "https://tweakers.net/pricewatch/1433272/"
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "tweakers:d42cfb01af10839107bd",
+      "productName": "Chieftec Smart GPS-700A8",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Chieftec Smart GPS-700A8",
+          "url": "https://tweakers.net/pricewatch/420600/"
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 260
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 260
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Chieftec/Chieftronic Smart GPS-A8 (550-700W, Unrated/None, No).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "tweakers:94a311fe46e06421805e",
+      "productName": "TP-Link TL-MCRP100",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "TP-Link TL-MCRP100",
+          "url": "https://tweakers.net/pricewatch/425693/"
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "tweakers:9c32ad4e812e915ab797",
+      "productName": "Chieftec Polaris 1050W",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Chieftec Polaris 1050W",
+          "url": "https://tweakers.net/pricewatch/1711086/"
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 248
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 249
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 248
+        },
+        {
+          "gid": "1078495601",
+          "row": 249
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Chieftec/Chieftronic Polaris PPS-FC (850/1050/1250W, 80+ Gold, Full); Chieftec/Chieftronic Polaris ATX 3.0 PPS-FC-A3 (850/1050/1250W, 80+ Gold, Full). Listing leaves a generation/label unspecified or uses a blanket brand rating; allow only likely.",
+      "maxBand": "likely"
+    },
+    {
+      "id": "tweakers:a1b83b2c208f0b83241e",
+      "productName": "Dell 450-AMJC",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Dell 450-AMJC",
+          "url": "https://tweakers.net/pricewatch/2025410/"
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "tweakers:79b0c6c11e48e36f57cf",
+      "productName": "Silverstone GM600 Silver",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Silverstone GM600 Silver",
+          "url": "https://tweakers.net/pricewatch/2160858/"
+        }
+      ],
+      "status": "unresolved",
+      "identities": [],
+      "rationale": "Saved 1200 W conflicts with 600 in the title."
+    },
+    {
+      "id": "tweakers:46d77aae24d75b017ef8",
+      "productName": "Akyga Ultimate Series 600 watt",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Akyga Ultimate Series 600 watt",
+          "url": "https://tweakers.net/pricewatch/1834450/"
+        }
+      ],
+      "status": "unresolved",
+      "identities": [],
+      "rationale": "Saved 540 W conflicts with 600 in the title."
+    },
+    {
+      "id": "tweakers:16a1a7e3bf9ab1a4427a",
+      "productName": "Silverstone Gemini 800C Platinum",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Silverstone Gemini 800C Platinum",
+          "url": "https://tweakers.net/pricewatch/2113524/"
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "tweakers:3df1328f07cab36e4fa8",
+      "productName": "Phanteks AMP GH 850W, Wit",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Phanteks AMP GH 850W, Wit",
+          "url": "https://tweakers.net/pricewatch/2118870/"
+        },
+        {
+          "file": "tests/fixtures/sheet/proper.csv",
+          "gid": "1078495601",
+          "row": 759
+        }
+      ],
+      "status": "rated",
+      "identities": [
+        {
+          "gid": "1078495601",
+          "row": 759
+        }
+      ],
+      "rationale": "Saved name and specifications compared with: Phanteks AMP GH Gold (750/850W, 80+ Gold, Full).",
+      "maxBand": "strong"
+    },
+    {
+      "id": "tweakers:c22648f2b6b2069ad215",
+      "productName": "Riotoro Enigma 850WG2",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Riotoro Enigma 850WG2",
+          "url": "https://tweakers.net/pricewatch/1157135/"
+        }
+      ],
+      "status": "unrated",
+      "identities": [],
+      "rationale": "No compatible identity in the frozen sheet for this saved model and specifications."
+    },
+    {
+      "id": "tweakers:bd24c0ff27e1acd64144",
+      "productName": "Xilence Performance C Series XP400",
+      "reviewer": "Codex: manual comparison of saved product records and frozen sheet; not human or manufacturer verification",
+      "sources": [
+        {
+          "file": "tools/tweakers_seed.json",
+          "productName": "Xilence Performance C Series XP400",
+          "url": "https://tweakers.net/pricewatch/427636/"
+        }
+      ],
+      "status": "unresolved",
+      "identities": [],
+      "rationale": "Saved 250 W conflicts with XP400 in the title."
+    }
+  ]
+}

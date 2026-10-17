@@ -1,0 +1,105 @@
+{
+  "checkedAt": "2026-10-17T17:54:36.449Z",
+  "tweakers": {
+    "badges": 39,
+    "examples": [
+      {
+        "badge": "Tier A+",
+        "name": "Corsair SF1000 (2024)"
+      },
+      {
+        "badge": "Tier B?",
+        "name": "MSI MAG A850GL PCIE5 Zwart"
+      },
+      {
+        "badge": "Tier A+",
+        "name": "Corsair RM850x (2024)"
+      },
+      {
+        "badge": "Tier B?",
+        "name": "MSI MAG A750GL PCIE5 Zwart"
+      },
+      {
+        "badge": "Tier B",
+        "name": "Cooler Master MWE GOLD 550 V3 ATX 3.1 Non-Modular"
+      },
+      {
+        "badge": "Tier B* (LC)",
+        "name": "MSI MAG A850GL PCIE5 II"
+      },
+      {
+        "badge": "Tier B+",
+        "name": "Corsair RM850e (2025) Zwart"
+      },
+      {
+        "badge": "Tier B+",
+        "name": "be quiet! Pure Power 13 M | 550W"
+      }
+    ],
+    "rows": 40,
+    "title": "Vergelijk voeding-prijzen en deals - Tweakers",
+    "url": "https://tweakers.net/voedingen/vergelijken/"
+  },
+  "pcpartpicker": {
+    "badges": 92,
+    "examples": [
+      {
+        "badge": "Tier B?",
+        "name": "MSI MAG A750GL PCIE5Tier B?"
+      },
+      {
+        "badge": "Tier B?",
+        "name": "MSI MAG A850GL PCIE5Tier B?"
+      },
+      {
+        "badge": "Tier C",
+        "name": "MSI MAG A650BNTier C"
+      },
+      {
+        "badge": "Tier A+",
+        "name": "Corsair SF1000 (2024)Tier A+"
+      },
+      {
+        "badge": "Tier B+",
+        "name": "Corsair RM850e (2025)Tier B+"
+      },
+      {
+        "badge": "Tier B+",
+        "name": "Corsair RM750e (2025)Tier B+"
+      },
+      {
+        "badge": "Tier C",
+        "name": "MSI MAG A550BNTier C"
+      },
+      {
+        "name": "Asus ROG THOR 1600T Gaming"
+      }
+    ],
+    "rows": 100,
+    "title": "Choose A Power Supply - PCPartPicker",
+    "url": "https://pcpartpicker.com/products/power-supply/"
+  },
+  "pcpartpickerPopup": {
+    "closeButton": true,
+    "model": "SF Platinum 2024",
+    "withinViewport": true,
+    "wordingVerified": true
+  },
+  "scope": "One live listing page per site; built userscript injected through T3 collaborative browser in incognito. This verifies current extraction, initial badges and one exact popup, not all products or Firefox/store installation.",
+  "finalArtifactRecheck": {
+    "checkedAt": "2026-10-17T18:08:40.684415+00:00",
+    "scriptSha256": "4e6852bcfd196046eaca6c02c99f531e76c5e0334e2941f528651dacf72be7fd",
+    "pcpartpicker": {
+      "rows": 100,
+      "badges": 92,
+      "popupModel": "SF Platinum 2024",
+      "honestScoreWording": true,
+      "withinViewport": true
+    },
+    "tweakers": {
+      "rows": 40,
+      "badges": 39
+    },
+    "method": "Final built userscript injected via T3 collaborative browser into fresh live pages; no store publishing or Firefox installation."
+  }
+}
